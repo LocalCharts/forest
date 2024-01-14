@@ -32,7 +32,7 @@
       packages = flake-utils.lib.flattenTree rec {
         new = pkgs.writeScriptBin "new"
         ''
-          ${forester-pkg}/bin/forester new --dir trees --prefix=${default-tree}
+          ${forester-pkg}/bin/forester new --dir trees --prefix=$1
         '';
         forester-dev = pkgs.writeScriptBin "forester-dev"
         ''
@@ -50,9 +50,7 @@
         };
         buildkite-deploy = pkgs.writeScriptBin "buildkite-deploy"
         ''
-          RESULT=$(${wrangler-pkgs.nodePackages.wrangler}/bin/wrangler pages deploy --branch $BUILDKITE_BRANCH result/)
-          echo $RESULT
-          buildkite-agent annotate $(echo $RESULT | tail -n 1)
+          ${wrangler-pkgs.nodePackages.wrangler}/bin/wrangler pages deploy --branch $BUILDKITE_BRANCH result/
         '';
       };
 
