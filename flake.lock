@@ -322,7 +322,8 @@
         "forest-server": "forest-server",
         "forester": "forester",
         "nixpkgs": "nixpkgs_4",
-        "systems": "systems_5"
+        "systems": "systems_5",
+        "wrangler-nixpkgs": "wrangler-nixpkgs"
       }
     },
     "rust-overlay": {
@@ -416,6 +417,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "wrangler-nixpkgs": {
+      "locked": {
+        "lastModified": 1697935353,
+        "narHash": "sha256-dDwl5ziD24Gs0feke2seFXoQibHafb5XeNDWlUZxCbg=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "8dfad603247387df1df4826b8bea58efc5d012d8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "8dfad603247387df1df4826b8bea58efc5d012d8",
         "type": "github"
       }
     }

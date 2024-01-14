@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/23.11";
+    wrangler-nixpkgs.url = "github:NixOS/nixpkgs/8dfad603247387df1df4826b8bea58efc5d012d8";
     systems.url = "github:nix-systems/default";
     forester.url = "github:olynch/ocaml-forester";
     forester.inputs.nixpkgs.follows = "nixpkgs";
@@ -10,6 +11,7 @@
   outputs = {
     self,
     nixpkgs,
+    wrangler-nixpkgs,
     flake-utils,
     systems,
     forester,
@@ -18,6 +20,9 @@
     flake-utils.lib.eachSystem (import systems)
     (system: let
       pkgs = import nixpkgs {
+        inherit system;
+      };
+      wrangler-pkgs = import wrangler-nixpkgs {
         inherit system;
       };
       forester-pkg = forester.packages.${system}.default;
@@ -43,6 +48,11 @@
             mv _redirects $out
           '';
         };
+        buildkite-deploy = pkgs.writeScriptBin "buildkite-deploy"
+        ''
+          RESULT=$(${wrangler-pkgs.nodePackages.wrangler}/bin/wrangler pages deploy --branch $BUILDKITE_BRANCH result/)
+          buildkite-agent annotate $(echo $RESULT | tail -n 1)
+        '';
       };
 
       devShells.default = pkgs.mkShell {
