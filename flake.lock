@@ -132,17 +132,17 @@
         "opam-repository": "opam-repository_2"
       },
       "locked": {
-        "lastModified": 1702478584,
-        "narHash": "sha256-rNAH0VEUNNY/Y8uvDEkemGysm+jyQoPyBxOOIZ3pYl0=",
-        "owner": "~jonsterling",
+        "lastModified": 1702896590,
+        "narHash": "sha256-HB2kt2pX43LFsUIDT6EzUN1sGHVhoce3qTrXgXlAKWM=",
+        "owner": "olynch",
         "repo": "ocaml-forester",
-        "rev": "7405900b6855a871dd295a18ffdf92a0731b99ab",
-        "type": "sourcehut"
+        "rev": "4dbde35fb8b17833403486d45727d58e978ae40a",
+        "type": "github"
       },
       "original": {
-        "owner": "~jonsterling",
+        "owner": "olynch",
         "repo": "ocaml-forester",
-        "type": "sourcehut"
+        "type": "github"
       }
     },
     "mirage-opam-overlays": {
