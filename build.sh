@@ -6,7 +6,7 @@ wget -nv https://github.com/DavHau/nix-portable/releases/download/v009/nix-porta
 chmod +x nix-portable
 
 mkdir -p ~/.ssh
-openssl enc -d -aes-256-cbc -pbkdf2 -in netlify-nixbuild.ed25519.aes -out ~/.ssh/id_ed25519 -k "$NIXBUILD_SSH_KEY"
+echo "$NIXBUILD_SSH_KEY" > ~/.ssh/id_ed25519
 chmod 600 ~/.ssh/id_ed25519
 
 echo 'eu.nixbuild.net ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPIQCZc54poJ8vqawd8TraNryQeJnvH1eLpIDgbiqymM' >> ~/.ssh/known_hosts
