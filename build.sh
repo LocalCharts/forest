@@ -2,7 +2,7 @@
 set -e
 
 export NP_GIT=$(which git)
-wget -nv https://github.com/DavHau/nix-portable/releases/download/v009/nix-portable
+wget -nv https://github.com/DavHau/nix-portable/releases/download/v010/nix-portable
 chmod +x nix-portable
 
 mkdir -p ~/.ssh
