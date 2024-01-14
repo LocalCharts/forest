@@ -50,7 +50,7 @@
         };
         buildkite-deploy = pkgs.writeScriptBin "buildkite-deploy"
         ''
-          ${wrangler-pkgs.nodePackages.wrangler}/bin/wrangler pages deploy --branch $BUILDKITE_BRANCH result/
+          ${wrangler-pkgs.nodePackages.wrangler}/bin/wrangler pages deploy --branch $BUILDKITE_BRANCH --project-name localcharts-forest result/
         '';
       };
 
