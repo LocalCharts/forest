@@ -40,6 +40,7 @@
           buildPhase = ''
             ${forester-pkg}/bin/forester build --root ${default-tree}-0001 trees/
             mv output/ $out/
+            mv _redirects $out
           '';
         };
       };
