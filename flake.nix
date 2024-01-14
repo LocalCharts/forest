@@ -51,6 +51,7 @@
         buildkite-deploy = pkgs.writeScriptBin "buildkite-deploy"
         ''
           RESULT=$(${wrangler-pkgs.nodePackages.wrangler}/bin/wrangler pages deploy --branch $BUILDKITE_BRANCH result/)
+          echo $RESULT
           buildkite-agent annotate $(echo $RESULT | tail -n 1)
         '';
       };
