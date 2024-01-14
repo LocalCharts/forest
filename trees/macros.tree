@@ -1,0 +1,4 @@
+\title{Macros}
+
+\def\cX{#{\mathcal{X}}}
+\def\cY{#{\mathcal{Y}}}

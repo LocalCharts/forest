@@ -1,5 +1,6 @@
 \title{Function space topoi}
 \author{owen-lynch}
+\import{macros}
 \date{2024-01-13}
 
 \p{In this post, I investigate the question of whether the category of topoi is cartesian closed.}
