@@ -150,6 +150,21 @@
         <title>
           <xsl:value-of select="/tree/frontmatter/title" />
         </title>
+
+        <meta name = 'discourse-username' content='forest' />
+        <script type="text/javascript">
+          <xsl:text>
+          window.DiscourseEmbed = {
+            discourseUrl: 'https://www.localcharts.org/',
+            discourseEmbedUrl: 'https://forest.localcharts.org/</xsl:text><xsl:value-of select="tree/frontmatter/addr" /><xsl:text>.xml'
+          };
+          (function() {
+            var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+            d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+          })();
+          </xsl:text>
+        </script>
       </head>
       <body>
         <ninja-keys placeholder="Start typing a note title or ID"></ninja-keys>

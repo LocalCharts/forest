@@ -36,7 +36,7 @@
         '';
         forester-dev = pkgs.writeScriptBin "forester-dev"
         ''
-          ${forest-server.packages.${system}.default}/bin/forest watch -- "build --dev --root ${default-tree}-0001 trees/"
+          ${forest-server.packages.${system}.default}/bin/forest watch $@ -- "build --dev --root ${default-tree}-0001 trees/"
         '';
         default = pkgs.stdenv.mkDerivation {
           name = "localcharts-forest";

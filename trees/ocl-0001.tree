@@ -3,6 +3,25 @@
 \import{macros}
 \date{2024-01-13}
 
-\p{In this post, I investigate the question of whether the category of topoi is cartesian closed.}
+\p{In this post, I investigate the question of whether the category of topoi is cartesian closed, and what this cartesian closed structure is if it exists.}
 
-\p{Given two topoi #{\cX} and #{\cY}, the category of geometric morphisms #{\Hom_{\ToposCat}(\cX, \cY)} is \em{not} a logos. However, the category of all functors #{\Sh(\cX)^{\Sh(\cY)}} is a logos, as #{\Sh(\cX)^C} is a logos for any category #{C}. So the question is then if we define #{[\cX, \cY]} to be the topos whose corresponding logos is the functor category #{\Sh(\cX)^{\Sh(\cY)}}.}
+\p{Given two topoi #{\bX} and #{\bY}, the category of geometric morphisms #{\Hom_{\Topos}(\bX, \bY)} is \em{not} a logos. However, the functor category #{[\Sh(\bY), \Sh(\bX)]} is a logos, as #{[C, \Sh(\bX)]} is a logos for any category #{C}. So the question is then if we define #{\bY^\bX} to be the topos whose corresponding logos is the functor category #{[\Sh(\bY), \Sh(\bX)]}, is it true that #{\Pt(\bY^\bX) \cong \Hom_{\Topos}(\bX, \bY)}? This is a necessary condition for #{\bY^\bX} to be an exponential object, as this is equivalent to #{\Hom_{\Topos}(\b1, \bY^\bX) \cong \Hom_{\Topos}(\b1 \times \bX, \bY)}.}
+
+\p{A point of #{[\Sh(\bY), \Sh(\bX)]} is a logos morphism #{[\Sh(\bY), \Sh(\bX)] \to \Set}. Given a logos morphism #{u^\ast \colon \Sh(\bY) \to \Sh(\bX)}, there is a functor #{[u^\ast, -] \colon [\Sh(\bY), \Sh(\bX)] \to \Set}. Is this a logos morphism? Well, let's see if it preserves colimits first. Suppose that #{D \colon J \to [\Sh(\bY), \Sh(\bX)]}. Then
+
+##{ [u^\ast, \colimit_{D} J] \cong \end{Y \in \Sh(\bY)} [u^\ast(Y), \colimit_{d \in D} J(d)(Y)] }
+
+This doesn't look good, folks...}
+
+\p{Let's inspect the exponential condition for a generic topos #{\bZ}. We have
+
+##{\Hom_\Topos(\bZ \times \bX, \bY) \cong \Hom_\Topos(\bZ, \bY^\bX)}
+
+In logos land, this translates to
+
+##{[\Sh(\bY), [\Sh(\bZ)^\op, \Sh(\bX)]^c]^\lex_\cc \cong [\Sh(\bY^\bX), \Sh(\bZ)]^\lex_\cc}
+
+or equivalently
+
+##{[\Sh(\bY), [\Sh(\bX)^\op, \Sh(\bZ)]^c]^\lex_\cc \cong [\Sh(\bY^\bX), \Sh(\bZ)]^\lex_\cc}
+}
