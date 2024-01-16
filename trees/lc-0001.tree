@@ -1,4 +1,5 @@
 \title{LocalCharts Forest}
+\author{owen-lynch}
 
 \p{The LocalCharts forest is a place for writing in the [spirit of LocalCharts](https://www.localcharts.org/t/localcharts-is-live/5714) with high-quality mathematical typesetting. To do this, we use [forester](http://www.jonmsterling.com/jms-005P.xml) to build the [source](https://github.com/LocalCharts/forest) of this website, and then embed comments from the [LocalCharts discourse instance](https://www.localcharts.org).}
 
