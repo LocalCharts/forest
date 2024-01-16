@@ -183,6 +183,7 @@
           <article>
             <xsl:apply-templates select="tree" />
           </article>
+          <div id="discourse-comments"></div>
           <xsl:if
             test="tree/mainmatter/tree[@toc='true'] and not(/tree/frontmatter/meta[@name = 'toc']/.='false')">
             <nav id="toc">
