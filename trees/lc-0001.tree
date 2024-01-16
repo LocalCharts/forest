@@ -9,4 +9,4 @@
 
 \p{There are some useful macros for math/category theory in [macros.tree](https://github.com/LocalCharts/forest/blob/main/trees/macros.tree). Hopefully as the forest grows, we will have some flame wars about notation and end up with some semi-productive standardization via this macros file.}
 
-\p{Currently, every post except for this one will automatically create a new discussion topic in the discourse. I'm not sure if this is the right behavior; I may figure out a way soon to have this be opt-in.}
+\p{Comments (and by extension, automatic cross-posting to the forum) are opt-in. If you would like comments, then you must put \code{\startverb\meta{comments}{true}\stopverb} at the top of your page.}

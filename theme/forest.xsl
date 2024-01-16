@@ -156,9 +156,18 @@
           <xsl:text>
           window.DiscourseEmbed = {
             discourseUrl: 'https://www.localcharts.org/',
-            discourseEmbedUrl: 'https://forest.localcharts.org/</xsl:text><xsl:value-of select="tree/frontmatter/addr" /><xsl:text>.xml'
+            discourseEmbedUrl: 'https://forest.localcharts.org/</xsl:text><xsl:value-of select="/tree/frontmatter/addr" /><xsl:text>.xml'
           };
-          if (window.DiscourseEmbed.discourseEmbedUrl != 'https://forest.localcharts.org/lc-0001.xml') {
+          const isLive = /^https:\/\/forest.localcharts.org/.test(window.location);
+          const isEnabled = </xsl:text><xsl:choose>
+            <xsl:when test="/tree/frontmatter/meta[@name = 'comments']/.='true'">
+              <xsl:text>true</xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:text>false</xsl:text>
+            </xsl:otherwise>
+          </xsl:choose><xsl:text>;
+          if (isEnabled &amp;&amp; isLive) {
             (function() {
               var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
               d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
