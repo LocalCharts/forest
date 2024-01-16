@@ -3,7 +3,11 @@
 \import{macros}
 \date{2024-01-13}
 
-\p{In this post, I investigate the question of whether the category of topoi is cartesian closed, and what this cartesian closed structure is if it exists.}
+\p{This is a record of my investigation into function space topoi. I now know where to look for this: it's in [the Elephant](https://ncatlab.org/nlab/show/Sketches+of+an+Elephant), sections B4.3 and C4.4. }
+
+\p{I wanted to understand function spaces because I wanted to see if there was a natural way of thinking about whether #{\Omega^X} was naturally a "space with a poset of points", in the sense that a topos is a "space with a category of points". I hope to eventually figure this out, but I think I have to read backwards in the Elephant before understanding those sections.}
+
+\p{Anyways, here were my preliminary ideas.}
 
 \p{Given two topoi #{\bX} and #{\bY}, the category of geometric morphisms #{\Hom_{\Topos}(\bX, \bY)} is \em{not} a logos. However, the functor category #{[\Sh(\bY), \Sh(\bX)]} is a logos, as #{[C, \Sh(\bX)]} is a logos for any category #{C}. So the question is then if we define #{\bY^\bX} to be the topos whose corresponding logos is the functor category #{[\Sh(\bY), \Sh(\bX)]}, is it true that #{\Pt(\bY^\bX) \cong \Hom_{\Topos}(\bX, \bY)}? This is a necessary condition for #{\bY^\bX} to be an exponential object, as this is equivalent to #{\Hom_{\Topos}(\b1, \bY^\bX) \cong \Hom_{\Topos}(\b1 \times \bX, \bY)}.}
 
