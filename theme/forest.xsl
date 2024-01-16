@@ -158,7 +158,7 @@
             discourseUrl: 'https://www.localcharts.org/',
             discourseEmbedUrl: 'https://forest.localcharts.org/</xsl:text><xsl:value-of select="tree/frontmatter/addr" /><xsl:text>.xml'
           };
-          if (window.DisourceEmbed.discourseEmbedUrl != 'https://forest.localcharts.org/lc-0001.xml') {
+          if (window.DisourseEmbed.discourseEmbedUrl != 'https://forest.localcharts.org/lc-0001.xml') {
             (function() {
               var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
               d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
