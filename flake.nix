@@ -58,7 +58,7 @@
               -H "Authorization: Bearer $GITHUB_TOKEN" \
               -H "X-GitHub-Api-Version: 2022-11-28" \
               https://api.github.com/repos/LocalCharts/forest/deployments \
-              -d '{"ref":"$BUILDKITE_COMMIT","payload":"{}","description":"Deployed at $DEPLOY_URL"}'
+              -d "{\"ref\":\"$BUILDKITE_COMMIT\",\"payload\":\"{}\",\"description\":\"Deployed at $DEPLOY_URL\"}"
         '';
       };
 
