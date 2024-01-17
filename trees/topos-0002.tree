@@ -8,6 +8,8 @@
 
 \p{\em{These are seminar notes originally taken by Brendan Fong during Owen Lynch's [Berkeley Seminar talk](https://topos.site/berkeley-seminar/). The video will be shortly uploaded to youtube, and there will be a link to it here after this is done.}}
 
+\p{\em{I (Owen) forgot to mention this during the talk, but I would like to thank David Jaz and Davidad for conversations developing my thoughts on this matter.}}
+
 \abstract{
 \p{Algebraic data types (i.e. sum types, product types, and recursive types) are a solid foundation for data that can be interchanged between programs. There are many software libraries that allow cross-language serialization of algebraic data types, and software based on these libraries is used across the industry. However, it is impossible to express self-reference within algebraic data types. Specifically, one can write down a type of lists as an algebraic data type, but one cannot write down the type of "a list of strings, and a valid index into that list", or more advanced structures like graphs or petri nets. One might think that dependent types are needed for this, but in fact a small extension of the theory of algebraic data types based on constructions standard in System F suffices to express the validity constraint for indices into arrays. With this extension, we can well-type many more data structures, including acsets, within a type theory that also encompasses algebraic data types.}
 
