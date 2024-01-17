@@ -50,7 +50,15 @@
         };
         buildkite-deploy = pkgs.writeScriptBin "buildkite-deploy"
         ''
-          ${wrangler-pkgs.nodePackages.wrangler}/bin/wrangler pages deploy --branch $BUILDKITE_BRANCH --project-name localcharts-forest result/
+          ${wrangler-pkgs.nodePackages.wrangler}/bin/wrangler pages deploy --branch $BUILDKITE_BRANCH --project-name localcharts-forest result/ | tee wrangler-log
+          DEPLOY_URL=$(cat wrangler-log | ${pkgs.gnused}/bin/sed -n 's/.*Take a peek over at \(.*\)/\1/p')
+          ${pkgs.curl}/bin/curl -L \
+            -X POST \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer $GITHUB_TOKEN" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              https://api.github.com/repos/LocalCharts/forest/commits/$BUILDKITE_COMMIT/comments \
+              -d "{\"body\":\"Deployed at $DEPLOY_URL\"}"
         '';
       };
 
