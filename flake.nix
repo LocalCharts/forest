@@ -51,7 +51,7 @@
         buildkite-deploy = pkgs.writeScriptBin "buildkite-deploy"
         ''
           ${wrangler-pkgs.nodePackages.wrangler}/bin/wrangler pages deploy --branch $BUILDKITE_BRANCH --project-name localcharts-forest result/ | tee wrangler-log
-          DEPLOY_URL=$(cat wrangler-log | ${pkgs.sed}/bin/sed -n 's/.*Take a peek over at \(.*\)/\1/p')
+          DEPLOY_URL=$(cat wrangler-log | ${pkgs.gnused}/bin/sed -n 's/.*Take a peek over at \(.*\)/\1/p')
           ${pkgs.curl}/bin/curl -L \
             -X POST \
               -H "Accept: application/vnd.github+json" \
