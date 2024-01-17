@@ -57,8 +57,8 @@
               -H "Accept: application/vnd.github+json" \
               -H "Authorization: Bearer $GITHUB_TOKEN" \
               -H "X-GitHub-Api-Version: 2022-11-28" \
-              https://api.github.com/repos/LocalCharts/forest/deployments \
-              -d "{\"ref\":\"$BUILDKITE_COMMIT\",\"payload\":\"{}\",\"description\":\"Deployed at $DEPLOY_URL\", \"required_contexts\":[]}"
+              https://api.github.com/repos/LocalCharts/forest/commits/$BUILDKITE_COMMIT/comments \
+              -d "{\"body\":\"Deployed at $DEPLOY_URL\"}"
         '';
       };
 
