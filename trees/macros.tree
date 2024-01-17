@@ -113,11 +113,17 @@
 \def\cat[c]{#{\mathsf{\c}}}
 
 \def\Cat{#{\cat{Cat}}}
+\def\Gpd{#{\cat{Gpd}}}
 \def\Set{#{\cat{Set}}}
 \def\Fin{#{\cat{Fin}}}
+\def\FinIso{#{\cat{Fin}_{\cong}}}
 \def\Topos{#{\cat{Topos}}}
 \def\Logos{#{\cat{Logos}}}
 
 \def\Pr{#{\operatorname{\cP\mathrm{r}}}}
 \def\Pt{#{\operatorname{\cP\mathrm{t}}}}
 \def\Sh{#{\operatorname{\cS\mathrm{h}}}}
+
+\def\abstract[body]{
+  \block{\strong{Abstract.}}{\body}
+}

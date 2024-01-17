@@ -1,0 +1,118 @@
+\title{Structured Data: A Principled Approach}
+\taxon{seminar}
+\date{2024-01-16}
+\import{macros}
+\author{owen-lynch}
+\author{brendan-fong}
+
+\p{\em{These are seminar notes originally taken by Brendan Fong during Owen Lynch's [Berkeley Seminar talk](https://topos.site/berkeley-seminar/). The video will be shortly uploaded to youtube.}}
+
+\abstract{
+\p{Algebraic data types (i.e. sum types, product types, and recursive types) are a solid foundation for data that can be interchanged between programs. There are many software libraries that allow cross-language serialization of algebraic data types, and software based on these libraries is used across the industry. However, it is impossible to express self-reference within algebraic data types. Specifically, one can write down a type of lists as an algebraic data type, but one cannot write down the type of "a list of strings, and a valid index into that list", or more advanced structures like graphs or petri nets. One might think that dependent types are needed for this, but in fact a small extension of the theory of algebraic data types based on constructions standard in System F suffices to express the validity constraint for indices into arrays. With this extension, we can well-type many more data structures, including acsets, within a type theory that also encompasses algebraic data types.}
+
+\p{We then discuss two potential semantics for this type theory. The first semantics is in groupoids, which is related to the fact that self-referential structures have natural symmetries based on "relabelings" of their combinatorial data. This semantics builds off of the "stuff types" introduced by Baez and Dolan in their 2000 paper "From Finite Sets to Feynman Diagrams." While this semantics captures the symmetries of self-referential data, the second semantics captures the mutation of self-referential data. Specifically, we posit that the essense of both in-place mutation and version control is that updating only part of a data structure should be treated differently than simply replacing the data structure with a new copy. Thus, for every data structure (expressed as a type in this type theory), there should be a category where the objects are seen as values and the morphisms are edits. The essence of version control is then a way of remembering the history of values and edits. We propose that such a history should be a finitely-presented poset along with a functor into the category of values and edits.}
+
+\p{In this talk, we will mainly give an overview of all of this material, without going too far into the mathematical details, concentrating on the overall vision of structured version control for combinatorial/self-referential data.}
+}
+
+\transclude{ocl-0002}
+
+\p{We want our scientific models to be:
+\ul{
+  \li{Graphical}
+  \li{Interactive}
+  \li{Archivable: they should be in a database, and we should be able to query it. eg. “give me all the models (Petri nets) that have [property]}
+}
+}
+
+\p{Assumption: Text files in version control are our source of truth.}
+
+\p{This is not incompatible with structured models in general. AlgJulia’s philosophy is that models should not be arbitrary code, they should have some structure. To make these compatible, we can just write our models in a DSL. Why does this make sense? In general, in formats that make sense for humans to write, small edits are also local in text.}
+
+\p{However, if we’re manipulating models graphically, a small semantic change might totally shift its representation in JSON, which results in a big git diff.}
+
+\p{Claim: the above three pronged vision — working with graphical, interactive models in databases — is fundamentally at odds with effective version control in git.}
+
+\p{Yet we want version control. Every software shop uses version control rather than dropbox. It is great. Version control gives:}
+
+\ul{
+\li{Transparency into development process, and hence}
+\li{Accountability for changes: without version control, a person could easily anonymously sneak a small, single line change into production.}
+\li{Collaborative decision-making for what changes get accepted.}
+\li{Immutability: changes can be made and unmade. You never get to change someone else’s stuff, you only get to add things. If they like the old way better, they can use the old version. This gives a sense of security.}
+}
+
+\p{Version control is great.}
+
+\p{The incompatibility of version control with graphical programming languages is something that has prevented us from moving beyond textual languages.}
+
+\p{Existing serialisation tools for structured data (eg. Protobuf) have approximately the following feature set:}
+
+\ul{
+\li{Primitives: String, Int}
+\li{Records (Products)}
+\li{Sum types}
+}
+
+\p{These are all trees. But we have other data structures, including ACSets. What do we need to add?}
+
+\ul{
+  \li{Functions out of finite types}
+  \li{Sigma types over the universe of finite sets}
+}
+
+\p{This may look a bit out of left field. Let’s explore an example. What’s a discrete dynamical system? It can be represented by the type:}
+
+##{\sum_{X \colon \Fin} (X \to X)}
+
+\p{This allows us something we could do before: we can \em{well-type references.}}
+
+\p{For example, here is the type of directed graphs:}
+
+##{\sum_{E\colon \Fin, V \colon \Fin} (E \to V) \times (E \to V)}
+
+\p{More examples: (see slides)}
+
+\ul{
+ \li{wiki}
+ \li{SQL}
+ \li{doubly linked list}
+ \li{abstract binding tree}
+ \li{nested wiring diagram}
+}
+
+\p{The semantics of this is the theory of stuff types.}
+
+\p{Baez and Dolan 2001 published a paper on \em{stuff types.} A stuff type is a functor from a groupoid G to the groupoid of finite sets. These generalise combinatorial species.}
+
+\p{A species is a functor from the groupoid of finite sets to Set. Taking the grothendieck construction of this, we get a stuff type, but one that is a fibration. Stuff types thus generalise species.}
+
+\p{An example of a stuff type that is not a fibration is the functor from the groupoid of finite graphs that sends a graph to its underlying vertex set.}
+
+\p{An attribute type is modelled by a groupoid.}
+
+\p{A multivariate stuff type can viewed as a sigma type over the universe of finite sets.}
+
+\p{A generic multivariate stuff type is a functor
+
+##{\Gpd^n \times \FinIso^m \to \Gpd}
+
+}
+
+\p{This gives a theory of data that captures anything we might want to serialise.}
+
+\p{The goal of version control is accounting for the collaborative creation process. When you make a change, you want to account for that change being made.}
+
+\p{To treat this categorically, we use *value-edit categories*. This is a definition with an attitude — a value-edit category is just a category, but we think of the objects as values, and the morphisms as edits that take one value to another.}
+
+\p{How do we define a history? It could be a morphism, but this means that for a value-edit category to have an interesting notion of history, it needs to be a free category. It could be a path, but this is too linear (didn’t capture the exact reason. it’s a bit like blockchain).}
+
+\p{We define a history as a functor from a poset to a category.}
+
+\p{The point of a version control system is not to tell you how to resolve commits, it’s to account for how you choose to resolve commits.}
+
+\p{We have semantics in groupoids for structured data; we also want to build semantics in value edit categories.}
+
+\p{Questions:}
+
+\p{A lot of combinatorial data structures don’t come with a notion of morphism that’s more flexible than isomorphism. Do we need one to have interesting value-edit categories? We might want these edits to be injective spans or partial functions of CSets.}

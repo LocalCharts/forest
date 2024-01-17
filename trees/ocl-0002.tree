@@ -1,0 +1,5 @@
+\title{Combinatorial Data Structures}
+\author{owen-lynch}
+\taxon{definition}
+
+\p{A combinatorial data structure is a data structure where parts of the data structure refer to other parts the data structure, possibly cyclically.}
