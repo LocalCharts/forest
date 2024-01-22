@@ -8,6 +8,17 @@
     forest-server.url = "github:kentookura/forest-server";
   };
 
+  nixConfig = {
+    substituters = [
+      "https://cache.nixos.org"
+      "https://localcharts.cachix.org"
+    ];
+    trusted-public-keys = [
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      "localcharts.cachix.org-1:Gg/segyIFaPNmLgO5sFFD+kv1sHKU/4pBRdubSugOBA="
+    ];
+  };
+
   outputs = {
     self,
     nixpkgs,
