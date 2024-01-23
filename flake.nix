@@ -73,9 +73,17 @@
         '';
       };
 
+      devShells.default-no-live = pkgs.mkShell {
+        buildInputs = with pkgs; with self.packages.${system}; [
+          forester-pkg new
+          tlDist
+        ];
+      };
+
       devShells.default = pkgs.mkShell {
         buildInputs = with pkgs; with self.packages.${system}; [
-          forester-pkg new forester-dev
+          forester-pkg new
+          forester-dev
           forest-server.packages.${system}.default
           tlDist
         ];
