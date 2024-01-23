@@ -45,6 +45,14 @@
         ''
           ${forester-pkg}/bin/forester new --dir trees --prefix=$1
         '';
+        build = pkgs.writeScriptBin "build"
+        ''
+          ${forester-pkg}/bin/forester build --dev --root ${default-tree}-0001 trees/
+        '';
+        serve = pkgs.writeScriptBin "serve"
+        ''
+          ${pkgs.python3}/bin/python3 -m http.server -d output 8080
+        '';
         forester-dev = pkgs.writeScriptBin "forester-dev"
         ''
           ${forest-server.packages.${system}.default}/bin/forest watch $@ -- "build --dev --root ${default-tree}-0001 trees/"
@@ -73,16 +81,15 @@
         '';
       };
 
-      devShells.default-no-live = pkgs.mkShell {
+      devShells.shell-minimal = pkgs.mkShell {
         buildInputs = with pkgs; with self.packages.${system}; [
-          forester-pkg new
-          tlDist
+          forester-pkg new build serve
         ];
       };
 
       devShells.default = pkgs.mkShell {
         buildInputs = with pkgs; with self.packages.${system}; [
-          forester-pkg new
+          forester-pkg new build serve
           forester-dev
           forest-server.packages.${system}.default
           tlDist
