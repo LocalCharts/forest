@@ -205,6 +205,11 @@
           </xsl:if>
           <div id="discourse-comments"></div>
         </div>
+        <footer class="footer">
+          <xsl:text>
+            Tip: use Ctrl-K to open a search window.
+          </xsl:text>
+        </footer>
       </body>
     </html>
   </xsl:template>
