@@ -103,12 +103,11 @@
 \def\limit{#{\varprojlim}}
 \def\colimit{#{\varinjlim}}
 
-\def\end[x]{#{\int_{\x}}}
-\def\coend[x]{#{\int^{\x}}}
-
 \def\op{#{\mathrm{op}}}
 \def\cc{#{\mathrm{cc}}}
 \def\lex{#{\mathrm{lex}}}
+
+\def\xto[f]{#{\xrightarrow{\f}}}
 
 \def\cat[c]{#{\mathsf{\c}}}
 
@@ -119,11 +118,25 @@
 \def\FinIso{#{\cat{Fin}_{\cong}}}
 \def\Topos{#{\cat{Topos}}}
 \def\Logos{#{\cat{Logos}}}
+\def\Diag{#{\cat{Diag}}}
 
 \def\Pr{#{\operatorname{\cP\mathrm{r}}}}
 \def\Pt{#{\operatorname{\cP\mathrm{t}}}}
 \def\Sh{#{\operatorname{\cS\mathrm{h}}}}
+\def\Open{#{\cO}}
+
+% Blocks
 
 \def\abstract[body]{
   \block{\strong{Abstract.}}{\body}
+}
+
+\def\notes[body]{
+  \block{\strong{Notes.}}{\body}
+}
+
+\def\texfig[body]{
+  \iftex{\tex{\body}}{
+    \xml{center}{\tex{\body}}
+  }
 }

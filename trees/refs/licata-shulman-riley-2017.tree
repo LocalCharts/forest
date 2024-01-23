@@ -1,0 +1,18 @@
+\title{A Fibrational Framework for Substructural and Modal Logics}
+\import{macros}
+\taxon{reference}
+\tag{refereed}
+\tag{type-theory}
+
+\author{daniel-licata}
+\author{michael-shulman}
+\author{mitchell-riley}
+\date{2017}
+\meta{doi}{10.4230/LIPIcs.FSCD.2017.25}
+\meta{external}{http://dlicata.web.wesleyan.edu/pubs/lsr17multi/lsr17multi-ex.pdf}
+
+\abstract{We define a general framework that abstracts the common features of many intuitionistic substructural and modal logics / type theories. The framework is a sequent calculus / normal-form type theory parametrized by a mode theory, which is used to describe the structure of contexts and the structural properties they obey. In this sequent calculus, the context itself obeys standard structural properties, while a term, drawn from the mode theory, constrains how the context can be used. Product types, implications, and modalities are defined as instances of two general connectives, one positive and one negative, that manipulate these terms. Specific mode theories can express a range of substructural and modal connectives, including non-associative, ordered, linear, affine, relevant, and cartesian products and implications; monoidal and non-monoidal functors, (co)monads and adjunctions; n-linear variables; and bunched implications. We prove cut (and identity) admissibility independently of the mode theory, obtaining it for many different logics at once. Further, we give a general equational theory on derivations / terms that, in addition to the usual beta/eta-rules, characterizes when two derivations differ only by the placement of structural rules. Additionally, we give an equivalent semantic presentation of these ideas, in which a mode theory corresponds to a 2-dimensional cartesian multicategory, the framework corresponds to another such multicategory with a functor to the mode theory, and the logical connectives make this into a bifibration. Finally, we show how the framework can be used both to encode existing existing logics / type theories and to design new ones.}
+
+\notes{
+The idea here is to use one data structure for syntax trees of various different logics, and then simply restrict variable usage to capture cartesian/affine/linear logics, or other things like modalities.
+}

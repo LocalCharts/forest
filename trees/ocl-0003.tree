@@ -1,0 +1,10 @@
+\title{Existentials in System F}
+\date{2023-12-05}
+
+\p{Existentials can be represented in System F via continuation-passing style:}
+
+\p{\code{
+  {∃X, T} := ∀Y. (∀X. T → Y) → Y
+}}
+
+\p{However, this is not the best way of implementing them; they are best treated separately.}

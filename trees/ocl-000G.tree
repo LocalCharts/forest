@@ -1,0 +1,6 @@
+\title{Geometric polynomial double category}
+\taxon{conjecture}
+\import{macros}
+\date{2024-01-04}
+
+\p{There is a double category where the objects are topoi, the vertical maps are geometric morphisms, and the horizontal maps are [geometric polynomials](ocl-000E).}

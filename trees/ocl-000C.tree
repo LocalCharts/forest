@@ -1,0 +1,8 @@
+\title{Notational conventions}
+\tag{writing}
+\date{2023-12-26}
+
+\p{In prose, we use \strong{bold} to emphasize terms that are being defined. As much as possible, terms that are defined elsewhere should be linked to.}
+
+\p{In equations, we use #{\mathbf{bold}} to refer to things that have a single top-level definition, and #{italic} to refer to locally-defined variables. We use #{\mathtt{monospace}} to write literal symbols. That is, #{\mathtt{a}} is not a variable that stands in for something else, it just is the symbol consisting of the letter #{\mathtt{a}}.}
+

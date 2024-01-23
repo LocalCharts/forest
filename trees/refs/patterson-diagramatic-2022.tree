@@ -1,0 +1,37 @@
+\title{A Diagrammatic View of Differential Equations in Physics}
+\date{2022-12}
+
+\import{macros}
+
+\taxon{reference}
+\tag{algebraic-julia}
+\tag{refereed}
+
+\author{evan-patterson}
+\author{andrew-baas}
+\author{tim-hosgood}
+\author{james-fairbanks}
+
+\meta{doi}{10.3934/mine.2023036}
+
+\meta{bibtex}{\startverb%
+@article{patterson_Diagrammatic_2022,
+  title = {A Diagrammatic View of Differential Equations in Physics},
+  author = {Patterson, Evan and Baas, Andrew and Hosgood, Timothy and Fairbanks, James},
+  year = {2022},
+  journal = {Mathematics in Engineering},
+  volume = {5},
+  number = {2},
+  eprint = {2204.01843},
+  primaryclass = {math-ph},
+  pages = {1--59},
+  issn = {2640-3501},
+  doi = {10.3934/mine.2023036},
+  urldate = {2023-01-04},
+  archiveprefix = {arxiv},
+  keywords = {Mathematical Physics,Mathematics - Category Theory},
+  file = {/home/o/Zotero/storage/2QMRLE9T/Patterson et al. - 2022 - A diagrammatic view of differential equations in p.pdf;/home/o/Zotero/storage/S8H6BF7U/2204.html}
+}
+\stopverb}
+
+\abstract{Presenting systems of differential equations in the form of diagrams has become common in certain parts of physics, especially electromagnetism and computational physics. In this work, we aim to put such use of diagrams on a firm mathematical footing, while also systematizing a broadly applicable framework to reason formally about systems of equations and their solutions. Our main mathematical tools are category-theoretic diagrams, which are well known, and morphisms between diagrams, which have been less appreciated. As an application of the diagrammatic framework, we show how complex, multiphysical systems can be modularly constructed from basic physical principles. A wealth of examples, drawn from electromagnetism, transport phenomena, fluid mechanics, and other fields, is included.}

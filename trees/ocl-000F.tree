@@ -1,0 +1,10 @@
+\title{The functor associated to a [geometric polynomial](ocl-000E)}
+\taxon{definition}
+\import{macros}
+\date{2024-01-04}
+
+\p{Given a geometric polynomial from #{X} to #{Y} consisting of #{(E \xto{p} B, Y_{/E} \xto{f} X)}, there is a corresponding functor from #{\Sh(X)} to #{\Sh(Y)} given by the following formula.}
+
+##{ A \mapsto \Sigma_B(\Pi_p(f^\ast(A))) }
+
+\p{ where #{\Sigma_B \colon Y_{/B} \to Y} is the forgetful functor, #{\Pi_p \colon Y_{/E} \to Y_{/B}} is the right adjoint to pullback, and #{f^\ast} is the action of #{f} on sheaves.}

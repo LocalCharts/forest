@@ -1,0 +1,5 @@
+\title{Ideas for Forester}
+\tag{writing}
+\date{2023-12-26}
+
+\p{Note that it is possible to put hyperlinks in KaTeX: #{\href{https://ncatlab.org/nlab/show/presheaf}{\mathbf{PSh}}(C)}. We could in our standard library of macros, hyperlink everything to the relevant definitions.}

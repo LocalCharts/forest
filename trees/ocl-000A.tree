@@ -1,0 +1,22 @@
+\title{Diagram Category}
+\date{2023-12-25}
+\texpackage{quiver}
+\import{macros}
+
+\p{Given a category #{\cC}, let #{\Diag(\cC)} be the category where the objects are [diagrams in #{\cC}](https://ncatlab.org/nlab/show/diagram), and the morphisms are diagrams of the form:}
+
+\texfig{
+\begin{tikzcd}
+	J && {J'} \\
+	& \cC
+	\arrow["F", from=1-1, to=1-3]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "D"', from=1-1, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{D'}", from=1-3, to=2-2]
+	\arrow["\alpha", shorten <=6pt, shorten >=6pt, Rightarrow, from=0, to=1]
+\end{tikzcd}
+}
+
+\p{
+  [](patterson-diagramatic-2022)
+  [](kock-thesis-1967)
+}

@@ -13,7 +13,7 @@
 
 \p{A point of #{[\Sh(\bY), \Sh(\bX)]} is a logos morphism #{[\Sh(\bY), \Sh(\bX)] \to \Set}. Given a logos morphism #{u^\ast \colon \Sh(\bY) \to \Sh(\bX)}, there is a functor #{[u^\ast, -] \colon [\Sh(\bY), \Sh(\bX)] \to \Set}. Is this a logos morphism? Well, let's see if it preserves colimits first. Suppose that #{D \colon J \to [\Sh(\bY), \Sh(\bX)]}. Then
 
-##{ [u^\ast, \colimit_{D} J] \cong \end{Y \in \Sh(\bY)} [u^\ast(Y), \colimit_{d \in D} J(d)(Y)] }
+##{ [u^\ast, \colimit_{D} J] \cong \int_{Y \in \Sh(\bY)} [u^\ast(Y), \colimit_{d \in D} J(d)(Y)] }
 
 This doesn't look good, folks...}
 

@@ -1,0 +1,6 @@
+\title{Geometric polynomials}
+\taxon{definition}
+\import{macros}
+\date{2024-01-04}
+
+\p{A geometric polynomial from a topos #{X} to a topos #{Y} consists of a morphism #{p \colon E \to B} in #{\Sh(Y)}, along with a geometric morphism #{Y_{/E} \to X}.}

@@ -1,0 +1,12 @@
+\title{Kan Extensions are Partial Colimits}
+\import{macros}
+\author{paolo-perrone}
+\author{walter-tholen}
+
+\meta{doi}{10.1007/s10485-021-09671-9}
+
+\abstract{One way of interpreting a left Kan extension is as taking a kind of “partial colimit”, whereby one replaces parts of a diagram by their colimits. We make this intuition precise by means of the partial evaluations sitting in the so-called bar construction of monads. The (pseudo)monads of interest for forming colimits are the monad of diagrams and the monad of small presheaves, both on the (huge) category CAT of locally small categories. Throughout, particular care is taken to handle size issues, which are notoriously delicate in the context of free cocompletion. We spell out, with all 2-dimensional details, the structure maps of these pseudomonads. Then, based on a detailed general proof of how the restriction-of-scalars construction of monads extends to the case of pseudoalgebras over pseudomonads, we consider a morphism of monads between them, which we call image. This morphism allows in particular to generalize the idea of confinal functors, i.e. of functors which leave colimits invariant in an absolute way. This generalization includes the concept of absolute colimit as a special case. The main result of this paper spells out how a pointwise left Kan extension of a diagram corresponds precisely to a partial evaluation of its colimit. This categorical result is analogous to what happens in the case of probability monads, where a conditional expectation of a random variable corresponds to a partial evaluation of its center of mass.}
+
+\notes{
+  Cited in [A Diagrammatic View of Differential Equations in Physics](patterson-diagramatic-2022) for prior work on diagram categories.
+}

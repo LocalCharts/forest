@@ -1,0 +1,16 @@
+\title{Structure in technical writing}
+\tag{writing}
+\date{2023-12-26}
+
+\p{Every chunk in a piece of technical writing should have a purpose, which can be summarized in around 5 words. It would be nice to display those <5 words in a small font as a side note to the right, along with a characterization of type of that chunk (definition, theorem, proposition, remark, example, exercise, etc.).}
+
+\p{This way, the reader can scan down the right side of the page and see the main outline of the progression of ideas.}
+
+\p{Inspiration for this:
+
+\ul{
+  \li{[Jon Sterling's thesis](sterling-thesis-2021)}
+  \li{[The novels of Walter Moers](https://en.wikipedia.org/wiki/Walter_Moers)}
+  \li{[Edward Tufte-style sidenotes](https://edwardtufte.github.io/tufte-css/)}
+}
+}

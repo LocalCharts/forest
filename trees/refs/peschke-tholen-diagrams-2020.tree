@@ -1,0 +1,18 @@
+\title{Diagrams, fibrations, and the decomposition of colimits}
+\import{macros}
+\date{2020-06}
+\taxon{reference}
+\tag{category-theory}
+\tag{preprint}
+
+\author{george-peschke}
+\author{walter-tholen}
+
+\meta{doi}{10.48550/arXiv.2006.10890}
+
+\abstract{The contributions of this paper are twofold. Within the framework of Grothendieck's fibrational category theory, we present a web of fundamental 2-adjunctions surrounding the formation of the category of all small diagrams in a given category and the formation of the Grothendieck category of a functor into the category of small categories. We demonstrate the utility of these adjunctions, in part by deriving three formulae for (co-)limits: a `twisted' generalization of the well-known Fubini formula, as first established by Chachólski and Scherer; a new `general colimit decomposition formula'; and a special case of the general formula, which actually initiated this work, and which was proved independently by Batanin and Berger. We give three proofs for this colimit decomposition formula, using methods that provide quite distinct insights.
+The `base' of our web of 2-adjunctions extends earlier work of the Ehresmann school and Guitart and promises to be of independent interest. It involves forming the diagram category of an arbitrary functor, seen as an object of the arrow category of the category of locally small categories, rather than that of a mere category. The left adjoint of the emerging generalized Guitart 2-adjunction factors through the 2-equivalence of split Grothendieck (co-)fibrations and strictly (co-)indexed categories, which we present here most generally by allowing 2-dimensional variation in the base categories. }
+
+\notes{
+  Cited by [A Diagrammatic View of Differential Equations in Physics](patterson-diagramatic-2022) for diagram categories.
+}

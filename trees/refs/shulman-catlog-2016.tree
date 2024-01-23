@@ -1,0 +1,10 @@
+\title{Categorical logic from a categorical point of view}
+\import{macros}
+\taxon{reference}
+\tag{notes}
+\tag{type-theory}
+\date{2016}
+\author{mike-shulman}
+\meta{external}{https://mikeshulman.github.io/catlog/catlog.pdf}
+
+\notes{A primer on type theory directed at category theorists. Does a good job of explaining things like cut elimination, and what properties a system of deduction needs in order to really be called a type theory.}

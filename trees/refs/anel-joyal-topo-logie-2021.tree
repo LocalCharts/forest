@@ -1,0 +1,15 @@
+\title{Topo-logie}
+\import{macros}
+
+\author{mathieu-anel}
+\author{andre-joyal}
+
+\meta{doi}{10.1017/9781108854429.007 }
+
+\notes{
+  \ul{
+    \li{Great translation table between logic and logoi. (pg. 9)}
+    \li{The Sierpinski locale is the free frame on one generator. (pg. 13)}
+    \li{The poset of open subsets of a closed set #{Z \subset X}, where #{Z = X \setminus U}, is the coslice of #{\Open(X)} under #{U}: open subsets of #{Z} are in canonical bijection with open subsets of #{X} containing #{U}. (pg. 15)}
+  }
+}
