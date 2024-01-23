@@ -8,17 +8,6 @@
     forest-server.url = "github:kentookura/forest-server";
   };
 
-  nixConfig = {
-    substituters = [
-      "https://cache.nixos.org"
-      "https://localcharts.cachix.org"
-    ];
-    trusted-public-keys = [
-      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-      "localcharts.cachix.org-1:Gg/segyIFaPNmLgO5sFFD+kv1sHKU/4pBRdubSugOBA="
-    ];
-  };
-
   outputs = {
     self,
     nixpkgs,
@@ -67,18 +56,24 @@
             mv _redirects $out
           '';
         };
-        buildkite-deploy = pkgs.writeScriptBin "buildkite-deploy"
-        ''
-          ${wrangler-pkgs.nodePackages.wrangler}/bin/wrangler pages deploy --branch $BUILDKITE_BRANCH --project-name localcharts-forest result/ | tee wrangler-log
-          DEPLOY_URL=$(cat wrangler-log | ${pkgs.gnused}/bin/sed -n 's/.*Take a peek over at \(.*\)/\1/p')
-          ${pkgs.curl}/bin/curl -L \
-            -X POST \
-              -H "Accept: application/vnd.github+json" \
-              -H "Authorization: Bearer $GITHUB_TOKEN" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
-              https://api.github.com/repos/LocalCharts/forest/commits/$BUILDKITE_COMMIT/comments \
-              -d "{\"body\":\"Deployed at $DEPLOY_URL\"}"
-        '';
+        buildkite-deploy = pkgs.writeShellApplication {
+          name = "buildkite-deploy";
+
+          runtimeInputs = with pkgs; [ forester-pkg wrangler-pkgs.nodePackages.wrangler curl gnused tlDist ];
+
+          text = ''
+            forester build --root ${default-tree}-0001 trees/
+            wrangler pages deploy --branch "$BUILDKITE_BRANCH" --project-name localcharts-forest output/ | tee wrangler-log
+            DEPLOY_URL=$(sed -n 's/.*Take a peek over at \(.*\)/\1/p' < wrangler-log)
+            curl -L \
+              -X POST \
+                -H "Accept: application/vnd.github+json" \
+                -H "Authorization: Bearer $GITHUB_TOKEN" \
+                -H "X-GitHub-Api-Version: 2022-11-28" \
+                "https://api.github.com/repos/LocalCharts/forest/commits/$BUILDKITE_COMMIT/comments" \
+                -d "{\"body\":\"Deployed at $DEPLOY_URL\"}"
+          '';
+        };
       };
 
       devShells.shell-minimal = pkgs.mkShell {
