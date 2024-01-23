@@ -63,6 +63,7 @@
 
           text = ''
             forester build --root ${default-tree}-0001 trees/
+            cp _redirects output/
             wrangler pages deploy --branch "$BUILDKITE_BRANCH" --project-name localcharts-forest output/ | tee wrangler-log
             DEPLOY_URL=$(sed -n 's/.*Take a peek over at \(.*\)/\1/p' < wrangler-log)
             curl -L \
