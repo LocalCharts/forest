@@ -1,0 +1,7 @@
+\title{Loro}
+\taxon{reference}
+\tag{version-control}
+\tag{intertypes}
+\meta{external}{https://www.loro.dev}
+
+\p{A suite of Rust libraries for defining CRDTs/version control systems. High-performance, and has support for both text and structured data!}
