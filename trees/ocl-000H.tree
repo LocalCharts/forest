@@ -3,6 +3,7 @@
 \author{owen-lynch}
 \date{2024-01-22}
 \import{macros}
+\meta{comments}{true}
 
 \p{The way that we implement #{\cC}-sets in Julia, the data structure used for a C-set depends crucially on the presentation of #{\cC}. Specifically, the data structure uses an array for each generator in the presentation.}
 

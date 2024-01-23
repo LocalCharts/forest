@@ -3,7 +3,7 @@
 \import{macros}
 \date{2024-01-04}
 
-\p{Given a geometric polynomial from #{X} to #{Y} consisting of #{(E \xto{p} B, Y_{/E} \xto{f} X)}, there is a corresponding functor from #{\Sh(X)} to #{\Sh(Y)} given by the following formula.}
+\p{Given a [geometric polynomial](ocl-000E) from #{X} to #{Y} consisting of #{(E \xto{p} B, Y_{/E} \xto{f} X)}, there is a corresponding functor from #{\Sh(X)} to #{\Sh(Y)} given by the following formula.}
 
 ##{ A \mapsto \Sigma_B(\Pi_p(f^\ast(A))) }
 

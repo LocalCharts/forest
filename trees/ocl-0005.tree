@@ -1,4 +1,5 @@
 \title{Data migration as two-step process}
+\taxon{note}
 \date{2023-12-05}
 
 \p{The way data migration actually works in practice is that it is a two-step process. The first step is to allow more things to be defined. For instance, add an optional column to a table. The second step is to \em{require} that those things are actually defined, i.e. make the optional column non-optional. These mathematically look like a cospan; the old schema and the new schema both embed into the intermediate schema.}
