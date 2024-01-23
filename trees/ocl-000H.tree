@@ -1,0 +1,12 @@
+\title{Two Perspectives on Data Definition}
+\author{owen-lynch}
+\date{2024-01-22}
+\import{macros}
+
+\p{The way that we implement #{\cC}-sets in Julia, the data structure used for a C-set depends crucially on the presentation of #{\cC}. Specifically, the data structure uses an array for each generator in the presentation.}
+
+\p{Another way of implementing #{\cC}-sets would be to run some sort of normalization procedure on the presentation of #{\cC} before determining the data layout. This would mean that different presentations could lead to the same data layout, or even the same presentation could lead to different data layout depending on the choice of normalization.}
+
+\p{As a consequence, the performance of operations on the data structure is not under the full control of the user of the software. On the other hand, the automatic normalization might apply optimizations that would be too laborious to ever apply by hand. There is a definite tradeoff here, akin to the tradeoff between writing software in a language like Haskell, where purity allows the compiler to make insanely clever optimizations... sometimes.}
+
+\p{When working with category theory, we often characterize things by universal properties. For instance, we might consider a #{\cC}-set where certain diagrams in #{\cC} became limits in #{\Set}. Previously, this felt too abstract for me to actually define a data structure, but now I see that it is simply asking for the "clever" side of the tradeoff, where the presentation of the schema doesn't lend itself to a specific data representation and some optimizations and translations must be made first.}
