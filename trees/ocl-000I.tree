@@ -1,0 +1,12 @@
+\title{Resources and References for Data Definition Languages}
+\tag{intertypes}
+\date{2024-01-23}
+
+\p{This page gathers various "data definition languages" to use as inspiration for [intertypes](https://blog.algebraicjulia.org/post/2023/11/intertypes/).}
+
+\query{
+  \query/and{
+    \query/taxon{reference}
+    \query/tag{intertypes}
+  }
+}

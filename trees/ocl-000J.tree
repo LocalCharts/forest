@@ -1,0 +1,8 @@
+\title{Mirage's repr library}
+\taxon{reference}
+\tag{intertypes}
+\meta{external}{https://github.com/mirage/repr}
+
+\p{This is a library for runtime representations of OCaml types.}
+
+\p{There is some [sophisticated use of GADTs](https://github.com/mirage/repr/blob/main/src/repr/type_core_intf.ml) to make the runtime representation well-typed.}
