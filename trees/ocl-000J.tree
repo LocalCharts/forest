@@ -1,0 +1,17 @@
+\title{How to set up a PDE}
+\taxon{note}
+\tag{algebraicjulia}
+\date{2024-01-24}
+
+\p{In [decapodes](decapodes), the problem of specifying a PDE has been [reified](ocl-000K). However, in order to actually \em{run} the PDE, we have to provide initial conditions and parameters, which come from various kinds of data. Currently, this is done by ad-hoc scripts.}
+
+\p{Here I propose a way of thinking about this process of providing initial conditions that is more formal in character. Abstractly, this is achieved by the following process.}
+
+\ol{
+  \li{Intake raw data in the form of arrays of real numbers. By array here, I mean the multidimensional sort.}
+  \li{Choose an interpolation method to interpret the arrays as continuous sections of vector bundles over a manifold. For instance, if we have a #{n \times n \times 2} array \code{A}, and we want to interpret it as a section #{\gamma} of #{T[0,1]^2}, then we might interpret each \code{A[i,j,:]} as giving the value of #{\gamma} at #{(i/n, j/n)}, and then linearly interpret between these points to get the rest of #{\gamma}.}
+  \li{Express symbolically certain transforms to perform on those sections. For instance, we can scale them, add them, take tensor products, biproducts, wedge products, etc.}
+  \li{Sample from the interpolations to re-discretize the sections into n-forms that can be used in Decapodes.}
+}
+
+\p{The advantage to thinking about this in terms of this process (I hope) is that there is a well-defined type that transfers the result of one step into the next. I.e., after the first step, we have array. After the second step, we have sections. After the third step, we also have sections. And after the fourth step, we have forms. So we can build out functionality for each step separately, and have them compose nicely together.}
