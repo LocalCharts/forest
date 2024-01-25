@@ -126,23 +126,25 @@
       "inputs": {
         "flake-utils": "flake-utils_4",
         "nixpkgs": [
+          "forester",
+          "opam-nix",
           "nixpkgs"
         ],
         "opam-nix": "opam-nix",
         "opam-repository": "opam-repository_2"
       },
       "locked": {
-        "lastModified": 1702896590,
-        "narHash": "sha256-HB2kt2pX43LFsUIDT6EzUN1sGHVhoce3qTrXgXlAKWM=",
-        "owner": "olynch",
+        "lastModified": 1705846822,
+        "narHash": "sha256-Cf1ylkVxpePOpq6YLao3ub/96oKLCuwgSUKY9H4w51o=",
+        "owner": "~jonsterling",
         "repo": "ocaml-forester",
-        "rev": "4dbde35fb8b17833403486d45727d58e978ae40a",
-        "type": "github"
+        "rev": "29da4cd644514646541e359efda09bdfc10709df",
+        "type": "sourcehut"
       },
       "original": {
-        "owner": "olynch",
+        "owner": "~jonsterling",
         "repo": "ocaml-forester",
-        "type": "github"
+        "type": "sourcehut"
       }
     },
     "mirage-opam-overlays": {
@@ -281,11 +283,11 @@
     "opam-repository_2": {
       "flake": false,
       "locked": {
-        "lastModified": 1699845376,
-        "narHash": "sha256-RZ+w6CI/K1PO33D5H7mTK0pT4jDh6DzwMT3zSUOsWTo=",
+        "lastModified": 1703856811,
+        "narHash": "sha256-dE+PZI0N8Hahs+D8GuvYktBGPhW9cyBZGxN6K+n2Y1g=",
         "owner": "ocaml",
         "repo": "opam-repository",
-        "rev": "cd93eb224789c7c645f72575b685eec97b0ccbca",
+        "rev": "91155d8f7ba41238a91fbffd093e5bb7a532aa0a",
         "type": "github"
       },
       "original": {

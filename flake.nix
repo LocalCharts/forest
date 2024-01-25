@@ -3,8 +3,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/23.11";
     wrangler-nixpkgs.url = "github:NixOS/nixpkgs/8dfad603247387df1df4826b8bea58efc5d012d8";
     systems.url = "github:nix-systems/default";
-    forester.url = "github:olynch/ocaml-forester";
-    forester.inputs.nixpkgs.follows = "nixpkgs";
+    forester.url = "sourcehut:~jonsterling/ocaml-forester";
     forest-server.url = "github:kentookura/forest-server";
   };
 

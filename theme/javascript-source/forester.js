@@ -10,7 +10,7 @@ function partition(array, isValid) {
 }
 
 window.addEventListener("load", (event) => {
-  autoRenderMath(document.body, { trust: true })
+  autoRenderMath(document.body)
 
   const openAllDetailsAbove = elt => {
     while (elt != null) {
@@ -87,3 +87,5 @@ fetch("./forest.json")
 
     ninja.data = items
   });
+
+
