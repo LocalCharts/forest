@@ -142,7 +142,5 @@
 }
 
 \def\image[source]{
-  \iftex{\tex{\includegraphics{\source}}}{
-    \xml{center}{\xml{img}[src]{\source}{}}
-  }
+  \xml{center}{\xml{img}[src]{\source}{}}
 }
