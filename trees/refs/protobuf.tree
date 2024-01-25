@@ -1,0 +1,15 @@
+\title{Protocol Buffers}
+\taxon{reference}
+\tag{intertypes}
+\tag{software}
+\meta{external}{https://protobuf.dev}
+\import{macros}
+
+\p{Protocol Buffers are language-neutral, platform-neutral extensible mechanisms for serializing structured data.}
+
+\notes{
+  \ul{
+    \li{Protobuf assigns numbers to each field of a struct. This seems to be in order to support migrations. We should do better than this via explicit migrations.}
+    \li{Protobuf supports enumerations, but not tagged unions.}
+  }
+}

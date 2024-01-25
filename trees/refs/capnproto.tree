@@ -1,0 +1,21 @@
+\title{Cap'n Proto}
+\taxon{reference}
+\tag{software}
+\tag{intertypes}
+\meta{external}{https://capnproto.org}
+\import{macros}
+
+\p{A data definition language and serialization format, written by one of the authors of protobuf after leaving Google. Notable for its in-wire format and in-memory format being identical.}
+
+\notes{
+  \ul{
+    \li{Fields are also numbered, like [Protocol Buffers](protobuf), but they must be consecutive.}
+    \li{Unions only supported inside a larger struct; not first class. The rational for this all seems to be around supporting protocol evolution: see https://capnproto.org/language.html, "Wait, why aren't unions first-class types?".}
+    \li{Dynamically typed fields: "A struct may have a field with type AnyPointer"!!}
+    \li{Generics only work with pointer types, so that layout of the struct doesn't have to change for different instantiations of the type parameters.}
+    \li{There is support for arbitrary annotations which can be passed down to specific codegen or read at runtime.}
+    \li{In general, a lot of thought has gone into how to evolve protocols over time. This is done in a fairly practical manner, and there is a natural tradeoff between certain features that one would like of the schema definition and the ability to evolve the protocol. This shows that a more explicit approach to migration via morphisms of schemas could have some solid benefits.}
+    \li{There is support for pointers in the protocol, and specifically structs are always encoded as pointers.}
+    \li{"A default struct is always all-zeros. To achieve this, fields in the data section are stored xor’d with their defined default values." Absolutely crazy.}
+  }
+}

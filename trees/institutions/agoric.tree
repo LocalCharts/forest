@@ -1,0 +1,7 @@
+\title{Agoric}
+\taxon{institution}
+\meta{external}{https://agoric.com}
+
+\p{The Agoric platform is purpose-built for JavaScript developers who demand a modern component framework with advanced safety properties.}
+
+\p{Has many of the developers from earlier [CapTP](captp) implementations (see: [ocapn repo](https://github.com/ocapn/ocapn#whats-the-plan))}
