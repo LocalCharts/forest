@@ -140,3 +140,10 @@
     \xml{center}{\tex{\body}}
   }
 }
+
+\def\image[source]{
+  \iftex{\tex{\includegraphics{\source}}}{
+    \xml{center}{\xml{img}[src]{\source}{}}
+  }
+}
+}
