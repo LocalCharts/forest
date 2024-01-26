@@ -1,6 +1,31 @@
-\title{Downwards-closed subalgebras}
+\title{Semi-subalgebras}
 \taxon{definition}
 \date{2024-01-26}
 \import{macros}
+\texpackage{quiver}
 
-\idea{A set of terms #{D} in an [algebraic signature](ocl-000O) is downwards closed if whenever #{f(t_1,\ldots,t_n)} is in the set, then also #{t_1,\ldots,t_n} is in the set.}
+\idea{A set of terms #{D} in an [algebraic signature](ocl-000O) is a semi-subalgebra if whenever #{f(t_1,\ldots,t_n)} is in the set, then also #{t_1,\ldots,t_n} is in the set.}
+
+\p{
+  Suppose that #{\sC} is a category with pullbacks, #{T} is a monad on it, and #{m \colon TA \to A} is an algebra of #{T}. Then a subobject #{D \into A} is a \defcase{semi-subalgebra} if the dotted arrow in the following diagram is an isomorphism.
+
+  \texfig{
+    \begin{tikzcd}
+	    \bar{D}' & \bar{D} & D \\
+	    TD & TA & A
+	    \arrow[from=2-2, to=2-3]
+	    \arrow[hook, from=1-3, to=2-3]
+	    \arrow[hook, from=2-1, to=2-2]
+	    \arrow[hook, from=1-1, to=2-1]
+	    \arrow[dotted, from=1-1, to=1-2]
+	    \arrow[from=1-2, to=1-3]
+	    \arrow[hook, from=1-2, to=2-2]
+	    \arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-2, to=2-3]
+	    \arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+    \end{tikzcd}
+  }
+}
+
+\p{We can think of #{\bar{D}} as the set of formal terms in #{A} whose composite lives in #{D}, and #{\bar{D}'} as the set of formal terms in #{D} whose composite lives in #{D}. #{\bar{D} = \bar{D}'} implies that if a composite of elements of #{A} is in #{D}, then each of those elements must have also been in #{D}.}
+
+\p{Note that #{\bar{D}} does not necessarily have to be closed under #{m} itself, which is why we only call this a semi-subalgebra.}

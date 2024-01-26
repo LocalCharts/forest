@@ -158,9 +158,22 @@
 
 \def\Terms{#{\operatorname{\mathbf{Terms}}}}
 
+% Poly
+
+\def\lott{#{\mathtt{lott}}}
+
+% Probability
+
+\def\expect{#{\EE}}
+
 % Links
 
 \def\nlab[article]{[\article](https://ncatlab.org/nlab/show/\article)\xml{sup}{\xml{span}[class]{nlab}{nLab}}}
+
+% Semantic markup
+
+% Used for words being defined.
+\def\defcase[term]{\strong{\term}}
 
 % Blocks
 

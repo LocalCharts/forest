@@ -1,6 +1,8 @@
 \title{Categorical Semantics of E-Graphs}
+\taxon{note}
 \author{owen-lynch}
 \date{2024-01-25}
+\import{macros}
 
 \p{E-graphs are a technology historically used in optimizing compilers to rewrite algebraic expressions so as to optimize execution time. However, they can also be used as a theorem-proving tool for equational reasoning.}
 
@@ -14,4 +16,14 @@
 
 \p{We care about signatures because we can only easily represent terms of signatures on a computer; terms of general theories are equivalence classes of terms of signatures, where the equivalence relation might not be decidable, or at least might be quite difficult.}
 
+\p{We now work towards the definition of a partial congruence, starting with a notion of a semi-subalgebra.}
+
+\transclude{ocl-000P}
+
+\p{Suppose that #{T} is a single-sorted [algebraic signature](ocl-000O), and #{X} is a set. Let #{TX} be the set of terms that can be built from the generators in #{X} using the term constructors in #{T} (in other words, we implicitly identify #{T} with its monad of terms). Then a partial congruence on #{TX} is a \nlab{partial equivalence relation} #{\sim} on #{TX}, such that if #{t_1,\ldots,t_n,t_1',\ldots,t_n' \in TX}, and #{f} is an n-ary term constructor in #{T}, then \em{if} #{f(t_1,\ldots,t_n)} and #{f(t_1',\ldots,t_n')} are in #{\dom(\sim)}, then #{f(t_1,\ldots,t_n) \sim f(t_1',\ldots,t_n')}.}
+
+\p{We would like to define a partial congruence to be something like a \nlab{congruence}, except without reflexivity, in the category of #{T}-algebras. However, this doesn't quite work. This is because #{R \into TX \times TX} is not necessarily a #{T}-algebra; it may not contain #{f(t_1,\ldots,t_n)} even if it contains #{t_1,\ldots,t_n}. Thus, the following definition.}
+
 \transclude{ocl-000N}
+
+\p{Let #{T \colon \Set \to \Set} be a monad corresponding to an algebraic signature, and #{X} be a set. Then we interpret a partial congruence on #{TX} as an e-graph in the following way. The set #{D \subset TX} is the set of terms that exist within the e-graph, and the set #{E} is the set of e-classes. Whenever there is an element #{{[f]}(t_1,\ldots,t_n) \in \bar{D} \subset T^2 X}, then we can either first flatten it and then take its e-class, or first take the e-class of each of the #{t_i}, and then apply #{f} to that tuple of e-classes, and either way we get the same thing. This implies that if #{e(t_i) = e(t_i')}, then #{e(f(t_1,\ldots,t_n)) = e(f(t_1',\ldots,t_n'))}, assuming #{f(t_1,\ldots,t_n), f(t_1',\ldots,t_n') \in D}, so we recover our intuition about partial congruence from before.}
