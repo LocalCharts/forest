@@ -1,0 +1,6 @@
+\title{Downwards-closed subalgebras}
+\taxon{definition}
+\date{2024-01-26}
+\import{macros}
+
+\idea{A set of terms #{D} in an [algebraic signature](ocl-000O) is downwards closed if whenever #{f(t_1,\ldots,t_n)} is in the set, then also #{t_1,\ldots,t_n} is in the set.}

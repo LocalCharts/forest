@@ -172,6 +172,10 @@
   \block{\strong{Notes.}}{\body}
 }
 
+\def\idea[body]{
+  \block{\strong{Idea.}}{\body}
+}
+
 % Figures
 
 \def\texfig[body]{

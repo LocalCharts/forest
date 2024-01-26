@@ -31,7 +31,7 @@
       packages = flake-utils.lib.flattenTree rec {
         new = pkgs.writeScriptBin "new"
         ''
-          ${forester-pkg}/bin/forester new --dir trees --prefix=$1
+          ${forester-pkg}/bin/forester new --dirs=trees --dest=trees --prefix=$1
         '';
         build = pkgs.writeScriptBin "build"
         ''

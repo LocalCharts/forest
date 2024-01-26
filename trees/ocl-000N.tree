@@ -5,7 +5,7 @@
 \texpackage{quiver}
 \import{macros}
 
-\block{\strong{Idea.}}{
+\idea{
   \p{Suppose that #{T} is a single-sorted [algebraic signature](ocl-000O), and #{X} is a set. Let #{TX} be the set of terms that can be built from the generators in #{X} using the term constructors in #{T} (in other words, we implicitly identify #{T} with its monad of terms). Then a partial congruence on #{TX} is a \nlab{partial equivalence relation} #{\sim} on #{TX}, such that if #{t_1,\ldots,t_n,t_1',\ldots,t_n' \in TX}, and #{f} is an n-ary term constructor in #{T}, then \em{if} #{f(t_1,\ldots,t_n)} and #{f(t_1',\ldots,t_n')} are in #{\dom(\sim)}, then #{f(t_1,\ldots,t_n) \sim f(t_1',\ldots,t_n')}.}
 
   \p{We would like to define a partial congruence to be something like a \nlab{congruence}, except without reflexivity, in the category of #{T}-algebras. However, this doesn't quite work. This is because #{R \into TX \times TX} is not necessarily a #{T}-algebra; it may not contain #{f(t_1,\ldots,t_n)} even if it contains #{t_1,\ldots,t_n}. Thus, the following definition.}
