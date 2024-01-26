@@ -1,7 +1,6 @@
 \title{Cap'n Proto}
-\taxon{reference}
-\tag{software}
-\tag{intertypes}
+\taxon{software}
+\tag{data-definition}
 \meta{external}{https://capnproto.org}
 \import{macros}
 

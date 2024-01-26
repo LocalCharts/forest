@@ -1,0 +1,13 @@
+\title{Categorical Models of Polymorphic Type Theory}
+\tag{intertypes}
+\author{owen-lynch}
+\date{2024-01-25}
+
+\p{This a stub of an tree working out the category theory of polymorphic type theory. Some references that I intend to draw from are:
+
+\ul{
+  \li{[nlab page on System F](https://ncatlab.org/nlab/show/System+F). This presents System F as a hyperdoctrine: a category with a functor into categories. I have a hunch that System F (and other polymorphic type theories) might be better described as 2-categories, where the functor into categories is representable.}
+  \li{[[harper-phase-1989]]. This describes how modules can be split into a runtime part and a compile time part. I think the phase distinction is important for understanding polymorphic type theory; one way of thinking about polymorphic type theory is it is dependent type theory with a restriction where you can only depend on things available at runtime.}
+  \li{[[sterling-harper-lrat-2021]]. This is a modern take on the previous paper, which I have yet to fully digest.}
+}
+}

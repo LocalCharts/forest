@@ -1,7 +1,6 @@
 \title{Protocol Buffers}
-\taxon{reference}
-\tag{intertypes}
-\tag{software}
+\taxon{software}
+\tag{data-definition}
 \meta{external}{https://protobuf.dev}
 \import{macros}
 

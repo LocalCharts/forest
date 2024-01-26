@@ -1,6 +1,6 @@
 \title{Mirage's repr library}
-\taxon{reference}
-\tag{intertypes}
+\taxon{software}
+\tag{data-definition}
 \meta{external}{https://github.com/mirage/repr}
 
 \p{This is a library for runtime representations of OCaml types.}

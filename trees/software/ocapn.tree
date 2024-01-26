@@ -1,5 +1,5 @@
 \title{OCapN}
-\taxon{reference}
+\taxon{software}
 \meta{external}{https://ocapn.org}
 
 \p{A nonexistent standard ("pre-specification") for an "object capability network" that would combine [Agoric](agoric), [Spritely](spritely) and [Cap'N Proto](capnproto).}

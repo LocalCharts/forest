@@ -1,0 +1,17 @@
+\title{Categorical Semantics of E-Graphs}
+\author{owen-lynch}
+\date{2024-01-25}
+
+\p{E-graphs are a technology historically used in optimizing compilers to rewrite algebraic expressions so as to optimize execution time. However, they can also be used as a theorem-proving tool for equational reasoning.}
+
+\p{Modern implementations of e-graphs can be found in [[egg]], [[metatheory]], and [[gatlab]] (the gatlab implementation is currently [WIP](https://github.com/AlgebraicJulia/GATlab.jl/pull/125)).}
+
+\p{In this tree, I outline an understanding of e-graphs from a categorical perspective.}
+
+\p{In brief, e-graphs are a data structure for storing [partial congruences](ocl-000N). In order to define what a partial congruence is, we must build some theory first. We first recall some facts and definitions about algebraic theories.}
+
+\transclude{ocl-000O}
+
+\p{We care about signatures because we can only easily represent terms of signatures on a computer; terms of general theories are equivalence classes of terms of signatures, where the equivalence relation might not be decidable, or at least might be quite difficult.}
+
+\transclude{ocl-000N}

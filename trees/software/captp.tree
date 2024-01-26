@@ -1,6 +1,5 @@
 \title{CapTP}
-\taxon{reference}
-\tag{software}
+\taxon{software}
 \meta{external}{http://erights.org/elib/distrib/captp/index.html}
 
 \p{A protocol for networked capabilities. In other words, the ability for machine A to call methods on an object that might live on machine B, and to pass such "objects" around the network.}

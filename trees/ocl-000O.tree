@@ -1,0 +1,11 @@
+\title{Algebraic Signature}
+\taxon{definition}
+\author{owen-lynch}
+\date{2024-01-25}
+\import{macros}
+
+\p{In [Lawvere's thesis](lawvere-thesis-1965), he defines an algebraic signature to be a presheaf on the discrete category on #{\NN}. Then the free algebraic theory on a signature is the left adjoint to the forgetful functor on theories which sends a theory #{\sT} to the functor #{n \mapsto \sT(n,1)}. The intuition here is that if #{F \colon \NN \to \Set}, then #{F(n)} is the set of #{n}-ary operations in the signature.}
+
+\p{We always want to think about multisorted theories; to do this if #{S} is the set of sorts, we can do the same thing but with the discrete category on #{\NN^S} instead.}
+
+\p{See also \nlab{signature}; an algebraic signature is a signature without relation symbols.}

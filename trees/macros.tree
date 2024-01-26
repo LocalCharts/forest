@@ -93,6 +93,33 @@
 \def\cY{#{\mathcal{Y}}}
 \def\cZ{#{\mathcal{Z}}}
 
+\def\sA{#{\mathscr{A}}}
+\def\sB{#{\mathscr{B}}}
+\def\sC{#{\mathscr{C}}}
+\def\sD{#{\mathscr{D}}}
+\def\sE{#{\mathscr{E}}}
+\def\sF{#{\mathscr{F}}}
+\def\sG{#{\mathscr{G}}}
+\def\sH{#{\mathscr{H}}}
+\def\sI{#{\mathscr{I}}}
+\def\sJ{#{\mathscr{J}}}
+\def\sK{#{\mathscr{K}}}
+\def\sL{#{\mathscr{L}}}
+\def\sM{#{\mathscr{M}}}
+\def\sN{#{\mathscr{N}}}
+\def\sO{#{\mathscr{O}}}
+\def\sP{#{\mathscr{P}}}
+\def\sQ{#{\mathscr{Q}}}
+\def\sR{#{\mathscr{R}}}
+\def\sS{#{\mathscr{S}}}
+\def\sT{#{\mathscr{T}}}
+\def\sU{#{\mathscr{U}}}
+\def\sV{#{\mathscr{V}}}
+\def\sW{#{\mathscr{W}}}
+\def\sX{#{\mathscr{X}}}
+\def\sY{#{\mathscr{Y}}}
+\def\sZ{#{\mathscr{Z}}}
+
 % Category Theory
 
 \def\Hom{#{\operatorname{\mathrm{Hom}}}}
@@ -107,6 +134,8 @@
 \def\cc{#{\mathrm{cc}}}
 \def\lex{#{\mathrm{lex}}}
 
+\def\into{#{\hookrightarrow}}
+\def\onto{#{\twoheadrightarrow}}
 \def\xto[f]{#{\xrightarrow{\f}}}
 
 \def\cat[c]{#{\mathsf{\c}}}
@@ -125,6 +154,14 @@
 \def\Sh{#{\operatorname{\cS\mathrm{h}}}}
 \def\Open{#{\cO}}
 
+% Universal Algebra
+
+\def\Terms{#{\operatorname{\mathbf{Terms}}}}
+
+% Links
+
+\def\nlab[article]{[\article](https://ncatlab.org/nlab/show/\article)\xml{sup}{\xml{span}[class]{nlab}{nLab}}}
+
 % Blocks
 
 \def\abstract[body]{
@@ -134,6 +171,8 @@
 \def\notes[body]{
   \block{\strong{Notes.}}{\body}
 }
+
+% Figures
 
 \def\texfig[body]{
   \iftex{\tex{\body}}{

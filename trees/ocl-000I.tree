@@ -6,7 +6,10 @@
 
 \query{
   \query/and{
-    \query/taxon{reference}
-    \query/tag{intertypes}
+    \query/or{
+      \query/taxon{reference}
+      \query/taxon{software}
+    }
+    \query/tag{data-definition}
   }
 }
