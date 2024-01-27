@@ -1,6 +1,7 @@
 \title{Entropy: the chain rule in terms of monad algebras}
 \author{david-spivak}
 \date{2024-01-25}
+\meta{comments}{true}
 \import{macros}
 
 %To see the result, 
@@ -10,31 +11,31 @@
 
 \texpackage{tikz-cd,amssymb}
 
-\p{Inspired by Vigneux's talk this morning, I was thinking a bit about Shannon's theorem on entropy. It says that (up to a constant multiple) Shannon entropy is the only continuous function #{S\colon \mathtt{lott}(1)\to\mathbb{R}_{\geq0}}, from the set of probability distributions on finite sets to the set of nonnegative reals that satisfies the chain rule. Here #{\mathtt{lott}} is the monad underlying what Leinster calls the operad of simplices; I wrote about it in this [Topos blog post](https://topos.site/blog/2023/03/the-distributions-monad-is-a-retract-of-the-lotteries-monad/). As an example of the chain rule, suppose #{P_1,P_2,P_3} are nonnegative reals such that #{P_1+P_2+P_3=1}. Then 
+\p{Inspired by Vigneux's talk this morning, I was thinking a bit about Shannon's theorem on entropy. It says that (up to a constant multiple) Shannon entropy is the only continuous function #{S\colon \lott(1) \to \RR_{\geq0}}, from the set of probability distributions on finite sets to the set of nonnegative reals that satisfies the chain rule. Here #{\lott} is the monad underlying what Leinster calls the operad of simplices; I wrote about it in this [Topos blog post](https://topos.site/blog/2023/03/the-distributions-monad-is-a-retract-of-the-lotteries-monad/). As an example of the chain rule, suppose #{P_1,P_2,P_3} are nonnegative reals such that #{P_1+P_2+P_3=1}. Then 
 ##{S(P_1,P_2,P_3)=S(P_1+P_2,P_3)+(P_1+P_2)S\left(\frac{P_1}{P_1+P_2},\frac{P_2}{P_1+P_2}\right)+P_3S(1).}
-We can write out the general formula in Poly notation: an entropy function is any function #{S\colon\mathtt{lott}(1)\to\mathbb{R}_{\geq0}} satisfying the following two diagrams:}
+We can write out the general formula in Poly notation: an entropy function is any function #{S \colon \lott(1)\to\RR_{\geq0}} satisfying the following two diagrams:}
 
 \texfig{
 \begin{tikzcd}
     1\ar[r, equal]\ar[d, "\eta\lhd 1"']&
     1\ar[d, "0"]\\
-    \mathtt{lott}\lhd 1\ar[r, "S"']&
-    \mathbb{R}_{\geq0}
+    \lott\lhd 1\ar[r, "S"']&
+    \RR_{\geq0}
 \end{tikzcd}
 \hspace{.6in}
 \begin{tikzcd}
-    \mathtt{lott}\lhd\mathtt{lott}\lhd 1
+    \lott\lhd\lott\lhd 1
         \ar[d, "\mu"']
-        \ar[r,"{(\mathtt{lott}\lhd!,\mathtt{lott}\lhd S)}"]&[30pt]
-    (\mathtt{lott}\lhd 1)\times(\mathtt{lott}\lhd\mathbb{R}_{\geq0})
-        \ar[r, "S\times\mathbb{E}"]&
-    \mathbb{R}_{\geq0}\times \mathbb{R}_{\geq0}
+        \ar[r,"{(\lott\lhd!,\lott\lhd S)}"]&[30pt]
+    (\lott\lhd 1)\times(\lott\lhd\RR_{\geq0})
+        \ar[r, "S\times\expect"]&
+    \RR_{\geq0}\times \RR_{\geq0}
         \ar[d, "+"]\\
-    \mathtt{lott}\lhd 1\ar[rr, "S"']&&
-    \mathbb{R}_{\geq0}
+    \lott\lhd 1\ar[rr, "S"']&&
+    \RR_{\geq0}
 \end{tikzcd}
 }
-\p{Here, the map #{\mathbb{E}\colon\mathtt{lott}(\mathbb{R}_{\geq0})\to\mathbb{R}_{\geq0}} is the expected value of a distribution of real numbers.}
+\p{Here, the map #{\expect\colon\lott(\RR_{\geq0})\to\RR_{\geq0}} is the expected value of a distribution of real numbers.}
 
 \p{This same definition, "the chain rule", makes sense for any monad #{(t,\eta,\mu)}, monoid #{M,e,*} and algebra structure #{h\colon t(M)\to M}. Now I don't know why, but part of me wants to insist that there is some coherence between these, as follows.}
 
@@ -54,9 +55,9 @@ We can write out the general formula in Poly notation: an entropy function is an
     M
 \end{tikzcd}
 }
-\p{Here, #{\otimes} is the Day convolution of #{\times}, which in Poly is indeed denoted #{\otimes}, the map ``Day" comes from its universal property, and the map #{t\otimes t\to t\circ t}, implicit in calling #{\mu}, comes from duoidality.}
+\p{Here, #{\otimes} is the Day convolution of #{\times}, which in Poly is indeed denoted #{\otimes}, the map "Day" comes from its universal property, and the map #{t\otimes t\to t\circ t}, implicit in calling #{\mu}, comes from duoidality.}
 
-\p{So let's define an *entropy* on a monoidal #{t}-algebra #{t,M,h} to be a map #{S\colon t(1)\to M} making the following diagrams commute.}
+\p{So let's define an \em{entropy} on a monoidal #{t}-algebra #{t,M,h} to be a map #{S\colon t(1)\to M} making the following diagrams commute.}
 \texfig{
 \begin{tikzcd}
     1\ar[r, equal]\ar[d, "\eta\lhd 1"']&
