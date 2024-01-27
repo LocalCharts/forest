@@ -1,0 +1,24 @@
+\title{Preorder of [Partial Congruences](ocl-000N)}
+\taxon{definition}
+\author{owen-lynch}
+\import{macros}
+\texpackage{quiver}
+\date{2024-01-26}
+
+\p{Let \sC be a regular category, #{T} a monad on it, #{m \colon TA \to A} an algebra of #{T} and #{e \colon D \to E}, #{e' \colon D' \to E'} two [partial congruences](ocl-000N) on #{A}. Then #{e \leq e'} if there is a commutative diagram of the form:
+
+\texfig{
+\begin{tikzcd}
+	& A \\
+	D && {D'} \\
+	E && {E'}
+	\arrow[hook, from=2-1, to=1-2]
+	\arrow[hook, from=2-3, to=1-2]
+	\arrow[two heads, from=2-1, to=3-1, "e"']
+	\arrow[hook, from=2-1, to=2-3]
+	\arrow[two heads, from=2-3, to=3-3, "e'"]
+	\arrow[from=3-1, to=3-3]
+\end{tikzcd}
+}
+
+Note that by the properties of epis and monos, if such a commutative diagram exists it must be unique, so the collection of partial congruences on an algebra #{A} forms a preorder which we call #{\PCong_T(A)}}

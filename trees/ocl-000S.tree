@@ -1,0 +1,11 @@
+\title{Category of e-presentations}
+\taxon{definition}
+\author{owen-lynch}
+\import{macros}
+\date{2024-01-26}
+
+\p{Let #{\sC} be a regular category with #{T} a monad on it. Then we define an e-presentation to be a object #{X \in \sC} along with a partial congruence #{e \colon D \onto E} on #{TX}. Let #{\EPres_T} be the category of e-presentations for #{T}, defined to be the \nlab{Grothendieck construction} of 
+
+##{\sC_{T}^\op \into \Alg_T^\op \xto{\PCong_T} \Poset}
+
+where #{\sC_T} is the Kleisli category of #{T}.}

@@ -148,6 +148,7 @@
 \def\Topos{#{\cat{Topos}}}
 \def\Logos{#{\cat{Logos}}}
 \def\Diag{#{\cat{Diag}}}
+\def\Poset{#{\cat{Poset}}}
 
 \def\Pr{#{\operatorname{\cP\mathrm{r}}}}
 \def\Pt{#{\operatorname{\cP\mathrm{t}}}}
@@ -157,6 +158,9 @@
 % Universal Algebra
 
 \def\Terms{#{\operatorname{\mathbf{Terms}}}}
+\def\PCong{#{\operatorname{\mathbf{PCong}}}}
+\def\Alg{#{\cat{Alg}}}
+\def\EPres{#{\cat{EPres}}}
 
 % Poly
 
@@ -187,6 +191,10 @@
 
 \def\idea[body]{
   \block{\strong{Idea.}}{\body}
+}
+
+\def\proof[body]{
+  \block{\strong{Proof.}}{\body}
 }
 
 % Figures

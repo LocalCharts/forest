@@ -1,0 +1,18 @@
+\title{An Attempt at Defining Morphisms Between E-Graphs}
+\author{owen-lynch}
+\import{macros}
+\date{2024-01-26}
+
+\p{This records one way of defining morphisms between e-graphs that ultimately didn't quite capture what I wanted; see \ref{ocl-000M} for a better approach.}
+
+\transclude{ocl-000Q}
+
+\transclude{ocl-000R}
+
+\transclude{ocl-000U}
+
+\transclude{ocl-000S}
+
+\p{We can think of an e-presentation as a generators-and-relations presentation that uses an e-graph to store its relations.}
+
+\transclude{ocl-000T}

@@ -1,0 +1,7 @@
+\title{Presenting Algebras via E-Presentations}
+\taxon{construction}
+\author{owen-lynch}
+\import{macros}
+\date{2024-01-26}
+
+\p{There is a functor #{U} from #{\Alg_T} to #{\EPres_T} which sends an algebra #{A} to the e-presentation #{(A, m \colon TA \to A)}. That is, the e-presentation with #{D = TA \subseteq TA}, #{E = A}. This functor should have a left adjoint #{F}, which sends an e-presentation to the algebra that it presents.}

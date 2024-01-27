@@ -1,0 +1,9 @@
+\title{Essentially Surjective Semi-subalgebra}
+\author{owen-lynch}
+\taxon{definition}
+\import{macros}
+\date{2024-01-26}
+
+\p{Let \sC be a regular category with #{T} a monad on it.}
+
+\p{A [semi-subalgebra](ocl-000P) #{D \into A} is \em{essentially surjective} if the restriction #{\Hom_{\Alg_T}(A,-) \to \Hom_\sC(D,-)} is injective.}

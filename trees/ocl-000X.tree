@@ -1,0 +1,7 @@
+\title{Generating set is essentially surjective}
+\taxon{example}
+\author{owen-lynch}
+\import{macros}
+\date{2024-01-26}
+
+\p{The semi-subalgebra #{X \into TX} is essentially surjective, as #{\Hom_{\Alg_T}(TX,-) \cong \Hom_\sC(X,-)} by adjointness. More generally, a subobject which \em{generates} #{A} is essentially surjective.}
