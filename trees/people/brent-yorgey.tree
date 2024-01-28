@@ -1,0 +1,10 @@
+\title{Brent Yorgey}
+\taxon{person}
+\meta{external}{http://ozark.hendrix.edu/~yorgey/}
+\import{macros}
+
+\notes{
+  \ul{
+    \li{Writer of the [diagrams](https://diagrams.github.io/) library.}
+  }
+}

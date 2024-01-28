@@ -1,0 +1,12 @@
+\title{A Combinatorial Approach to Higher-Order Structure for Polynomial Functors}
+\author{marcelo-fiore}
+\author{zeinab-galal}
+\author{hugo-paquet}
+\taxon{reference}
+\tag{data-definition}
+\date{2022}
+\meta{doi}{10.4230/LIPICS.FSCD.2022.31}
+\import{macros}
+
+\abstract{Polynomial functors are categorical structures used in a variety of applications across theoretical computer science; for instance, in database theory, denotational semantics, functional programming, and type theory. A well-known problem is that the bicategory of finitary polynomial functors between categories of indexed sets is not cartesian closed, despite its success and influence on denotational models and linear logic. 
+This paper ihttps://lipn.univ-paris13.fr/~paquet/ntroduces a formal bridge between the model of finitary polynomial functors and the combinatorial theory of generalised species of structures. Our approach consists in viewing finitary polynomial functors as free analytic functors, which correspond to free generalised species. In order to systematically consider finitary polynomial functors from this combinatorial perspective, we study a model of groupoids with additional logical structure; this is used to constrain the generalised species between them. The result is a new cartesian closed bicategory that embeds finitary polynomial functors.}
