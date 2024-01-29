@@ -5,11 +5,11 @@
 \texpackage{quiver}
 \date{2024-01-26}
 
-\p{Let an e-presentation be a tuple #{(A,D \into A, e \colon D \onto E)} of a #{T}-algebra and a [essentially-surjective](ocl-000X) [partial congruence](ocl-000N) on it. Then a morphism from #{(A,D,E)} to #{(A',D',E')} is a diagram of the form
+\p{A morphism of [e-presentations](ocl-0010) from #{(X,D,E)} to #{(X',D',E')} is a diagram of the form
 
 \texfig{
 \begin{tikzcd}
-	A & {A'} \\
+	{TX} & {TX'} \\
 	D & {D'} \\
 	E & {E'}
 	\arrow[hook, from=2-2, to=1-2]
@@ -36,5 +36,5 @@ such that the following commutes
 \end{tikzcd}
 }
 
-where #{\bar{E} \into TE} is the collections of expressions in #{E} whose composite exists in #{E}.
+where #{\bar{E} \into TE} is the collections of expressions in #{E} whose composite exists in #{E}. Let #{\EPres_T} be the category of e-presentations for #{T}.
 }

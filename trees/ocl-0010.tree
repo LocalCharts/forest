@@ -1,0 +1,7 @@
+\title{e-presentation}
+\taxon{definition}
+\author{owen-lynch}
+\import{macros}
+\date{2024-01-29}
+
+\p{Let #{\sC} be a regular category, and #{T} a monad on it. An \strong{e-presentation} for #{T} consists of a tuple #{(X, D \into TX, e\colon D \onto E)} of an object #{X \in \sC} and an [essentially-surjective](ocl-000W) [partial congruence](ocl-000N) on the free #{T}-algebra #{TX}.}

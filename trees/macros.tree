@@ -172,7 +172,7 @@
 
 % Links
 
-\def\nlab[article]{[\article](https://ncatlab.org/nlab/show/\article)\xml{sup}{\xml{span}[class]{nlab}{nLab}}}
+\def\nlab[article]{\xml{a}[class]{nlab}[href]{https://ncatlab.org/nlab/show/\article}{\article}}
 
 % Semantic markup
 

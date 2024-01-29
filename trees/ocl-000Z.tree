@@ -1,0 +1,8 @@
+\title{e-presentations and algebras}
+\taxon{construction}
+\import{macros}
+\date{2024-01-29}
+
+\p{Let #{\sC} be a regular category, and #{T} a monad on it. Then there is a forgetful functor from the \nlab{Eilenberg-Moore category} #{\sC^T} to #{\EPres_T} which sends an algebra #{a \colon TA \to A} to the e-presentation #{A, TA \into TA, a \colon TA \to a}.}
+
+\p{This should have a left adjoint, which sends an e-presentation #{(X,D,E)} to the quotient of #{TX} which identifies the elements identified by #{e \colon D \to E}.}
