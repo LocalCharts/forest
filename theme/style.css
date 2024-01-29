@@ -627,6 +627,6 @@ ol li ol li ol {
   font-size: 0.8em;
 }
 
-.nlab {
+span.nlab > a {
   color: #226622;
 }

@@ -8,4 +8,4 @@
 
 \p{We always want to think about multisorted theories; to do this if #{S} is the set of sorts, we can do the same thing but with the discrete category on #{\NN^S} instead.}
 
-\p{See also \nlab{signature}; an algebraic signature is a signature without relation symbols.}
+\p{See also \nlab{signature (in logic)}; an algebraic signature is a signature without relation symbols.}
