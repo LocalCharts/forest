@@ -1,0 +1,125 @@
+\title{Categories, controls, and flows}
+\import{macros}
+\def\in{\mathrm{in}}
+\def\out{\mathrm{out}}
+\texpackage{quiver}
+\date{2024-01-29}
+
+\p{Start off with a general look at Poly}
+
+\p{Vignette: Undirected wiring diagrams}
+
+\p{Key idea: cospans of typed finite sets are just cospans of polynomial functors.}
+
+\p{A polynomial is a typed set, a set of sets, a bundle.}
+
+\p{For the purposes of wiring diagrams, we are going to think of it as a circle with lines, where each line is typed by a finite set.}
+
+\p{#{p \to y} is a "global section".}
+
+##{\Gamma p = \Poly(p, y) = \prod_{P: p(1)} p[P]}
+
+##{\Cospan(\Poly) \to \Set}
+
+##{p_1 + p_2 + p_3 \to q \from p'}
+
+\p{There's another typ
+\p{Directed Wiring Diagrams}
+e of wiring diagram with inputs and outputs: a directed wiring diagram.}
+
+\p{Let's say that the interface to a box was}
+
+##{p^{\mathrm{in}} = y^{\ZZ} + y^{\ZZ} + y^{\RR}}
+
+\p{Note that #{\Gamma(p^{\mathrm{in}}) = \ZZ \times \ZZ \times \RR}}
+
+\p{A wiring diagram from #{(p^\in, p^\out)} to #{(q^\in, q^\out)} is then a pair}
+
+##{q^\out \to p^\out}
+
+##{p^\in \to p^\out + q^\in}
+
+\p{We can translate this into something more typical by turning it into a polynomial map}
+
+##{\Gamma p^\out y^{\Gamma p^\in} \to \Gamma q^\out y^{\Gamma q^\in}}
+
+\p{Note from Kevin: #{\Gamma p = y^p(0) = \Poly(1, y^p)}}
+
+\p{A machine #{Sy^S \to p}, if #{p = By^A} "takes in #{A} and outputs #{B}".}
+
+\p{What is it about this that makes it seem like #{Sy^S} can "run forever" -- it's that #{Sy^S} is a comonoid. We have maps}
+
+##{Sy^S \to y}
+
+##{Sy^S \to Sy^S \tri Sy^S}
+
+\p{There is a cofree comononad construction}
+
+##{\Poly \rightleftarrows \Poly\text{-comonad}}
+
+\p{#{\fC_p} is the cofree comonad on #{p}.}
+
+\p{A map #{Sy^S \to p} is the same as a comonoid map #{Sy^S \to \fC_p}, which is the same as a #{\fC_p}-Set with elements #{S}.}
+
+\p{Comonoids n Poly}
+
+\p{Comonoid maps are \nlab{cofunctors}.}
+
+\p{There is a cofunctor from the schema for reflexive graphs to the schema for directed graphs that just forgets the chosen reflexive edge.}
+
+\texfig{
+\begin{tikzcd}
+	E & V
+	\arrow["tgt"', shift right=2, from=1-1, to=1-2]
+	\arrow["refl"{description}, from=1-2, to=1-1]
+	\arrow["src", shift left=2, from=1-1, to=1-2]
+\end{tikzcd}
+}
+
+\p{A cofunctor #{\sC \xto{F} \sD} consists of:
+\ol{
+    \li{A function #{\Ob \sC \xto{F} \Ob \sD}}
+    \li{For each #{C \colon \Ob \sC, f\colon \sD[F(C)]}, a morphism #{F^\sharp_C(f): \sC[C]}, preserving identities, codomains, and composition.}
+}
+}
+
+\p{Cofunctors represent "control". If we have #{c \xto{\varphi} d}, #{d} is controlling #{c} via #{\varphi}.}
+
+\p{Real situation: #{c(1) \to d(1)}; the situation on the ground in #{c} is mapped over to #{d}, and then #{d} gets to decide what happens.}
+
+\p{#{\Cat^\sharp = \Comon(\Poly)} is the category of categories and cofunctors.}
+
+\p{The \nlab{fundamental groupoid} #{\Pi_1(X)} of a space #{X} is the groupoid where objects are points and morphisms are homotopy classes of paths. A comonoid map #{\Pi_1(X) \to y^\RR} tells us something like a vector field over #{\Pi_1(X)}, but even better, it is an actual flow through #{X}.}
+
+\p{There are two notions of natural transformation between cofunctors. We are going to talk about the second one, which comes out of enriched category theory.}
+
+\p{Suppose we have two maps #{\varphi, \psi \colon c \to d}. A natural transformation looks like}
+
+\texfig{
+\begin{tikzcd}
+	c & C && {C'} \\
+	d && \bullet & \bullet && \bullet \\
+	&&&& \bullet
+	\arrow["\varphi"', maps to, from=1-2, to=2-3]
+	\arrow["\psi", maps to, from=1-4, to=2-3]
+	\arrow["{\alpha_c}", squiggly, from=1-2, to=1-4]
+	\arrow[from=2-3, to=3-5]
+	\arrow[squiggly, from=2-4, to=2-6]
+	\arrow[maps to, from=2-4, to=3-5]
+	\arrow[maps to, from=2-6, to=3-5]
+	\arrow[from=1-2, to=2-4]
+	\arrow[from=1-4, to=2-6]
+\end{tikzcd}
+}
+
+\p{A natural transformation tells us how to relate two different notions of control}
+
+\p{Therefore, #{\Cat^\sharp} is a 2-category; #{\Cat^\sharp(c,d)\colon \Cat}}
+
+\p{If #{m} is a #{\times}-monoid, then #{\Cat^\sharp(c,\fC_m)} is a monoidal category.}
+
+\p{Moreover, if #{t} is a #{\tri}-monoid, then #{\Cat^\sharp(c,\fC_t)} are monoidal categories.}
+
+\p{Kevin asks: how can I make this more continuous-y?}
+
+\p{Poly is the category of all connected-limit preserving functors from #{\Set} to #{\Set}. What if we instead look at all pullback preserving functors from #{\Set} to #{\Set}?}

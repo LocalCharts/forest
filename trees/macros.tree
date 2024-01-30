@@ -93,6 +93,33 @@
 \def\cY{#{\mathcal{Y}}}
 \def\cZ{#{\mathcal{Z}}}
 
+\def\fA{#{\mathfrak{A}}}
+\def\fB{#{\mathfrak{B}}}
+\def\fC{#{\mathfrak{C}}}
+\def\fD{#{\mathfrak{D}}}
+\def\fE{#{\mathfrak{E}}}
+\def\fF{#{\mathfrak{F}}}
+\def\fG{#{\mathfrak{G}}}
+\def\fH{#{\mathfrak{H}}}
+\def\fI{#{\mathfrak{I}}}
+\def\fJ{#{\mathfrak{J}}}
+\def\fK{#{\mathfrak{K}}}
+\def\fL{#{\mathfrak{L}}}
+\def\fM{#{\mathfrak{M}}}
+\def\fN{#{\mathfrak{N}}}
+\def\fO{#{\mathfrak{O}}}
+\def\fP{#{\mathfrak{P}}}
+\def\fQ{#{\mathfrak{Q}}}
+\def\fR{#{\mathfrak{R}}}
+\def\fS{#{\mathfrak{S}}}
+\def\fT{#{\mathfrak{T}}}
+\def\fU{#{\mathfrak{U}}}
+\def\fV{#{\mathfrak{V}}}
+\def\fW{#{\mathfrak{W}}}
+\def\fX{#{\mathfrak{X}}}
+\def\fY{#{\mathfrak{Y}}}
+\def\fZ{#{\mathfrak{Z}}}
+
 \def\sA{#{\mathscr{A}}}
 \def\sB{#{\mathscr{B}}}
 \def\sC{#{\mathscr{C}}}
@@ -136,6 +163,7 @@
 
 \def\into{#{\hookrightarrow}}
 \def\onto{#{\twoheadrightarrow}}
+\def\from{#{\leftarrow}}
 \def\xto[f]{#{\xrightarrow{\f}}}
 
 \def\cat[c]{#{\mathsf{\c}}}
@@ -150,10 +178,18 @@
 \def\Diag{#{\cat{Diag}}}
 \def\Poset{#{\cat{Poset}}}
 
+\def\Ob{#{\operatorname{\mathbf{Ob}}}}
+
+\def\Comon{#{\operatorname{\cat{Comon}}}}
+
 \def\Pr{#{\operatorname{\cP\mathrm{r}}}}
 \def\Pt{#{\operatorname{\cP\mathrm{t}}}}
 \def\Sh{#{\operatorname{\cS\mathrm{h}}}}
 \def\Open{#{\cO}}
+
+\def\Poly{#{\cat{Poly}}}
+
+\def\Cospan{#{\cat{Cospan}}}
 
 % Universal Algebra
 
@@ -165,6 +201,7 @@
 % Poly
 
 \def\lott{#{\mathtt{lott}}}
+\def\tri{#{\triangleleft}}
 
 % Probability
 

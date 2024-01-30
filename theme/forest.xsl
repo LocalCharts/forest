@@ -161,6 +161,7 @@
         </script>
 
         <script type="module" src="forester.js"></script>
+        <script src="reload.js"></script>
         <title>
           <xsl:value-of select="/tree/frontmatter/title" />
         </title>
