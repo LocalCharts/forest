@@ -131,6 +131,7 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   display: flex;
+  align-items: center;
   flex-direction: column;
   font-family: "Inria Sans";
   font-size: 12pt;
