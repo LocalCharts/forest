@@ -1,0 +1,22 @@
+\title{The Cofree Lie Algebroid on a Vector Bundle}
+\taxon{note}
+\author{owen-lynch}
+\import{macros}
+\date{2024-01-31}
+
+\p{I posit that #{\tri}-comonoids are to Poly as \nlab{Lie algebroid}s are to lenses of vector bundles.}
+
+\p{In order for this to be true, we would need a notion of a "cofree Lie algebroid on a vector bundle". I don't know how to construct this, but I think that it should be something like:
+
+##{\fC_{\arena{\bar{A}}{A}} = \sum_{x \colon B} E_x \times D \to \fC_{\arena{E}{B}} }
+
+##{\overline{\fC_{\arena{E}{B}}}_{(x, f)} = E_x}
+
+where #{D} is the object of infinitesimals. The idea is that a position of #{\fC_{\arena{E}{B}}} consists of a point of #{B} along with a function that takes a direction at that point and a infinitesimal step size and returns a new element of #{\fC_{\arena{E}{B}}}. But it should also be the case that if I take an element #{(x,f) \in \fC_{\arena{E}{B}}}, then for any #{e \in E_x}, #{f(e,0) = (x,f)}. There is then a canonical map #{\overline{\fC_{\arena{E}{B}}}_{(x,f)} \to {T\fC_{\arena{E}{B}}}_{(x,f)}} which sends #{e \in E_x} to #{(d \mapsto f(e,d)) \in {T\fC_{\arena{E}{B}}}_{(x,f)}}.}
+
+\p{A presentation of this without synthetic differential geometry might look something that supports a dependent function
+
+##{(p \colon \fC_{\arena{E}{B}}) \to \sum_{x \colon B} E_x^\ast \otimes T_p \fC_{\arena{E}{B}}}
+
+There should be some way of describing this as a fixpoint.}
+

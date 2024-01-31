@@ -203,6 +203,10 @@
 \def\lott{#{\mathtt{lott}}}
 \def\tri{#{\triangleleft}}
 
+% Lenses
+
+\def\arena[E][B]{#{E \choose B}}
+
 % Probability
 
 \def\expect{#{\EE}}
