@@ -211,6 +211,13 @@
 
 \def\expect{#{\EE}}
 
+% Geometry
+
+\def\Mfld{#{\cat{Mfld}}}
+\def\Subm{#{\cat{Subm}}}
+\def\CPoly{#{\cat{CPoly}}}
+\def\SPoly{#{\cat{SPoly}}}
+
 % Links
 
 \def\nlab[article]{\xml{span}[class]{nlab}{[\article](https://ncatlab.org/nlab/show/\article)}}

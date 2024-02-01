@@ -1,0 +1,14 @@
+\title{Smooth Poly}
+\author{owen-lynch}
+\import{macros}
+\date{2024-01-31}
+
+\p{Let #{(\cT, \cR)} be a \nlab{smooth topos}, and let #{\SPoly} be the subcategory of #{\Poly_\cT} given by polynomials #{p^\ast(1) \to p(1)} where #{p^\ast(1)} and #{p(1)} are both \nlab{microlinear}. We call such a polynomial a microlinear polynomial. Then we wish to investigate whether #{\SPoly} is closed under #{\tri}.}
+
+\p{Let #{\sM} be the category of microlinear spaces in #{\cT}. The question of whether #{\SPoly} is closed under #{\tri} essentially boils down to the question of whether for any #{f \colon X \to Y} of microlinear spaces, #{f^\ast \colon \sM /Y \to \sM /X} has a right adjoint. If it does, it should likely be the same as the right adjoint for smooth sets, so the real question is whether for a map of microlinear spaces #{p \colon E \to X} is #{\Pi_f(p)} a microlinear space?}
+
+\p{This should be true, because microlinear spaces are closed under limits, and the right adjoint can be computed via a limit.}
+
+\p{Then in this case, the standard construction of composition of polynomials based on left and right adjoints to pullback should go through.}
+
+\p{A comonoid for #{\tri} should then be something like a microlinear category.}
