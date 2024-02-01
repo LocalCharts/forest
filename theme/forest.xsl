@@ -206,17 +206,17 @@
           </header>
         </xsl:if>
         <div id="grid-wrapper">
-          <xsl:if test="tree/mainmatter/tree[@toc='true'] and not(/tree/frontmatter/meta[@name = 'toc']/.='false')">
-            <nav id="toc">
+          <article>
+            <xsl:apply-templates select="tree" />
+          </article>
+          <nav id="toc">
+            <xsl:if test="tree/mainmatter/tree[@toc='true'] and not(/tree/frontmatter/meta[@name = 'toc']/.='false')">
               <div class="block">
                 <h1>Table of Contents</h1>
                 <xsl:apply-templates select="tree/mainmatter" mode="toc" />
               </div>
-            </nav>
-          </xsl:if>
-          <article>
-            <xsl:apply-templates select="tree" />
-          </article>
+            </xsl:if>
+          </nav>
           <div id="discourse-comments"></div>
         </div>
         <footer class="footer">
