@@ -192,6 +192,7 @@
         </script>
       </head>
       <body>
+        <div class="container">
         <ninja-keys placeholder="Start typing a note title or ID"></ninja-keys>
         <xsl:if test="not(/tree[@root = 'true'])">
           <header class="header">
@@ -205,9 +206,6 @@
           </header>
         </xsl:if>
         <div id="grid-wrapper">
-          <article>
-            <xsl:apply-templates select="tree" />
-          </article>
           <xsl:if test="tree/mainmatter/tree[@toc='true'] and not(/tree/frontmatter/meta[@name = 'toc']/.='false')">
             <nav id="toc">
               <div class="block">
@@ -216,6 +214,9 @@
               </div>
             </nav>
           </xsl:if>
+          <article>
+            <xsl:apply-templates select="tree" />
+          </article>
           <div id="discourse-comments"></div>
         </div>
         <footer class="footer">
@@ -226,6 +227,7 @@
           </p>
           <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title"><xsl:text>LocalCharts Forest</xsl:text></span><xsl:text> is licensed under </xsl:text><a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"><xsl:text>CC BY 4.0</xsl:text><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /></a></p> 
         </footer>
+      </div>
       </body>
     </html>
   </xsl:template>
