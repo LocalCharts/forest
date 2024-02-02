@@ -1,0 +1,5 @@
+\title{Discrete Interval Category}
+\taxon{definition}
+\date{2024-02-01}
+
+\p{The \strong{discrete interval category} #{\DiscInt} is the categor where objects are sets #{\{0,\ldots,n\}}, and a morphism from #{\{0,\ldots,n\}} to #{\{0,\ldots,m\}} is a choice #{0 \leq k \leq m} such that #{k + n \leq m}. In other words, it is a map that preserves the linear order and metric structure.}

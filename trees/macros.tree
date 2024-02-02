@@ -196,7 +196,13 @@
 \def\Terms{#{\operatorname{\mathbf{Terms}}}}
 \def\PCong{#{\operatorname{\mathbf{PCong}}}}
 \def\Alg{#{\cat{Alg}}}
+\def\Coalg{#{\cat{Coalg}}}
 \def\EPres{#{\cat{EPres}}}
+
+% Dynamical systems
+
+\def\DiscInt{#{\II_0}}
+\def\Traj{#{\cat{Traj}}}
 
 % Poly
 
@@ -205,7 +211,7 @@
 
 % Lenses
 
-\def\arena[E][B]{#{E \choose B}}
+\def\arena[E][B]{#{{\E \choose \B}}}
 
 % Probability
 

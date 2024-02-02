@@ -1,0 +1,72 @@
+\title{Cofree Comonoids Via Presheaves}
+\taxon{note}
+\author{owen-lynch}
+\import{macros}
+\texpackage{quiver}
+\date{2024-02-01}
+
+\p{In this note, I record an alternative way of constructing the [cofree comonoid](poly-book) for a polynomial #{p}. I'm interested in this because I hope it will generalize to a notion of comonoid for continuous dynamical systems.}
+
+\p{For a polynomial #{p}, let #{\Coalg(p)} be the category of coalgebras for #{p}. This is the comma category #{\Set \downarrow p}, via the map #{\Set \to \Poly} given by #{S \mapsto Sy^S}.}
+
+\p{Let #{\DiscInt} be the [discrete interval category](ocl-0015).}
+
+\p{Then for any #{f \colon Sy^S \to p}, there is a presheaf #{\Traj_S} on #{\DiscInt} which sends #{\{0,\ldots,n\}} to the set of length-#{n} trajectories of #{f}. A length-#{n} trajectory of #{f} is a commutative diagram of the form
+
+\texfig{
+\begin{tikzcd}
+	{y^n + \cdots + y^2 + y} & {Sy^S} \\
+	{y^n + \cdots + y^2 + y} & {\fC_p}
+	\arrow[shift right, from=1-1, to=1-2]
+	\arrow[shift right, from=1-2, to=2-2]
+	\arrow[shift right, from=1-1, to=2-1]
+	\arrow[shift right, from=2-1, to=2-2]
+	\arrow[shift right, from=2-2, to=1-2]
+	\arrow[shift left, from=1-1, to=1-2]
+	\arrow[shift left, from=2-1, to=2-2]
+	\arrow[shift right, from=2-1, to=1-1]
+\end{tikzcd}
+}
+
+of functors and cofunctors, where #{y^{n+1} + \cdots + y} has the comonoid structure of the preorder on #{\{0,\ldots,n\}}.}
+
+\p{This presheaf satisfies a \nlab{Segal condition}, which basically means that a length-#{n} trajectory can be built via gluing #{n} length-#{1} trajectories together. This is equivalent to it being the nerve of a small category #{\sC} with a map #{\sC \to \bB\NN}, where #{\bB\NN} is the single-object category corresponding to the monoid of natural numbers.}
+
+\p{Thus, #{\Traj_{-}} is a functor #{\Coalg(p) \to \Cat /\bB\NN}. We can then take the Grothendieck construction #{\int \Traj}, and this lives over #{\bB\NN} in a natural way; let #{\ell \colon \int \Traj \to \bB\NN} be the resulting map.}
+
+\p{I then claim that if we quotient #{\int \Traj} by the weak equivalence structure lifted from isomorphisms in #{\bB\NN}, we get a category equivalent to #{\fC_p}; the cofree coalgebra on #{p}. That is, #{f} is a weak equivalence if #{\ell(f) = 0}.}
+
+\p{To construct this equivalence, send an element #{m \in \fC_p} to #{(\fC_p(1), \fC_p(1)y^{\fC_p(1)} \to p, m) \in \int \Traj}, and conversely send #{(S,f \colon Sy^S \to p, x \in S) \in \int \Traj} to #{\phi_f(x) \in \fC_p(1)}, where #{\phi_f} is the unique functor #{Sy^S \to \fC_p} such that the following commutes.
+
+\texfig{
+\begin{tikzcd}
+	{Sy^S} && {\fC_p} \\
+	& p
+	\arrow["{\phi_f}", from=1-1, to=1-3]
+	\arrow["f"', from=1-1, to=2-2]
+	\arrow[from=1-3, to=2-2]
+\end{tikzcd}
+}
+
+In one direction, this is the identity, and in the other direction, the natural morphism #{(S, f \colon Sy^S \to p, x \in S) \to (\fC_p(1), \fC_p(1)y^{\fC_p(1)} \to p, \phi_f(x) \in S)} is a weak equivalence, and hence an isomorphism in the quotiented category.}
+
+\p{We then conjecture that we should be able to tell a similar story for "smooth coalgebras" of vector bundles, where a smooth coalgebra of #{\arena{\bar{A}}{A}} is a lens map #{\arena{TX}{X} \to \arena{\bar{A}}{A}}. A trajectory is a smooth map #{(a,b) \to X} such that we have a diagram 
+
+\texfig{
+\begin{tikzcd}
+	{T (a,b) \choose (a,b)} & {TX \choose X} \\
+	{T(a,b) \choose (a,b)} & {\bar{A} \choose A}
+	\arrow[shift right, from=1-1, to=2-1]
+	\arrow[shift right, from=2-1, to=1-1]
+	\arrow[shift right, from=1-1, to=1-2]
+	\arrow[shift left, from=1-1, to=1-2]
+	\arrow[shift right, from=2-1, to=2-2]
+	\arrow[shift left, from=2-1, to=2-2]
+	\arrow[shift right, from=1-2, to=2-2]
+	\arrow[shift right, from=2-2, to=1-2]
+\end{tikzcd}
+}
+
+Trajectories of a smooth coalgebra form a presheaf on the interval category #{\II}, whose objects are open intervals of #{\RR} and whose morphisms are order and metric-preserving maps. They also satisfy some sort of Segal condition, which only allows us to compose trajectories \em{when they overlap slightly}. I propose that "presheaves on the interval category satisfying this Segal condition" should be the appropriate generalization of comonoids to the smooth case, and then therefore that there should be some appropriate notion of the "cofree smooth comonoid" to this case, using a similar construction to before. An "object" in this cofree smooth comonoid should be a coalgebra along with a point in it, but appropriately quotiented so that we can always embed into a larger system.}
+
+\p{\strong{Open questions}: should we be using closed or open intervals? Does it matter?}
