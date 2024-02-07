@@ -1,0 +1,8 @@
+\title{Motivation}
+\import{macros}
+
+\p{In category theory, we are often interested in enriched categories and internal categories.
+Defining enriched categories requires some choice of monoidal category #{\cV}, and all the homs will
+be objects of #{\cV}. So for #{\cV}-enriched, you have a set of objects and an object of #{\cV} of Homs 
+for each pair of objects. But wll be more interested in internal categories. For a category #{\cE},
+\em{both} the objects and homs of an internal category in #{\cE} are objects of #{\cE}.} 

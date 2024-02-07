@@ -1,68 +1,70 @@
 \title{Growth and Form in Neural Networks}
-\author{jesse-hoogland}
+\author{owen-lynch}
+\author{sophie-libkind}
+
+\p{These are notes written by Sophie and lightly edited by Owen on a talk that [Jesse Hoogland](jesse-hoogland) gave at the Berkeley Seminar.}
 
 \p{Learning about development can tell us about the final form (and vice versa).}
 
 \p{Debate today: lottery tickets (i.e. randomly jumping around hoping to find the good solution) vs. singular learning theory (stages of development)
-(S note: The lottery ticket view doesn't sound right to me (i.e. reflective of a common perspective of learning))
+(S note: The lottery ticket view doesn't sound right to me (i.e. reflective of a common perspective of learning))}
 
-Main question: What room is there for *studying learned structure* in SLT?
+\p{Main question: What room is there for \em{studying learned structure} in SLT?}
 
-## Learning
+\p{\strong{Learning}}
 
-Learning is about updating a distribution of beliefs (prior) according to data. Data is drawn from an underlying "truth". The updated belief is the posterior.
+\p{Learning is about updating a distribution of beliefs (prior) according to data. Data is drawn from an underlying "truth". The updated belief is the posterior.}
 
-In Bayes, we often hide the part that's selecting the right model class. There's really two parts (1) Bayesian inference given of model class. (2) Model selection, finding the model class that gives us the highest likelihood.
+\p{In Bayes, we often hide the part that's selecting the right model class. There's really two parts (1) Bayesian inference given of model class. (2) Model selection, finding the model class that gives us the highest likelihood.}
 
-There's something in between: "a variational problem that's minimizing free energy (i.e. the denominator of Bayes rule)" (S note: I don't get this.)
+\p{There's something in between: "a variational problem that's minimizing free energy (i.e. the denominator of Bayes rule)" (S note: I don't get this.)}
 
-Bayesian inference is about selecting the *particular* parameters. Internal model selection is selecting a family of parameters (a partition of the model space) that minimizes the free energy.
-(S note: Can we think more about minimizing free energy?)
-
-
-## Form
-
-### Form as critical points (in the sense of Thom)
-
-Superposition is where one neuron captures many features. I.e. there are more things that we want to represent than we have dimensions. 
-
-In toy models of superposition we look at autoencoders there the encoding dimension is small compared to the input and output dimensions. 
-
-We can look at the critical points (i.e. the parameters that make the derivative of the loss zero). And we can classify them based on some things. (S note: what things?)
+\p{Bayesian inference is about selecting the \em{particular} parameters. Internal model selection is selecting a family of parameters (a partition of the model space) that minimizes the free energy.
+(S note: Can we think more about minimizing free energy?)}
 
 
-What about the geometry of form. More complex forms are more fragile. How do we measure that?
+\p{\strong{Form}}
 
-Def: The learning coefficient is the volume scaling rate. I.e. around a critical point, the volume of the points below some learning rate scales as $e \epislon ^\lambda* for the learning coefficient $\lambda$.
+\p{\strong{Form as critical points (in the sense of Thom)}}
 
-More complex critical points are more fragile have lower learning coefficients. 
+\p{Superposition is where one neuron captures many features. I.e. there are more things that we want to represent than we have dimensions.}
 
-### Growth as transitions between critical points
+\p{In toy models of superposition we look at autoencoders there the encoding dimension is small compared to the input and output dimensions.}
 
-Wanabe proved that $$F_n(\mathcal{W}) = n \L_n(w^*) + \lambda \log n + O_p(\log \log n).$$ I.e. the free energy of the model class $\mathcal W$ only depends on the critical point $w^*$.
-
-Note that free energy trades off accuracy $(nL_n(w^*))$ with complexity $\lambda \log n$. 
-
-Empirically verified in the toy model of superposition. (S: I would like to understand this.)
-
-## Scale 
-
-Oh no, but what about actually large models. 
-
-- The local learning coefficient $\lambda$ can be estimated. 
-- This estimation is accurate even at scale.
-
-What about real systems?  In particular, transformer architecture.
-
-Transformers map sequences to sequences. The learning coefficient goes through phase transitions over learning.
-
-When do we see zero derivative in the change of the learning coefficient. However, these aren't true critical points. 
-
-S: I got lost at the trajectory PCA part. Here's what I have: There's some trajectory, we run PCA on it, we plot the circle tangent to the trajectory with radius inverse to the curvature, and we see some convergence in the centers of these circles. 
-The centeres of these circles represent different types of inference and the trajectory is pushed and pulled by these stages of inference.
-
-S: Very cool! We see the learning trajectory as mediated by partial critical points --- i.e. critical points for subsets of the data.
+\p{We can look at the critical points (i.e. the parameters that make the derivative of the loss zero). And we can classify them based on some things. (S note: what things?)}
 
 
+\p{What about the geometry of form. More complex forms are more fragile. How do we measure that?}
 
+\p{Def: The learning coefficient is the volume scaling rate. I.e. around a critical point, the volume of the points below some learning rate scales as #{e \epsilon^\lambda} for the learning coefficient #{\lambda}.}
 
+\p{More complex critical points are more fragile have lower learning coefficients.}
+
+\strong{Growth as transitions between critical points}
+
+\p{Wanabe proved that ##{F_n(\mathcal{W}) = n L_n(w^*) + \lambda \log n + O_p(\log \log n).} I.e. the free energy of the model class #{\mathcal W} only depends on the critical point #{w^*}.}
+
+\p{Note that free energy trades off accuracy #{(nL_n(w^*))} with complexity #{\lambda \log n}.}
+
+\p{Empirically verified in the toy model of superposition. (S: I would like to understand this.)}
+
+\p{\strong{Scale}}
+
+\p{Oh no, but what about actually large models.}
+
+\ul{
+\li{The local learning coefficient #{\lambda} can be estimated.}
+\li{This estimation is accurate even at scale.}
+}
+
+\p{What about real systems?  In particular, transformer architecture.}
+
+\p{Transformers map sequences to sequences. The learning coefficient goes through phase transitions over learning.}
+
+\p{When do we see zero derivative in the change of the learning coefficient. However, these aren't true critical points.}
+
+\p{S: I got lost at the trajectory PCA part. Here's what I have: There's some trajectory, we run PCA on it, we plot the circle tangent to the trajectory with radius inverse to the curvature, and we see some convergence in the centers of these circles.}
+
+\p{The centeres of these circles represent different types of inference and the trajectory is pushed and pulled by these stages of inference.}
+
+\p{S: Very cool! We see the learning trajectory as mediated by partial critical points --- i.e. critical points for subsets of the data.}

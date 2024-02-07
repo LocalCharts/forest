@@ -1,0 +1,88 @@
+\title{Double Category Theory from a Double Categorical Perspective}
+\author{owen-lynch}
+% Add yourself as an author by making a file in trees/author/name.tree, and then use \author
+\date{2024-02-06}
+\texpackage{quiver}
+\meta{comments}{true}
+\import{macros}
+
+\def\comment[c]{}
+
+\comment{
+1. Double categories
+    1. Definition of (pseudo) double category
+        1. As a pseudocategory internal to Cat
+        2. In concrete terms
+        3. Mention coherence theorem, good candidate to actually prove some other time
+    2. Key examples:
+        1. Span and, more generally, Span(C)
+        2. Mat and, more generally, V-Mat
+        3. Rel
+        4. Prof (and, more generally, V-Prof) [or maybe later, as example of Mod construction]
+            1. Could discuss Boolean or metric cases directly
+    3. Other examples [optional]:
+        1. Cospan and, more generally, decorated and structured cospans
+        2. Commutative squares in a category and, more generally, quintets in a 2-category
+        3. Adjunctions in a 2-category
+    4. Special cases:
+        1. 2-categories
+        2. Bicategories
+        3. Monoidal categories
+        4. Slogan: “2-categories and bicategories are orthogonal concepts”
+        5. Apology for double categories over 2-categories/bicategories:
+            1. Rel is bad, in terms of eg limits and colimits, but RRel is great. Similarly for Adj, Prof, etc.
+            2. Adjunctions that ought to be oplax and lax can’t be expressed bicategorically. These are common; eg the pullback/pushout adjunction between spans and cospans in a category with pullbacks and pushouts.
+2. Equipments
+    1. The three-way equivalence (Shulman 2010, Theorem 4.1)
+        1. Companions and conjoints
+        2. Restrictions (cartesian cells)
+        3. Extensions (opcartesian cells)
+    2. Computations in the main examples: spans, matrices, relations
+    3. Conjoints versus adjoints
+        1. Conjoints (”orthogonal adjunctions”) as generalized adjunctions
+        2. Conjoints in double category of quintets
+3. Double functors
+    1. Definitions of lax, colax, and pseudo double functors
+    2. Key examples:
+        1. Lax functors out of the terminal double category as categories
+            1. Internal categories
+            2. Enriched categories
+        2. Hom as a lax double functor (Pare 2011)
+    3. Other examples [optional]
+        1. Functors between span and cospan double categories
+    4. Special cases:
+        1. 2-functors
+        2. Lax and pseudofunctors
+        3. Lax monoidal functors
+4. Natural transformations
+    1. Definition of a strict natural transformation
+    2. Special cases:
+        1. Icons
+        2. Monoidal natural transformations
+    3. The 2-category of double categories, (pseudo, lax, or colax) functors, and natural transformations
+    4. The double category of double categories, lax functors, colax functors, and natural transformations
+        1. Companions in this double category
+        2. Doctrinal adjunction [maybe]
+5. Cartesian equipments
+    1. Cartesian double categories
+        1. As double categories with (parallel) products
+        2. As cartesian objects in Dbl
+        3. As pseudocategories in CartCat
+    2. Computations in the main examples
+    3. Double categories of relations (after Lambert 2022)
+    4. The idea of double-categorical databases
+}
+
+\transclude{topos-0007} %Motivation
+
+\transclude{topos-0006} %Definition of internal categories
+
+\transclude{topos-0009} %Examples of internal categories
+
+\transclude{topos-000A} % Double categories as internal categories
+
+\transclude{topos-000B} % Coherence theorem for double categories
+
+\transclude{topos-000C} % Examples of double categories
+
+\transclude{topos-0008} %Definition of enriched categories

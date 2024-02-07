@@ -1,0 +1,41 @@
+\title{Double category of matrices}
+\taxon{example}
+\import{macros}
+\date{2024-02-06}
+\p{Let #{\cV} be an infinitary-distributive monoidal category (such as a closed monoidal category with coproducts.)
+	The double category #{\cV-\Mat} has
+    \ul{
+	\li{Objects: sets}
+    \li{Arrows: functions}
+	\li{Proarrows #{M:X\nrightarrow Y} are #{X\times Y}-indexed families #{M(x,y)\in \cV}.}
+	\li{Cells are natural transformations, if we think of #{X,Y} as discrete categories, or just #{X\times Y}-indexed families
+    of morphisms of #{\cV}.}
+    }
+}
+
+\p{In order to compose 2-cells horizontally, you use the universal property of the coproduct.
+\texfig{
+    % https://q.uiver.app/#q=WzAsNixbMCwwLCJYIl0sWzEsMCwiWSJdLFsyLDAsIloiXSxbMCwxLCJYJyJdLFsxLDEsIlknIl0sWzIsMSwiWiciXSxbMCwzLCJmIiwyXSxbMSw0LCJnIiwyXSxbMiw1LCJoIl0sWzAsMSwiTSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9fX1dLFsxLDIsIk4iLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJiYXJyZWQifX19XSxbMyw0LCJNJyIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9fX1dLFs0LDUsIk4nIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn19fV0sWzksMTEsIlxcYWxwaGEiLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsMTIsIlxcYmV0YSIsMSx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}
+	X & Y & Z \\
+	{X'} & {Y'} & {Z'}
+	\arrow["f"', from=1-1, to=2-1]
+	\arrow["g"', from=1-2, to=2-2]
+	\arrow["h", from=1-3, to=2-3]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "M", "\shortmid"{marking}, from=1-1, to=1-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "N", "\shortmid"{marking}, from=1-2, to=1-3]
+	\arrow[""{name=2, anchor=center, inner sep=0}, "{M'}"', "\shortmid"{marking}, from=2-1, to=2-2]
+	\arrow[""{name=3, anchor=center, inner sep=0}, "{N'}"', "\shortmid"{marking}, from=2-2, to=2-3]
+	\arrow["\alpha"{description}, draw=none, from=0, to=2]
+	\arrow["\beta"{description}, draw=none, from=1, to=3]
+\end{tikzcd}
+
+This ends up being a map
+
+##{(M \hcomp N)(x,z) = \sum_{y \in Y} M(x,y) \hcomp N(y,z) \to \sum_{y \in Y} M(fx, gy) \otimes N(gy, hz) \to \sum_{y' \in Y'} M(fx, y') \hcomp N(y', hz) }
+
+which needs to be constructed using the universal property of coproducts.
+}
+
+\p{Identities are given by #{\id_X(x,x) = I}, #{\id_X(x,x') = 0} for #{x \neq x'}, where #{I} is the monoidal unit, and #{0} is the initial object, i.e. the nullary coproduct.}
+}

@@ -1,0 +1,18 @@
+\title{Examples of Internal Categories}
+\import{macros}
+\date{2024-02-06}
+% is enumerate a thing? or should this be separate files?
+
+\p{A small category is a category internal to Set.}
+
+\p{A Baez-Crans 2-vector space is a category internal to Vect.}
+
+\p{Suppose that #{\cV} has is distributive cartesian monoidal, has 
+coproducts, a terminal object, and the functor 
+from Set to #{\cV} sending a set #{X} to the coproduct of #{X} 
+many copies of the terminal object. Then a #{\cV}-enriched category
+can usually be seen as internal categories.}
+
+\p{In a preorder, an internal category is just an isomorphism. This is because once we pick #{C_0} and #{C_1}, we have #{s=t} ...(todo) }
+
+\p{If the object #{\cC_1} of objects is terminal, we just have an internal monoid.}

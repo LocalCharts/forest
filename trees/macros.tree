@@ -154,6 +154,10 @@
 \def\codom{#{\operatorname{\mathrm{codom}}}}
 \def\yoneda{#{\operatorname{\mathbf{y}}}}
 
+\def\id{#{\mathrm{id}}}
+\def\then{#{\mathbin{⨟}}}
+\def\hcomp{#{\mathbin{\odot}}}
+
 \def\limit{#{\varprojlim}}
 \def\colimit{#{\varinjlim}}
 
@@ -177,6 +181,9 @@
 \def\Logos{#{\cat{Logos}}}
 \def\Diag{#{\cat{Diag}}}
 \def\Poset{#{\cat{Poset}}}
+\def\Span{#{\SS\cat{pan}}}
+\def\Rel{#{\RR\cat{el}}}
+\def\Mat{#{\MM\cat{at}}}
 
 \def\Ob{#{\operatorname{\mathbf{Ob}}}}
 

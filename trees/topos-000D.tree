@@ -1,0 +1,12 @@
+\title{Double categories as logic}
+\import{macros}
+\date{2024-02-06}
+
+\p{There is a correspondence between the [double category of relations](topos-000F) and logic, which goes
+\ul{
+    \li{types are sets}
+    \li{terms/function symbols are functors}
+    \li{predicates/relation symbols are relations}
+    \li{entailment is implications}
+}
+}

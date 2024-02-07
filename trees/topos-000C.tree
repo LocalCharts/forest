@@ -1,0 +1,12 @@
+\title{Examples of Double Categories}
+\import{macros}
+\texpackage{quiver}
+\date{2024-02-06}
+
+\transclude{topos-000E}
+
+\transclude{topos-000F}
+
+\transclude{topos-000D} % Double categories as logic
+
+\transclude{topos-000G}

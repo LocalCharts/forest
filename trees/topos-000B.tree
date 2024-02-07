@@ -1,0 +1,10 @@
+\title{Coherence theorem for double categories}
+\taxon{theorem}
+\import{macros}
+% You're faster on the draw than I am!
+
+\p{Every pseudo double category #{\DD} is "equivalent" to some strict double category #{\DD'}.}
+
+\p{Proof is analogous to the proof of the \nlab{coherence theorem for monoidal categories}.}
+
+\p{However, it may not be very "natural" to work with the strictification of a given pseudo double category. So we normally work with pseudo double categories, but pretend that they are strict double categories.}
