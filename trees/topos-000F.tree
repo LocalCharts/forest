@@ -1,6 +1,7 @@
 \title{Double category of relations}
 \taxon{example}
 \import{macros}
+\texpackage{quiver}
 \date{2024-02-06}
 
 \p{#{\Rel} is the double category where

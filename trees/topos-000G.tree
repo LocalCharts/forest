@@ -1,6 +1,7 @@
 \title{Double category of matrices}
 \taxon{example}
 \import{macros}
+\texpackage{quiver}
 \date{2024-02-06}
 \p{Let #{\cV} be an infinitary-distributive monoidal category (such as a closed monoidal category with coproducts.)
 	The double category #{\cV-\Mat} has
@@ -29,6 +30,7 @@
 	\arrow["\alpha"{description}, draw=none, from=0, to=2]
 	\arrow["\beta"{description}, draw=none, from=1, to=3]
 \end{tikzcd}
+}
 
 This ends up being a map
 
@@ -38,4 +40,3 @@ which needs to be constructed using the universal property of coproducts.
 }
 
 \p{Identities are given by #{\id_X(x,x) = I}, #{\id_X(x,x') = 0} for #{x \neq x'}, where #{I} is the monoidal unit, and #{0} is the initial object, i.e. the nullary coproduct.}
-}
