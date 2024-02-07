@@ -1,5 +1,11 @@
 \title{Double Category Theory from a Double Categorical Perspective}
 \author{owen-lynch}
+\author{brendan-fong}
+\author{evan-patterson}
+\author{priyaa-srinivasan}
+\author{kris-brown}
+\author{david-spivak}
+\author{kevin-arlin}
 % Add yourself as an author by making a file in trees/author/name.tree, and then use \author
 \date{2024-02-06}
 \texpackage{quiver}
@@ -7,6 +13,8 @@
 \import{macros}
 
 \def\comment[c]{}
+
+\p{This was an after-hours seminar on double categories presented by Kevin and Evan, that we collaboratively took notes on via visual studio code liveshare. The name is just for fun.}
 
 \comment{
 1. Double categories
