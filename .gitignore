@@ -6,3 +6,4 @@ package.json
 build
 latex
 output
+.local
