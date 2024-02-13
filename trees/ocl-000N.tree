@@ -2,14 +2,13 @@
 \author{owen-lynch}
 \taxon{definition}
 \date{2024-01-25}
-\texpackage{quiver}
 \import{macros}
 
 \p{Let #{\sC} be a regular category with #{T} a monad on it. Suppose that #{A \in \sC} is an algebra of #{T}. Then a partial congruence on #{A} is a [semi-subalgebra](ocl-000P) #{D \into A} along with a surjection #{e \colon D \onto E} such that the following holds.}
 
 \p{Let #{\bar{E}} to be the image of #{\bar{D} \into TD} via the map #{TD \to TE}. Then there must exist a function #{\bar{E} \to E} such that the following commutes
 
-\texfig{
+\quiver{
   \begin{tikzcd}
 	TD & {\bar{D}} & D \\
 	TE & {\bar{E}} & E

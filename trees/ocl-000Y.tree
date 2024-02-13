@@ -2,12 +2,11 @@
 \author{owen-lynch}
 \taxon{definition}
 \import{macros}
-\texpackage{quiver}
 \date{2024-01-26}
 
 \p{A morphism of [e-presentations](ocl-0010) from #{(X,D,E)} to #{(X',D',E')} is a diagram of the form
 
-\texfig{
+\quiver{
 \begin{tikzcd}
 	{TX} & {TX'} \\
 	D & {D'} \\
@@ -22,7 +21,7 @@
 
 such that the following commutes
 
-\texfig{
+\quiver{
 \begin{tikzcd}
 	TE & {\bar{E}} & E \\
 	{TE'} & {\bar{E}'} & {E'}

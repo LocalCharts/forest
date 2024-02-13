@@ -243,27 +243,29 @@
 % Blocks
 
 \def\abstract[body]{
-  \block{\strong{Abstract.}}{\body}
+  \subtree{\title{Abstract}\body}
 }
 
 \def\notes[body]{
-  \block{\strong{Notes.}}{\body}
+  \subtree{\title{Notes.} \body}
 }
 
 \def\idea[body]{
-  \block{\strong{Idea.}}{\body}
+  \subtree{\title{Idea.} \body}
 }
 
 \def\proof[body]{
-  \block{\strong{Proof.}}{\body}
+  \subtree{\title{Proof.} \body}
+}
+
+\def\definition[head][body]{
+  \subtree{\title{\head} \taxon{definition} \body}
 }
 
 % Figures
 
-\def\texfig[body]{
-  \iftex{\tex{\body}}{
-    \xml{center}{\tex{\body}}
-  }
+\def\quiver[body]{
+  \xml{center}{\tex{\usepackage{quiver, amsopn, amssymb}}{\body}}
 }
 
 \def\image[source]{

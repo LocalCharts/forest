@@ -1,7 +1,6 @@
 \title{Double category of relations}
 \taxon{example}
 \import{macros}
-\texpackage{quiver}
 \date{2024-02-06}
 
 \p{#{\Rel} is the double category where
@@ -10,7 +9,7 @@
     \li{Arrows (tight morphisms) are functions #{f \colon X \to Y}	}
 	\li{Proarrows (loose morphisms) are relation #{R\subseteq X\times Y}}
     \li{A 2-cell of the shape
-    \texfig{
+    \quiver{
         % https://q.uiver.app/#q=WzAsNCxbMCwwLCJYIl0sWzEsMCwiWSJdLFswLDEsIlciXSxbMSwxLCJaIl0sWzAsMSwiUiJdLFsyLDMsIlMiLDJdLFswLDIsImYiLDJdLFsxLDMsImciXSxbNCw1LCIiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV1d
 \begin{tikzcd}
 	X & Y \\

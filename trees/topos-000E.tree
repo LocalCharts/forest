@@ -1,7 +1,6 @@
 \title{Double category of Spans}
 \taxon{example}
 \import{macros}
-\texpackage{quiver}
 \date{2024-02-06}
 
 \p{#{\Span} is the double category where:
@@ -9,7 +8,7 @@
     \li{Objects are sets #{X \in \Set}}
     \li{Tight maps are functions #{f \colon X \to Y}}
     \li{Loose maps are spans #{X \from M \to Y}, which are composed by
-    \texfig{
+    \quiver{
 % https://q.uiver.app/#q=WzAsNixbMCwyLCJYIl0sWzIsMiwiWSJdLFs0LDIsIloiXSxbMywxLCJOIl0sWzEsMSwiTSJdLFsyLDAsIk1cXGhjb21wIE4iXSxbNCwwXSxbNCwxXSxbMywxXSxbMywyXSxbNSwzXSxbNSw0XSxbNSwxLCIiLDIseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XV0=
 \begin{tikzcd}
 	&& {M\hcomp N} \\
@@ -26,7 +25,7 @@
     }
     }
     \li{2-cells are diagrams of the form
-    \texfig{
+    \quiver{
         % https://q.uiver.app/#q=WzAsNixbMCwwLCJYXzEiXSxbMSwwLCJNXzEiXSxbMiwwLCJZXzEiXSxbMCwxLCJYXzIiXSxbMSwxLCJNXzIiXSxbMiwxLCJZXzIiXSxbMCwzXSxbMiw1XSxbMSw0XSxbMSwwXSxbMSwyXSxbNCw1XSxbNCwzXV0=
 \begin{tikzcd}
 	{X_1} & {M_1} & {Y_1} \\

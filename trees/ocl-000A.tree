@@ -1,11 +1,10 @@
 \title{Diagram Category}
 \date{2023-12-25}
-\texpackage{quiver}
 \import{macros}
 
 \p{Given a category #{\cC}, let #{\Diag(\cC)} be the category where the objects are [diagrams in #{\cC}](https://ncatlab.org/nlab/show/diagram), and the morphisms are diagrams of the form:}
 
-\texfig{
+\quiver{
 \begin{tikzcd}
 	J && {J'} \\
 	& \cC

@@ -2,12 +2,11 @@
 \taxon{definition}
 \author{owen-lynch}
 \import{macros}
-\texpackage{quiver}
 \date{2024-01-26}
 
 \p{Let \sC be a regular category, #{T} a monad on it, #{m \colon TA \to A} an algebra of #{T} and #{e \colon D \to E}, #{e' \colon D' \to E'} two [partial congruences](ocl-000N) on #{A}. Then #{e \leq e'} if there is a commutative diagram of the form:
 
-\texfig{
+\quiver{
 \begin{tikzcd}
 	& A \\
 	D && {D'} \\

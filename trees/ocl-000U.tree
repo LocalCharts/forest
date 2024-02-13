@@ -2,12 +2,11 @@
 \taxon{proposition}
 \author{owen-lynch}
 \import{macros}
-\texpackage{quiver}
 \date{2024-01-26}
 
 \p{We can also explicitly define what a morphism of e-presentations is: a morphism from #{(X, D \into TX, e \colon D \onto E)} to #{(X', D' \into TX', e' \colon D' \onto E')} is a morphism #{f \colon X \to TX'} such that there exists a diagram of the form
 
-\texfig{
+\quiver{
 \begin{tikzcd}
 	TX & {TX'} \\
 	D & {D'} \\

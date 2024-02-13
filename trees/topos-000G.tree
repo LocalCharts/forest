@@ -1,7 +1,6 @@
 \title{Double category of matrices}
 \taxon{example}
 \import{macros}
-\texpackage{quiver}
 \date{2024-02-06}
 \p{Let #{\cV} be an infinitary-distributive monoidal category (such as a closed monoidal category with coproducts.)
 	The double category #{\cV-\Mat} has
@@ -15,7 +14,7 @@
 }
 
 \p{In order to compose 2-cells horizontally, you use the universal property of the coproduct.
-\texfig{
+\quiver{
     % https://q.uiver.app/#q=WzAsNixbMCwwLCJYIl0sWzEsMCwiWSJdLFsyLDAsIloiXSxbMCwxLCJYJyJdLFsxLDEsIlknIl0sWzIsMSwiWiciXSxbMCwzLCJmIiwyXSxbMSw0LCJnIiwyXSxbMiw1LCJoIl0sWzAsMSwiTSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9fX1dLFsxLDIsIk4iLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJiYXJyZWQifX19XSxbMyw0LCJNJyIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9fX1dLFs0LDUsIk4nIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn19fV0sWzksMTEsIlxcYWxwaGEiLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsMTIsIlxcYmV0YSIsMSx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
 \begin{tikzcd}
 	X & Y & Z \\

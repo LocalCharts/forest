@@ -2,7 +2,6 @@
 \taxon{note}
 \author{owen-lynch}
 \import{macros}
-\texpackage{quiver}
 \date{2024-02-01}
 
 \p{In this note, I record an alternative way of constructing the [cofree comonoid](poly-book) for a polynomial #{p}. I'm interested in this because I hope it will generalize to a notion of comonoid for continuous dynamical systems.}
@@ -13,7 +12,7 @@
 
 \p{Then for any #{f \colon Sy^S \to p}, there is a presheaf #{\Traj_S} on #{\DiscInt} which sends #{\{0,\ldots,n\}} to the set of length-#{n} trajectories of #{f}. A length-#{n} trajectory of #{f} is a commutative diagram of the form
 
-\texfig{
+\quiver{
 \begin{tikzcd}
 	{y^n + \cdots + y^2 + y} & {Sy^S} \\
 	{y^n + \cdots + y^2 + y} & {\fC_p}
@@ -38,7 +37,7 @@ of functors and cofunctors, where #{y^{n+1} + \cdots + y} has the comonoid struc
 
 \p{To construct this equivalence, send an element #{m \in \fC_p} to #{(\fC_p(1), \fC_p(1)y^{\fC_p(1)} \to p, m) \in \int \Traj}, and conversely send #{(S,f \colon Sy^S \to p, x \in S) \in \int \Traj} to #{\phi_f(x) \in \fC_p(1)}, where #{\phi_f} is the unique functor #{Sy^S \to \fC_p} such that the following commutes.
 
-\texfig{
+\quiver{
 \begin{tikzcd}
 	{Sy^S} && {\fC_p} \\
 	& p
@@ -52,7 +51,7 @@ In one direction, this is the identity, and in the other direction, the natural 
 
 \p{We then conjecture that we should be able to tell a similar story for "smooth coalgebras" of vector bundles, where a smooth coalgebra of #{\arena{\bar{A}}{A}} is a lens map #{\arena{TX}{X} \to \arena{\bar{A}}{A}}. A trajectory is a smooth map #{(a,b) \to X} such that we have a diagram 
 
-\texfig{
+\quiver{
 \begin{tikzcd}
 	{T (a,b) \choose (a,b)} & {TX \choose X} \\
 	{T(a,b) \choose (a,b)} & {\bar{A} \choose A}

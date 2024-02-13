@@ -1,7 +1,5 @@
 \import{macros}
 \title{Double Categories as Categories internal to #{\Cat}}
-\texpackage{quiver}
-\texpackage{amsopn}
 \date{2024-02-06}
 
 \p{A locally small strict double category #{\DD} is a [category internal to](topos-0006) #{\Cat}, 
@@ -15,7 +13,7 @@ the category of locally small categories.}
 }
 }
 
-\texfig{
+\quiver{
 % https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXEREX3swLDF9Il0sWzAsMiwiXFxERF97MCwwfSJdLFsyLDAsIlxcRERfezEsMX0iXSxbMiwyLCJcXEREX3sxLDB9Il0sWzEsMCwiXFxpZCJdLFswLDEsIlxcZG9tIiwyLHsiY3VydmUiOjJ9XSxbMCwxLCJcXGNvZG9tIiwwLHsiY3VydmUiOi0yfV0sWzMsMiwiXFxpZCJdLFsyLDMsIlxcY29kb20iLDAseyJjdXJ2ZSI6LTJ9XSxbMiwzLCJcXGRvbSIsMix7ImN1cnZlIjoyfV0sWzMsMSwidCIsMCx7Im9mZnNldCI6LTF9XSxbMywxLCJzIiwyLHsib2Zmc2V0IjoxfV0sWzIsMCwidCIsMCx7Im9mZnNldCI6LTF9XSxbMiwwLCJzIiwyLHsib2Zmc2V0IjoxfV1d
 \begin{tikzcd}
 	{\DD_{0,1}} && {\DD_{1,1}} \\
@@ -40,7 +38,7 @@ the category of locally small categories.}
 
 \p{For instance, we have a squares of the form
 
-\texfig{
+\quiver{
 % https://q.uiver.app/#q=WzAsNCxbMCwwLCJ4Il0sWzAsMSwieCJdLFsyLDAsInciXSxbMiwxLCJ3Il0sWzAsMSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiwzLCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDIsIihtIFxcaGNvbXAgbikgXFxoY29tcCBwIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn19fV0sWzEsMywibSBcXGhjb21wIChuIFxcaGNvbXAgcCkiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJiYXJyZWQifX19XSxbNiw3LCJcXGFscGhhX3ttLG4scH0iLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV1d
 \begin{tikzcd}
 	x && w \\
@@ -53,7 +51,7 @@ the category of locally small categories.}
 \end{tikzcd}
 }
 and
-\texfig{
+\quiver{
     % https://q.uiver.app/#q=WzAsNCxbMCwwLCJ4Il0sWzAsMSwieCJdLFsyLDAsInkiXSxbMiwxLCJ5Il0sWzAsMiwiVV94IFxcaGNvbXAgbSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9fX1dLFsxLDMsIm0iLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJiYXJyZWQifX19XSxbMiwzLCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDEsIiIsMSx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsNSwiXFxsYW1iZGFfbSIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH19XV0=
 \begin{tikzcd}
 	x && y \\
@@ -68,7 +66,7 @@ and
 
 and
 
-\texfig{
+\quiver{
     % https://q.uiver.app/#q=WzAsNCxbMCwwLCJ4Il0sWzAsMSwieCJdLFsyLDAsInkiXSxbMiwxLCJ5Il0sWzAsMiwibSBcXGhjb21wIFVfeSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9fX1dLFswLDEsIiIsMix7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMywiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMSwzLCJtIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn19fV0sWzQsNywiXFxyaG9fbSIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH19XV0=
 \begin{tikzcd}
 	x && y \\
@@ -83,7 +81,7 @@ and
 
 \p{But then we need coherence conditions for these natural isomorphisms. The biggest one is the pentagon identity
 
-\texfig{
+\quiver{
     % https://q.uiver.app/#q=WzAsNSxbMSwwLCIoKG0gXFxoY29tcCBuKSBcXGhjb21wIHApIFxcaGNvbXAgcSJdLFsyLDEsIihtIFxcaGNvbXAgbikgXFxoY29tcCAocCBcXGhjb21wIHEpIl0sWzIsMiwibSBcXGhjb21wKG4gXFxoY29tcChwIFxcaGNvbXAgcSkpIl0sWzAsMiwibSBcXGhjb21wKChuXFxoY29tcClcXGhjb21wIHEpIl0sWzAsMSwiKG1cXGhjb21wKG5cXGhjb21wIHApKVxcaGNvbXAgcSkiXSxbMCw0LCJcXHNpbSIsMix7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMSwiXFxzaW0iLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDIsIlxcc2ltIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMywyLCJcXHNpbSIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsMywiXFxzaW0iLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
 \begin{tikzcd}
 	& {((m \hcomp n) \hcomp p) \hcomp q} \\

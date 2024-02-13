@@ -1,6 +1,5 @@
 \title{Internal category}
 \import{macros}
-\texpackage{quiver}
 \taxon{definition}
 
 %I met \cV...
@@ -9,7 +8,7 @@
 
 \p{An internal category in #{E} is given by a diagram}
 
-\texfig{
+\quiver{
 % https://q.uiver.app/#q=WzAsMixbMCwwLCJIIl0sWzAsMSwiTyJdLFsxLDAsImkiXSxbMCwxLCJ0IiwwLHsiY3VydmUiOi0xfV0sWzAsMSwicyIsMix7ImN1cnZlIjoxfV1d
 \begin{tikzcd}
 	\cC_1\\
@@ -23,7 +22,7 @@
 \p{in #{E} satisfying #{s \circ i = t \circ i = \id_O}, together with a map #{c \colon \cC_1 \times_{\cC_0} \cC_1 \to \cC_1} where}
 
 
-\texfig{
+\quiver{
     % https://q.uiver.app/#q=WzAsNCxbMCwwLCJUIl0sWzEsMCwiSCJdLFsxLDEsIk8iXSxbMCwxLCJIIl0sWzMsMiwidCIsMl0sWzEsMiwicyJdLFswLDMsInAiLDJdLFswLDEsInEiXSxbMCwyLCIiLDEseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XV0=
 \begin{tikzcd}
 	\cC_1\times_{\cC_0}\cC_1 & \cC_1 \\
@@ -38,7 +37,7 @@
 
 \p{such that}
 
-\texfig{
+\quiver{
 \begin{tikzcd}
 	\cC_1 \\
 	& \cC_2 & \cC_1 \\

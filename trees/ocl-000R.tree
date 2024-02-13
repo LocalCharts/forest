@@ -2,14 +2,13 @@
 \author{owen-lynch}
 \import{macros}
 \taxon{construction}
-\texpackage{quiver}
 \date{2024-01-26}
 
 \p{Let #{\sC} be a regular category, with #{T} a monad on it. Let #{\Alg_T} be the category of algebras of #{T}. Then #{\PCong_T} as defined in \ref{ocl-000Q} is a functor #{\Alg_T^\op \to \Poset}, with action on partial congruences given in the following way.}
 
 \p{Let #{A} and #{A'} be #{T}-algebras, let #{f \colon A \to A'} be a #{T}-algebra morphisms, and let #{e' \colon D' \onto E'} be a partial congruence on #{A'}. Then define #{f^\ast(e') \colon f^\ast(D') \onto f^\ast(E')} via the diagram
 
-  \texfig{
+  \quiver{
     \begin{tikzcd}
 	    A & {A'} \\
 	    {f^\ast(D')} & {D'} \\
