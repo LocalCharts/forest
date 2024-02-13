@@ -1,0 +1,14 @@
+\title{Precision Typography and WYSIWYG}
+\author{owen-lynch}
+\import{macros}
+\date{2024-02-13}
+
+\p{WYSIWYG interfaces are far more intuitive and popular among laypeople than text-based formats like LaTeX and markdown. Why haven't they just completely won; why is almost every mathematics paper written in LaTeX rather than Word?}
+
+\p{One reason is that the informational needs of the author of a document are different from the informational needs of a reader. In good typography, the reader \em{shouldn't notice} the details! For instance, boxes used to layout the text should be invisible, and internal reference names (i.e. \code{\startverb\label{thm:foo}\stopverb}) should not be exposed. However, the explicit structure of the document should be very easy to read for the author. In other words, the affordances of "digesting" and the affordances of "editing" lead to different user interface designs.}
+
+\p{As a sub-problem to this, when I am authoring, it drives me crazy if the mapping from what is on disk to what I can see is non-injective. For instance, I can't see the difference between an italicized word, and an italicized word+space in Word, but it's trivial to spot the difference between \code{\startverb\em{this }\stopverb} and \code{\startverb\em{this}\stopverb}.}
+
+\p{Another reason, connected to the first but slightly different, is that in order to maintain stylistic consistency, the authoring format should support a separation of content and style. For instance, when I write math, I make macros for all of my mathematics notation. For instance, I make a macro \code{\startverb\Set\stopverb} for the category of sets, which prints out as #{\Set}. One reason to do this is to shorten my LaTeX, but the more important reason is that I can change my mind later about how I want to format a given notation. If I decide that I want categories to be in bold instead of sans-serif, I can just change the definition of the macro.}
+
+\p{This also extends to document structure. Often, we want a consistent length used for, say, interparagraph spacing. In a WYSIWYG editor, it's impossible to tell the difference between two lengths which are coincidentally the same, and two lengths which are \em{by definition} the same, in the sense that they are determined by both referencing the same variable.}
