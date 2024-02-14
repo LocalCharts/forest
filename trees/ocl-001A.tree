@@ -1,0 +1,29 @@
+\title{Library Recommendations}
+\date{2024-02-14}
+
+\def\topic[lang][t]{
+  \subtree{
+    \title{\t}
+    \query{
+      \query/and{
+        \query/or{
+          \query/taxon{software}
+        }
+        \query/tag{\lang}
+        \query/tag{\t}
+      }
+    }
+  }
+}
+\def\language[name]{
+  \subtree{
+    \title{\name}
+    \topic{\name}{parsing}
+  }
+}
+
+\p{This is a list of libraries which I have found useful in many languages, along with notes. Work in progress.}
+
+\language{rust}
+\language{ocaml}
+\language{scala}
