@@ -1,0 +1,26 @@
+\title{On Debugging and Errors}
+\author{owen-lynch}
+\meta{comments}{true}
+\date{2024-02-15}
+
+\p{There are three sorts of errors in programming.}
+
+\p{The first type of error isn't really an error, it's more of a "negative result to a query". For instance, the access method for a dictionary might return returns a \code{Option} value. The \code{None} case doesn't indicate that anything has failed per se, it just means that the key that you attempted to access doesn't exist in the dictionary. These "errors" are just part of normal programming.}
+
+\p{The second type of error is when something external to your program breaks a contract. For instance, a user might make a syntax error in code passed to your compiler, or a server might send ill-formatted JSON in response to a query. This kind of error isn't necessarily recoverable, but it should be reported carefully as feedback to the external source of the error, especially if that source of error is a user. One might argue that part of the job of the program is to help the user abide by the contract, and detailed error reporting is part of that.}
+
+\p{The third type of error indicates a serious mistake on the part of the programmer; the logical structure of the program is simply faulty. This error is unrecoverable by definition, because "recovering" from it implies rewriting the program itself, but it may be the case that it can be isolated and ignored by other parts of the program. In a server, this could mean that, say, a single thread crashes and the operation that the user was trying to do fails, but the database does not get corrupted and other operations still work. A healthy program should be robust to bugs in some parts of the codebase, and limit their scope of impact.}
+
+\p{The second and third types of error are the same if you view the programmer as a user; it's as important for the programmer to provide themselves with feedback about the correctness of their own code as it is to provide the user with the correctness of their input to that code.}
+
+\p{The traditional way that errors are managed in high-level programs is through exceptions. When you throw an exception, you get to "stop the program" in a way that gives a little information as to why the program stopped. And then the program prints out the "stack trace" of what it was currently doing.}
+
+\p{But the problem with this is that typically the actual error is not described by the error message; the error could be a false assumption that happened at any part of the stack. For instance, we might assume that a key exists in a dictionary, and thus call a method that will error if the key isn't in the dictionary. If this errors, then we will get a "KeyError" exception or something printed out to the console. But what we won't get is the higher-level knowledge of why that KeyError happened, which is not available to the code throwing the error.}
+
+\p{One way to fix this would be to surround all code which could error with try/catch blocks which rethrow any error found with some context about assumptions made in the current context. But this is kind of annoying to do, and additionally I'd end up with huge error types which were essentially linked lists.}
+
+\p{What I really want is the ability to "annotate the stack trace." That is, I want to decorate a function call such that if that function call throws an error, that error keeps going, but when the stack trace prints out, at the stack frame of the function call it also shows the context I decorated the function call with. And perhaps also some other convenient annotations, like make it easy to say "also print out the arguments to this function call."}
+
+\p{Come to think of it, when a function errors, I should be able to inspect all the local variables at any point in the stack. Somehow I feel like this is how in common lisp works; I know that when an error happens in common lisp it always prompts the ability to enter a debugging session.}
+
+\p{Does anyone know about programming languages which have something like this?}
