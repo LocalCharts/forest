@@ -67,7 +67,7 @@
             echo -e '\n' >> _redirects
             for FILE in *.xml; do
               LOWERCASE_FILE=$(echo "$FILE" | tr '[:upper:]' '[:lower:]')
-              if [$LOWERCASE_FILE != $FILE]
+              if [$LOWERCASE_FILE != $FILE]; then
                 echo "/$LOWERCASE_FILE /$FILE 301" >> _redirects
               fi
             done
