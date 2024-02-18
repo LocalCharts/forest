@@ -63,6 +63,12 @@
           text = ''
             forester build --root ${default-tree}-0001 trees/
             cp _redirects output/
+            cd output/
+            for FILE in *.xml; do
+              LOWERCASE_FILE=$(echo "$FILE" | tr '[:upper:]' '[:lower:]')
+              echo "/$LOWERCASE_FILE /$FILE 301" >> _redirects
+            done
+            cd ..
             wrangler pages deploy --branch "$BUILDKITE_BRANCH" --project-name localcharts-forest output/ | tee wrangler-log
             DEPLOY_URL=$(sed -n 's/.*Take a peek over at \(.*\)/\1/p' < wrangler-log)
             curl -L \
