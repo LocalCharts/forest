@@ -67,7 +67,9 @@
             echo -e '\n' >> _redirects
             for FILE in *.xml; do
               LOWERCASE_FILE=$(echo "$FILE" | tr '[:upper:]' '[:lower:]')
-              echo "/$LOWERCASE_FILE /$FILE 301" >> _redirects
+              if [$LOWERCASE_FILE != $FILE]
+                echo "/$LOWERCASE_FILE /$FILE 301" >> _redirects
+              fi
             done
             cd ..
             wrangler pages deploy --branch "$BUILDKITE_BRANCH" --project-name localcharts-forest output/ | tee wrangler-log
