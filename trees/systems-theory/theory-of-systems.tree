@@ -1,0 +1,21 @@
+
+\title{Theory of Systems}
+\taxon{definition}
+\import{macros}
+\import{systems-theory-macros}
+
+\p{
+	A \defcase{theory of systems} over a [theory of composition](theory-of-composition) #{\compth{P}} is a (double) algebra #{\Sys} over #{\compth{P}}, meaning
+	\ol{
+		\li{for each interface #{A:\compth{P}}, a category ##{\Sys(A)} whose objects are \defcase{systems},}
+		\li{for each map of interfaces #{h:A \to A'}, a profunctor ##{\Sys(h) : \Sys(A) \proto \Sys(A'),} whose elements are \defcase{maps of systems},}
+		\li{for each composition #{p:A_1,\ldots,A_n \proto B}, a functor ##{\Sys(p):\Sys(A_1) \times \cdots \times \Sys(A_n) \to \Sys(B),} defining \defcase{composition of systems},}
+		\li{for each map of compositions, a square in #{\Cat} with obvious signature,}
+	}
+	subject to coherence conditions
+	\ol{
+		\li{the assignment of maps of interfaces to profunctors is unitary lax functorial, meaning #{\Sys(1_A) = \Sys(A)(-,=)}, with the latter denoting the identity profunctor of #{\Sys(A)}, and such that every composition of maps of interfaces has an associated canonical compositor 2-cell #{\Sys(h_1)\hcomp \Sys(h_2) \twoto \Sys(h_1 \then h_2)}, witnessing composition of maps of systems}
+		\li{the assignment of compositions to functors is strictly functorial,}
+		\li{the assignment of maps of compositions to 2-cells is natural.}
+	}
+}

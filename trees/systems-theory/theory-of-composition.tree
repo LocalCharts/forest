@@ -1,0 +1,9 @@
+\title{Theory of Composition}
+\taxon{definition}
+\import{macros}
+\import{systems-theory-macros}
+
+\p{
+	A \textbf{theory of composition} is a symmetric monoidal double category.
+	Its objects are called \textbf{interfaces}, its operations \textbf{compositions}, its tight maps and 2-cells just \textbf{maps of interfaces} and \textbf{compositions}, respectively.
+}

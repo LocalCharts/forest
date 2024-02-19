@@ -1,0 +1,8 @@
+\title{The operad of wiring diagrams: formalizing a graphical language for databases, recursion, and plug-and-play circuits}
+\import{macros}
+\author{david-spivak}
+\taxon{reference}
+
+\meta{doi}{10.48550/arXiv.1305.0297}
+
+\abstract{Wiring diagrams, as seen in digital circuits, can be nested hierarchically and thus have an aspect of self-similarity. We show that wiring diagrams form the morphisms of an operad #{\cal T}, capturing this self-similarity. We discuss the algebra #{\mathrm{\mathcal Rel}} of mathematical relations on #{\cal T}, and in so doing use wiring diagrams as a graphical language with which to structure queries on relational databases. We give the example of circuit diagrams as a special case. We move on to show how plug-and-play devices and also recursion can be formulated in the operadic framework as well. Throughout we include many examples and figures.}

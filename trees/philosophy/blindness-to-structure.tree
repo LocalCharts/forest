@@ -1,0 +1,22 @@
+\title{Blindness to Structure}
+\taxon{philosophy}
+\author{matteo-capucci}
+\import{macros}
+
+\p{
+	\strong{Blindness to structure} is a pitfall in mathematics whereby the opacity of a materialistic framework hides the reliance on some structure.
+	Formally, it can be seen as a failure to recognize the ambient \nlab{category} one is working in.
+}
+
+\p{
+	Notice blindness to structure isn't necessarily a failure to recognize structure, but more accurately is failure to recognize the role a structure plays.
+}
+
+\p{
+	The most common form of blindness to structure is caused by mistaking the ambient for \nlab{Set}.
+	Another very common one is caused by using the \nlab{reals}.
+}
+
+\p{
+	Working with [Concrete Objects](concrete-object) easily leads to rely on structure without explicitly acknowledging it.
+}

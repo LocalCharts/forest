@@ -1,0 +1,9 @@
+\title{Matteo Capucci}
+\taxon{person}
+\meta{institution}{University of Strathclyde}
+\meta{position}{PhD student}
+\meta{external}{https://matteocapucci.wordpress.org/}
+
+\import{macros}
+
+\p{See \nlab{Matteo Capucci} or [my blog](https://matteocapucci.wordpress.org/).}

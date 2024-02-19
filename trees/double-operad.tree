@@ -1,0 +1,8 @@
+\title{Double Operad}
+\taxon{definition}
+\import{macros}
+
+\p{
+	A \defcase{double #{T}-operad} is a #{T}-operad in the [[equipment-of-cats]] \dblCat, for #{T:\dblCat \to \dblCat} a monad.
+	It has a category of \textbf{objects} and \textbf{tight maps} and a (#{\Set}-)#{T}-operad of \textbf{loose maps} (the \defcase{operations}) and \textbf{2-cells} thereof.
+}

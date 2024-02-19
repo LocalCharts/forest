@@ -1,0 +1,114 @@
+\title{Theories, Doctrines, Paradigms}
+\tag{categorical systems theory}
+\author{matteo-capucci}
+\import{macros}
+\import{systems-theory-macros}
+
+\p{
+	The narratology of categorical systems theory can be organized in three levels of decreasing abstraction.
+	It's easier to start from the topmost level:
+}
+
+\predefinition{Paradigm}{
+	A \defcase{paradigm} of systems theory is a way to answer the following questions:
+	\ol{
+		\li{What kind of \emph{comparisons} between systems we want to ponder?}
+		\li{What kind of \emph{compositions} of systems we want to ponder?}
+	}
+}
+
+\p{
+	The most familiar paradigms in applied category theory are the following:
+}
+
+\example{Paradigm of sets}{
+	In this paradigm, systems are organized in sets, thus can only be compared for equality.
+	Composition is described by symmetric operads, thus basically symmetric monoidal categories.
+	This is a fairly common paradigm in the literature, e.g. Spivak's [paper on wiring diagrams](spivak-wiring-diagrams-2013) can be considered to work in the paradigm of sets.
+}
+
+\example{Paradigm of categories}{
+	In this paradigm, systems are organized in categories, thus can be compared with morphisms
+	Composition is described by symmetric double operads, thus basically symmetric monoidal double categories.
+	\textbf{This is the default paradigm in categorical systems theory}.
+}
+
+\p{
+	One could conceive other paradigms.
+	For instance, one might want to compare systems by quantifying their similarity with a number, a cohomology class, or some other extensive measurement.
+	One could compose them in different ways, for instance by glueing them instead of wiring them.
+}
+
+\p{
+	Mathematically, the answers to the questions posed by a choice of paradigm correspond to the following:
+}
+
+\definition{Paradigm}{
+	A \defcase{paradigm} is an equipment #{\dblcat{E}} along with a monad #{T:\dblcat{E} \to \dblcat{E}}, i.e. a way to define what 'operad' and 'algebra' mean.
+}
+
+\p{
+	From a paradigm, we can build a 2-category of theories, whose objects are theories of systems and whose maps are lax maps thereof.
+}
+
+\definition{2-category of theories}{
+	Let #{\Paradigm} be a paradigm.
+	The associated \defcase{2-category of theories} #{\Theories^\Paradigm} is the 2-category of #{T}-operads and right algebras thereof, with \emph{lax} maps and 2-cells.
+	Objects are thus pairs #{(\Comp, \Sys)} where \Comp is a #{T}-operad and \Sys a right algebra thereof.
+}
+
+\predefinition{Theory}{
+	A \defcase{theory} for a paradigm \Paradigm is an object of #{\Theories^\Paradigm}.
+}
+
+\example{Theories in the set paradigm}{
+	The 2-category of theories for the paradigm #{(\dblSet, \SymOperads)} is the 2-category whose objects are pairs #{(\cat{C}, \mathrm{Sys})} were the first is a symmetric monoidal category and the latter is a symmetric monoidal copresheaf #{\mathrm{Sys} : \cat{C} \to \Set}.
+	A map of theories is given by a symmetric lax monoidal functor between the base categories and a natural transformation.
+}
+
+\example{Theories in the categories paradigm}{
+	The 2-category of theories for the paradigm #{(\dblCat, \SymDblOperads)} is the 2-category whose objects are pairs #{(\compth{C}, \Sys)} were the first is a symmetric monoidal double category and the latter is a symmetric monoidal lax copresheaf #{\Sys:\compth{C} \to \dblSet}, also known as a doubly indexed category.
+	A map of theories is given by a symmetric lax monoidal lax double functor between the base double categories and a lax natural transformation.
+}
+
+\p{
+	However, the concept of theory at the minute is underspecified.
+	Most times we describe a theory we are actually giving a description of class of theories all parametrized by some common data (e.g. a category with pullbacks, a category together with a monad, etc.).
+	So a theory is often just some data we can use to get an operad and an algebra in a specified way.
+	Informally, one defines a doctrine as follows (this one is straight from [David](david-jaz-myers)'s book [[djm-categorical-systems-theory]]):
+}
+
+\predefinition{Doctrine}{
+	A \defcase{doctrine} of systems is a particular way to answer the following questions about it means to be a systems theory:
+	\ol{
+		\li{What does it mean to be a system? Does it have a notion of states, or of behaviors?
+		Or is it a diagram describing the way some primitive parts are organized?}
+		\li{What should the interface of a system be?}
+		\li{How can interfaces be connected in composition patterns?}
+		\li{How are systems composed through composition patterns between their interfaces?}
+		\li{What is a map between systems, and how does it affect their interfaces?}
+		\li{When can maps between systems be composed along the same composition patterns as the systems?}
+	}
+}
+
+\p{
+	Thus a doctrine is a \emph{uniform}, meaning \emph{functorial}, \emph{way of building theories}:
+
+}
+
+\definition{Doctrine}{
+	A \defcase{doctrine} \Doc in the paradigm \Paradigm is a 2-functor
+	##{\Sys^{\Doc} : \Theories^{\Doc} \longto \Theories^\Paradigm}
+	The objects of #{\Theories^{\Doc}} are called \defcase{theories for the doctrine \Doc}.
+}
+
+\remark{
+	The reason we already called #{\Theories^\Paradigm} the 2-category of \emph{theories} is easily seen: clearly the identity functor of #{\Theories^\Paradigm} is a doctrine, and in fact the 'universal one', since it is terminal among doctrines over \Paradigm.
+	Thus all right algebras for #{T}-operads in \dblcat{E} are theories for the universal doctrine for the paradigm \Paradigm.
+
+	The definitive definition of theory mentions directly the doctrine:
+}
+
+\definition{Theory}{
+	A \defcase{theory} \Sys for a doctrine \Doc is an object in #{\Theories^\Doc}.
+}

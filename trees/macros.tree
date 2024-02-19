@@ -1,5 +1,9 @@
 \title{Macros}
 
+% These play much nicer with sh in VSCode & my muscle memory
+\def\emph[x]{\em{\x}}
+\def\textbf[x]{\strong{\x}}
+
 % Blackboard bold, bold, and calligraphic characters
 
 \def\AA{#{\mathbb{A}}}
@@ -169,21 +173,31 @@
 \def\onto{#{\twoheadrightarrow}}
 \def\from{#{\leftarrow}}
 \def\xto[f]{#{\xrightarrow{\f}}}
+\def\longto{#{\longrightarrow}}
+\def\proto{#{\nrightarrow}}
+\def\twoto{#{\Rightarrow}}
 
 \def\cat[c]{#{\mathsf{\c}}}
+\def\dblcat[name]{#{\cat{\mathbb \name}}}
 
 \def\Cat{#{\cat{Cat}}}
+\def\dblCat{#{\dblcat{Cat}}} % equipment of cats, not to be confused with DblCat
+% it'd be cool to have it automatically linked, like so:
+% \def\dblCat{#{\dblcat{Cat}}}{[#{\dblcat{Cat}}](equipment-of-cats)}
+% but it doesn't compile!
+
 \def\Gpd{#{\cat{Gpd}}}
 \def\Set{#{\cat{Set}}}
+\def\dblSet{#{\dblcat{Set}}} % equipment of spans of sets, i.e. Span(Set)
 \def\Fin{#{\cat{Fin}}}
 \def\FinIso{#{\cat{Fin}_{\cong}}}
 \def\Topos{#{\cat{Topos}}}
 \def\Logos{#{\cat{Logos}}}
 \def\Diag{#{\cat{Diag}}}
 \def\Poset{#{\cat{Poset}}}
-\def\Span{#{\SS\cat{pan}}}
-\def\Rel{#{\RR\cat{el}}}
-\def\Mat{#{\MM\cat{at}}}
+\def\Span{#{\dblcat{Span}}}
+\def\Rel{#{\dblcat{Rel}}}
+\def\Mat{#{\dblcat{Mat}}}
 
 \def\Ob{#{\operatorname{\mathbf{Ob}}}}
 
@@ -260,6 +274,18 @@
 
 \def\definition[head][body]{
   \subtree{\title{\head} \taxon{definition} \body}
+}
+
+\def\remark[body]{
+  \subtree{\taxon{remark} \body}
+}
+
+\def\predefinition[head][body]{
+  \subtree{\title{\head} \taxon{preliminary definition} \body}
+}
+
+\def\example[head][body]{
+  \subtree{\title{\head} \taxon{example} \body}
 }
 
 % Figures

@@ -1,0 +1,37 @@
+
+\title{A quick tour of the ideas}
+\tag{categorical systems theory}
+\import{macros}
+\import{systems-theory-macros}
+
+\p{
+	In Greek, the word `system' means `composite'. Categorical systems theory takes this etymology very seriously, approaching the study of systems as the study of `things that compose'. Thankfully, the mathematical theory of composition is rich and has been abundantly studied before, under the guise of \textbf{operads}. The idea that systems are algebras of operads is more than a decade old now, being first proposed by [Spivak](david-spivak) in [his 2013 paper](spivak-wiring-diagrams-2013).
+}
+
+\remark{
+	The word operad is quite overloaded, and, in some sense, not overloaded enough. An \nlab{operad}, traditionally, is a structure encoding formal operations of arbitrary finite arity which compose associatively and have a unit. In fact, the idea can be easily generalized much further, by having "arities" being structured objects.
+	In this generalized form, operads are usually called \emph{multicategories}, but I'd like to keep calling them operads because (a) morally, they still are and (b) operad is a much nicer and less scary word than multicategory.
+	This translates to their even-more-generalized form, #{T}-multicategories, which I call #{T}-operads.
+}
+
+\idea{
+	\emph{Operads} are \defcase{theories of composition}.
+	\emph{Theories of systems} should be algebras of theories of compositions.
+}
+
+\p{
+	This is the \emph{algebraic} aspect of systems theory: it concerns the way systems are put together by operations (incidentally, also the word \emph{algebra} is etymologically related to composition)!
+	There is also a \emph{geometric} aspect to systems theory, if we might abuse the algebro-geometric duality.
+	Systems are objects with an internal structure, which can be probed by morphisms which compare systems to each other.
+	Having this extra geometric structure is quite important, albeit often overlooked. It is not overlooked in coalgebraic automata theory, where the algebraic aspect is neglected but the idea that systems shall be objects of a category is taken in great consideration.
+}
+
+\idea{
+	\defcase{Theories of systems} should be algebras of \emph{double operads}, i.e. operads in categories.
+}
+
+\remark{
+	This 'definition' is preemptively general.
+	While the ideal, for both [me](matteo-capucci) and [David](david-jaz-myers), is to eventually work in terms of general #{T}-operads (that being the 'morally right' setting), at the minute  most of categorical systems theory is done for #{T = \SymDblOperads}, where #{\SymDblOperads} is a made-up notation for the \emph{free symmetric monoidal category} 2-monad on #{\Cat} (Example 4.1.16 in [[leinster-higher-operads-2004]]).
+	Concretely, this means that a double #{\SymDblOperads}-operad is a \emph{symmetric monoidal double category}.
+}

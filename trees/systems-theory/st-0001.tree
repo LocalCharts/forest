@@ -1,0 +1,29 @@
+\title{Categorical Systems Theory}
+\tag{categorical systems theory}
+\author{matteo-capucci}
+\import{macros} % the localcharts macro library
+
+\p{
+	Systems are ubiquitous, in science as in life.
+	People regularly deal with physical systems, political systems, economical systems, living systems, learning systems, writing systems, voting systems, computing systems, etc.
+	As we zoom into a thing, we inevitably realize it is comprised of smaller interacting parts. As we zoom out, we realize it is itself part of an even more complex system.
+}
+
+\p{
+	Given the staggering variety systems come in, it is no surprise the existing scientific and mathematical frameworks to describe them are manifold and often incompatible with one another.
+	Studying each of these frameworks by themselves is surely a useful endeavour, but that doesn't mean there is nothing to learn from a generalist approach which aims to distill the common motifs underpinning each paradigm.
+	Hence in approaching the study of systems theory, the category theorist (a label that indicates a philosophy more than a subject of study) asks: \textbf{what are the formal structures underlying all the different approaches to systems?}
+}
+
+\p{
+	An important consequence of this approach is \emph{removing opacity}.
+	In fact, each framework created to deal with systems makes certain assumptions regarding the structure of these systems, the way they compose and the way they relate, as well as what behaviour they are interested in and what even means to display a certain behaviour.
+	It's easy to get lost in these questions, and to miss important insight because of [[blindness-to-structure]].
+	So an important contribution of categorical systems theory is to clarify, within each individual framework, what are the choices that have been made.
+}
+
+\transclude{st-history}
+
+\transclude{st-0002}
+
+\transclude{st-0003}

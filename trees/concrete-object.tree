@@ -1,0 +1,18 @@
+\title{Concrete Object}
+\taxon{philosophy}
+\author{matteo-capucci}
+\import{macros}
+
+\p{
+	This concept is due to [[david-jaz-myers]].
+}
+
+\p{
+	An object is concrete if it embodies numerous abstractions. The more abstractions it straddles across, the more concrete it is. Formally, one might regard a concrete object as one 'living in many different categories'.
+}
+
+\p{
+	The archetypal concrete object is #{\R}.
+}
+
+

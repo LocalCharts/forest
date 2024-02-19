@@ -1,0 +1,7 @@
+\title{Equipment of Categories}
+\taxon{definition}
+\import{macros}
+
+\p{
+	The \defcase{equipment of categories}, denoted #{\dblCat}, is the equipment of locally small categories, functors (as tight maps), small profunctors (as loose maps) and natural transformations of profunctors (as 2-cells).
+}

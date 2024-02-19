@@ -1,0 +1,17 @@
+\title{Macros for Systems Theory}
+\import{macros}
+
+\def\compth[name]{#{\dblcat{\name}}}
+\def\systh[name]{#{\cat{\name}}}
+\def\doc[name]{#{\mathfrak{\name}}}
+
+\def\Theories{#{{\dblcat{Th}}}}
+\def\RAlg{#{{\dblcat{RAlg}}}}
+
+\def\Paradigm{#{{(\dblcat{E}, T)}}}
+\def\Doc{#{\doc{Doc}}}
+\def\Sys{#{\systh{Sys}}}
+\def\Comp{#{\compth{C}}}
+
+\def\SymOperads{#{S[-]}}
+\def\SymDblOperads{#{\cat{S}[-]}}

@@ -1,0 +1,7 @@
+\title{Equipment of Sets}
+\taxon{definition}
+\import{macros}
+
+\p{
+	The \defcase{equipment of sets}, denoted #{\dblSet}, is the equipment of sets, functions (as tight maps), spans of functions (as loose maps) and maps of spans (as 2-cells).
+}
