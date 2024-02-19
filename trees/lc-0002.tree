@@ -1,4 +1,4 @@
-\title{[Forester](http://www.jonmsterling.com/jms-005P.xml) for the Woodland Skeptic}
+\title{Forester for the Woodland Skeptic}
 \author{owen-lynch}
 \meta{comments}{true}
 \date{2024-02-18}
@@ -9,7 +9,7 @@
 \p{-- [Matteo Cappuci](https://www.localcharts.org/t/double-category-theory-from-a-double-categorical-perspective/14659/3?u=owenlynch)}
 }
 
-\p{This is a tutorial aimed at people who want to get started writing on the LocalCharts forest, but don't know how forester works/are frustrated at how forester is different from tools they may be used to. This is intended to be a direct introduction than the [official tutorial](http://www.jonmsterling.com/jms-0052.xml) (which has more motivation for forester), and also has some localcharts-specific content.}
+\p{This is a tutorial aimed at people who want to get started writing on the LocalCharts forest, but don't know how [forester](http://www.jonmsterling.com/jms-005P.xml) works/are frustrated at how forester is different from tools they may be used to. This is intended to be a direct introduction than the [official tutorial](http://www.jonmsterling.com/jms-0052.xml) (which has more motivation for forester), and also has some localcharts-specific content.}
 
 \transclude{lc-0003}
 
