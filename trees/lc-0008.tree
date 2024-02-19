@@ -3,7 +3,7 @@
 
 \p{One of the main reasons that I chose forester of all the ways of writing math on the web was its support for macros. It pains the soul to have to write \code{\startverb\mathsf{Cat}\stopverb} all the time; I just want to write \code{\startverb\Cat\stopverb}!}
 
-\p{Macro definition is similar to LaTeX, but with two changes. The first change is that it uses \code{\startverb\def\stopverb} instead of \code{\startverb\newcommand\stopverb}. Recall that \code{\startverb\def\stopverb} was the original syntax in TeX, but had some warts, so LaTeX had to change to \code{\startverb\newcommand\stopverb}, so this is really just going back to roots. The second change is that arguments are named instead of numbered. For instance, instead of}
+\p{Macro definition is similar to LaTeX, but with two changes. The first change is that it uses \code{\startverb\def\stopverb} instead of \code{\startverb\newcommand\stopverb}. Recall that \code{\startverb\def\stopverb} was the original syntax in TeX, but had some warts, so LaTeX had to change to \code{\startverb\newcommand\stopverb}, so this is really just going back to the roots of TeX. The second change is that arguments are named instead of numbered. For instance, instead of}
 
 \pre{\startverb
 \newcommand\innerproduct[2]{\langle #1, #2 \rangle}
