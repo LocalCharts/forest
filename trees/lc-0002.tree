@@ -15,9 +15,10 @@
 
 \p{Now that you've seen the overview, I encourage you to try writing a page. Instructions for setting up the localcharts forest are in the [README](https://github.com/LocalCharts/forest/blob/main/README.md) for the localcharts forest. Once you've done that, you can come back here and learn forester in some more depth.}
 
-\p{But before you go on, three things.}
+\p{But before you go on, four things.}
 
 \ol{
+  \li{There is a convenient script for making new trees numbered in base-36: \code{new <namespace>}. For instance \code{new ocl} produces a new file \code{trees/ocl-XXXX.tree}, where \code{XXXX} is the least strict upper bound of the set of \code{YYYY} such that \code{ocl-YYYY} exists in the forest. We use this for most prose, but we also use the \code{authors/}, \code{institutions/}, etc. directories to put bibliographic trees, named after their contents instead of automatically named.}
   \li{If you have any questions or complaints about this tutorial, please comment below. If you have general questions about forester, I encourage you to join the [mailing list](https://lists.sr.ht/~jonsterling/forester-discuss).}
   \li{Don't be afraid to poke around at either the [source code for localcharts](https://github.com/LocalCharts/forest/tree/main/trees) or the [source code for Jon Sterling's webpage](https://git.sr.ht/~jonsterling/public-trees/tree); you may find some interesting features!}
   \li{Be aware that forester is new software in active development, and Jon Sterling is not afraid to make breaking changes. This is a blessing and a curse; he might write something which breaks things, but he also might write the feature that you really want if you [ask nicely on the mailing list](https://lists.sr.ht/~jonsterling/forester-discuss)!}
