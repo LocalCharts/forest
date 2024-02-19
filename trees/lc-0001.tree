@@ -1,12 +1,9 @@
 \title{LocalCharts Forest}
 \author{owen-lynch}
 
-\p{The LocalCharts forest is a place for writing in the [spirit of LocalCharts](https://www.localcharts.org/t/localcharts-is-live/5714) with high-quality mathematical typesetting. To do this, we use [forester](http://www.jonmsterling.com/jms-005P.xml) to build the [source](https://github.com/LocalCharts/forest) of this website, and then embed comments from the [LocalCharts discourse instance](https://www.localcharts.org). Forester satisfies more of the [desiderata for an adequate scientific publishing platform](https://www.localcharts.org/t/desiderata-for-an-adequate-scientific-publishing-platform/11367) than almost any other tool that I've considered using for a similar purpose, which is funny because it came out of [Jon Sterling having a fairly similar thought process](http://www.jonmsterling.com/tfmt-000E.xml).}
+\transclude{lc-000F}
 
-\p{To contribute to the forest, you can send a pull request to the [github repository](https://github.com/LocalCharts/forest). The README in the github repository has instructions for how to set up a local environment for writing. Additionally, if you have been around in the LocalCharts community for a reasonable amount of time, you can DM [Owen Lynch](https://www.localcharts.org/u/owenlynch) and ask for write access to the github so that you don't have to go through an approval step before pushing to the repo.}
+\transclude{lc-000G}
 
-\p{In any case, when you contribute to the forest, you should do a couple things. First of all, you should add yourself to the \code{trees/authors} folder (you can see [owen-lynch.tree](https://github.com/LocalCharts/forest/tree/main/trees/authors/owen-lynch.tree) for an example of this). Then you should claim a namespace. For instance, Owen's posts all start with ocl (Owen Carroll Lynch), i.e. \code{ocl-0001}, \code{ocl-0002}. You might end up typing this a lot, so initials are good. You can generate new trees in a namespace using the \code{new} script in the repository, so for instance \code{new ocl} makes a new file within the ocl namespace, numbered with the next number.}
+\transclude{lc-000H}
 
-\p{There are some useful macros for math/category theory in [macros.tree](https://github.com/LocalCharts/forest/blob/main/trees/macros.tree). Hopefully as the forest grows, we will have some flame wars about notation and end up with some semi-productive standardization via this macros file.}
-
-\p{Comments (and by extension, automatic cross-posting to the forum) are opt-in. If you would like comments, then you must put \code{\startverb\meta{comments}{true}\stopverb} at the top of your page.}

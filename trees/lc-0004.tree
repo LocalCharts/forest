@@ -1,0 +1,10 @@
+\title{Basic Typography}
+\author{owen-lynch}
+
+\p{Forester has a lot of interesting features around large-scale organization of documents, but it's worth reviewing the nuts and bolts of basic typographical constructions first, so that you have tools in your toolbox for when we move to the large-scale stuff.}
+
+\p{Forester's syntax is a little bit unfamiliar, however I hope by the end of this section, you will see that the design decisions leading to this were not unreasonable, and lead to a quite usable and simple language. This is because there is mainly just one syntactic construct in forester: the command. The syntax is \code{\startverb\commandname{argument}\stopverb}, which should be familiar to anyone who has used LaTeX.}
+
+\transclude{lc-0009}
+
+\transclude{lc-000A}

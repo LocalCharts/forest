@@ -1,0 +1,49 @@
+\title{Forester in 30 seconds}
+
+\p{[Forester](http://www.jonmsterling.com/jms-005P.xml) is a tool for writing large quantities of professional quality mathematics on the web. To support large quantities, it has extensive interlinking/backlink/transclusion support. To support professional quality, it has a uniform, LaTeX-like syntax with macros that work the same in prose, KaTeX-based math equations, and LaTeX-produced figures.}
+
+\p{An example forester document showcasing basic features looks like this:}
+
+\pre{\startverb
+\title{Example document}
+\author{owen-lynch}
+\import{macros} % the localcharts macro library
+\date{1970-01-01}
+
+% A comment
+\p{A paragraph with inline math: #{a+b}, and then display math}
+
+##{\int_a^b f(x)}
+
+\p{\strong{bold} and \em{italics}}
+
+\ul{
+  \li{a}
+  \li{bulleted}
+  \li{list}
+}
+
+\ol{
+  \li{a}
+  \li{numbered}
+  \li{list}
+}
+
+\quiver{
+  \begin{tikzcd}
+    A \ar[r, "f"] & B
+  \end{tikzcd}
+}
+
+\def\my-macro[arg]{Called \code{my-macro} with argument \arg}
+
+\p{\my-macro{tweedle}}
+
+\transclude{lc-0005} % a subsection
+\stopverb}
+
+\p{and would be rendered like this:}
+
+\transclude{lc-0006}
+
+\p{Forester is written in \code{.tree} files in the \code{trees/} directory. Trees are named \code{namespace-XXXX}, where \code{XXXX} is a number in base 36 (using digits 0-9 then A-Z), and \code{namespace} is typically something like the initials of the person writing.}

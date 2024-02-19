@@ -1,0 +1,7 @@
+\title{Tips and Tricks}
+
+\p{If you haven't used forester before (which is most people), you can start by reading [[lc-0002]], which will get you started quickly and hopefully give you a sense of why to use forester.}
+
+\p{There are some useful macros for math/category theory in [macros.tree](https://github.com/LocalCharts/forest/blob/main/trees/macros.tree). Hopefully as the forest grows, we will have some flame wars about notation and end up with some semi-productive standardization via this macros file.}
+
+\p{Comments (and by extension, automatic cross-posting to the forum) are opt-in. If you would like comments, then you must put \code{\startverb\meta{comments}{true}\stopverb} at the top of your page.}

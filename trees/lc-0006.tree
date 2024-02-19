@@ -1,0 +1,35 @@
+\title{Example document}
+\author{owen-lynch}
+\import{macros} % the localcharts macro library
+\date{1970-01-01}
+
+% A comment
+\p{A paragraph with inline math: #{a+b}, and then display math}
+
+##{\int_a^b f(x)}
+
+\p{\strong{bold} and \em{italics}}
+
+\ul{
+  \li{a}
+  \li{bulleted}
+  \li{list}
+}
+
+\ol{
+  \li{a}
+  \li{numbered}
+  \li{list}
+}
+
+\quiver{
+  \begin{tikzcd}
+    A \ar[r, "f"] & B
+  \end{tikzcd}
+}
+
+\def\my-macro[arg]{Called \code{my-macro} with argument \arg}
+
+\p{\my-macro{tweedle}}
+
+\transclude{lc-0005} % a subsection

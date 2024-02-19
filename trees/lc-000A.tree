@@ -1,0 +1,7 @@
+\title{Math Typesetting}
+
+\p{To produce inline mathematics, use \code{\startverb #{...}\stopverb}. Math mode uses [KaTeX](https://katex.org/), so anything supported in KaTeX will work in forester. Note that math mode is idempotent: \code{\startverb #{a + b}\stopverb} produces the same result as \code{\startverb #{#{a} + b}\stopverb}. Display mathematics can be made with \code{\startverb ##{...}\stopverb}.}
+
+\p{The killer feature of forester is the ability to include LaTeX figures as svgs. This is done by compiling the figure with the [standalone](https://ctan.org/pkg/standalone?lang=en) package, and then running [dvisvgm](https://dvisvgm.de/). The results are cached, so that when you make changes elsewhere in your document, the figures do not have to be recompiled.}
+
+\p{You can access this feature with the \code{\startverb\tex{...}{...}\stopverb} command. The first argument is the preamble, where you can put your \code{\startverb\usepackage{...}\stopverb} statements. The second argument is the code for your figure, using TikZ or similar packages. The localcharts macro package (accessed with \code{\startverb\import{macros}\stopverb}) also provides a command \code{\startverb\quiver{...}\stopverb} which has the right preamble for copy-pasting [quiver](https://q.uiver.app/) diagrams. Note that you must remove the surrounding \code{\startverb\[...\]\stopverb} from the quiver export, or you will get weird LaTeX errors.}

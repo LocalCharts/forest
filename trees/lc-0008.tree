@@ -1,0 +1,18 @@
+\title{Macros}
+\author{owen-lynch}
+
+\p{One of the main reasons that I chose forester of all the ways of writing math on the web was its support for macros. It pains the soul to have to write \code{\startverb\mathsf{Cat}\stopverb} all the time; I just want to write \code{\startverb\Cat\stopverb}!}
+
+\p{Macro definition is similar to LaTeX, but with two changes. The first change is that it uses \code{\startverb\def\stopverb} instead of \code{\startverb\newcommand\stopverb}. Recall that \code{\startverb\def\stopverb} was the original syntax in TeX, but had some warts, so LaTeX had to change to \code{\startverb\newcommand\stopverb}, so this is really just going back to roots. The second change is that arguments are named instead of numbered. For instance, instead of}
+
+\pre{\startverb
+\newcommand\innerproduct[2]{\langle #1, #2 \rangle}
+\stopverb}
+
+\p{you would use}
+
+\pre{\startverb
+\def\innerproduct[x][y]{\langle \x, \y \rangle}
+\stopverb}
+
+\p{You can take a look at [macros.tree](https://github.com/LocalCharts/forest/blob/main/trees/macros.tree) for the LocalCharts "macro standard library". To use this in one of your trees, you must have \code{\startverb\import{macros}\stopverb} at the top. Finally, note that the same macro definition works in prose, within \code{\startverb #{...}\stopverb} or \code{\startverb ##{...}\stopverb}, and also within \code{\startverb\tex{...}{...}\stopverb}, so you can use the same math abbreviations in your inline equations and in your commutative diagrams, just like you would in a real LaTeX document.}

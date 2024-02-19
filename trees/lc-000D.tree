@@ -1,0 +1,3 @@
+\title{Bibliographies}
+
+\p{Bibliographic citations are just trees with \code{\startverb\taxon{reference}\stopverb} at the top. See [here](https://github.com/LocalCharts/forest/tree/main/trees/refs) for examples of how to write these. Whenever a reference is linked to in a tree, the bibliographic information appears at the bottom of the page. For instance, I can link to [Topo-logie](anel-joyal-topo-logie-2021) and the formatted citation should appear at the bottom of this page.}

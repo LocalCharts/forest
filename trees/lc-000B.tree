@@ -1,0 +1,7 @@
+\title{Links}
+\import{macros}
+
+\p{The easiest way to connect ideas is via links! Forester supports several different types of links. The simplest is markdown-style links, written like \code{\startverb[link title](https://linkaddress.com)\stopverb}. Because linking to the nlab is so common in localcharts, we also have a special macro \code{\startverb\nlab{...}\stopverb} (when you have \code{\startverb\import{macros}\stopverb} at the top of your file) for linking to nlab pages by their title, tastefully colored in that special nlab green like so: \nlab{Double category}.}
+
+\p{Additionally, pages within the same forest can be referenced just by their tag, as in \code{\startverb[Home page](lc-0001)\stopverb}, or "wikilink style" with \code{\startverb[[lc-0001]]\stopverb}, which produces a link titled by the title of the referred page, like so: [[lc-0001]]. Note that internal links have a dotted underline. Moreover, on a given page #{X}, one can see all of the other pages that point to #{X} via internal links.}
+

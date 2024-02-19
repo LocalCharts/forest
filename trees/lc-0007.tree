@@ -1,0 +1,11 @@
+\title{References and Transclusions}
+\import{macros}
+\author{owen-lynch}
+
+\p{In this section, we discuss how to handle ideas that are not contained in a single file in quiver.}
+
+\transclude{lc-000B}
+
+\transclude{lc-000C}
+
+\transclude{lc-000D}

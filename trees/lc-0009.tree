@@ -1,0 +1,28 @@
+\title{HTML Tags}
+
+\def\table[body]{\xml{table}{\body}}
+\def\th[body]{\xml{th}{\body}}
+\def\tr[body]{\xml{tr}{\body}}
+\def\td[body]{\xml{td}{\body}}
+
+\p{The most basic commands just produce html tags, as can be found in the table below.}
+
+\xml{table}{
+  \tr{\th{Name} \th{HTML} \th{Forester}}
+  \tr{\td{[Paragraph](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)} \td{\code{\startverb<p>...</p>\stopverb}} \td{\code{\startverb\p{...}\stopverb}}}
+  \tr{\td{[Unordered list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)} \td{\code{\startverb<ul><li>...</li><li>...</li></ul>\stopverb}} \td{\code{\startverb\ul{\li{...}\li{...}}\stopverb}}}
+  \tr{\td{[Ordered list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol)} \td{\code{\startverb<ol><li>...</li><li>...</li></ol>\stopverb}} \td{\code{\startverb\ol{\li{...}\li{...}}\stopverb}}}
+  \tr{\td{[Emphasis](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em)} \td{\code{\startverb<em>...</em>\stopverb}} \td{\code{\startverb\em{...}\stopverb}}}
+  \tr{\td{[Strong](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong)} \td{\code{\startverb<strong>...</strong>\stopverb}} \td{\code{\startverb\strong{...}\stopverb}}}
+  \tr{\td{[Code](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code)} \td{\code{\startverb<code>...</code>\stopverb}} \td{\code{\startverb\code{...}\stopverb}}}
+  \tr{\td{[Pre](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)} \td{\code{\startverb<pre>...</pre>\stopverb}} \td{\code{\startverb\pre{...}\stopverb}}}
+  \tr{\td{[Blockquote](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote)} \td{\code{\startverb<blockquote>...</blockquote>\stopverb}} \td{\code{\startverb\blockquote{...}\stopverb}}}
+}
+
+\p{Note that unlike in markdown or LaTeX, paragraphs must be explicitly designated via \code{\startverb\p{...}\stopverb}, rather than being implicit from newlines.}
+
+\p{Also note the conspicuous absence of the [anchor tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a): we will cover links in \ref{lc-0007}.}
+
+\p{It is also possible to output any other HTML tag via the \code{\startverb\xml\stopverb} command. For instance, I used \code{\startverb\xml{table}{...}\stopverb} to produce the table above.} 
+
+\p{So to sum up, basic typography in forester is just a LaTeX-flavored wrapper around HTML elements. Given that we have to use LaTeX for math (because it's too much effort to relearn how to typeset math euations), it makes sense to just have a single syntax throughout the whole document.}
