@@ -1,10 +1,8 @@
 <?xml version="1.0"?>
 <!-- SPDX-License-Identifier: CC0-1.0 -->
-
 <xsl:stylesheet version="1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-public="" doctype-system="" />
-
   <!-- The following ensures that node not matched by a template will simply be
    copied into the output. -->
   <xsl:template match="node()|@*">
@@ -19,15 +17,12 @@
       </span>
     </xsl:copy>
   </xsl:template>
-
   <xsl:template match="year">
     <xsl:apply-templates />
   </xsl:template>
-
   <xsl:template match="day">
     <xsl:apply-templates />
   </xsl:template>
-
   <xsl:template match="month[.='1']">
     <xsl:text>January</xsl:text>
   </xsl:template>
@@ -64,7 +59,6 @@
   <xsl:template match="month[.='12']">
     <xsl:text>December</xsl:text>
   </xsl:template>
-
   <xsl:template match="date" mode="date-inner">
     <xsl:apply-templates select="month" />
     <xsl:if test="day">
@@ -76,7 +70,6 @@
     </xsl:if>
     <xsl:apply-templates select="year" />
   </xsl:template>
-
   <xsl:template match="date[@href]">
     <li class="meta-item">
       <a class="link local" href="{@href}">
@@ -84,22 +77,18 @@
       </a>
     </li>
   </xsl:template>
-
   <xsl:template match="date[not(@href)]">
     <li class="meta-item">
       <xsl:apply-templates select="." mode="date-inner" />
     </li>
   </xsl:template>
-
   <xsl:template match="p | img | code | pre | a | em | b | strong | ol | ul | li | center | blockquote | table | tr | th | td | ruby | rb | rt | rp | span | figure | figcaption | mark | div | hr | abbr | sub | sup">
     <xsl:copy>
       <xsl:apply-templates select="node()|@*" />
     </xsl:copy>
   </xsl:template>
-
   <xsl:template match="pause">
   </xsl:template>
-
   <xsl:template match="embedded-tex">
     <center>
       <img src="resources/{@hash}.svg" />
@@ -110,13 +99,11 @@
       <xsl:apply-templates />
     </span>
   </xsl:template>
-
   <xsl:template match="link">
     <span class="link {@type}">
       <xsl:apply-templates />
     </span>
   </xsl:template>
-
   <xsl:template match="link//text()">
     <a href="{ancestor::link[1]/@href}">
       <xsl:choose>
@@ -137,19 +124,16 @@
       <xsl:value-of select="." />
     </a>
   </xsl:template>
-
   <xsl:template match="tex[@display='block']">
     <xsl:text>\[</xsl:text>
     <xsl:value-of select="." />
     <xsl:text>\]</xsl:text>
   </xsl:template>
-
   <xsl:template match="tex[not(@display='block')]">
     <xsl:text>\(</xsl:text>
     <xsl:value-of select="." />
     <xsl:text>\)</xsl:text>
   </xsl:template>
-
   <xsl:template match="/">
     <html>
       <head>
@@ -157,7 +141,6 @@
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="katex.min.css" />
         <xsl:apply-templates select="/tree/frontmatter/rss" />
-
         <script type="text/javascript">
           <xsl:if test="/tree/frontmatter/source-path">
             <xsl:text>window.sourcePath = '</xsl:text>
@@ -165,40 +148,12 @@
             <xsl:text>'</xsl:text>
           </xsl:if>
         </script>
-
         <script type="module" src="forester.js"></script>
-        <script src="reload.js"></script>
         <title>
           <xsl:value-of select="/tree/frontmatter/title" />
         </title>
-        <meta name = 'discourse-username' content='forest' />
-        <script type="text/javascript">
-          <xsl:text>
-          window.DiscourseEmbed = {
-            discourseUrl: 'https://www.localcharts.org/',
-            discourseEmbedUrl: 'https://forest.localcharts.org/</xsl:text><xsl:value-of select="/tree/frontmatter/addr" /><xsl:text>.xml'
-          };
-          const isLive = /^https:\/\/forest.localcharts.org/.test(window.location);
-          const isEnabled = </xsl:text><xsl:choose>
-            <xsl:when test="/tree/frontmatter/meta[@name = 'comments']/.='true'">
-              <xsl:text>true</xsl:text>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:text>false</xsl:text>
-            </xsl:otherwise>
-          </xsl:choose><xsl:text>;
-          if (isEnabled &amp;&amp; isLive) {
-            (function() {
-              var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-              d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-            })();
-          }
-          </xsl:text>
-        </script>
       </head>
       <body>
-        <div class="container">
         <ninja-keys placeholder="Start typing a note title or ID"></ninja-keys>
         <xsl:if test="not(/tree[@root = 'true'])">
           <header class="header">
@@ -215,29 +170,18 @@
           <article>
             <xsl:apply-templates select="tree" />
           </article>
-          <nav id="toc">
-            <xsl:if test="tree/mainmatter/tree[@toc='true'] and not(/tree/frontmatter/meta[@name = 'toc']/.='false')">
+          <xsl:if test="tree/mainmatter/tree[@toc='true'] and not(/tree/frontmatter/meta[@name = 'toc']/.='false')">
+            <nav id="toc">
               <div class="block">
                 <h1>Table of Contents</h1>
                 <xsl:apply-templates select="tree/mainmatter" mode="toc" />
               </div>
-            </xsl:if>
-          </nav>
-          <div id="discourse-comments"></div>
+            </nav>
+          </xsl:if>
         </div>
-        <footer class="footer">
-          <p>
-            <xsl:text>
-              Tip: use Ctrl-K to open a search window.
-            </xsl:text>
-          </p>
-          <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title"><xsl:text>LocalCharts Forest</xsl:text></span><xsl:text> is licensed under </xsl:text><a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"><xsl:text>CC BY 4.0</xsl:text><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /></a></p> 
-        </footer>
-      </div>
       </body>
     </html>
   </xsl:template>
-
   <xsl:template match="tree" mode="toc">
     <li>
       <xsl:for-each select="frontmatter">
@@ -262,18 +206,14 @@
       <xsl:apply-templates select="mainmatter" mode="toc" />
     </li>
   </xsl:template>
-
   <xsl:template match="mainmatter" mode="toc">
     <ul class="block">
       <xsl:apply-templates select="tree[@toc='true']" mode="toc" />
     </ul>
   </xsl:template>
-
-
   <xsl:template match="frontmatter/title">
     <xsl:apply-templates />
   </xsl:template>
-
   <xsl:template match="authors">
     <li class="meta-item">
       <address class="author">
@@ -295,17 +235,14 @@
       </address>
     </li>
   </xsl:template>
-
   <xsl:template match="mainmatter">
     <div class="tree-content">
       <xsl:apply-templates />
     </div>
   </xsl:template>
-
   <xsl:template match="/tree/frontmatter/rss">
     <link rel="alternate" type="application/rss+xml" href="{.}" title="{../title}" />
   </xsl:template>
-
   <xsl:template match="tree/frontmatter/addr">
     <a class="slug" href="{../route}">
       <xsl:text>[</xsl:text>
@@ -313,13 +250,11 @@
       <xsl:text>]</xsl:text>
     </a>
   </xsl:template>
-
   <xsl:template match="tree/frontmatter/source-path">
     <a class="edit-button" href="{concat('vscode://file', .)}">
       <xsl:text>[edit]</xsl:text>
     </a>
   </xsl:template>
-
   <xsl:template match="meta[@name='doi']">
     <li class="meta-item">
       <a class="doi link" href="{concat('https://www.doi.org/', .)}">
@@ -327,7 +262,6 @@
       </a>
     </li>
   </xsl:template>
-
   <xsl:template match="meta[@name='orcid']">
     <li class="meta-item">
       <a class="orcid" href="{concat('https://orcid.org/', .)}">
@@ -335,19 +269,16 @@
       </a>
     </li>
   </xsl:template>
-
   <xsl:template match="meta[@name='bibtex']">
     <pre>
       <xsl:value-of select="." />
     </pre>
   </xsl:template>
-
   <xsl:template match="meta[@name='venue']|meta[@name='position']|meta[@name='institution']|meta[@name='source']">
     <li class="meta-item">
       <xsl:apply-templates />
     </li>
   </xsl:template>
-
   <xsl:template match="meta[@name='external']">
     <li class="meta-item">
       <a class="link external" href="{.}">
@@ -355,7 +286,6 @@
       </a>
     </li>
   </xsl:template>
-
   <xsl:template match="meta[@name='slides']">
     <li class="meta-item">
       <a class="link external" href="{.}">
@@ -363,8 +293,6 @@
       </a>
     </li>
   </xsl:template>
-
-
   <xsl:template match="meta[@name='video']">
     <li class="meta-item">
       <a class="link external" href="{.}">
@@ -372,11 +300,9 @@
       </a>
     </li>
   </xsl:template>
-
   <xsl:template match="tree/frontmatter/taxon">
     <xsl:value-of select="." />
   </xsl:template>
-
   <xsl:template match="tree/frontmatter">
     <header>
       <h1>
@@ -389,7 +315,6 @@
             <xsl:text>.&#160;</xsl:text>
           </xsl:if>
         </span>
-
         <xsl:apply-templates select="title" />
         <xsl:text>&#032;</xsl:text>
         <xsl:apply-templates select="addr" />
@@ -415,11 +340,9 @@
       </div>
     </header>
   </xsl:template>
-
   <xsl:template match="tree" mode="tree-number">
     <xsl:number format="1.1" count="tree[@toc='true' and @numbered='true']" level="multiple" />
   </xsl:template>
-
   <xsl:template match="ref">
     <a class="link local">
       <xsl:attribute name="href">
@@ -433,7 +356,6 @@
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
-
       <xsl:choose>
         <xsl:when test="@taxon">
           <xsl:value-of select="@taxon" />
@@ -453,7 +375,6 @@
       </xsl:choose>
     </a>
   </xsl:template>
-
   <xsl:template match="backmatter/references">
     <xsl:if test="tree">
       <section class="block link-list">
@@ -462,7 +383,6 @@
       </section>
     </xsl:if>
   </xsl:template>
-
   <xsl:template match="backmatter/context">
     <xsl:if test="tree">
       <section class="block link-list">
@@ -471,7 +391,6 @@
       </section>
     </xsl:if>
   </xsl:template>
-
   <xsl:template match="backmatter/contributions">
     <xsl:if test="tree">
       <section class="block link-list">
@@ -480,7 +399,6 @@
       </section>
     </xsl:if>
   </xsl:template>
-
   <xsl:template match="backmatter/related">
     <xsl:if test="tree">
       <section class="block link-list">
@@ -489,7 +407,6 @@
       </section>
     </xsl:if>
   </xsl:template>
-
   <xsl:template match="backmatter/backlinks">
     <xsl:if test="tree">
       <section class="block link-list">
@@ -498,7 +415,6 @@
       </section>
     </xsl:if>
   </xsl:template>
-
   <xsl:template match="/tree/backmatter">
     <footer>
       <xsl:apply-templates select="references" />
@@ -508,7 +424,6 @@
       <xsl:apply-templates select="contributions" />
     </footer>
   </xsl:template>
-
   <xsl:template match="/tree|mainmatter/tree">
     <xsl:choose>
       <xsl:when test="@show-heading = 'false'">
@@ -546,7 +461,6 @@
     </xsl:choose>
     <xsl:apply-templates select="self::*[@root != 'true']/backmatter" />
   </xsl:template>
-
   <xsl:template match="backmatter/*/tree">
     <section class="block">
       <xsl:if test="frontmatter/taxon">
@@ -554,7 +468,6 @@
           <xsl:value-of select="frontmatter/taxon" />
         </xsl:attribute>
       </xsl:if>
-
       <details>
         <summary>
           <xsl:apply-templates select="frontmatter" />

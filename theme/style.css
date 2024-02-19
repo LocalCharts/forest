@@ -315,7 +315,7 @@ nav#toc a {
   color: #555;
 }
 
-nav#toc a {
+nav#toc .link {
  box-shadow: none;
  text-decoration: none;
 }
@@ -350,20 +350,7 @@ nav#toc li {
 }
 
 .katex {
-  font-size: 1.2em;
-}
-
-.block {
-  border-radius: var(--radius)
-}
-
-.block:hover {
-  background-color: rgba(0, 100, 255, 0.04);
-}
-
-.block.highlighted {
-  border-style: solid;
-  border-width: 1pt;
+  font-size: 1.15em !important;
 }
 
 .highlighted {
@@ -419,12 +406,13 @@ nav#toc li {
   visibility: visible;
 }
 
-a.external {
+.link.external {
   text-decoration: underline;
 }
 
 
-a.local,
+a.link.local,
+.link.local a,
 a.slug {
   box-shadow: none;
   text-decoration: underline;
@@ -558,12 +546,20 @@ blockquote {
   border-inline-start: 1px solid var(--secondary);
 }
 
-a:hover {
+a.slug:hover,
+a.bullet:hover,
+.edit-button:hover,
+.link:hover {
   background-color: rgba(0, 100, 255, .1);
+}
+
+.link {
+  cursor: pointer;
 }
 
 a {
   color: black;
+  text-decoration: inherit;
 }
 
 .nowrap {
@@ -651,4 +647,10 @@ ol li ol li ol {
 
 span.nlab > a {
   color: #226622;
+}
+
+.error {
+  background-color: red;
+  font-weight: bold;
+  color: white;
 }
