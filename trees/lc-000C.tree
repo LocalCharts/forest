@@ -14,6 +14,8 @@
 
 \transclude{ocl-0015}
 
+\p{In general, \code{\startverb\taxon{...}\stopverb} is used to designate the type of a tree, like definition, lemma, theorem, etc., but also non-standard ones like person, institute, reference. You can search for \code{taxon} in the LocalCharts forest to see how it is used.}
+
 \p{Splitting up your writing between so many files can be a pain, but there is a reason behind it. The philosophy behind forester is that in order to pedagogically present mathematics, it is necessary to order the web of linked concepts in some logical manner. However, this order is non-canonical. Therefore, we should support multiple orderings.}
 
 \p{From a more practical perspective, one gets tired at a certain point of clearing one's throat in the same manner every time one starts a new paper or blog post, reviewing similar definitions to get the reader up to speed. Being able to reuse parts of a document can alleviate this.}
