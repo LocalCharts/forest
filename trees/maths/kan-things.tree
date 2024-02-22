@@ -1,0 +1,119 @@
+\title{Kan extensions and lifts -- a cheatsheet}
+\author{matteo-capucci}
+\import{macros}
+
+\p{
+	Let's record some formulae for Kan lifts and extensions in the [[equipment-of-cats]].
+}
+
+\p{
+	First of all, some quick facts:
+	\ol{
+		\li{Kan extensions are when you start with profunctors sharing a domain, Kan lifts are when they share a codomain,}
+		\li{\textbf{Left} and \textbf{right} mean, respectively, into the composite and out of the composite. In the rest of category theory these would be called 'colax' and 'lax' directions,}
+		\li{Moreover, left also means \textbf{initial} and right also means \textbf{terminal}.}
+	}
+	So I think a better name for left/right Kan extensions/lifts would me co/lax initial/terminal Kan extensions/lift.
+}
+
+\p{
+	\textbf{Remark.}
+	Incidentally, this makes me wonder: do colax terminal and lax initial extensions/lift exist? Or do they trivialize?
+}
+
+\p{
+	\textbf{Remark.}
+	In a \em{virtual} equipment, only the lax direction makes sense since in that settings we have 2-cells \emph{out of} 'formal composites' but not \emph{into} them. Thus only \textbf{right extensions} make sense in this setting.
+}
+
+\p{
+	\textbf{Remark.}
+	The following formulae generalize for extensions but not for lifts: we have them here just because profunctors are self-dual.
+}
+
+
+\def\lan{\operatorname{lan}}
+\def\ran{\operatorname{ran}}
+\def\lift{\operatorname{lift}}
+\def\rift{\operatorname{rift}}
+
+\subtree{
+  \title{Right Kan lift}
+  \quiver{
+	\begin{tikzcd}
+		A & B & C \\
+		A && C
+		\arrow["\rift_K F", "\shortmid"{marking}, dashed, from=1-1, to=1-2]
+		\arrow["K", "\shortmid"{marking}, from=1-2, to=1-3]
+		\arrow[""{name=0, anchor=center, inner sep=0}, "F"', "\shortmid"{marking}, from=2-1, to=2-3]
+		\arrow[Rightarrow, no head, from=1-1, to=2-1]
+		\arrow[Rightarrow, no head, from=1-3, to=2-3]
+		\arrow["\lambda", shorten >=3pt, Rightarrow, from=1-2, to=0]
+	\end{tikzcd}
+  }
+  \p{
+	We can compute #{\rift_K F} as
+	##{\rift_K F(a,b) = \int_{c:C} K(b,c) \to F(a,c) }
+  }
+}
+
+\subtree{
+  \title{Right Kan extension}
+  \quiver{
+	\begin{tikzcd}
+		A & B & C \\
+		A && C
+		\arrow["H", "\shortmid"{marking}, from=1-1, to=1-2]
+		\arrow["\ran_H F", "\shortmid"{marking}, dashed, from=1-2, to=1-3]
+		\arrow[""{name=0, anchor=center, inner sep=0}, "F"', "\shortmid"{marking}, from=2-1, to=2-3]
+		\arrow[Rightarrow, no head, from=1-1, to=2-1]
+		\arrow[Rightarrow, no head, from=1-3, to=2-3]
+		\arrow["\lambda", shorten >=3pt, Rightarrow, from=1-2, to=0]
+	\end{tikzcd}
+  }
+  \p{
+	We can compute #{\ran_H F} as
+	##{\ran_H F(b,c) = \int_{a:A} H(a,b) \to F(a,c) }
+  }
+}
+
+
+\subtree{
+  \title{Left Kan lift}
+  \quiver{
+	\begin{tikzcd}
+		\cdot && \cdot \\
+		\cdot & \cdot & {\cdot}
+		\arrow["{\lift_K F}"', dashed, "\shortmid"{marking}, from=2-1, to=2-2]
+		\arrow["K"', "\shortmid"{marking}, from=2-2, to=2-3]
+		\arrow[""{name=0, anchor=center, inner sep=0}, "F", "\shortmid"{marking}, from=1-1, to=1-3]
+		\arrow[Rightarrow, no head, from=2-1, to=1-1]
+		\arrow[Rightarrow, no head, from=2-3, to=1-3]
+		\arrow["\nu", shorten <=3pt, Rightarrow, from=0, to=2-2]
+	\end{tikzcd}
+  }
+  \p{
+	We can compute #{\lift_K F} as
+	##{\lift_K F(a,b) = \int^{c:C} K(b,c) \times F(a,c) }
+  }
+}
+
+\subtree{
+  \title{Left Kan extension}
+  \quiver{
+	\begin{tikzcd}
+		\cdot && \cdot \\
+		\cdot & \cdot & \cdot
+		\arrow["H"', "\shortmid"{marking}, from=2-1, to=2-2]
+		\arrow["{\lan_H F}"', dashed, "\shortmid"{marking}, from=2-2, to=2-3]
+		\arrow[""{name=0, anchor=center, inner sep=0}, "F", "\shortmid"{marking}, from=1-1, to=1-3]
+		\arrow[Rightarrow, no head, from=2-1, to=1-1]
+		\arrow[Rightarrow, no head, from=2-3, to=1-3]
+		\arrow["\nu", shorten <=3pt, Rightarrow, from=0, to=2-2]
+	\end{tikzcd}
+  }
+  \p{
+	We can compute #{\lan_H F} as
+	##{\lan_H F(b,c) = \int^{a:A} H(a,b) \times F(a,c) }
+  }
+}

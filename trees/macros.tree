@@ -278,6 +278,7 @@
 
 \def\remark[body]{
   \subtree{\taxon{remark} \body}
+  % \p{\textbf{Remark}. \body}
 }
 
 \def\predefinition[head][body]{
