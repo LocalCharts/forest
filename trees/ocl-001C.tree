@@ -1,0 +1,14 @@
+\title{Editable Stuff Types}
+\import{macros}
+\author{owen-lynch}
+\date{2024-02-20}
+
+\p{This is just a quick note to write down a notion of \em{editable} [stuff types](topos-0002) (see also [stuff calculus](https://voluble-melba-325609.netlify.app/aria-0S86.xml)). To be refined later.}
+
+\p{Normally, a stuff type is a functor from #{\FinIso} to #{\Gpd}. For example, the functor that sends a finite set #{X} to the groupoid of directed multigraphs with vertices #{X} is a stuff type.}
+
+\p{If we wanted to version control a graph, we would want to be able to add or delete vertices (and also edges). We can model editing finite sets by using #{\Span(\Fin)}, the double category of cospans of finite sets. This allows us to also merge and delete vertices. A more conservative choice would be to instead use the double category where the proarrows were \em{monic} spans of finite sets (i.e. partial functions), and the arrows were isomorphisms of finite sets. Call this double category #{\Edit}.}
+
+\p{Then, an editable stuff type is a \nlab{lax double functor} #{F \colon \Edit \to \Span}, or equivalently a normal lax double functor #{F \colon \Edit \to \Prof}. The idea is that each finite set #{A} is sent to the category where the objects are values of the stuff type with underlying finite set #{A}, and the morphisms are edits that do not change the underlying set. A finite span #{s} of type #{A \from X \to B} is sent to the profunctor #{F(s) \colon F(A) \to F(B)} where #{F(s)(a,b)} is the set of edits that start in value #{a} and end in value #{b} and are compatible with the edit of finite sets #{s}. Isomorphisms of finite sets act functorially on edits.}
+
+\p{The stuff calculus story should then extend to editable multivariate stuff types.}

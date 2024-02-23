@@ -196,6 +196,7 @@
 \def\Diag{#{\cat{Diag}}}
 \def\Poset{#{\cat{Poset}}}
 \def\Span{#{\dblcat{Span}}}
+\def\Prof{#{\dblcat{Prof}}}
 \def\Rel{#{\dblcat{Rel}}}
 \def\Mat{#{\dblcat{Mat}}}
 
@@ -211,6 +212,9 @@
 \def\Poly{#{\cat{Poly}}}
 
 \def\Cospan{#{\cat{Cospan}}}
+\def\Csp{#{\cat{Csp}}}
+\def\Edit{#{\dblcat{Edit}}}
+
 
 % Universal Algebra
 
