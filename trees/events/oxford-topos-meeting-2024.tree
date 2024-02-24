@@ -19,7 +19,13 @@
     \p{Note: there may be a break in the schedule for attending a talk by [[thorsten-altenkirch]] in the afternoon.}
 
     \ul{
-      \li{9:30am-12pm introductory talks (speakers to be confirmed) on systems theory and probabilistic programming.}
+      \li{9:30am-12pm introductory talks on systems theory and probabilistic programming.
+        \ul{
+          \li{9:30am-10:15am David Jaz Myers, Categorical Systems Theory}
+          \li{10:15am-10:30am Questions.}
+          \li{...(to be determined)}
+        }
+      }
       \li{12pm-1pm lunch}
       \li{1pm-2:30pm focused discussion in smaller groups.}
       \li{2:30pm-3pm break and reformation of groups.}
