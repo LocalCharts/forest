@@ -1,0 +1,26 @@
+\title{Continuation Passing}
+\author{owen-lynch}
+\import{macros}
+
+\p{\wikipedia{Continuation passing} is a fundamental rethinking of control flow. In normal programming, a function returns a value, and the rest of the code gets to decide what to do with that value. In continuation-passing style, you pass the "rest of the code" in as an argument to the function, and the function gets to decide what to do with the rest of the code. The "rest of the code" is known as the continuation.}
+
+\p{If you've ever written javascript with callbacks, you should be familiar with this idea. The way that you might want to make a request to a server is something like:}
+
+\pre{%
+const response = makeRequest(url, data)
+// do stuff with response
+}
+
+\p{However, the way that this is typically done in javascript is:}
+
+\pre{%
+makeRequest(url, data, function(response) {
+  // do stuff with response
+})
+}
+
+\p{The reason for this is that javascript is single-threaded, so in the first piece of code if waiting for the response to come back takes a long time, nothing else can run. The second piece of code instead sends off the request, registers the "callback" to be run when the response eventually comes back, and returns, letting other code run.}
+
+\p{This style of doing things created the infamous situation known as "callback hell", where a complex sequence of actions ended up going far off the side of the screen, as callbacks were nested inside callbacks inside callbacks ad naseum.}
+
+\p{Fortunately, in a good language one can automatically transform code written in the first style into code written in the second style, so that you can have the readability benefits of the first with the performance of the second. This is the point of [[cats-effect]] and the companion library [[cats-effect-cps]] (cps stands for "continuation passing style").}

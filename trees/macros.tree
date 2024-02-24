@@ -249,9 +249,16 @@
 \def\CPoly{#{\cat{CPoly}}}
 \def\SPoly{#{\cat{SPoly}}}
 
+% C-sets
+
+\def\src{#{\mathrm{src}}}
+\def\tgt{#{\mathrm{tgt}}}
+
+
 % Links
 
 \def\nlab[article]{\xml{span}[class]{nlab}{[\article](https://ncatlab.org/nlab/show/\article)}}
+\def\wikipedia[article]{\xml{span}[class]{wikipedia}{[\article](https://en.wikipedia.org/wiki/\article)}}
 
 % Semantic markup
 

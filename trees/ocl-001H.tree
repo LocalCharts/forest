@@ -1,0 +1,29 @@
+\title{Call the continuation multiple or no times}
+\author{owen-lynch}
+\import{macros}
+
+\p{The secret to [[ocl-001F]] via [[ocl-001G]] is to \em{call the continuation multiple or no times}. If we transform}
+
+\pre{%
+x = choose([1,2,3])
+y = choose([x, x*2])
+...
+}
+
+\p{into}
+
+\pre{%
+choose([1,2,3], x -> choose([x, x*2], y -> ...))
+}
+
+\p{then it becomes super clear how to implement \code{choose}!}
+
+\pre{%
+function choose(xs, f)
+  for x in xs
+    f(x)
+  end
+end
+}
+
+\p{This is the basic idea, but there is more to say (to be continued).}

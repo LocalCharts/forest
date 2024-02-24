@@ -1,0 +1,73 @@
+\title{Logic Programming}
+\import{macros}
+\author{owen-lynch}
+\date{2024-02-23}
+
+\p{The most condensed explanation of logic programming is that it's normal programming, except you get to make "non-deterministic choices" and you succeed if \em{any} of the choices "are good".}
+
+\p{For instance, suppose that you suspect there might be an alligator behind some of five doors. Normally, you have to choose one of the doors, and if there is an alligator behind it, you die. But in logic programming, you get to choose \em{all} of the doors, and if \em{any} of the doors doesn't have an alligator, then you live.}
+
+\p{One way of implementing logic programming is just with for loops. For instance, in Julia one could write}
+
+\pre{%
+for door in doors
+  if !hasalligator(door)
+    return :alive
+  end
+end
+return :dead
+}
+
+\p{This has the disadvantage that if you want to make multiple choices, you have to nest the for-loops. For instance, maybe you have a chance when you open the door to dodge left or right, and if the alligator lunges in the opposite direction, then you are safe. This would be written as:}
+
+\pre{%
+for door in doors
+  if !hasalligator(door)
+    return :alive
+  end
+  for direction in [:left, :right]
+    if gator_direction(door) != direction
+      return :alive
+    end
+  end
+end
+return :dead
+}
+
+\p{If you have to make too many choices, then your code will go off the right side of the screen. Logic programming gives a "magical" \code{choose} operator with which we can rewrite the above to look like this:}
+
+\pre{%
+door = choose(doors)
+if !hasalligator(door)
+  return :alive
+end
+direction = choose([:left, :right])
+if gator_direction(door) != direction
+  return :alive
+end
+_ = choose([])
+}
+
+\p{Now we represent failure by choosing from an empty list: nothing past that line can possibly run. This code above doesn't run in Julia (unless you do some fancy meta-programming perhaps). However, we can rewrite this in Haskell using the [List monad](https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/13-the-list-monad) to something like the following}
+
+\pre{%
+do
+  door <- doors
+  if !(hasalligator door)
+  then return Alive
+  else do
+    direction <- [Left, Right]
+    if (gator_direction door) != direction
+    then return Alive
+    else []
+}
+
+\p{A more serious example of logic programming is graph homomorphism finding (see [here](https://blog.algebraicjulia.org/post/2022/01/cset-automorphisms/) for a longer introduction to this subject). Suppose that we have two graphs #{G} and #{H}, where we write #{G(V)} and #{G(E)} for the sets of vertices and edges respectively, and #{G(\src), G(\tgt) \colon G(E) \to G(V)} for the source and target functions. A graph homorphism from #{G} to #{H} is a pair of functions functions ##{f_V \colon G(V) \to H(V),} ##{f_E \colon G(E) \to H(E)} such that for all #{e \in G(E)}, ##{f_V(G(\src)(e)) = H(\src)(f_E(e))} ##{f_V(G(\tgt)(e)) = H(\tgt)(f_E(e)).}}
+
+\p{With logic programming, we can write a (probably inefficient) algorithm to find graph homomorphisms in the following way.}
+
+\p{For each vertex in #{G}, nondeterministically choose a vertex in #{H} to send it to. Similarly, for each edge in #{G}, nondeterministically choose an edge in #{H} to send it to. Each time we pick an assignment of edges, check whether the two equations hold, and "fail" if they don't hold. If we ever manage to get to the end of the program, then we've chosen where to send all of the edges and vertices, and this choice satisfies the equations, so by definition we will have found a graph homomorphism.}
+
+\p{The trick to efficient use of logic programming is to "fail as fast as possible". I.e., every time we make a choice, we want to figure out as soon as possible if no future choices will lead to success, and ideally never even have to run those loops. This is known as "pruning"; eliminating whole branches of the search tree before we ever have to reach their leaves.}
+
+\p{There are a wide variety of languages and libraries that implement logic programming, but I will only cite a couple for now: [[oleg-backtracking-2005]], [[picat]].}

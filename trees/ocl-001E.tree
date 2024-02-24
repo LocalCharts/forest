@@ -1,0 +1,18 @@
+\title{Logic Programming via Continuation Passing}
+\author{owen-lynch}
+\date{2024-02-23}
+
+\p{This is an exposition of a technique for logic programming that makes use of continuation passing. If you don't know what either of these things are, don't worry! I'll explain both on the way.}
+
+\transclude{ocl-001F}
+
+\p{The question now becomes: how does one implement logic programming in a language like Julia, which doesn't have monads? One way is to implement a virtual machine that supports non-deterministic choice. This is essentially how we got a [10x speedup](https://github.com/AlgebraicJulia/Catlab.jl/pull/830) for homomorphism finding in Catlab. This is also how [the e-matching algorithm works in egg](https://github.com/egraphs-good/egg/blob/main/src/machine.rs). However, this is not very flexible, and somewhat tedious, involving stuff like register allocation. A more elegant way to do this is via continuation passing. I learned this technique from reading the [[metatheory]] source code, but it is a quite old technique; Alessandro (the author of Metatheory) says that he learned it from Gerald Sussman.}
+
+\p{We first review the basics of continuation-passing style.}
+
+\transclude{ocl-001G}
+
+\p{Now we can explain how continuation-passing is used for logic programming.}
+
+\transclude{ocl-001H}
+
