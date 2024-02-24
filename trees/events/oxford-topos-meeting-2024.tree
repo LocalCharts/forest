@@ -1,0 +1,103 @@
+\title{Systems Theory and Systems Practice Discussions}
+\taxon{event}
+
+\p{On March 6-8, a number of members of the Topos institute will be visiting the Oxford computer science department to have discussions around the topic of "systems theory and systems practice". A small number of Topos-affiliated guests will also join. This trip is supported by a grant from [[atlas-computing]].}
+
+\p{While this is not an open workshop, as there was not time or funding to invite a larger group of participants, we intend to share the content of the meetings as much as is possible, in the spirit of open collaboration with the larger applied category theory community.}
+
+\p{To this end, we will have some lectures open to anyone in Oxford at the beginning of the workshop, which may or may not be recorded depending on preference of participants and availability of recording equipment.}
+
+\p{This page lays out a rough schedule, and also serves as a place to link notes produced from the meeting.}
+
+\subtree{
+  \title{Schedule}
+  \subtree{
+    \title{Wednesday, Jan 6}
+
+    \p{Location: Room 051.}
+
+    \p{Note: there may be a break in the schedule for attending a talk by [[thorsten-altenkirch]] in the afternoon.}
+
+    \ul{
+      \li{9:30am-12pm introductory talks (speakers to be confirmed) on systems theory and probabilistic programming.}
+      \li{12pm-1pm lunch}
+      \li{1pm-2:30pm focused discussion in smaller groups.}
+      \li{2:30pm-3pm break and reformation of groups.}
+      \li{3pm-4:30pm focused discussion in smaller groups.}
+      \li{4:30pm-6pm writing notes from focused discussion.}
+    }
+  }
+
+  \subtree{
+    \title{Thursday, Jan 7}
+
+    \p{Location: Tony Hoare room 8am-12pm, lecture theatre A 3pm-6pm}
+
+    \ul{
+      \li{9am-10am group discussion of research directions from Wednesday, rereading what we wrote.}
+      \li{10am-12pm focused discussion in smaller groups.}
+      \li{12pm-3pm lunch and excursion (perhaps to the Botanical Gardens, optional)}
+      \li{3pm-4:30pm focused discussion in smaller groups.}
+      \li{4:30pm-6pm writing notes from focused discussion.}
+    }
+  }
+
+  \subtree{
+    \title{Friday, Jan 8}
+
+    \p{Location: Tony Hoare room 8am-12pm, room 051 3pm-6pm}
+    
+    \ul{
+      \li{9am-10am group discussion of research directions from Wednesday+Thursday, rereading what we wrote.}
+      \li{10am-11am (tentative) recorded panel discussion of interesting topics from the past two days.}
+      \li{11am-12pm focused discussion in smaller groups.}
+      \li{12pm-2pm lunch and free time.}
+      \li{2pm-3pm [[elena-di-lavore]] talk in Lecture Theatre A.}
+      \li{3pm-4:30pm focused discussion in smaller groups.}
+      \li{4:30pm-5:30pm final writing session.}
+      \li{5:30pm-6:00pm discussion of research directions for Topos and Oxford CS going forward into the future.}
+    }
+  }
+}
+
+\subtree{
+  \title{Topics}
+
+  \p{The overall theme of this workshop is the idea of "models as formal objects". Within this theme, there are several subtopics that we might pursue.}
+
+  \subtree{
+    \title{Double-operadic systems theory}
+
+    \p{[Double-operadic systems theory](st-0001) provides an abstract structure for the affordances of \em{composing} and \em{comparing} models. It is currently under development by [[matteo-capucci]] and [[david-jaz-myers]]. Open areas of research to discuss include:}
+
+    \ul{
+      \li{\em{Doctrines of hybrid systems}. This would be a development of theory along the lines of the the theory already developed for continuous systems and discrete systems that allows for systems that display both discrete and continuous behavior.}
+      \li{\em{Nondeterminism+probability}. How can we incorporate infrabayesian ideas into dynamical systems?}
+      \li{\em{Approximate decomposition}. How can we relate a system to a proposed decomposition of it, and measure how assumptions of causality, etc. implicit within a given decomposition lose or do not lose details about the original system. We can think of this like “graphical causal models,” but for dynamical systems rather than just Markov kernels.}
+    }
+  }
+
+  \subtree{
+    \title{Models as data}
+
+    \p{This topic works towards a vision for scientific computing where model specifications, theoretically backed by [[st-0001]], can be serialized and passed between different programming languages for different analysis tasks. Open areas of research to discuss include:}
+
+    \ul{
+      \li{\em{Type theory for serializable models}. Certain type formers (producs, sums, recursive types, etc.) are amenable to serialization, while others (function types, streams, etc.) are not. [[david-jaz-myers]] has suggested that this distinction comes down to \em{inductive} vs. \em{coinductive} type formers. How detailed can our type specification language be while remaining practical?}
+      \li{\em{Symmetries}. Scientific models often have natural symmetries, due to the ability to rename variables. How can we capture these symmetries, and tell when two models are "isomorphic"?}
+      \li{\em{Version control}. If we are to store scientific models on disk, rather than just in transit between programming languages, we need to version them. And this versioning should be high-level: I shouldn't have to wade through a git diff of JSON that I didn't write.}
+    } 
+  }
+
+  \subtree{
+    \title{Inference over the space of models}
+
+    \p{When models are data, it is natural to think of searching over the space of models as part of Bayesian statistical inference. Searching over large combinatorial spaces has a lot of difficulties: how can we use our knowledge of structure to help here?}
+
+    \ul{
+      \li{\em{Symmetries}. If the type theory naturally affords a definition of symmetry, can we use this to avoid sampling isomorphic models?}
+      \li{\em{Composition/decompostion}. How does composition interact with model search? Can we use composition/decomposition as a "divide and conquer" strategy?}
+      \li{\em{Ensemble models}. The result of a Bayesian inference is a posterior over model space, not a specific models. Can we treat this within a doctrine of "ensemble models"?}
+    }
+  }
+}
