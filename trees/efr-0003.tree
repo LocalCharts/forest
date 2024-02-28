@@ -1,0 +1,27 @@
+\date{2024-02-27}
+\author{eigil-rischel}
+\title{Dependent optics}
+\import{macros}
+\transclude{efr-0001}
+
+\transclude{efr-0002}
+
+\p{The problem of \em{dependent optics} is how to combine both the nondeterminism (or some more general form of effects) of optics with the dependent backwards pass of dependent lenses. The basic issue is that, given a nondeterministic forwards pass #{p: X \to Y}, and an element #{x \in X}, there is no particular element #{p(x) \in Y} so that we can ask for a backwards map #{B_{p(x)} \to A_x}.}
+
+\p{The idea, then, is to demand that the forwards stochastic process generate not just an element #{y} by also some residual #{m \in M} \em{which is compatible with the #{y}} - that is, there is an indexed family #{M_{xy}}, and we generate a pair #{y,m \in M_{xy}}, and then there is a family of backwards processes #{q: M_{xy} \otimes B_y \to A_x}.}
+
+\p{With a little bit of elaboration, this definitions works to produce what you might call \em{coproduct optics} or \em{indexed optics} - when the indexed object is a coproduct of "trivial" ones, (which is, of course, always the case for sets), we get a suitable definition.}
+
+\p{With significantly more elaboration, we get what has been called \em{fibre optics}, which is about the widest possible generality for the above idea. It is not entirely clear that this captures everything someone might mean by "dependent optics" - in particular, the cases covered by the definition are forced to be somewhat "Markovesque", in the sense that there has to be a Cartesian subcategory in there.}
+
+\p{To elaborate on this, in an ordinary optic, the backwards map #{M \otimes B \to A} doesn't see "the #{Y} part" of the forwards pass #{X \to M \otimes Y} - in a Cartesian or Markov setting, of course, we could just copy the value in #{Y} and pass that along to the residual, so that doesn't matter. But in the general monoidal case, optics might not be able to depend on "which #{y \in Y} happened" (in a sense, this is the whole difficulty of dependent optics). Fibre optics only effectively cover cases where the information which the dependent types depend on can be copied at will.}
+
+\transclude{efr-0005}
+
+\p{Apart from the previously mentioned conceptual quibbles, the obvious complexity of the definition is probably the biggest downside to this notion (it's even worse than it looks, since the functors #{\pi^*, \pi^!} are only defined up to isomorphism).}
+
+\p{The flavor of the intended examples of fibre optics is given by the following construction on Markov categories:}
+
+\transclude{efr-0006}
+
+\transclude{efr-0007}

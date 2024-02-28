@@ -1,0 +1,13 @@
+\title{Fibre Optics}
+\author{dylan-braithwaite}
+\author{matteo-capucci}
+\author{eigil-rischel}
+\author{bruno-gavranovic}
+\author{jules-hedges}
+\meta{doi}{10.48550/arXiv.2112.11145}
+\taxon{reference}
+\tag{extended abstract}
+\import{macros}
+\notes{
+    \li{Introduces the [fibre optics](efr-0005) concept, as an attempted unification of optics and dependent lenses.}
+}
