@@ -5,6 +5,7 @@
     systems.url = "github:nix-systems/default";
     forester.url = "sourcehut:~jonsterling/ocaml-forester";
     forest-server.url = "github:kentookura/forest-server";
+    bunnycdn-cli.url = "github:olynch/bunnycdn-cli";
   };
 
   outputs = {
@@ -14,7 +15,8 @@
     flake-utils,
     systems,
     forester,
-    forest-server
+    forest-server,
+    bunnycdn-cli
   }:
     flake-utils.lib.eachSystem (import systems)
     (system: let
@@ -58,7 +60,13 @@
         buildkite-deploy = pkgs.writeShellApplication {
           name = "buildkite-deploy";
 
-          runtimeInputs = with pkgs; [ forester-pkg wrangler-pkgs.nodePackages.wrangler curl gnused tlDist ];
+          runtimeInputs = with pkgs; [
+            forester-pkg
+            bunnycdn-cli.packages.${system}.bnycdn
+            curl
+            gnused
+            tlDist
+          ];
 
           text = ''
             forester build --root ${default-tree}-0001 trees/
@@ -72,15 +80,19 @@
               fi
             done
             cd ..
-            wrangler pages deploy --branch "$BUILDKITE_BRANCH" --project-name localcharts-forest output/ | tee wrangler-log
-            DEPLOY_URL=$(sed -n 's/.*Take a peek over at \(.*\)/\1/p' < wrangler-log)
-            curl -L \
-              -X POST \
-                -H "Accept: application/vnd.github+json" \
-                -H "Authorization: Bearer $GITHUB_TOKEN" \
-                -H "X-GitHub-Api-Version: 2022-11-28" \
-                "https://api.github.com/repos/LocalCharts/forest/commits/$BUILDKITE_COMMIT/comments" \
-                -d "{\"body\":\"Deployed at $DEPLOY_URL\"}"
+            # wrangler pages deploy --branch "$BUILDKITE_BRANCH" --project-name localcharts-forest output/ | tee wrangler-log
+            # DEPLOY_URL=$(sed -n 's/.*Take a peek over at \(.*\)/\1/p' < wrangler-log)
+            bnycdn key set default $BUNNY_API
+            bnycdn key set localcharts $BUNNY_API_STORAGE --type=storages
+            bnycdn cp -R -s localcharts ./output /localcharts/
+            bnycdn pz purge -t localcharts
+            # curl -L \
+            #   -X POST \
+            #     -H "Accept: application/vnd.github+json" \
+            #     -H "Authorization: Bearer $GITHUB_TOKEN" \
+            #     -H "X-GitHub-Api-Version: 2022-11-28" \
+            #     "https://api.github.com/repos/LocalCharts/forest/commits/$BUILDKITE_COMMIT/comments" \
+            #     -d "{\"body\":\"Deployed at $DEPLOY_URL\"}"
           '';
         };
       };
