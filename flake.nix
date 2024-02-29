@@ -82,8 +82,8 @@
             cd ..
             # wrangler pages deploy --branch "$BUILDKITE_BRANCH" --project-name localcharts-forest output/ | tee wrangler-log
             # DEPLOY_URL=$(sed -n 's/.*Take a peek over at \(.*\)/\1/p' < wrangler-log)
-            bnycdn key set default $BUNNY_API
-            bnycdn key set localcharts $BUNNY_API_STORAGE --type=storages
+            bnycdn key set default "$BUNNY_API"
+            bnycdn key set localcharts "$BUNNY_API_STORAGE" --type=storages
             bnycdn cp -R -s localcharts ./output /localcharts/
             bnycdn pz purge -t localcharts
             # curl -L \
