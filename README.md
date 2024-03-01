@@ -25,6 +25,6 @@ Here you have two choices:
 Now you can go and edit some files in the `trees/` directory!
 For a general reference on forester syntax, see [The Forester markup language](http://www.jonmsterling.com/jms-007N.xml).
 
-## Alternative ways of contributing
+## Contributing
 
-If you are GDPR-sensitive, there is a mirror of this repository at https://codeberg.org/LocalCharts/forest, which is bidirectionally synced to the github at https://github.com/LocalCharts/forest.
+You can send PRs to either [github](https://github.com/LocalCharts/forest) or [codeberg](https://codeberg.org/LocalCharts/forest); they are bidirectionally synced through the magic of distributed version control. The difference is that codeberg doesn't send non-public information associated with your account to Microsoft.
