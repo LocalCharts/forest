@@ -7,11 +7,10 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: yesolutions/mirror-action@master
-        with:
-          REMOTE: 'ssh://git@codeberg.org/LocalCharts/forest.git'
-          GIT_SSH_PRIVATE_KEY: ${{ secrets.GIT_SSH_PRIVATE_KEY }}
-          GIT_SSH_KNOWN_HOSTS: ${{ secrets.GIT_SSH_KNOWN_HOSTS }}
-          GIT_SSH_NO_VERIFY_HOST: "true"
-          GIT_USERNAME: git
-          GIT_SSH_PUBLIC_KEY: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP63xGtELUDp7ni17dnIX7vgvpiRK2Y1O9oWHJB1E3by o@red-special"
+      - run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.GIT_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.GIT_SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          git config --global core.sshCommand 'ssh -i ~/.ssh/id_rsa -o IdentitiesOnly=yes -o UserKnownHostsFile=~/.ssh/known_hosts'
+          git remote add mirror ssh://git@codeberg.org/LocalCharts/forest.git
+          git push --tags --force --prune mirror 'refs/remotes/origin/*:refs/heads/*'
