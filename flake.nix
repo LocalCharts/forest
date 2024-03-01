@@ -62,7 +62,7 @@
 
           runtimeInputs = with pkgs; [
             forester-pkg
-            bunnycdn-cli.packages.${system}.bnycdn
+            awscli
             curl
             gnused
             tlDist
@@ -70,29 +70,7 @@
 
           text = ''
             forester build --root ${default-tree}-0001 trees/
-            cp _redirects output/
-            cd output/
-            echo -e '\n' >> _redirects
-            for FILE in *.xml; do
-              LOWERCASE_FILE=$(echo "$FILE" | tr '[:upper:]' '[:lower:]')
-              if [ "$LOWERCASE_FILE" != "$FILE" ]; then
-                echo "/$LOWERCASE_FILE /$FILE 301" >> _redirects
-              fi
-            done
-            cd ..
-            # wrangler pages deploy --branch "$BUILDKITE_BRANCH" --project-name localcharts-forest output/ | tee wrangler-log
-            # DEPLOY_URL=$(sed -n 's/.*Take a peek over at \(.*\)/\1/p' < wrangler-log)
-            bnycdn key set default "$BUNNY_API"
-            bnycdn key set localcharts "$BUNNY_API_STORAGE" --type=storages
-            bnycdn cp -R -s localcharts ./output /localcharts/
-            bnycdn pz purge -t localcharts
-            # curl -L \
-            #   -X POST \
-            #     -H "Accept: application/vnd.github+json" \
-            #     -H "Authorization: Bearer $GITHUB_TOKEN" \
-            #     -H "X-GitHub-Api-Version: 2022-11-28" \
-            #     "https://api.github.com/repos/LocalCharts/forest/commits/$BUILDKITE_COMMIT/comments" \
-            #     -d "{\"body\":\"Deployed at $DEPLOY_URL\"}"
+            aws s3 sync output s3://forest.next.localcharts.org
           '';
         };
       };
