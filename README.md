@@ -24,3 +24,7 @@ Here you have two choices:
 
 Now you can go and edit some files in the `trees/` directory!
 For a general reference on forester syntax, see [The Forester markup language](http://www.jonmsterling.com/jms-007N.xml).
+
+## Alternative ways of contributing
+
+If you are GDPR-sensitive, there is a mirror of this repository at https://codeberg.org/LocalCharts/forest, which is bidirectionally synced to this one.
