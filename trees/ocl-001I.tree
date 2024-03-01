@@ -10,4 +10,4 @@
 
 \p{Another approach is to do a binary product which is not strictly associative. This is how functional programming languages do coproduct, via an \code{Either a b} type, with \code{Left : a -> Either a b} and \code{Right : b -> Either a b} constructors. This has the advantage that it is more readable, however because it is not associative, it becomes annoying to use for when we want to combine three ring presentations, for instance.}
 
-\p{What we really want is to }
+\p{What we really want is to a \em{named binary product}.}
