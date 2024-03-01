@@ -27,4 +27,4 @@ For a general reference on forester syntax, see [The Forester markup language](h
 
 ## Alternative ways of contributing
 
-If you are GDPR-sensitive, there is a mirror of this repository at https://codeberg.org/LocalCharts/forest, which is bidirectionally synced to this one.
+If you are GDPR-sensitive, there is a mirror of this repository at https://codeberg.org/LocalCharts/forest, which is bidirectionally synced to the github at https://github.com/LocalCharts/forest.
