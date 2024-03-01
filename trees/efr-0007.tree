@@ -1,0 +1,57 @@
+\date{2024-02-28}
+\title{Fibre Optics for Markov Bundles}
+\author{eigil-rischel}
+\def\FibOptic{#{\mathsf{FibOptic}}}
+\import{macros}
+\def\Optic{#{\mathsf{Optic}}}
+\taxon{theorem}
+
+\def\det{#{\mathrm{det}}}
+\def\Bun{#{\mathsf{Bun}}}
+
+\p{Let \cC be a Markov category, and consider the [category of bundles](efr-0006) in \cC. Suppose \cC satisfies the pullback condition for #{\Bun(\cC) \to \cC_\det} to be a fibration}
+
+\p{Now consider [fibre optics](efr-0005) applied to the self-action of the fibration #{\Bun(\cC) \to \cC_\det}. Let us abbreviate #{\FibOptic^{\cC_\det}_{\Bun(\cC)}(\Bun(\cC),\Bun(\cC))} by merely #{\FibOptic(\cC)}. Let us also abbreviate #{\Bun(\cC) = \Bun}, and write the fibers as usual as #{\Bun_I}}
+
+\ul{
+    \li{Given two objects #{(I,X \to I, A \to I), (J, Y \to J, A \to J)} of #{\FibOptic(\cC)},
+    the set of morphisms can be written as
+    ##{\int^{M \in \Bun_{I \times J}} \Bun_I(X, M \times_J Y) \times \Bun_I(M \times_J B, A)}}
+    \li{Given an object #{(I, Y,B)}, this object is isomorphic to #{(Y, Y, B \times_I Y)}}
+    \li{The set of maps into an object #{(Y,Y,B)} of this form (out of #{I, X, A}) is given by
+    ##{\int^{M \in \Bun_{I \times Y}} \Bun_I(X,M) \times \Bun_I(M \times_J B, A)}}
+    \li{The set of maps #{(X, X, A \times X) \to (Y, Y, B \otimes Y)} is in bijection with the set of simple optics #{\Optic(\cC)((X,A),(Y,B))}}
+}
+
+\scope{
+\put\transclude/expanded{false}
+\subtree{
+    \title{Proof}
+\p{The first statement is simply rewriting using the fact that the pullback operations #{f^*} are given by actual pullbacks in #{\cC_\det}, and so is the local tensor product on each fiber #{\Bun_I}. We also suppress the pushforwards #{f_!}, since they simply change the morphism to the base, which is implicit in this notation anyway. Do note that these pullbacks in #{\cC_\det} are \em{not} pullbacks in #{\Bun_I}!}
+
+\p{For the second statement, by definition the set of maps from an arbitrary test object into #{(Y,Y,Y \times_J B)} is given by 
+##{\int^{M \in \Bun_{I \times Y}} \Bun_I(X, M \times_Y Y) \times \Bun_I(M \times_Y B \times_J Y, A)}
+But clearly #{M \times_Y Y = M}, and similarly #{M \times_Y B \times_J Y = M \times_J B},
+so we can write
+##{\int^{M \in \Bun_{I \times Y}} \Bun_I(X, M) \times \Bun_I(M \times_J B, A)}
+The claim is that this is in bijection with
+##{\int^{M \in \Bun_{I \times J}} \Bun_I(X, M \times_J Y) \times \Bun_I(M \times_J B, A)} }
+
+\p{We construct a bijection. Given a tuple in the first set #{M, \phi: X \to M, \psi: M \times_J B \to A}, we carry it to #{M, \phi;(1_M,p_Y), \psi}, by just postcomposing the structural map to #{Y} with #{Y \to J}. The map #{p_Y} is the structural map #{M \to Y} - we form #{M to M \times_J Y} in the obvious way and compose it with #{\phi}. #{\psi}, we can just leave in place.}
+
+\p{For the other direction, given a tuple #{(M, \phi: X \to M \times_J Y, \psi: M \times_J B \to A)},
+we form the tuple #{(M \times_J Y, \phi, \pi;\psi)} - here we use the obvious projection #{\pi: M \times_J Y \times_J B \to M \times_J B}.}
+
+\p{The functoriality of these constructions makes it easy to verify that they're well-defined. Let's verify they're inverses.
+In one case, I start with #{M} over #{J} (and #{I}), and obtain #{M \times_J Y}. There is an obvious projection map #{M\times_J Y \to M}, and this witnesses the equivalence of the two optics in this case.
+In the other case, I start with #{M} over #{Y}, and obtain #{M \times_J Y} again. In this case, it's the diagonal map #{M \to M \times_J Y} which does it.}
+
+\p{The third statement is, again, a straightforward rewriting.}
+
+\p{For the fourth statement, note that the set of ordinary optics is the set
+
+##{\int^{M \in \cC} \cC(X, M \otimes Y) \times \cC(M \otimes B, A)\\
+\cong \int^{M \in \Bun_{* \times *}}\Bun_*(X, M \times Y) \times \Bun_*(M \times B, A)\\
+\cong \FibOptic(\cC)((*,X,A),(*,Y,B)) \cong \FibOptic(\cC)((X,X,X \times A),(Y,Y,Y\times A)),}
+
+where the last step uses the preceding}}}

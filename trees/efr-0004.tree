@@ -1,0 +1,15 @@
+\date{2024-02-28}
+\title{Simple Optics}
+\author{eigil-rischel}
+\taxon{definition}
+\import{macros}
+\def\Optic{#{\mathsf{Optic}}}
+\p{Let \cC be a monoidal category. Then #{\Optic(\cC)} is a category where
+
+\ul{
+    \li{Objects are pairs #{\binom{A}{X}} of objects in \cC}
+    \li{The set of morphisms is 
+    ##{\Hom\left(\binom{A}{X},\binom{B}{Y}\right) = \int^{M \in \cC} \cC(X, M \otimes Y) \times \cC(M \otimes B, A)}}
+}}
+
+\p{Note that many sources, including [[riley-optics-2018]], write the forwards direction \em{on top}, rather than on the bottom as we have done here. Writing the forwards direction on the bottom is in line with the comparison with [dependent optics](efr-0003), where the backwards pass is indexed in some sense over the forwards pass.}

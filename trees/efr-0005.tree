@@ -1,0 +1,18 @@
+\date{2024-02-28}
+\title{Fibre Optics}
+\author{eigil-rischel}
+\import{macros}
+\def\FibOptic{#{\mathsf{FibOptic}}}
+\def\Optic{#{\mathsf{Optic}}}
+
+
+\p{Let \cI have all finite limits, and equip it with the Cartesian monoidal structure.
+Let #{\cC,\cM,\cD \to \cI} be bifibrations which have the Beck-Chevalley condition. Suppose \cM is a monoidal bifibration in the sense of [[shulman-monfib-2009]], and suppose further that \cM acts on \cC and \cD in a way compatible with the fibrations.}
+
+\p{Note that we are only asking for compatibility with the \em{fibration}, not with the bifibration - that is, we expect tensors of Cartesian lifts to be again Cartesian, but not that this is the case for coCartesian lifts.}
+
+\p{Then the objects of the category of \em{fibre optics}, #{\FibOptic^\cI_\cM(\cC,\cD)}, are tuples #{(I \in \cI, X \in \cC_I, A \in \cD_I)}
+
+The set of morphisms #{(I,X,A) \to (J,Y,B)} is given by the scary-looking expression
+
+#{\int^{M \in \cM_{I \times J}} \cC_\cI(X, \pi_J^!(M \cdot \pi_J^*Y)) \times \cD_\cI(\pi_I^!(M \cdot \pi_J^*B), A)}}

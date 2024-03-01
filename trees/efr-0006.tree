@@ -1,0 +1,31 @@
+\date{2024-02-28}
+\author{eigil-rischel}
+\def\det{#{\mathrm{det}}}
+\def\Bun{#{\mathsf{Bun}}}
+\import{macros}
+\p{Let \cC be a Markov category. We may define a category of "bundles", which we will denote #{\Bun(\cC)}, as follows: its objects are \em{deterministic} maps #{X \to I \in \cC_\det}, and its morphisms are squares
+
+\quiver{
+  \begin{tikzcd}
+    X \ar[r, "f"] \ar[d] & Y \ar[d]\\
+    I \ar[r, "g"] & J
+  \end{tikzcd}
+}
+
+where #{g}, but not #{f}, is required to be deterministic.}
+
+\p{There is a forgetful functor #{\Bun(\cC) \to \cC_\det} which takes #{X \to I} to #{I}.
+If \cC itself is Cartesian, then this is just the codomain opfibration, and this thing will be a bifibration if and only if \cC has pullbacks.}
+
+\p{In the Markov case, it's not necessarily sufficient that #{\cC_\det} has pullbacks. What is required is, given a diagram of this form where all the maps are deterministic:
+
+\quiver{
+    \begin{tikzcd}
+        X \ar[rd] & Y \times_J I \ar[r] \ar[d] & Y \ar[d]\\
+          & I \ar[r] & J,
+    \end{tikzcd}
+}
+
+there is a bijection between (nondeterministic) maps #{X \to Y} making the outer square commute, and maps #{X \to Y \times_J I} making the triangle over #{I} commute. This is true, for example, in #{\mathsf{FinStoch}}, as can be readily verified, and it seems like it "should" be true based on an intuitive model of probability.}
+
+\p{If we impose this condition, #{\Bun(\cC) \to \cC_\det} becomes not only a bifibration, but a monoidal fibration, and a bifibration with the Beck-Chevalley condition. (The monoidal structure on #{\Bun(\cC)} simply being the obvious one). The fibration being monoidal follows from the fact that products of pullback diagrams are pullback diagrams, and the Beck-Chevalley condition holds because it holds for codomain fibrations, and all the morphisms involved in checking it are deterministic}

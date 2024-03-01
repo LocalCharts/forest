@@ -1,0 +1,7 @@
+\date{2024-02-27}
+\author{eigil-rischel}
+\title{Polynomial functors as lenses}
+\import{macros}
+\p{Let \cC be a locally Cartesian closed category. Recall the definition of \nlab{polynomial functor}. We will only be interested in the simple case of polynomial \em{endofunctors}, which means a polynomial is given simply by a morphism #{p: A \to X \in \cC}.}
+
+\p{We think of the object #{p: A \to X} as being an #{X}-indexed family of objects, given by the "fibers" #{p^{-1}(\{x\}) = A_x}. Then a transformation of polynomials #{(p: A \to X) \to (p': B \to Y)} consists of a map #{f^+: X \to Y} and a map #{f^-: B \times_Y X \to A} over #{X}. If #{\cC = \Set}, this backwards map amounts to a family of maps #{f^-_x: B_{f(x)} \to A_x}}

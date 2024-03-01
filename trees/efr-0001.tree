@@ -1,0 +1,10 @@
+\date{2024-02-27}
+\author{eigil-rischel}
+\taxon{definition}
+\title{Simple Bimorphic Lens}
+\import{macros}
+
+\p{Let \cC be a Cartesian monoidal category. Then #{\mathsf{Lens}(\cC)} is the category whose objects
+are pairs #{\binom{X}{A}} of objects in \cC, where morphisms are defined by ##{\Hom\left(\binom{X}{A}, \binom{Y}{B}\right) = \cC(X,Y) \times \cC(X \times B, A),} and where composition is defined by ##{(f^+: X \to Y, f^-: X \times B \to A) ; (g^+: Y \to Z, g^-: Y \times C \to B) \\= 
+(f^+;g^+, (x,c) \mapsto f^-(x,g^-(f^+(x),c)))}
+(The expression of the composite of the backwards passes in terms of elements is easily seen to correspond to a composite of maps between products in a generic Cartesian category)}
