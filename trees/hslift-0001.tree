@@ -1,0 +1,87 @@
+\title{Hausdorff Lifting for Metrics and Relations}
+\author{ralph-sarkis}
+\import{macros}
+
+\def\qL{#{\mathsf{L}}}
+\def\Bools{#{\mathsf{B}}}
+\def\lawq{[0,\infty]}
+\def\catLSpa[arg1]{#{\arg1\cat{Spa}}}
+\def\Pset{#{\mathcal{P}_{\mathrm{f}}}}
+
+\p{
+    I am writing this post to try out [Forester](http://www.jonmsterling.com/jms-005P.xml), procrastinate on writing my thesis, and talk about a cool thing I recently discussed with my supervisors (I am sure it is known already by many, especially the authors of \ref{monoidal-topology}). 
+}
+
+\subtree{
+    \title{Complete Lattice}
+    \taxon{definition}
+    \p{
+        A \textbf{complete lattice} #{(\qL,\leq)} is a partially ordered set where all subsets have an infimum and a supremum.
+    }
+}
+
+\subtree{
+    \title{Complete Lattices}
+    \taxon{example}
+    \ol{
+        \li{
+            The interval #{\lawq} of positive real numbers extended with infinity with the usual order is a complete lattice. The infimum and supremum are computed just like you would expect (although it does not hurt to recall that #{\infty} is the supremum of any unbounded subset and the infimum of the empty subset).
+        }
+        \li{
+            The set #{\Bools = \{\bot,\top\}} of boolean values ordered with #{\bot \leq \top} is a complete lattice. The infimums can be seen as ANDs or #{\forall}, namely, if #{\{x_i\}_{i \in I}} is a family of boolean values, #{\inf_{i \in I} x_i} is true if and only if all #{x_i}s are true. Similarly, supremums can be seen as ORs or #{\exists}.
+        }
+    }
+}
+
+\subtree{
+    \title{#{\qL}-spaces}
+    \taxon{definition}
+    \p{
+        An #{\qL}-\textbf{relation} on a set #{X} is a function #{d:X\times X \to \qL}. An #{\qL}-\textbf{space} is a pair #{(X,d)} comprising a set #{X} and an #{\qL}-relation #{d} on it. A nonexpansive function from #{(X,d_X)} to #{(Y,d_Y)} is a map #{f:X\rightarrow Y} such that for all ##{\forall x,x'\in X, d_Y(f(x),f(x')) \leq d_X(x,x').} This yields a category #{\catLSpa{\qL}} of #{\qL}-spaces and nonexpansive maps. There is an evident forgetful functor #{U: \catLSpa{\qL} \rightarrow \Set} sending a #{\qL}-space #{(X,d)} to its underlying set #{X}.
+    }
+}
+\subtree{
+    \title{Hausdorff Lifting}
+    \taxon{definition}
+    \p{
+        Given an #{\qL}-space #{(X,d)}, the Hausdorff lifting of #{d} is a #{\qL}-relation #{\widehat{d}} on the non-empty finite powerset #{\Pset X} given by, for all non-empty finite #{S,T \subseteq X},
+        ##{
+            \widehat{d}(S,T) = \max\left\{\sup_{x \in S}\inf_{y \in T} d(x,y), \sup_{y \in T}\inf_{x \in S}d(x,y)\right\}.
+        }
+        I do not have any intuition to sell you this distance on sets, but it originated in the case #{\qL = \lawq}, and with the restriction that #{d} is a metric (#{\widehat{d}} can be shown to be a metric when #{d} is). Moreover, the Hausdorff distance is usually considered on compact subsets to ensure the supremums and infimums are attained (finite subsets are compact and we could have written #{\max} and #{\min} here instead).
+    }
+    \p{
+        This yields a lifting of the (covariant) powerset functor on #{\Set} to #{\catLSpa{\qL}} (along the forgetful functor). In fact, this is also a monad lifting meaning that the unit (embedding of singletons) and multiplication (union) of the powerset monad are nonexpansive with respect to the Hausdorff distances.
+    }
+}
+
+\p{
+    As is expected for all optimization problems, there is a dual formulation of this distance given by, for all non-empty finite #{S,T \subseteq X},
+    ##{
+        \widehat{d}(S,T) = \inf\{\sup_{(m,n) \in C}d(m,n) \mid C\subseteq X \times X, \pi_1(C) = A \text{ and } \pi_2(R) = C\}.
+    }
+    There is a proof that both formulations coincide in Proposition 2.1 of \ref{memoli-2011} (they consider #{\qL = \lawq} and compact subspaces, but their proof does not rely on these assumptions).
+}
+
+\p{
+    Again, I will not give intuition for why these dual optimization problems give the same solution, but I will instantiate it to some (hopefully) more familiar case. For #{\qL = \Bools}, the category #{\catLSpa{\Bools}} is isomorphic to the category of endorelations #{\cat{EndoRel}} whose objects are sets #{X} equipped with a binary relation #{R \subseteq X\times X} and morphisms are functions preserving the relation (i.e. #{(x,x') \in R_X \implies (fx,fx') \in R_Y}). A bit counterintuitively, the #{\Bools}-space #{(X,d)} is sent to #{X} equipped with the relation ##{R_d = \{(x,x') \in X\times X \mid d(x,x') = \bot\},} so that nonexpansive functions preserve that relation.
+}
+
+\p{
+    The fact that #{\bot} is now seen as TRUE (#{x} and #{x'} are related when #{d(x,x') = \bot}) means that the role of infimums and supremums are switched. For instance, the equation #{\sup_{x \in S}\inf_{y \in T} d(x,y) = \bot} holds only if we can find some #{x} such that #{\inf_{y \in T} d(x,y) = \bot} which holds when for all #{y \in T}, #{d(x,y) = \bot}, thus:
+    ##{
+        \sup_{x \in S}\inf_{y \in T} d(x,y) = \bot \Longleftrightarrow \forall x \in S, \exists y \in T, (x,y) \in R_d.
+    }
+    This means the first formulation of #{\widehat{d}} lifts a relation on #{X} to a relation on #{\Pset X} called the Egli-Milner extension given by 
+    ##{
+        (S,T) \in R_{\widehat{d}} \Longleftrightarrow \forall x \in S, \exists y \in T, (x,y) \in R_d \text{ and } \forall y \in T, \exists x \in S, (x,y) \in R_d.
+    }
+}
+
+\p{
+    To translate the second formulation of #{\widehat{d}}, note that #{\sup_{(m,n) \in C} d(m,n) = \bot} if and only if all the pairs #{(m,n)} of #{C} also belong to #{R_d}, namely, #{C \subseteq R_d}. This means we lift a relation on #{X} to a relation on #{\Pset X} given by 
+    ##{
+        (S,T) \in R_{\widehat{d}} \Longleftrightarrow \exists C\subseteq R_d, \pi_1(C) = S \wedge \pi_2(C) = T.
+    }
+    The equivalence between the two formulations in the case #{\qL = \Bools} should be known to those who have studied relation liftings (in particular in the context of bisimulation of transition systems), but I found it cool to rediscover it coming from the metric point of view.
+}
