@@ -21,7 +21,7 @@
   }
 
   \notes{
-    \p{This is the source document for my talk at Davidad's second ARIA workshop in Birmingham on safe-by-design AI. From this document, I produce the pdf presentation slides, the pdf speaker notes, the pdf handout, and an HTML forester page.}
+    \p{This is the source document for my talk at Davidad's second ARIA workshop in Birmingham on safe-by-design AI. From this document, I produce the [pdf presentation slides](/aria-0001.pdf) and this HTML forester page.}
   }
 }
 

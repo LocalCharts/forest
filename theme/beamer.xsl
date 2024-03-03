@@ -122,8 +122,8 @@
 		<xsl:text>\frame{\titlepage}</xsl:text>
 		<xsl:apply-templates select="/tree/mainmatter" />
 		<xsl:text>\nocite{*}</xsl:text>
-		<xsl:text>\bibliographystyle{plain}</xsl:text>
-		<xsl:text>\begin{frame}[t,allowframebreaks]\frametitle{Bibliography}\bibliography{\jobname.bib}\end{frame}</xsl:text>
+		<!-- <xsl:text>\bibliographystyle{plain}</xsl:text> -->
+		<!-- <xsl:text>\begin{frame}[t,allowframebreaks]\frametitle{Bibliography}\bibliography{\jobname.bib}\end{frame}</xsl:text> -->
 		<xsl:text>\end{document}</xsl:text>
 	</xsl:template>
 	<xsl:template match="/tree/backmatter/references">

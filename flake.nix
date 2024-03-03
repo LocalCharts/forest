@@ -47,22 +47,46 @@
         ''
           ${forest-server.packages.${system}.default}/bin/forest watch $@ -- "build --dev --root ${default-tree}-0001 trees/"
         '';
-        default = pkgs.stdenv.mkDerivation {
-          name = "localcharts-forest";
+        forest = pkgs.stdenv.mkDerivation {
+          name = "localcharts-forest-xml";
           src = ./.;
           buildInputs = [
             tlDist
             forester-pkg
-            pkgs.saxon-he
           ];
           buildPhase = ''
             forester build --root ${default-tree}-0001 trees/
             mv output/ $out/
-            saxon-he -s:output/aria-0001.xml -xsl:theme/beamer.xsl -o:latex/aria-0001.tex
-            cd latex
-            pdflatex aria-0001.tex
-            cd ..
-            cp latex/aria-0001.pdf $out/
+            cp pdfbuilds.json $out/
+          '';
+        };
+        pdfbuilds = pkgs.stdenv.mkDerivation {
+          name = "localcharts-forest-pdfs";
+          unpackPhase = "true";
+          buildInputs = [
+            tlDist
+            pkgs.jq
+          ];
+          buildPhase = ''
+            mkdir -p $out/
+            mkdir latex/
+            while read build
+            do
+              tree=$(echo "$build" | jq -r .tree)
+              style=$(echo "$build" | jq -r .style)
+              ${pkgs.saxon-he}/bin/saxon-he "-s:${forest}/$tree.xml" "-xsl:${forest}/$style.xsl" "-o:$tree.tex"
+              pdflatex "$tree.tex"
+              cp "$tree.pdf" "$out/"
+            done < <(cat ${forest}/pdfbuilds.json | jq -c '.[]')
+          '';
+        };
+        default = pkgs.stdenv.mkDerivation {
+          name = "localcharts-forest";
+          unpackPhase = "true";
+          buildPhase = ''
+            mkdir -p $out/
+            cp -r ${forest}/* $out/
+            cp -r ${pdfbuilds}/* $out/
           '';
         };
         buildkite-deploy = pkgs.writeShellApplication {
