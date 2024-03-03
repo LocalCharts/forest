@@ -1,0 +1,316 @@
+\title{Formal and Informal Collaboration}
+\author{owen-lynch}
+\meta{institute}{Topos Institute}
+\meta{subtitle}{A presentation at Davidad's second ARIA workshop}
+\date{2024-03-04}
+
+\def\slide[name][body]{\subtree{\taxon{slide} \title{\name} \body}}
+\def\fragileslide[name][body]{\subtree{\taxon{fragileslide} \title{\name} \body}}
+\def\hiddenslide[name][body]{\subtree{\taxon{hiddenslide} \title{\name} \body}}
+\def\notes[body]{\subtree{\taxon{notes} \meta{toc}{false} \body}}
+\def\quotes[body]{\xml{inquotes}{\body}}
+\def\pause{\xml{pause}{}}
+
+\slide{Overview}{
+  \p{Follow along at [forest.localcharts.org/aria-0001.xml](https://forest.localcharts.org/aria-0001.xml)!}
+
+  \ol{
+    \li{Motivation}
+    \li{Informal collaboration}
+    \li{Formal collaboration}
+  }
+
+  \notes{
+    \p{This is the source document for my talk at Davidad's second ARIA workshop in Birmingham on safe-by-design AI. From this document, I produce the pdf presentation slides, the pdf speaker notes, the pdf handout, and an HTML forester page.}
+  }
+}
+
+\slide{Motivation: What does success mean?}{
+
+  % Include screenshot of thesis diagram
+
+  \p{Successful implementation of [Davidad's program thesis](https://www.aria.org.uk/wp-content/uploads/2024/01/ARIA-Safeguarded-AI-Programme-Thesis-V1.pdf) over the next 3 years implies something like}
+
+  \ul{
+    \li{Several new fields worth of novel math research}
+    \li{#{>}1,000,000 lines of code}
+  }
+
+  \pause
+
+  \p{This is only possible if we either:}
+
+  \ul{
+    \li{Clone Urs and ekmett a couple of times and form them into an (aligned) borg-like mindmass, or}
+    \pause
+    \li{Get really good at collaboration.}
+  }
+
+  \notes{
+    \p{The scale of this program is daunting. We need to essentially invent whole new fields of math and computer science, and then immediately turn them into correct and efficient software programs.}
+  }
+}
+
+\slide{Motivation: Current de-facto standards for collaboration}{
+  \ul{
+    \li{Informal technical writing: overleaf+arXiv}
+    \li{Technical computing: github repositories containing arbitrary code}
+  }
+
+  \notes{
+    \p{If you are really lucky, the github repository will be a maintained package installable through a package manager, and if you are really really lucky, the maintainer won't graduate in a year and forget about it.}
+  }
+}
+
+\hiddenslide{Informal collaboration: options}{
+  \ul{
+    \li{Papers: too slow, standalone.}
+    \li{Blog posts: better as advertisements/summaries for a larger audience. Also usually fairly standalone.}
+    \li{Slack/zulip: too fragmented, too short}
+    \li{[Roam Research](https://roamresearch.com/): not designed for real \quotes{book-length} mathematics.}
+    \li{[nLab](https://ncatlab.org/nlab/show/HomePage): past attempts to encourage people other than Urs to do novel math on the nLab have failed, unclear why}
+    \li{[Gerby](https://gerby-project.github.io/) (stacks project software): powers arguably one of the most successful giant mathematical collaborations in history. Not explorative, janky}
+    \li{[Forester](link)... just might work??}
+  }
+
+
+  \notes{
+    \p{I've thought about this a lot: see a more complete survey [here](https://www.localcharts.org/t/desiderata-for-an-adequate-scientific-publishing-platform/11367).}
+  }
+}
+
+\slide{Informal collaboration: A dream}{
+  \ul{
+    \li{Monday morning (UK time): DJM writes down new definition}
+    \li{Monday afternoon (EU time): Matteo adds some key lemmas}
+    \li{Monday afternoon (Pacific time): Sophie spots hole}
+    \li{Tuesday morning (EU time): A long-time lurker comments for the first time on idea for patching hole}
+    \li{... \pause}
+    \li{By Thursday night: Enough material for a paper}
+    \li{Friday morning (UK time): Organize material into a paper by writing an abstract, collating background+new material into a reasonable order, and then exporting to arXiv-compatible LaTeX. All authors of transcluded material notified and given a chance to review.}
+    \li{Friday afternoon (UK time): pub.}
+  }
+  \notes{
+    \p{AND THEN WE DO IT AGAIN THE NEXT WEEK.}
+  }
+}
+
+\slide{Informal collaboration: How does forester work?}{
+  \p{[Forester](http://www.jonmsterling.com/jms-005P.xml) takes a collection of files with TeX-like syntax and produces both a static website and LaTeX.}
+
+  \p{Key features:}
+
+  \ul{
+    \li{Transclusion}
+    \li{Linking, backlinking, and citation}
+    \li{Macros}
+    \li{TikZ#{\to}SVG}
+    \li{Customizable LaTeX export}
+    \li{Better error messages than LaTeX}
+  }
+
+  \notes{
+    \ul{
+      \li{Transclusion: the operad of writing}
+      \li{Linking, backlinking, and citation: the best organization method known to humanity}
+      \li{Macros: separation of intent from style}
+      \li{TikZ#{\to}SVG: diagrams, diagrams everywhere}
+      \li{Customizable LaTeX export: the magic of XML}
+      \li{Better error messages than LaTeX}
+    }
+
+    \p{Definitions, theorems, sections, references, etc. are all separate units (called trees) in Forester which can be freely included into other documents via \em{transclusion}, possibly recursively.}
+
+    \p{In addition to transclusion, you can also just link other pages, which will automatically show up as a link to, say, Definition 3.4 if it happens to be on the same page, or Definition [double-category] if not. Each tree records which other trees link to it, and displays those trees at the bottom.}
+
+    \p{Forester mimics the LaTeX macro system, and expands a single macro definition within text, inline math (which is displayed via KaTeX), and TikZ that gets compiled to svg. Macros also are tree-local rather than global to the whole forest, though one tree can import the macros from another tree.}
+
+    \p{Specifically, you can just copy-paste commutative diagrams from quiver into forester.}
+  }
+}
+
+\slide{Informal collaboration: Just add (more) users}{
+  \p{[LocalCharts is live!](https://www.localcharts.org/t/localcharts-is-live/5714)}
+
+  \ul{
+    \li{Medium-sized forum}
+    \li{Small but growing forester instance}
+    \li{This talk built via forester}
+    \li{Compatible with UK law for government projects}
+  }
+  \notes{
+    \p{I have spent the last year (actually funnily enough starting with the first time I met Davidad) setting up the [localcharts](link localcharts is live) ecosystem, which includes a [collaborative markdown editor](https://docs.localcharts.org), a [discourse server](https://www.localcharts.org), and an automated build system for forester which builds [the localcharts forest](https://forest.localcharts.org) from its [git repository](https://github.com/LocalCharts/forest).}
+    \p{We have [docs on how to use the localcharts forest](lc-0002).}
+    \p{And the whole system runs on (EU/UK)-hosted services, fit for use in a program sponsored by the UK government.}
+  }
+}
+
+\slide{Formal collaboration: Math on the computer}{
+  \p{What does it mean to do math on the computer?}
+
+  \ul{
+    \li{Logician: propositions as types.
+      \ul{
+        \li{Characteristic Algorithms: Martin-Lof type checking}
+        \li{Programming languages: Isabelle, Lean, Coq, Agda}
+      }
+    }
+    \li{Algebraist: Symbolic rewriting
+      \ul{
+        \li{Characteristic Algorithms: Groebner bases, e-graphs}
+        \li{Programming languages: Mathematica, Macaulay2, OBJ3, Z3}
+      }
+    }
+    \li{Engineer/statistician: Numerical computing
+      \ul{
+        \li{Characteristic Algorithms: Euler's method, MCMC, gradient descent}
+        \li{Programming languages: Fortran, MATLAB, Julia}
+      }
+    }
+  }
+
+  \notes{
+    We are going to be \quotes{doing math on the computer} a lot in this program. But what does that actually mean?
+      \ul{
+        \li{To a logician, that means turning propositions into types, and proofs into terms of those types, in a language like Agda, Coq, Lean, etc. In this way of \quotes{doing math}, however, the only algorithm is the type-checking algorithm. Of course, by the Curry-Howard correspondence constructive proofs are equivalent to functions, and those functions might be interesting algorithms. But there is a significant difference between the use cases of \quotes{formal verification of an algorithm} and \quotes{proof by typechecking.} It's nice to formally verify your algorithms, but when your task is \quotes{write an algorithm for a task}, the constraint that your program has to also be a proof of that program's correctness slows things down. And there are many algorithms other than the typechecking algorithm that we care about. For instance...}
+        \li{To an algebraist, doing math on a computer means \quotes{using a variety of algorithms to rewrite symbolic equations.} One could see this as tactics for proof, but I have yet to see a \quotes{Groebner base} tactic or an \quotes{e-graph} tactic implemented in a proof assistant. It could be an interesting research task to build such a proof assistant, but this is somewhat of a distraction when prototyping new symbolic algorithms. And additionally, the task of \quotes{writing a tactic engine} is significantly enough different from \quotes{writing proofs using that tactic engine} that it's worth thinking about as a \quotes{different way of doing math on the computer}. Classically computer algebra is often done in in dialects of LISP, or special-purpose solvers written in high-performance languages like C++; we might want to do it in Rust or Julia. But that is not the extent of math on a computer.}
+        \li{To an analyst, \quotes{math on a computer} means numerical methods. In the glorious future, we will have numerical methods written in Lean that compile to the GPU. But we are not yet in the glorious future. Especially for experimentation, we will want to use languages suited for high-performance which classically meant Fortran or C, but now includes Julia, Rust, \quotes{the ecosystem of prewritten Fortran/C/C++ that has python wrappers,} and Haskell DSLs that compile down to Fortran/C/C++/CUDA (which is how Ed Kmett 100xed state of the art performance for ray tracers).}
+      }
+    And then there is another task that requires a different set of tools: the task of having a UI that is not \quotes{a github of script files,} which is the current state of the art for scientific computing. Now, \quotes{a github of script files} is actually a pretty excellent UI; I'd take a github of script files over an opaque, half-baked web UI any day of the week. But if we want something like \quotes{a database of models,} then we may end up with UI that is not just \quotes{writing scripts and putting them in git.} All of these types of \quotes{doing math on the computer} are important for the program.
+  }
+}
+
+\slide{Formal Collaboration: Polyglot Scientific Models}{
+  \p{Dilemna:}
+
+  \ol{
+    \li{Don't want to rewrite tensorflow}
+    \li{Don't want to write everything in Python}
+  }
+
+  \p{Solution: Models should be language-independent \quotes{initial algebras} of [systems doctrines](st-0001).}
+
+  \p{Algorithms are \quotes{model semantics} that apply over large classes of models.}
+
+  \notes{
+    \p{We don't want to rewrite tensorflow, but we also don't want to write \em{everything} in python.}
+
+    \p{Eventually, we should just develop a language which \quotes{does it all.} But we have to figure out what \quotes{it all} consists of first. And \em{engineering is research}; even though the final product might be a clean reimplementation of research prototypes, it's still important to surface engineering problems in research prototypes. These research prototypes by necessity will be in extant programming languages, using extant libraries, and there is not a single choice of extant programming language which completely covers all of the ways of \quotes{doing math on a computer}. In any case, we should be learning from the technological state of the art in different domains, and this necessitates multiple programming languages.}
+
+    \p{Even if we manage to build the next great mathematical programming language, it will still be good to have language-independent models, because we aren't going to convince the entire world to use a single programming language, but we want to have safe AI for the entire world.}
+  }
+}
+
+\slide{Formal Collaboration: Models as Data}{
+  \p{What can be cross-language?}
+
+  \ul{
+    \li{Algebraic Data Types}
+    \li{Generic types}
+    \li{Multidimensional Arrays}
+    \li{Presentations of algebraic structures (i.e. ring presentations by generator and relations).}
+    \li{Knowledge bases, i.e. collections of \quotes{facts} in the style of prolog.}
+  }
+  
+  \p{What can't?}
+
+  \ul{
+    \li{Arbitrary functions}
+    \li{Arbitrary dependent types}
+  }
+
+  \notes{
+    Given that we want to use multiple languages, how can we nonetheless build off each other's work? One way is \quotes{remote procedure calls}. But there's a hard limit to what remote procedure calls can convey cross-language: that limit is the expressivity of the serialization format. You can't just serialize a function in a probabilistic programming language and ship it off somewhere. If you want to produce a scientific model in one language and then run analysis tasks on it with other languages, you need to be able to seamlessly serialize complex scientific models. So we need to carefully choose an integration strategy based on what is reasonable to serialize, that encompasses types complex enough to convey scientific models.
+  }
+}
+
+\slide{Formal Collaboration: Implementation of \quotes{Models as Data}}{
+  \ol{
+    \li{Type theory for data}
+    \li{Embed into existing languages}
+    \li{Build storage system}
+  }
+  \notes{
+    \ol{
+      \li{Make a type theory expressive enough for the models we want, and such that all well-formed types \quotes{make sense to serialize cross-language}. I have some clever ideas for how to do this that I won't go into right now, but can be found (links)}
+      \li{Write a compiler that compiles type definitions to produce wrapper types in all relevant languages, similar to protobuf.}
+      \li{Build systems for storing serialized models that can be accessed programmatically.}
+    }
+    \p{It would look something like:}
+    \pre{%
+struct Graph {
+  V: fintype;
+  E: fintype;
+  src: E -> V;
+  tgt: E -> V;
+};%
+  }
+  }
+}
+
+\slide{Formal Collaboration: Version the Source of Truth, Cache Everything Else}{
+  \ul{
+    \li{Structured version control for models?}
+    \li{Version control the source of truth, which could be
+      \ul{
+        \li{The model itself}
+        \li{Stochastic model search + random seed}
+        \li{Textual DSL}
+        \li{A composition diagram with other models inserted}
+      }
+    }
+    \li{Everything downstream of source of truth: deterministically cache}
+    \li{Nix is current state-of-the-art.}
+  }
+
+  \notes{
+    \p{Originally, the idea was that we would version-control this data, directly. I still think that this is a good idea, but I think that there is a larger picture. Namely, you should version-control the \quotes{source of truth} for your scientific models. If that source of truth is a modeler directly editing the data of the model via some interface, then you should version-control the model. However, if the source of truth is an algorithm that did a \quotes{model search} to find that model, you should cache the model and attach it to a hash of \quotes{this code+this random seed}. If the source of truth is a handwritten textual DSL that gets compiled into the model, then you shouldn't check the result of that compilation process into version control. You should instead cache the model, keyed on the hash of the DSL.}
+
+    \p{The state-of-the-art current system for caching the results of arbitrary computation is Nix. It is not the most ideal platform for a variety of reasons, including speed, but we have to at least learn from how it works if we want to do better.}
+
+    \p{We can hack version control of structured data into Nix via hashing the \quotes{patch application process.} That is, we can make a Nix derivation with inputs \quotes{the previous state} and \quotes{the patch} which outputs the result of applying a patch to the previous state. Whether or not this is a \em{good} idea is not yet clear to me, but it is \em{an} idea.}
+
+    \p{Interestingly enough, this would \em{also} be keyed on the hash of the versioning software, so every update to the versioning software would also cause all caches to be invalidated, and patches applied from scratch. Fortunately this is not too expensive: git does this every time you clone.}
+
+    \p{Another sidenote: the difference between nix and content-addressed stores is that content-addressed stores are keyed by the hash of the thing that is stored, while nix is keyed by the hash of the inputs to a (more or less) pure function (the nix evaluator).}
+  }
+}
+
+\slide{Informal+Formal Collaboration: literate programming?}{
+  \ul{
+    \li{I thought literate programming is dead... but is it?
+      \ul{
+        \li{[Rustdoc](https://doc.rust-lang.org/rustdoc/index.html) is literate programming}
+        \li{[1lab](https://1lab.dev) is literate programming}
+        \li{[PBRT](https://www.pbrt.org/) is literate programming}
+        \li{[Jupyter](https://jupyter.org/) is literate programming}
+      }
+    }
+    \li{Caching enables principled notebook computing}
+    \li{Explainable AI involves AI... and explanations!}
+  }
+  \notes{
+    \p{Literate programming has a long history, starting with Knuth's implementation of TeX. One might argue that the traditional noweb style of literate programming has died out to some extent. But to a certain extent, if you consider notebooks or "documentation generators" like rustdoc to be literate programming, then literate programming is still going very strong.}
+
+    \p{Also, the [[1lab]] is a really interesting project: it combines formal mathematics with informal mathematics via literate agda.}
+
+    \p{One of the Achilles heels of writing scientific documents as, say, Jupyter notebooks is that caching is hard. If you want a live-refreshing preview, then you can't rerun the notebook from scratch on every change. But if you want to avoid issues related to out-of-order cell execution, you have to rerun the notebook from scratch. And if you want to build notebooks in CI, then not having a cache system can mean >30 minute CI times, which is a massive drain on productivity.}
+
+    \p{However, if your scientific system is built from the ground up to have fine-grained caching, including for simulation runs and figures, then it becomes practical to offer a live-reloading compilation server for your document, which only reruns cells when necessary. And by cache-sharing, someone else can edit your document without having to run your (potentially extremely expensive) simulations. You can also delegate computation to server farms and just pull in the result (link to post on this)}
+
+    \p{Finally, a significant part of scientific modeling \em{is} informal explanation! Human language should be a first class citizen in the modeling workbench.}
+  }
+}
+
+\slide{Conclusion}{
+  \ul{
+    \li{Success requires scaling our development via more effective collaboration}
+    \li{Informal collaboration needs to scale beyond \quotes{couple of mathematicians write standalone paper}}
+    \li{Formal collaboration needs to scale beyond \quotes{software package for single type of model in a single language}}
+  }
+  \blockquote{
+    \p{We shape technology for public benefit by advancing sciences of connection and integration.}
+
+    \p{-- Topos Institute}
+  }
+}

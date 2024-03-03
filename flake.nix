@@ -50,27 +50,30 @@
         default = pkgs.stdenv.mkDerivation {
           name = "localcharts-forest";
           src = ./.;
-          buildInputs = [tlDist];
+          buildInputs = [
+            tlDist
+            forester-pkg
+            pkgs.saxon-he
+          ];
           buildPhase = ''
-            ${forester-pkg}/bin/forester build --root ${default-tree}-0001 trees/
+            forester build --root ${default-tree}-0001 trees/
             mv output/ $out/
-            mv _redirects $out
+            saxon-he -s:output/aria-0001.xml -xsl:theme/beamer.xsl -o:latex/aria-0001.tex
+            cd latex
+            pdflatex aria-0001.tex
+            cd ..
+            cp latex/aria-0001.pdf $out/
           '';
         };
         buildkite-deploy = pkgs.writeShellApplication {
           name = "buildkite-deploy";
 
           runtimeInputs = with pkgs; [
-            forester-pkg
             awscli
-            curl
-            gnused
-            tlDist
           ];
 
           text = ''
-            forester build --root ${default-tree}-0001 trees/
-            aws s3 sync output s3://forest.next.localcharts.org
+            aws s3 sync ${default} s3://forest.next.localcharts.org
           '';
         };
       };

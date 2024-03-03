@@ -1,0 +1,36 @@
+\title{Formal and Informal Collaboration Outline}
+\author{owen-lynch}
+\date{2024-03-02}
+
+\p{Outline:
+\ul{
+  \li{This is a big project. Pull figures from the program thesis.}
+  \li{We need to produce ground-breaking foundational research and engineer a high-quality product at the same time.}
+  \li{How can we remove barriers to collaboration in the pursuit of this?}
+  \li{One side of the equation is informal collaboration. By informal, I mean "math in English", as opposed to "math in code." We are going to do a lot of math, and the speed of "research papers" is too slow. Also, "blog posts" are not a suitable substitute: the purpose of blog posts is to explain work to a more general audience, not necessarily to direct collaborators. What we need is something like a wiki, where I can write a new definition Monday morning and you can prove a theorem using that definition Monday afternoon. Solution: LocalCharts forest.}
+  \li{Another side of the equation is formal collaboration. We are going to be "doing math on the computer" a lot in this program. But what does that actually mean?
+  \ul{
+    \li{To a logician, that means turning propositions into types, and proofs into terms of those types, in a language like Agda, Coq, Lean, etc. In this way of "doing math", however, the only algorithm is the type-checking algorithm. Of course, by the Curry-Howard correspondence constructive proofs are equivalent to functions, and those functions might be interesting algorithms. But there is a significant difference between the use cases of "formal verification of an algorithm" and "proof by typechecking." It's nice to formally verify your algorithms, but when your task is "write an algorithm for a task", the constraint that your program has to also be a proof of that program's correctness slows things down. And there are many algorithms other than the typechecking algorithm that we care about. For instance...}
+    \li{To an algebraist, doing math on a computer means "using a variety of algorithms to rewrite symbolic equations." One could see this as tactics for proof, but I have yet to see a "Groebner base" tactic or an "e-graph" tactic implemented in a proof assistant. It could be an interesting research task to build such a proof assistant, but this is somewhat of a distraction when prototyping new symbolic algorithms. And additionally, the task of "writing a tactic engine" is significantly enough different from "writing proofs using that tactic engine" that it's worth thinking about as a "different way of doing math on the computer". Classically computer algebra is often done in in dialects of LISP, or special-purpose solvers written in high-performance languages like C++; we might want to do it in Rust or Julia. But that is not the extent of math on a computer.}
+    \li{To an analyst, "math on a computer" means numerical methods. In the glorious future, we will have numerical methods written in Lean that compile to the GPU. But we are not yet in the glorious future. Especially for experimentation, we will want to use languages suited for high-performance which classically meant Fortran or C, but now includes Julia, Rust, "the ecosystem of prewritten Fortran/C/C++ that has python wrappers," and Haskell DSLs that compile down to Fortran/C/C++/CUDA (which is how Ed Kmett 100xed state of the art performance for ray tracers).}
+  }
+  And then there is another task that requires a different set of tools: the task of having a UI that is not "a github of script files," which is the current state of the art for scientific computing. Now, "a github of script files" is actually a pretty excellent UI; I'd take a github of script files over an opaque, half-baked web UI any day of the week. But if we want something like "a database of models," then we may end up with UI that is not just "writing scripts and putting them in git." All of these types of "doing math on the computer" are important for the program.
+  }
+  \li{Eventually, we should just develop a language which "does it all." But we have to figure out what "it all" consists of first. And \em{engineering is research}; even though the final product might be a clean reimplementation of research prototypes, it's still important to surface engineering problems in research prototypes, and we should be learning from the technological state of the art in different domains in those research prototypes, which may vary across tasks.}
+  \li{Given all of this, how can we nonetheless build off each other's work? One way is "remote procedure calls". But there's a hard limit to what remote procedure calls can convey cross-language: that limit is the expressivity of the serialization format. You can't just serialize a function in a probabilistic programming language and ship it off somewhere. If you want to produce a scientific model in one language and then run analysis tasks on it with other languages, you need to be able to seamlessly serialize complex scientific models. So we need to carefully choose an integration strategy based on what is reasonable to serialize, that encompasses types complex enough to convey scientific models. This includes:
+  \ul{
+    \li{Algebraic Data Types}
+    \li{Generic types (as long as both sides agree on the type parameters provided in advance)}
+    \li{Multidimensional Arrays}
+    \li{Presentations of algebraic structures (i.e. ring presentations by generator and relations).}
+    \li{Knowledge bases, i.e. collections of "facts" in the style of prolog.}
+  }
+  but does not include:
+  \ul{
+    \li{Arbitrary functions (this would essentially bring us back to "just having one programming language")}
+    \li{Arbitrary dependent types (too hard to integrate into non-dependent languages)}
+  }
+  }
+  \li{My concept for making "formal collaboration" easier to develop is to create a system for principled cross-language serialization that can handle the types of data that we care about. This means coming up with a new type theory that systematically excludes things that don't make sense to serialize, while still supporting the things we do want to serialize. Then we implement a bindings generator for a wide variety of languages.}
+}
+}

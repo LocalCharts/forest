@@ -89,6 +89,11 @@
   </xsl:template>
   <xsl:template match="pause">
   </xsl:template>
+  <xsl:template match="inquotes">
+    <xsl:text>"</xsl:text>
+    <xsl:apply-templates />
+    <xsl:text>"</xsl:text>
+  </xsl:template>
   <xsl:template match="embedded-tex">
     <center>
       <img src="resources/{@hash}.svg" />
