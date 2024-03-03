@@ -47,7 +47,7 @@
   }
 
   \notes{
-    \p{The scale of this program is daunting. We need to essentially invent whole new fields of math and computer science, and then immediately turn them into correct and efficient software programs.}
+    \p{The code also needs to be correct and efficient.}
   }
 }
 
@@ -110,6 +110,8 @@
   }
 
   \notes{
+    \p{[[lc-0002]] is an introduction to forester for localcharts, and the official introduction is [Build your own Stacks Project in 10 minutes](http://www.jonmsterling.com/jms-0052.xml). You can see the [README](https://codeberg.org/LocalCharts/forest)}
+
     \ul{
       \li{Transclusion: the operad of writing}
       \li{Linking, backlinking, and citation: the best organization method known to humanity}
@@ -198,6 +200,10 @@
     \p{Eventually, we should just develop a language which \quotes{does it all.} But we have to figure out what \quotes{it all} consists of first. And \em{engineering is research}; even though the final product might be a clean reimplementation of research prototypes, it's still important to surface engineering problems in research prototypes. These research prototypes by necessity will be in extant programming languages, using extant libraries, and there is not a single choice of extant programming language which completely covers all of the ways of \quotes{doing math on a computer}. In any case, we should be learning from the technological state of the art in different domains, and this necessitates multiple programming languages.}
 
     \p{Even if we manage to build the next great mathematical programming language, it will still be good to have language-independent models, because we aren't going to convince the entire world to use a single programming language, but we want to have safe AI for the entire world.}
+
+    \p{Fortunately, we have [[st-0001]], which tells us that a model is an initial algebra in some doctrine of systems. Elements of this initial algebra are just data that is independent of any particular computational paradigm.}
+
+    \p{Of course, in order to implement all the operations of categorical systems theory, we will need to write functions for editing, composition, simplification, analysis, simulation, etc. These will operate on language-independent data, but will not themselves be language-independent data. Ideally, we write basic operations like editing, composition, simplification, etc. in a single language (Rust perhaps), and then offer some kind of ffi.}
   }
 }
 
