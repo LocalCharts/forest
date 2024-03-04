@@ -23,9 +23,9 @@
     \ul{
       \li{9:30am-12pm introductory talks on systems theory and probabilistic programming.
         \ul{
-          \li{9:30am-10:15am David Jaz Myers, Categorical Systems Theory}
-          \li{10:15am-10:30am Questions.}
-          \li{...(to be determined)}
+          \li{9:30am-10:30am David Jaz Myers, Categorical Systems Theory}
+          \li{10:30am-10:45am Coffee Break.}
+          \li{10:45am-11:45am Sam Staton, LazyPPL}
         }
       }
       \li{12pm-1pm lunch}
