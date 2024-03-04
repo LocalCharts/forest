@@ -3,6 +3,7 @@
 \meta{institute}{Topos Institute}
 \meta{subtitle}{A presentation at Davidad's second ARIA workshop}
 \date{2024-03-04}
+\meta{comments}{true}
 
 \def\slide[name][body]{\subtree{\taxon{slide} \title{\name} \body}}
 \def\fragileslide[name][body]{\subtree{\taxon{fragileslide} \title{\name} \body}}
