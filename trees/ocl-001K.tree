@@ -77,3 +77,22 @@
 
   \p{Huh, weird.}
 }
+
+\subtree{
+  \title{Breakout group discussion}
+
+  \p{Owen talks about the type signature of different data structures.}
+  \p{You can turn a dependent type into a data specification - but only if the types which things depend on are restricted to be finite types, and you only ever have function types where the domain is one of these finite types.}
+  \p{An element of such a type basically amounts to a database, a set of rows and columns}
+  \p{The idea is that this data language is what goes inside all the arrows in Davidad's big diagram describing his program.}
+
+  \ul{
+    \li{https://onnx.ai/}
+    \li{https://flatbuffers.dev/}
+    \li{https://github.com/pyprob/ppx}
+  }
+
+  \p{ONNX is storage for models, PPX is live-communication protocol between running programs. Which paradigm do we want? Maybe both?}
+
+  \p{Owen has been envisioning this as a format for model interoperability, but perhaps also good as a format for "recording things we've learned in semantics."}
+}

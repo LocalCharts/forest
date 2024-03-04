@@ -1,0 +1,20 @@
+\title{Breakout Room 4}
+\author{eigil-rischel}
+\meta{institute}{Topos Institute}
+
+\def\slide[name][body]{\subtree{\taxon{slide} \title{\name} \body}}
+\def\fragileslide[name][body]{\subtree{\taxon{fragileslide} \title{\name} \body}}
+\def\hiddenslide[name][body]{\subtree{\taxon{hiddenslide} \title{\name} \body}}
+\def\notes[body]{\subtree{\taxon{notes} \meta{toc}{false} \body}}
+\def\quotes[body]{\xml{inquotes}{\body}}
+\def\pause{\xml{pause}{}}
+
+\p{The grand vision is a data specification language that can encompass a large variety of models}
+
+\p{This could be used for passing models between different programs, but also managing the long-term evolution of these models via version control.}
+
+\p{You want the description level to be very high-level, and capture as much as possible the structure of the models, while not being that hard to check (i.e. not Martin-Lof type theory).}
+
+\p{ONNX is a very successful format; all the big companies use it. This general idea is proven to be successful. We need to generalize ONNX-style stuff to general categorical systems theory.}
+
+\p{The data format needs almost the same expressivity as source code, but without executing turing-complete code to parse it}
