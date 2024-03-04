@@ -313,6 +313,7 @@ struct Graph {
     \li{Success requires scaling our development via more effective collaboration}
     \li{Informal collaboration needs to scale beyond \quotes{couple of mathematicians write standalone paper}}
     \li{Formal collaboration needs to scale beyond \quotes{software package for single type of model in a single language}}
+    \li{Next steps: [intertypes](https://github.com/AlgebraicJulia/intertypes)}
   }
   \blockquote{
     \p{We shape technology for public benefit by advancing sciences of connection and integration.}
