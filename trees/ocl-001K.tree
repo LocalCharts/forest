@@ -6,3 +6,74 @@
 \p{I will be taking notes on [repl.it](https://replit.com/@olynch/forest) during the Davidad's second ARIA Workshop. If you would like to join my collaborative session in a google-docs-like fashion, reach out to me either via DM on [localcharts](https://www.localcharts.org) or via the category theory zulip, or via any other means you have at your disposal.}
 
 \p{You can see the live-updating notes [here](https://fe4c8d58-a033-4576-8a20-909cc6f47a50-00-jxvz73lbppio.spock.replit.dev/ocl-001K.xml), but note that the lifespan of that URL is unclear.}
+
+\subtree{
+  \title{Intro talk}
+
+  \p{ARIA has a motto of "people then projects". They believe in individuals over committees, but they also recognize the importance of long-term projects.}
+
+  \p{Davidad is running a program based on his thesis about an opportunity space.}
+
+  \p{Formal verification and AI are both large areas, but they are not yet combined within a single field.}
+
+  \p{We are starting with TA1.1, which is theory. So likely this program will be somewhat "staggered": we will go from theory to implementation.}
+
+  \p{The goal is safe-by-design AI, and the key to safe-by-design AI is formal world models. If we can get the AI to understand the world formally and explain their reasoning/plan formally, then we can use non-AI tools to reason formally about the actions of the AI.}
+
+  \p{We may have very strong AI, but it would be isolated in a box.}
+
+  \p{Emmet Shear had an [interesting thread recently](https://twitter.com/eshear/status/1764479991511998518) about the mythological analogues to AI, and how we shouldn't try to enslave AI. I wonder if we can phrase this as "a wonderful gift to the AI; beautiful puzzles to solve."}
+
+  \p{If we can formalize world models in this way, then we are much better at science in general, maybe that makes the AI happy? Anyways, this is not the main thread of the program.}
+
+  \p{[[eberhart-compositional-2023]] successfully scales to POMDPs with billions of states! Very cool.}
+
+  \p{Infinite-dimensional port-Hamiltonian systems are a subject of interest! [[markus-lohmayer]] will be happy. Also see [this](https://arxiv.org/abs/2402.17640) and [this](https://arxiv.org/abs/2204.05135).}
+
+  \p{Different flavours of compositionality: transition between systems might be only possible in certain states of the system? Not totally sure what this means.}
+
+  \p{Colimit composition: gluing together state spaces. Limit composition: imposing relations on a-priori independent systems.}
+
+  \p{I wonder, is this just "colimits in syntax, limits in semantics"? Perhaps there are also "colimits in semantics", would this correspond to limits in syntax?}
+
+  \p{Reconfigurable port-Hamiltonian systems. Motivation: we want to model continuous-time interaction between dynamically created and destroyed entities. He screenshotted my thesis!}
+
+  \p{We want to think about the interaction between non-normalization of distributions, as is often used computationally, and infradistributions (i.e. convex sets of distributions)?}
+
+  \p{Is V-Rel or V-Prof a "big tent" for semantics. Different models all eventually should relate within a single world.}
+
+  \p{Final words: the important thing is to give the AI an expressive language for talking about the world. It doesn't matter so much if proof search within that expressive language is practical by traditional means.}
+}
+
+\subtree{
+  \title{Chat in between sessions}
+
+  \blockquote{
+  \p{You may not like it, but this is what peak chat performance looks like}
+  \p{-- Eigil Rischel}
+  }
+
+  \p{Hello Eigil, can you see this? Try typing something?}
+  \p{Hi Mike! Try typing something to see if it works.}
+  \p{Yeah, I can see it -E}
+  \p{HI Owen! From Mike! I'm taking notes on digital paper - I prefer handwriting for notes - But thanks for the invite here!! }
+
+  \p{Makes sense! Well, I'm glad that the repl.it successfully supports at least three people.}
+
+  \p{Is there a way to typeset this and see the results?}
+
+  \p{Yes: https://fe4c8d58-a033-4576-8a20-909cc6f47a50-00-jxvz73lbppio.spock.replit.dev/ocl-001K.xml}
+  \p{This link still doesn't work - even with the `l` but no big deal - I was just curious to see the typeset results}
+  \p{That's frustrating!! Maybe it has to do with cookies on my computer??}
+  \p{Yeah maybe - no big deal}
+  \p{Huh, it works on my phone.}
+  \p{"site can't be reached" for me - oh well}
+
+  \p{Very strange.}
+
+  \p{@Eigil, how about you, can you see it?}
+
+  \p{Yeah it works for me.}
+
+  \p{Huh, weird.}
+}
