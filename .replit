@@ -8,4 +8,3 @@ run = ["sh", "-c", "build"]
 [[ports]]
 localPort = 8080
 externalPort = 80
-exposeLocalhost = true
