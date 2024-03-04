@@ -70,4 +70,4 @@ do
 
 \p{The trick to efficient use of logic programming is to "fail as fast as possible". I.e., every time we make a choice, we want to figure out as soon as possible if no future choices will lead to success, and ideally never even have to run those loops. This is known as "pruning"; eliminating whole branches of the search tree before we ever have to reach their leaves.}
 
-\p{There are a wide variety of languages and libraries that implement logic programming, but I will only cite a couple for now: [[oleg-backtracking-2005]], [[picat]].}
+\p{There are a wide variety of languages and libraries that implement logic programming, but I will only cite a couple for now: [[oleg-backtracking-2005]], [[picat]]. Also see [this blog post](https://blog.jle.im/entry/unique-sample-drawing-searches-with-list-and-statet).}
