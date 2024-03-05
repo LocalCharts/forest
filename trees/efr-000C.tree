@@ -1,0 +1,9 @@
+\date{2024-03-04}
+\author{eigil-rischel}
+\taxon{theorem}
+\import{macros}
+\import{efr-0008}
+\p{Let #{X_i \in \cC} be a collection of objects with coproduct #{\sum_i X_i}. Let #{A \in \cC}.
+Then the family of lenses #{\binom{A}{X_i} \to \binom{A}{\sum_i X_i}} given by the inclusions as the forwards pass, and the projection #{X_i \times A \to A} as the backwards pass, is a coproduct diagram.}
+
+\p{This is essentially due to Hedges, in [[hedges-morphisms-ogs]]}

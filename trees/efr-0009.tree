@@ -1,0 +1,8 @@
+\date{2024-03-04}
+\author{eigil-rischel}
+\taxon{example}
+\import{macros}
+\import{efr-0008}
+
+\p{In #{\Lens{\Set}} ##{\binom{0}{1} + \binom{1}{1} = \binom{0}{2}.} To see this, let #{\binom{A}{X}} be a test object, and consider
+#{\Hom(\binom{0}{1}, \binom{A}{X}) \times \Hom(\binom{1}{1},\binom{A}{X})}. If #{A} is empty, the backwards pass  is trivial in both cases, and so this just amounts to choosing two points of #{X}. If #{A} is nonempty, it is impossible to define the backwards pass in the first map (or the forwards pass, if #{X} is also empty), and so this product is empty. On the other hand, #{\Hom(\binom{0}{2}, \binom{A}{X})} is exactly the same - if #{A} is empty, it is #{X^2}, and if #{A} is nonempty, it is the empty set. Hence this is a coproduct.}

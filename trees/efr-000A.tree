@@ -1,0 +1,10 @@
+\date{2024-03-04}
+\author{eigil-rischel}
+\taxon{theorem}
+\import{macros}
+\import{efr-0008}
+\p{In #{\Lens = \Lens(\Set)}, a tuple of lenses #{\binom{A_i}{X_i} \overset{\phi_i}{\to} \binom{B}{Y}}  is a coproduct diagram if and only if the forwards passes #{X_i \to Y} form a coproduct diagram in #{\Set} and one of these conditions hold:
+\ol{
+    \li{For all #{i}, and for each #{x \in X_i}, the function #{\phi^-(x, -): B \to A_i} is a bijection}
+    \li{For at least one #{i}, #{A_i = \emptyset} and #{X_i} is nonempty. (In this case the existence of any lens #{\phi_i: \binom{A_i}{X_i} \to \binom{B}{Y}} implies that #{B} is also empty)}
+}}
