@@ -1,0 +1,25 @@
+\date{2024-03-04}
+\author{eigil-rischel}
+\import{macros}
+\def\Lens{#{\mathsf{Lens}}}
+\title{Wild coproducts in the category of simple lenses}
+
+\p{This note contains material previously posted on my blog, [here](https://erischel.com/coprods-lens-blogpost/)}
+
+\p{The category of [simple (bimorphic) lenses](https://erischel.com/coprods-lens-blogpost/) (let's just say over \Set, for now) has a monoidal structure, given by #{\binom{A}{X} \otimes \binom{B}{Y} = \binom{A \times B}{X \times Y}}, which is neither Cartesian nor coCartesian. It also has Cartesian products, given by #{\binom{A}{X} \times \binom{B}{Y} = \binom{A + B}{X \times Y}}. However, it does not in general have coproducts.}
+
+\p{In the category of containers/dependent set lenses/polynomials, which is an extension of #{\Lens(\Set)}, coproducts do exist. If we think of an element of this category as a base set #{X} and an indexed family of fiber sets #{A_x, x \in X}, then the coproduct just takes the disjoint union of the bases and combines the two indexed families.}
+
+\p{The polynomials in the image of #{\Lens(\Set)} are those where the family is constant - #{B_x = B} for all #{x} - and so the problem with #{\Lens(\Set)} when it comes to coproducts is that, if #{A \ncong B}, computing the coproduct of #{\binom{A}{X}} and #{\binom{B}{Y}} in polynomials takes us out of lenses. And indeed in the case #{A = B}, these coproducts do exist in #{\Lens(\Set)} and are given by #{\binom{A}{X + Y}}.}
+
+\p{This defect is part of what motivated the development of [[efr-0003]].}
+
+\p{For a while, it was thought that coproducts of this form were the \em{only} coproducts in #{\Lens(\Set)}, and that therefore the category of depdendent lenses could be constructed as the universal completion under coproducts of #{\Lens(\Set)} preserving the existing coproducts. This would then provide a universal property for a category of dependent optics as well.}
+
+\p{Unfortunately, this is not true. #{\Lens(\Set)} has the following "wild" coproduct as well:}
+
+\transclude{efr-0009}
+
+\p{We have the following theorem characterizing all the coproducts in #{\Lens(\Set)}}
+
+\transclude{efr-000A}

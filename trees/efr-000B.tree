@@ -1,0 +1,7 @@
+\date{2024-03-04}
+\author{eigil-rischel}
+\taxon{lemma}
+\import{macros}
+\import{efr-0008}
+\p{Fix a (Cartesian) distributive category #{\cC}. Denote the initial object by #{0}.}
+\p{The functor #{\Lens(\cC) \to \cC} which maps #{\binom{A}{X} \mapsto X} and carries each lens to its forward pass is left adjoint. Its right adjoint is given by #{X \mapsto \binom{0}{X}}. In particular, it preserves coproducts.}   

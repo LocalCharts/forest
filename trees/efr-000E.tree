@@ -1,0 +1,37 @@
+\date{2024-03-05}
+\author{eigil-rischel}
+\taxon{lemma}
+\import{macros}
+\import{efr-0008}
+\def\labelto[l]{#{\overset{\l}{\to}}}
+
+\p{Let #{\binom{A_i}{X_i} \labelto{\phi} \binom{B}{\coprod_j X_j}} be a tuple of lenses, where the forwards pass #{\phi^+_i} in each case is given by the coproduct inclusion #{X_i \to \coprod_j X_j}.}
+
+\p{Given an object #{C \in \cC}, each backwards pass #{\phi_i^+: X_i \times B \to A} determines a map
+#{(\phi_i^-)^*: \cC(X_i \times C, B) \to \cC(X_i \times C, A)}, given on elements by
+#{(\phi_i^-)^*(\psi)(x,c) = \phi^-_i(x,\psi(x,c))}. The tuple #{(\phi_i)} is a coproduct diagram if, for all #{C}, one of these conditions hold (note the order of the quantifiers, here!)}
+
+\ol{
+    \li{Each #{(\phi^-_i)^*} is a bijection}
+    \li{For some #{i}, the set #{\cC(X_i \times C, A_i)} is empty.}
+}
+
+
+\subtree{
+    \title{Proof}
+    \taxon{proof}
+    \p{Note that #{\binom{B}{\sum_i X_i} \cong #{\sum_i \binom{B}{X_i}}}, and each of the #{\phi_i} factors as #{\binom{A_i}{X_i} \to \binom{B}{X_i} \to \sum_i \binom{B}{X_i}}.}
+    \p{Hence if #{\binom{C}{Z}} is a test object, the natural transformation
+    ##{\Lens(\cC)(\binom{B}{\sum_i X_i}, \binom{C}{Z}) \to \prod_i \Lens(\cC)(\binom{A_i}{X_i},\binom{C}{Z})} is isomorphically the morphism
+    ##{\prod_i \Lens(\cC)(\binom{B}{X_i}, \binom{C}{Z}) \to \prod_i \Lens(\cC)(\binom{A_i}{X_i},\binom{C}{Z})} given by the product of the precomposition maps.}
+    \p{The tuple is a coproduct diagram if and only if this is a bijection. A product of maps in \Set is a bijection if and only if either each individual map is a bijection, or one of the sets in the codomain product is empty (in which case both products must be empty).}
+    \p{We can rewrite the individual sets as follows:
+        ##{\Lens(\cC)(\binom{B}{X_i},\binom{C}{Z}) = \cC(X_i, Z) \times \cC(X_i \times C, B)}
+        ##{\Lens(\cC)(\binom{A_i}{X_i},\binom{C}{Z}) = \cC(X_i, Z) \times \cC(X_i \times C, A_i)}
+        by definition of #{\Lens}.
+        The precomposition maps then carry #{(\psi^+, \psi^-)} to #{(\psi^+, (\phi_i^-)^*\psi^-)}.
+    }
+    \p{So clearly, if condition 1 holds - if each #{(\phi_i^-)^*} is a bijection - each of these maps is a bijection, as desired. If condition 2 holds, both products are empty. This establishes the forwards direction: if, for each #{C}, one of the conditions hold, the natural transformation is a bijection, and so we have a coproduct.}
+    \p{On the other hand, let #{C} be so that neither condition holds. Take #{Z = \sum_i X_i}.}
+    \p{By assumption all of the sets #{\cC(X_i \times C, A_i)} are nonempty, and so are the sets #{\cC(X_i, Z)}. Hence neither product is empty, so each map must be a bijection. But by assumption there is some #{i} where this is not the case.}
+}

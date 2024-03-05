@@ -1,0 +1,36 @@
+\date{2024-03-04}
+\author{eigil-rischel}
+\taxon{theorem}
+\import{macros}
+\import{efr-0008}
+\p{In #{\Lens = \Lens(\Set)}, a tuple of lenses #{\binom{A_i}{X_i} \overset{\phi_i}{\to} \binom{B}{Y}}  is a coproduct diagram if and only if the forwards passes #{X_i \to Y} form a coproduct diagram in #{\Set} and one of these conditions hold:
+\ol{
+    \li{For all #{i}, and for each #{x \in X_i}, the function #{\phi^-(x, -): B \to A_i} is a bijection}
+    \li{For at least one #{i}, #{A_i = \emptyset} and #{X_i} is nonempty. (In this case the existence of any lens #{\phi_i: \binom{A_i}{X_i} \to \binom{B}{Y}} implies that #{B} is also empty)}
+}}
+
+
+\put\transclude/expanded{false}
+\subtree{
+    \title{Proof}
+    \taxon{proof}
+    
+    \p{We divide the proofs into a few lemmata, which may be of some independent interest.
+    It is unfortunate that this result only holds for #{\Lens(\Set)}, and not for #{\Lens(\cC)} with #{\cC} a general Cartesian category. The statement as given is not true in general, but hopefully the proof will give an idea of how these things work in a general Cartesian category.}
+
+    \transclude{efr-000B}
+
+    \transclude{efr-000C}
+
+    \transclude{efr-000E}
+
+    \p{Now we are ready to prove the theorem.}
+    \p{Without loss of generality, we can assume we are in the situation of \ref{efr-000E}, where the forwards passes are given by coproduct inclusions.}
+    \p{Now we will use the two following observations:
+        \ol{
+            \li{If #{C} is empty, the map #{(\phi_i^-)^*: \Set(X_i \times C, B) \to \Set(X_i \times C, A_i)} is always a bijection, since it is a map between two singleton sets. If #{C} is nonempty, it is a bijection only if the lens #{(1_{X_i},\phi^-_i): \binom{A_i}{X_i} \to \binom{B}{X_i}} is an isomorphism, i.e only if each of the maps #{\phi^-_i(x,-): B \to A_i} are bijections}
+            \li{The set #{\cC(X_i \times C, A_i)} is empty if and only if #{X_i, C} are nonempty, and #{A_i} is empty}
+        }}
+    \p{Verifying the first statement is routine but somewhat tiresome. The second statement is trivial.}
+    \p{Hence, if #{(\phi_i)} form a coproduct diagram, by taking #{C} any nonempty set, we find that condition 1. of \ref{efr-000E} implies condition 1. of this theorem. And condition 2., implies there is some #{i} with #{X_i} nonempty and #{A_i} empty, so in either case, we have what we wanted. Conversely, if either of the conditions of this theorem hold, they imply the corresponding condition of \ref{efr-000E}, and so we have the desired equivalence.}
+}
