@@ -31,8 +31,13 @@
       \li{12pm-1pm lunch}
       \li{1pm-2:30pm focused discussion in smaller groups.}
       \li{2:30pm-3pm break and reformation of groups.}
-      \li{3pm-4:30pm focused discussion in smaller groups.}
-      \li{4:30pm-6pm writing notes from focused discussion.}
+      \li{3pm-4pm focused discussion in smaller groups.}
+      \li{4pm-5pm A talk by [[thorsten-altenkirch]] with the following description
+      \blockquote{
+        What is equality? I want to discuss the role of equality in Type Theory in the context of Homotopy Type Theory and recent work with Ambrus Kaposi and Mike Shulman on Higher observational Type Theory. 
+      }
+      }
+      \li{5pm-6pm: An opportunity to write up notes from the day or discuss further.}
     }
   }
 
