@@ -20,3 +20,6 @@
 
 \transclude{efr-0009}
 
+\p{We have the following theorem characterizing all the coproducts in #{\Lens(\Set)}}
+
+\transclude{efr-000A}

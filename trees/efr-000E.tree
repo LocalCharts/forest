@@ -2,6 +2,7 @@
 \author{eigil-rischel}
 \taxon{lemma}
 \import{macros}
+\import{efr-0008}
 \def\labelto[l]{#{\overset{\l}{\to}}}
 
 \p{Let #{\binom{A_i}{X_i} \labelto{\phi} \binom{B}{\coprod_j X_j}} be a tuple of lenses, where the forwards pass #{\phi^+_i} in each case is given by the coproduct inclusion #{X_i \to \coprod_j X_j}.}
