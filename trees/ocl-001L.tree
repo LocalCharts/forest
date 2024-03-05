@@ -1,0 +1,22 @@
+\title{Random Observables and Logic}
+\author{owen-lynch}
+\import{macros}
+\date{2024-03-05}
+
+\p{One core requirement for Davidad's AI safety program is a very expressive logic for talking about the behavior of systems. By necessity, this must support a notion of probability.}
+
+\p{However, the best tool for logic, topos theory, doesn't necessarily play very nicely with probability. How can we extend topos theory to deal with probability?}
+
+\p{One idea to rectify this is to try and work out a theory of measurable topoi, analogous to the theory of measurable locales. This has been studied to some extent in the nlab page \nlab{measurable+space#relation_to_boolean_toposes}, which links [[jackson-thesis-2006]].}
+
+\p{However, a geometric morphism between Boolean toposes is not stochastic. How can we get something like Markov kernels back into the picture?}
+
+\p{[[pavlov-gelfand-2020]] gives a Gelfand duality between commutative von Neumann algebras and measurable locales.}
+
+\p{A Markov kernel between commutative von Neumann algebras is a \em{linear} map (with some other properties) -- i.e. it doesn't necessarily preserve multiplication. The paradigmatic example of this is that a map out of the singleton space (whose von Neumann algebra is just the complex numbers), corresponds dually to the expectation of observables, which is a linear map but does not preserve multiplication except for when two observables are independent according to the probability measure.}
+
+\p{How can we extend this kind of map from locales to topoi?}
+
+\p{Perhaps we can do the following. Define a "measurable topos" to be a topos #{\cE} equipped with a semiring object #{R \in \Sh(\cE)}, and a semiring map #{\Omega_{\cE} \to R}, where #{\Omega_{\cE}} has the and/or semiring structure. The idea is that #{R} contains all of the observables}
+
+\p{Then a Markov kernel from #{(\cE, R)} to #{(\cF, S)} might be something like a geometric morphism from #{\cE_{/R}} to #{\cF_{/S}}...}
