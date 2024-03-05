@@ -2,7 +2,7 @@
 \author{eigil-rischel}
 \import{macros}
 \def\Lens{#{\mathsf{Lens}}}
-\title{Coproducts in the category of simple lenses}
+\title{Wild coproducts in the category of simple lenses}
 
 \p{This note contains material previously posted on my blog, [here](https://erischel.com/coprods-lens-blogpost/)}
 
@@ -19,4 +19,3 @@
 \p{Unfortunately, this is not true. #{\Lens(\Set)} has the following "wild" coproduct as well:}
 
 \transclude{efr-0009}
-

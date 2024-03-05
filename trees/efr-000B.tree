@@ -1,6 +1,6 @@
 \date{2024-03-04}
 \author{eigil-rischel}
-\taxon{theorem}
+\taxon{lemma}
 \import{macros}
 \import{efr-0008}
 \p{Fix a (Cartesian) distributive category #{\cC}. Denote the initial object by #{0}.}
