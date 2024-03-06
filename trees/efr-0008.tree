@@ -3,6 +3,7 @@
 \import{macros}
 \def\Lens{#{\mathsf{Lens}}}
 \title{Wild coproducts in the category of simple lenses}
+\meta{comments}{true}
 
 \p{This note contains material previously posted on my blog, [here](https://erischel.com/coprods-lens-blogpost/)}
 

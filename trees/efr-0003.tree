@@ -2,6 +2,7 @@
 \author{eigil-rischel}
 \title{Dependent optics}
 \import{macros}
+\meta{comments}{true}
 \transclude{efr-0001}
 
 \transclude{efr-0002}
