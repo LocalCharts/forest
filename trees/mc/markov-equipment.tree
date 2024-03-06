@@ -1,0 +1,23 @@
+\title{Markov equipment}
+\author{matteo-capucci}
+\import{macros}
+
+\p{
+	One can define a #{V}-enriched \nlab{virtual double category} to be a virtual double category where the squares form an object in #{V} instead of a set.
+}
+
+\definition{Markov equipment}{
+	The objects are finite sets, the tight 1-cells are functions, the loose 1-cells are matrices in #{[0,\infty]} and the squares are
+	##{\sum^*_{a_0,\ldots,a_{n+1}} R_1(a_0, a_1) + \cdots + R_n(a_n, a_{n+1}) \multimap S(f(a_0), g(a_{n+1}))}
+}
+
+\p{
+	\textbf{Claims.} Some of this need one to work with #{[0,1]} instead.
+	\ol{
+		\li{This virtual double category is an equipment}
+		\li{This virtual double category has all units and composites, given by Chapman--Kolmogorov}
+		\li{Right Kan extensions are weighting of measures}
+		\li{Right Kan lifts are Radon--Nikodym derivatives (not checked)}
+		\li{The Cauchy-completion of an object #{A} is the set of measures on #{A}}
+	}
+}

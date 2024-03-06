@@ -1,0 +1,31 @@
+\title{Harmonic sums}
+\author{matteo-capucci}
+\import{macros}
+
+\p{
+	Consider the quantale #{\mathbb{L}=([0,\infty], \geq, \cdot)}. Notice the following can be done with #{\overline\R} and #{0,1}, though the results vary.
+
+	It is closed, meaning there is an operation #{\multimap} such that
+	##{\dfrac{ab \geq c}{a \geq b \multimap c}}
+	Concretely, this means
+	##{
+		b \multimap c := \begin{cases}
+			c/b & \text{if }c,b \in (0,\infty)\\
+			0 & \text{if }c=0\text{ or }b=\infty\\
+			\infty & \text{if }b=0\text{ or }c=\infty
+		\end{cases}
+	}
+	It also has \emph{sums} and \emph{harmonic sums}, the latter being defined as
+	##{\sum^*_i x_i = \dfrac1{\sum_i \dfrac1{x_i}}}
+	Since #{1/x} is the semantics of #{x \multimap 1}, this means harmonic sum is the ''de Morgan dual'' to sum.
+	We also have
+	##{\sum_i (b \multimap {a_i}) = b \multimap {\sum_i a_i}}
+	##{\sum_i ({b_i} \multimap b) = {\sum^*_i b_i} \multimap a}
+	Clearly one can express this in any #{\mathbb{L}}-enriched category, leading to the definition of \textbf{internal sums and cosums}:
+}
+
+\transclude{sums}
+
+\p{
+	Bizarelly enough, sums in #{\mathbb{L}} are cosums when we see it as a self-enriched category.
+}

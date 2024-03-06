@@ -1,0 +1,10 @@
+\title{Oxford-Topos Meeting 2024 - Outcomes}
+\author{matteo-capucci}
+\import{macros}
+
+\p{
+	This page is the research output of the meeting [[oxford-topos-meeting-2024]].
+}
+
+\transclude{harmonic-sums}
+\transclude{markov-equipment}
