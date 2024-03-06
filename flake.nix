@@ -10,7 +10,6 @@
   outputs = {
     self,
     nixpkgs,
-    wrangler-nixpkgs,
     flake-utils,
     systems,
     forester,
@@ -20,9 +19,6 @@
     flake-utils.lib.eachSystem (import systems)
     (system: let
       pkgs = import nixpkgs {
-        inherit system;
-      };
-      wrangler-pkgs = import wrangler-nixpkgs {
         inherit system;
       };
       forester-pkg = forester.packages.${system}.default;
