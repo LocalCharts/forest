@@ -12,7 +12,6 @@
 
 \put\transclude/expanded{false}
 \subtree{
-    \title{Proof}
     \taxon{proof}
     
     \p{We divide the proofs into a few lemmata, which may be of some independent interest.

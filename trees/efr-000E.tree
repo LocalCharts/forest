@@ -18,7 +18,6 @@
 
 
 \subtree{
-    \title{Proof}
     \taxon{proof}
     \p{Note that #{\binom{B}{\sum_i X_i} \cong #{\sum_i \binom{B}{X_i}}}, and each of the #{\phi_i} factors as #{\binom{A_i}{X_i} \to \binom{B}{X_i} \to \sum_i \binom{B}{X_i}}.}
     \p{Hence if #{\binom{C}{Z}} is a test object, the natural transformation
