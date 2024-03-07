@@ -3,7 +3,7 @@ on: [push, pull_request]
 jobs:
   push:
     runs-on: ubuntu-latest
-    if: github.repository == 'LocalCharts/forest',
+    if: github.repository == 'LocalCharts/forest'
     steps:
       - uses: actions/checkout@v4
         with:
