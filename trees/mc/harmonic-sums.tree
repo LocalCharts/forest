@@ -29,3 +29,11 @@
 \p{
 	So sums seems to be `limity' and cosums `colimity'.
 }
+
+\p{
+	Sums are known to be associative and commutative. Cosums are too:
+	##{a +^*(b +^*c) = \dfrac1{1/a + 1/b +1/c} = (a +^* b)+^* c}
+	and
+	##{a +^* b +^* c = \dfrac{1}{1/a + 1/b + 1/c}}
+	What cosum isn't is a monoidal product on #{[0,\infty]} since it isn't monotone.
+}
