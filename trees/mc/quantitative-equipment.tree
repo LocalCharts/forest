@@ -1,4 +1,4 @@
-\title{Markov equipment}
+\title{A quantitative equipment}
 \author{matteo-capucci}
 \import{macros}
 
@@ -6,7 +6,7 @@
 	One can define a #{V}-enriched \nlab{virtual double category} to be a virtual double category where the squares form an object in #{V} instead of a set.
 }
 
-\definition{Markov equipment}{
+\definition{A quantitative equipment}{
 	The objects are finite sets, the tight 1-cells are functions, the loose 1-cells are matrices in #{[0,\infty]} and the squares are
 	##{\sum^*_{a_0,\ldots,a_{n+1}} R_1(a_0, a_1) + \cdots + R_n(a_n, a_{n+1}) \multimap S(f(a_0), g(a_{n+1}))}
 }

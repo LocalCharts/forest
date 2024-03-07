@@ -20,12 +20,12 @@
 	Since #{1/x} is the semantics of #{x \multimap 1}, this means harmonic sum is the ''de Morgan dual'' to sum.
 	We also have
 	##{\sum_i (b \multimap {a_i}) = b \multimap {\sum_i a_i}}
-	##{\sum_i ({b_i} \multimap b) = {\sum^*_i b_i} \multimap a}
+	##{\sum_i ({b_i} \multimap a) = {\sum^*_i b_i} \multimap a}
 	Clearly one can express this in any #{\mathbb{L}}-enriched category, leading to the definition of \textbf{internal sums and cosums}:
 }
 
 \transclude{sums}
 
 \p{
-	Bizarelly enough, sums in #{\mathbb{L}} are cosums when we see it as a self-enriched category.
+	So sums seems to be `limity' and cosums `colimity'.
 }
