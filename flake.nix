@@ -103,6 +103,12 @@
         ];
       };
 
+      devShells.shell-notex = pkgs.mkShell {
+        buildInputs = with pkgs; with self.packages.${system}; [
+          forester-pkg new build serve forester-dev
+        ];
+      };
+
       devShells.default = pkgs.mkShell {
         buildInputs = with pkgs; with self.packages.${system}; [
           forester-pkg new build serve

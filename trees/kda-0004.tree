@@ -1,0 +1,7 @@
+\title{#{T}-pseudo double category}
+\taxon{definition}
+\import{macros}
+\date{2024-03-07}
+
+\p{Let #{T:\cat{A}\to \cat{B}} be a monad relative to #{J:\cat{A}\to \cat{B}}. Then a #{T}-pseudo double category
+is a pseudo-algebra for the extension of the free #{T}-category monad to the double category of categories internal to #{T}-graphs.}
