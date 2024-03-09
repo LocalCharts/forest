@@ -16,11 +16,11 @@
 		\end{cases}
 	}
 	It also has \emph{sums} and \emph{harmonic sums}, the latter being defined as
-	##{\sum^*_i x_i = \dfrac1{\sum_i \dfrac1{x_i}}}
+	##{{\sum_i}^* x_i = \dfrac1{\sum_i \dfrac1{x_i}}}
 	Since #{1/x} is the semantics of #{x \multimap 1}, this means harmonic sum is the ''de Morgan dual'' to sum.
 	We also have
 	##{\sum_i (b \multimap {a_i}) = b \multimap {\sum_i a_i}}
-	##{\sum_i ({b_i} \multimap a) = {\sum^*_i b_i} \multimap a}
+	##{\sum_i ({b_i} \multimap a) = {{\sum_i}^* b_i} \multimap a}
 	Clearly one can express this in any #{\mathbb{L}}-enriched category, leading to the definition of \textbf{internal sums and cosums}:
 }
 
@@ -31,9 +31,34 @@
 }
 
 \p{
-	Sums are known to be associative and commutative. Cosums are too:
+	Sums are known to be associative and commutative. Harmonic sums are too:
 	##{a +^*(b +^*c) = \dfrac1{1/a + 1/b +1/c} = (a +^* b)+^* c}
 	and
 	##{a +^* b +^* c = \dfrac{1}{1/a + 1/b + 1/c}}
-	What cosum isn't is a monoidal product on #{[0,\infty]} since it isn't monotone.
+	Harmonic sum is a monoidal product on #{[0,\infty]} too, since when #{a \leq b, a' \leq b'}, then #{1/a \geq 1/b, 1/a' \geq 1/b'} and thus
+	##{a+^*a' = \dfrac1{1/a+1/a'} \leq \dfrac1{1/b + 1/b'} = b+^*b'}
+}
+
+\p{
+	Sums and harmonic sums lie in a spectrum which includes #{p}-norms as well as #{\sup} and #{\inf}. Specifically, define the \defcase{#{p}-sum} to be
+	##{{\sum_i}^p\ b_i := \left(\sum_i (b_i)^p\right)^{1/p}}
+	Then
+	\ol{
+		\li{#{{\sum}^{-\infty}} is #{\inf} and #{{\sum}^\infty} is #{\sup},}
+		\li{#{{\sum}^{1}} is just sum and #{{\sum}^{-1}} is harmonic sum.}
+	}
+	So we can indeed see sum as a deformed colimit and harmonic sum as a deformed limit:
+
+	\quiver{
+		\begin{tikzcd}
+			\inf & \cdots & {{\sum}^{-p}} & \cdots & {{\sum}^*} & 1 & {\sum} & \cdots & {{\sum}^p} & \cdots & \sup \\
+			{-\infty} && {-p} && {-1} & 0 & 1 && p && \infty
+			\arrow[no head, from=2-5, to=2-6]
+			\arrow[no head, from=2-6, to=2-7]
+			\arrow[no head, from=2-1, to=2-3]
+			\arrow[no head, from=2-3, to=2-5]
+			\arrow[from=2-9, to=2-11]
+			\arrow[no head, from=2-9, to=2-7]
+		\end{tikzcd}
+	}
 }
