@@ -8,6 +8,6 @@
 	Let #{C} be a #{\mathbb{L}}-category.
 	The \defcase{sum} of a finite collection #{(c_i)_{i \in I}} of objects in #{C} is an object #{\sum_i c_i} such that
 	##{\sum_i C(d, c_i) = C(d, \sum_i c_i)}
-	Dually, their \defcase{cosum} is the object #{\sum^*_i c_i} such that
-	##{\sum_i C(c_i, d) = C(\sum^*_i c_i,d)}
+	Dually, their \defcase{cosum} is the object #{{\sum_i}^* c_i} such that
+	##{\sum_i C(c_i, d) = C({\sum_i}^* c_i,d)}
 }

@@ -1,5 +1,4 @@
 \title{Oxford-Topos Meeting 2024 - Outcomes}
-\author{matteo-capucci}
 \import{macros}
 
 \p{
@@ -8,4 +7,5 @@
 
 \transclude{harmonic-sums}
 \transclude{quantitative-equipment}
+\transclude{kda-0002}
 \transclude{kda-0003}
