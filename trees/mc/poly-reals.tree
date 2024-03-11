@@ -1,0 +1,27 @@
+\title{The polycategory of additive positive reals}
+\author{matteo-capucci}
+\import{macros}
+
+\p{
+    Consider #{[0,\infty]_+} as a polycategory.
+    Its hom-sets are given by
+    ##{[0,\infty]_+(\underline a; \underline b) = \sum_i a_i \leq \sum_i b_i.}
+    One can form the free *-autonomous polycategory on it, whose objects are given by #{[0,\infty]+[0,\infty]} and whose morphisms are given by
+    ##{[0,\infty]_+^*(\underline a, - \underline a'; \underline b, -\underline b') = [0,\infty]_+(\underline a + \underline b'; \underline a' + \underline b).}
+    In this free completion, there are two zeros, the positive and the negative one. This solves the problem of the indeterminacy of #{\infty - \infty}.
+}
+
+\p{
+    To show that, recall that #{+} has the following universal property:
+    ##{[0,\infty]_+(\underline a, b, c; \underline d) = [0,\infty]_+(\underline a, b + c; \underline d).}
+    Then #{\infty - \infty = \infty + (-\infty)} is defined as the object such that
+    ##{[0,\infty]^*_+(\infty, -\infty; +0, -0) = [0,\infty]^*_+(\infty-\infty; +0, -0).}
+    Unpacking, we are saying:
+    ##{\dfrac{\infty -\infty \leq +0}{\infty \leq \infty}}
+}
+
+\p{
+    Notice that in this way we can't give a meaning to the expression #{-\infty + \infty}.
+}
+
+\transclude{poly-reals-mods}

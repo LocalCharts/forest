@@ -1,0 +1,12 @@
+
+\title{Modules}
+\author{matteo-capucci}
+\import{macros}
+
+\p{
+	A (depleted) module for #{[0,\infty]_+} is a family of propositions #{U(\underline a; \underline b)} such that
+	##{[0,\infty]_+(\underline a;\underline b,\underline c) \land U(\underline c, \underline d; \underline e) \implies U(\underline a, \underline d; \underline b, \underline e),\\
+	U(\underline a; \underline b, \underline c) \land [0,\infty]_+(\underline c,\underline d;\underline e) \implies U(\underline a, \underline d; \underline b, \underline e)}
+	We can unpack this further exploiting the representability of #{[0,\infty]_+}:
+	##{(a \leq b+c) \land U(c+d; e) \implies U(a+d;b+e),\\ U(a; b+c) \land (c+d \leq e) \implies U(a+d;b+e)}
+}
