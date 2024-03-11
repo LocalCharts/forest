@@ -49,4 +49,4 @@ horizontal edges, yet. An actual algebra for the free #{T}-multicategory monad i
 
 \transclude{kda-0004}
 
-\{I'm not quite sure about the profunctors of #{T}-double categories as in the definition above, they're the same as profunctors of #{T}-virtual double categories but I think the two notions don't coincide for #{T=\id}.}
+\p{I am not quite sure about the profunctors of #{T}-double categories as in the definition above, they're the same as profunctors of #{T}-virtual double categories but I think the two notions don't coincide for #{T=\id}.}
