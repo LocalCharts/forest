@@ -3,5 +3,9 @@
 \import{macros}
 \date{2024-03-07}
 
-\p{Let #{T:\cat{A}\to \cat{B}} be a monad relative to #{J:\cat{A}\to \cat{B}}. Then a #{T}-pseudo double category
+\p{Let #{T:\cat{A}\to \cat{B}} be a monad relative to #{J:\cat{A}\to \cat{B}}. Then a #{T}-(pseudo) double category
 is a pseudo-algebra for the extension of the free #{T}-category monad to the double category of categories internal to #{T}-graphs.}
+
+\p{A virtual #{T}-double category is a normalized monad in the horizontal Kleisli double category of the same free #{T}-category monad. This gives a virtual equipment #{T-\cat{VDblCat}}. }
+
+\p{The double category of #{T}-pseudo double categories is, preliminarily, the full sub-virtual double category of #{T-\cat{VDblCat}} spanned by the virtual #{T}-double categories that are actually pseudo.}
