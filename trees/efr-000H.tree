@@ -1,0 +1,23 @@
+\date{2024-03-11}
+\title{Disjoint-Set Data Structure}
+\author{eigil-rischel}
+\import{macros}
+\p{See also [disjoint-set data structure](https://en.wikipedia.org/wiki/Disjoint-set_data_structure) on wikipedia.}
+\p{A disjoint-set data structure is a data structure for computing colimits in the category of finite sets - specifically, for computing the equivalence relation given by a set of generators.}
+\p{The interface for such a datastructure consists of three operations:
+    \ul{
+        \li{\code{MakeSet()}, which adjoins a new element to the set, not initially equivalent to anything but itself.}
+        \li{\code{Find(x)}, which given an element \code{x}, computes a representative of the equivalence class of \code{x}, in a way so that if \code{x} and \code{y} are in the same equivalence class, \code{Find(x)} and \code{Find(y)} returns the \em{same} representative (assuming the equivalence relation isn't modified in between)}
+        \li{\code{Union(x,y)}, which given two elements, merges their equivalence classes into a single class}
+    }}
+\p{It is possible to implement this data structure in such a way that the worst-case performance for running #{m} operations, of which #{n \leq m} are \code{MakeSet}-operations, is #{O(m\alpha(n))}, where #{\alpha(n)} is the inverse of the Ackermann function - since this grows ridiculously slowly, this is practically linear time, giving an almost constant-time \em{amortized} complexity for each operation (this doesn't hold without the "amortized" qualifier)}
+\p{The basic idea is to represent the relation as a collection of trees - for each element, we store a parent element, so that two elements are related if they're in the same tree (for the roots, we just set \code{x.parent = x}, or \code{x.parent = null}, or something like that). Then \code{Find(x)} just needs to find the root of the tree, and \code{Union(x,y)} just needs to find the roots of the two trees, and make one the parent of the other.}
+\p{To get optimal performance, you stack two optimizations onto this idea:
+    \ul{
+        \li{While running \code{Find(x)}, you also make each of the nodes between \code{x} (inclusive) and the root point to the root - this reduces the running time of future \code{Find(-)} queries}
+        \li{You store some auxiliary information on each node (for example, the number of descendants it has), which you then use during \code{Union(x,y)} to make the trees as shallow as possible (by making whichever of \code{x} and \code{y} has the most descendants the parent of the other)}
+    }}
+
+\p{It is interesting to note that this algorithm essentially stores a function #{f: X \to X}, and represents the equivalence classes by its fixpoints (assuming by construction that #{x, f(x), f^2(x), \dots} always reaches one).}
+
+\p{See also [this post on LocalCharts](https://www.localcharts.org/t/equivalence-relations-via-idempotent-endomorphisms/1119/2) by [[owen-lynch]]}
