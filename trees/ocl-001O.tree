@@ -6,7 +6,7 @@
 \subtree{
 \title{Overview}
 
-\p{Sam Staton, Paolo Perrone and I organized a [small meeting between Topos Institute and the Oxford CS department](topos-oxford-meeting-2024). It was kind of like a workshop, but because of the short time frame that we planned it on and limited funding, we didn't invite all the people we'd like to invite or have it open to applications, so we called it a "meeting." Anyways, we managed to make some good progress on some open problems within categorical systems theory, and it was a lot of fun, so this is a short retrospective on what worked, what didn't work, and directions to pursue in the future.}
+\p{Sam Staton, Paolo Perrone and I organized a [small meeting between Topos Institute and the Oxford CS department](oxford-topos-meeting-2024). It was kind of like a workshop, but because of the short time frame that we planned it on and limited funding, we didn't invite all the people we'd like to invite or have it open to applications, so we called it a "meeting." Anyways, we managed to make some good progress on some open problems within categorical systems theory, and it was a lot of fun, so this is a short retrospective on what worked, what didn't work, and directions to pursue in the future.}
 
 \p{The meeting was fairly loosely structured. We had two talks at the beginning, one from David Jaz on double categorical systems theory, and another from Sam Staton on LazyPPL. The rest of the time was spent on:}
 
