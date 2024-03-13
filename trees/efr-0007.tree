@@ -19,7 +19,9 @@
     ##{\int^{M \in \Bun_{I \times J}} \Bun_I(X, M \times_J Y) \times \Bun_I(M \times_J B, A)}}
     \li{Given an object #{(I, Y,B)}, this object is isomorphic to #{(Y, Y, B \times_I Y)}}
     \li{The set of maps into an object #{(Y,Y,B)} of this form (out of #{I, X, A}) is given by
-    ##{\int^{M \in \Bun_{I \times Y}} \Bun_I(X,M) \times \Bun_I(M \times_J B, A)}}
+    ##{\int^{M \in \Bun_{I \times Y}} \Bun_I(X,M) \times \Bun_I(M \times_J B, A).}}
+    \li{In particular, #{\FibOptic(\cC)} is equivalent to the category where objects are deterministic morphisms #{A \to X \in \cC}, and the set of morphisms #{(A \to X) \to (B \to Y)} is given by
+    ##{\int^{M \in \Bun_{X \times Y}} \cC_{/X}(X,M) \times \cC_{/X}(M \times_Y B, A)}}
     \li{The set of maps #{(X, X, A \times X) \to (Y, Y, B \otimes Y)} is in bijection with the set of simple optics #{\Optic(\cC)((X,A),(Y,B))}}
 }
 
