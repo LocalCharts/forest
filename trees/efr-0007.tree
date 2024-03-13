@@ -48,9 +48,9 @@ we form the tuple #{(M \times_J Y, \phi, \pi;\psi)} - here we use the obvious pr
 In one case, I start with #{M} over #{J} (and #{I}), and obtain #{M \times_J Y}. There is an obvious projection map #{M\times_J Y \to M}, and this witnesses the equivalence of the two optics in this case.
 In the other case, I start with #{M} over #{Y}, and obtain #{M \times_J Y} again. In this case, it's the diagonal map #{M \to M \times_J Y} which does it.}
 
-\p{The third statement is, again, a straightforward rewriting.}
+\p{The third statement is, again, a straightforward rewriting. The fourth statement is just a simple rewriting of the third, plus the observation that, since every object is isomorphic to one of this form, the subcategory on those is equivalent.}
 
-\p{For the fourth statement, note that the set of ordinary optics is the set
+\p{For the fifth statement, note that the set of ordinary optics is the set
 
 ##{\int^{M \in \cC} \cC(X, M \otimes Y) \times \cC(M \otimes B, A)\\
 \cong \int^{M \in \Bun_{* \times *}}\Bun_*(X, M \times Y) \times \Bun_*(M \times B, A)\\
