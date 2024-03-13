@@ -1,0 +1,27 @@
+\title{Random trajectories of Markov kernels}
+\author{owen-lynch}
+\import{macros}
+\date{2024-03-07}
+
+\p{In categorical systems theory, one of the great features is that trajectories are representable. That is, a trajectory of a certain system is a morphism from a special "clock system" into that system. Different choices of clock systems can give you different notions of trajectory, i.e. trajectory for all of #{\RR}, a trajectory on the interval #{[a,b]}, a cyclic trajectory, etc.}
+
+\p{However, we don't yet have a good notion of trajectory for systems defined by stockastic kernels #{k \colon S \to \Delta S}.}
+
+\p{Classically, such a trajectory is a collection of random variables #{\{X_i \in S\}_{i \in \NN}} such that #{p(X_{n+1}|X_n) = k(X_n)}.}
+
+\p{Or, in other words, for all #{f \colon S \to \RR}, #{\EE[f(X_{n+1})|X_n] = \EE_{x \sim k(X_n)}[f(x)]}.}
+
+\p{We were thinking about representing the data of a trajectory as a map #{\Omega \times \NN \to S} in quasi-Borel spaces, where #{\Omega} is the canonical sample space. Then the clock system needs to be a map #{\Omega \times \NN \to \Delta(\Omega \times \NN)}, where #{\Delta} is the probability monad for quasi-Borel spaces, such that the following commutes:}
+
+\quiver{
+\begin{tikzcd}
+  \Delta(\Omega \times \NN) \ar[r] & \Delta(S) \\
+  \Omega \times \NN \ar[u] \ar[r] & S \ar[u]
+\end{tikzcd}
+}
+
+\p{In order for this to work, commutativity of the above square needs to be equivalent to the condition above involving conditional expectation.}
+
+\p{Two things that don't work are sending #{(\omega, n)} to #{(\omega', n+1)} where #{\omega'} is uniformly sampled independent from #{\omega}, or sending it to #{(\omega, n+1)}.}
+
+\p{The problem is that we need some notion of #{X_{-}} being adapted to a filtration. (broke off at this point to go talk to Paolo and David Jaz about this)}

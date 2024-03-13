@@ -2,6 +2,6 @@
 \author{owen-lynch}
 \date{2024-03-06}
 
-\p{[[david-jaz-myers]] proposed an interesting idea, which is to have a "review" taxon that shows up in a different section than backlinks. Then people can leave reviews by linking to trees which they find problems with.}
+\p{[[david-jaz-myers]] proposed an interesting idea, which is to have a "review" taxon that shows up in a different section than backlinks. Then people can leave reviews by writing a tree with taxon "review" that links to the tree with which they find problems.}
 
-\p{Then when the review is addressed or not, it can be marked as such.}
+\p{When the review is addressed, it can be marked as such.}

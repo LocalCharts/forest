@@ -48,3 +48,5 @@ horizontal edges, yet. An actual algebra for the free #{T}-multicategory monad i
 \p{There's an extra complication when you want symmetric double operads, since then #{T} needs to be a monad on #{\Cat} (namely the free symmetric monoidal category monad). For this we only want to consider the categories internal to #{T}-graphs with discrete categories of vertices and edges. I bet this'll be made clearer by considering the case that #{T} is a \em{relative} monad #{T:\cat{A}\to \cat{B},} and then considering #{T}-graphs as graphs #{TV\leftarrow JE\to JV,} where #{J} is the inclusion of #{\cat{A}} into #{\cat{B}}.}
 
 \transclude{kda-0004}
+
+\p{I am not quite sure about the profunctors of #{T}-double categories as in the definition above, they're the same as profunctors of #{T}-virtual double categories but I think the two notions don't coincide for #{T=\id}.}

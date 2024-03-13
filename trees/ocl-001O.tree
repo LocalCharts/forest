@@ -1,0 +1,103 @@
+\title{A Retrospective on the Oxford-Topos Meeting}
+\author{owen-lynch}
+\import{macros}
+\date{2024-03-12}
+
+\subtree{
+\title{Overview}
+
+\p{Sam Staton, Paolo Perrone and I organized a [small meeting between Topos Institute and the Oxford CS department](oxford-topos-meeting-2024). It was kind of like a workshop, but because of the short time frame that we planned it on and limited funding, we didn't invite all the people we'd like to invite or have it open to applications, so we called it a "meeting." Anyways, we managed to make some good progress on some open problems within categorical systems theory, and it was a lot of fun, so this is a short retrospective on what worked, what didn't work, and directions to pursue in the future.}
+
+\p{The meeting was fairly loosely structured. We had two talks at the beginning, one from David Jaz on double categorical systems theory, and another from Sam Staton on LazyPPL. The rest of the time was spent on:}
+
+\ul{
+  \li{Talking in small groups about math.}
+  \li{Writing up what we talked about on the LocalCharts forest.}
+  \li{Explaining things we talked about to the whole group.}
+}
+
+\p{I opened the meeting by asking participants to do three things.}
+
+\ol{
+  \li{As much as possible, attempt to ground any new theory with concrete examples.}
+  \li{Write things down on the forest \em{on the day} that you discussed them, so that you won't forget them, and so that people interested in the topics of the meeting who didn't attend the meeting wouldn't be too left out.}
+  \li{Be comfortable with the idea that you might spend three hours teaching existing theory to people who aren't familiar with it yet. Transmitting knowledge is a good outcome of the workshop and not at all a waste of time.}
+}
+
+\p{The last request was I think the most successful idea; people were pretty happy at the end of the workshop about things that they had learned. For the second request, I tried to set aside time at the end of each day to write, but it was very tempting to continue conversations into this time instead of writing, and also it was somewhat hard to write at the end of the day, when everyone was tired from doing math all day and looking forward to dinner. The first request I think was a good idea, but very easy to forget when you are a category theorist! So I think that it's worth asking people to do in the future, even though we weren't very good at living up to it.}
+
+}
+
+\subtree{
+  \title{Content}
+\p{We gathered together things that people wrote at the workshop into [[oxford-topos-meeting-2024-output]]. Some people ended up writing a lot, others none at all. I ended up not writing very much because I was hovering around helping people install forester. Hopefully in future events, everyone will have forester installed and be used to forester syntax before designated writing times.}
+
+\p{So my dream of having all of the discussions captured on paper for those who weren't present didn't quite materialize. But fortunately I can talk a little bit now about some of the topics of the discussions that I participated in.}
+
+\p{Note: I'm not putting the list of people in each discussion in case people wish to keep that private, but if you were in a discussion and you want to add your name, please just edit this!}
+
+\subtree{
+  \title{Port-Hamiltonian Systems}
+
+  \p{I ended up in two discussions on port-Hamiltonian systems. Both of these discussions were somewhat one-sided, in that they mostly consisted of me explaining what I did in my [masters thesis](lynch-relational-2022). I want to emphasize that I did not set out for this meeting to consist of me shilling for my own work, but it seemed like people were interested and enjoyed learning about it.}
+
+  \p{However, I was especially pleased that after I went through some of the big gaps in my thesis which had to do with my lack of knowledge of differential geometry: Paolo Perrone was kind enough to teach me some intuition about integrable forms. Specifically, the kernel of an integrable 1-form #{\omega \in \Gamma(T^\ast X)} is the tangent bundle of a codimension-1 foliation. He told me to imagine this like sedimentary rocks: the manifold is divided up into layers, and the kernel of #{\omega} consists of directions that travel along a single layer.}
+
+  \p{Then, as far as I understand it, the idea Paolo was proposing was to replace the relations that I use in my thesis with something like forms which vanish on the relations. The problem that I was running into in my thesis is that, when thought of as relations, linear subbundles of vector bundles don't necessarily compose because of constant-rank issues. Perhaps moving to forms would allow me to talk about non-constant-rank linear subbundles? Anyways, I'm excited to investigate this direction, and not having a good intuition for integrable forms was something that had bothered me for a while so I was happy to learn about that.}
+}
+
+\subtree{
+  \title{Stochastic Behavior}
+
+  \p{Another group I participated in tackled the problem of stochastic behavior of dynamical systems. There is a good story for "representable behaviors" within categorical systems theory, but it was unknown how to generalize this to talk about behaviors of a Markov chain.}
+
+  \p{We were able to come up with a definition for representable stochastic behavior which mimicked the classical notion of "a stochastic process adapted to a filtration" using some techiniques from \nlab{quasi-Borel spaces}. I wrote up some preliminary notes on this [here](ocl-001N), but that does not capture where we ended up going on this topic, and hopefully there may end up being a paper on this.}
+
+  \p{Funnily enough, our group was originally interested in trying to make a categorical systems theory for stochastic differential equations, but we ended up getting sidetracked after we slogged through an hour of half-remembering functional analysis. There were some promising directions here that I hope we circle back around to though.}
+}
+
+\subtree{
+  \title{Double Operads}
+
+  \p{I was not in the group that discussed double operads, and in fact to a certain extent, I don't think it was a group, it was a one-man show of Kevin Arlin sitting down and grinding out higher category theory, and the result are here: [[kda-0003]].}
+
+  \p{This was especially cool because in David Jaz's opening talk he said that he's wanted a good definition for double operad for years.}
+
+  \p{I think the lesson from this is that sometimes it's OK to have a group of 1! Working with other people can spark ideas that it is best to work out individually.}
+}
+
+\subtree{
+  \title{Combinatorial Type Theory}
+
+  \p{It was a lucky coincidence that [[thorsten-altenkirch]] happened to have been scheduled to give a talk during the meeting, because I learned about the concept of observational type theory and higher observational type theory from this talk.}
+
+  \p{Or rather, what really happened is that Thorsten gave a talk, and then later on, David Jaz explained to me why it was really cool.}
+
+  \p{As far as I can understand, the idea of higher observational type theory is that each type constructor in a type theory (i.e. sigma, pi, etc.) should come along with a \em{definitional equality} for what the equality type on that type is equivalent to. For instance, equality for the universe type should be \em{definitionally} equal to isomorphism, so univalence becomes definitional instead of propositional.}
+
+  \p{This seems really cool to me, because it is exactly what I want for combinatorial type theory. Namely, if I write down a combinatorial type, I want to automatically \em{compute} a definition for identifications between two elements of that combinatorial type: I want to automatically derive from the definition of a graph a definition of graph isomorphism!}
+
+  \p{I also want to take this one step further: from the definition of a graph, I want to automatically derive a notion of \em{edit} of a graph!}
+
+  \p{Unfortunately, it seems like there hasn't been much published on Higher Observational Type Theory yet: it's being kept somewhat under wraps as it develops.}
+
+  \p{I think I only really need a fragment of the full power of Higher Observational Type Theory to do what I want, so David Jaz and I discussed some ways of doing HOTT "on the cheap".}
+}
+
+\p{But these were not all of the topics discussed at the meeting: these are only the topics that I know about and participated in! I encourage anyone who attended the meeting but didn't get much of a chance to write during the meeting to write up thoughts while the thoughts are still fresh, and if they feel comfortable, share those thoughts!}
+
+}
+
+\subtree{
+  \title{Lessons learned}
+
+  \ol{
+    \li{When you are organizing something for academics, it's good to have a half-hour buffer at the beginning and tell people to show up at the beginning of it, so that when they inevitably show up late, the rest of the schedule doesn't have to be shifted.}
+
+    \li{Keeping to a schedule is hard. But that's OK: you don't necessarily need to keep to a strict schedule in order to get things done!}
+
+    \li{Small is powerful. Generally the most productive discussions involved 2-3 participants, even if there were more than 3 in the group. That being said, there is a balance between "everyone contributes" and "people who don't have the same level of experience get to be a fly on the wall and see how people with more experience handle a subject", and I think that sometimes it is more productive to slow down a discussion and keep everyone following, to accomplish the "learning things" objective. All that being said, I think that it is very hard to do math in a group of >5.}
+  }
+
+  \p{Overall, people said that they had a good time at the meeting, so I hope to do this again some time. I honestly think both the small discussion groups and the overall small number of people were both assets, and in fact the small number of days was also somewhat of an asset because it forced people to focus. So I think "scaling this up" doesn't look like inviting more people for a longer time: I think it looks like inviting different groups of people semi-frequently. Of course, this is only practical when the groups of people happen to be in the same place, but perhaps this is possible if small meetings like this can "piggyback" over other events like conferences. And I encourage other people to organize similar small events and not invite me, but still write up the results on localcharts: I think the ideal number of this kind of event is much larger than would be practical for me to attend!}
+}
