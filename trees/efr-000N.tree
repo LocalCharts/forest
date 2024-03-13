@@ -1,0 +1,11 @@
+\date{2024-03-13}
+\author{eigil-rischel}
+\import{macros}
+\taxon{definition}
+\p{Let #{\cC = (\cC, \otimes, I)} be a Markov category. Then the category of \em{random morphisms in \cC}, denoted #{\cat{RandMor}(\cC)} is defined as follows:
+\ul{
+    \li{The objects are the objects of \cC.}
+    \li{A morphism #{X \to Y} is given by an object #{\Omega \in \cC}, a state #{I \to \Omega} and a \em{deterministic} map #{X \otimes \Omega \to Y}, up to the equivalence relation that identifies #{(\Omega_1, \mu_1, f_1) \sim (\Omega_2, \mu_2, f_2)} if there exists a map #{\phi: \Omega_1 \to \Omega_2} so that #{\phi\mu_1 = \mu, f_1(X \otimes \phi) = f_2}}
+    \li{The identity on #{X} is #{(I, 1_I, \lambda_x: I \otimes X \cong X)}}
+    \li{Composition is given by ##{(\Omega_1, \mu_1, f_1) \circ (\Omega_2, \mu_2, f_2) = (\Omega_1 \otimes \Omega_2, \mu_1 \otimes \mu_2, f_1 \circ (\Omega_1 \otimes f_2))} (the only thing that makes sense)}
+}}
