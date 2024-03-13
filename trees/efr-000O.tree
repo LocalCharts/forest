@@ -2,6 +2,7 @@
 \author{eigil-rischel}
 \taxon{proposition}
 \import{macros}
+\p{Consider [[efr-000N]] for some Markov category \cC}
 \ul{
     \li{\p{There is an obvious functor #{\cat{RandMor}(\cC) \to \cC}, which carries #{(\mu: I \to \Omega, f_1: \Omega \otimes X \to Y)} to the composite #{f_1 (\mu \otimes X)}.}}
     \li{That functor is full if and only if #{\cC} has \em{randomness pushback} in the sense of [[fritz-markov-cats-2019]], definition 11.19}

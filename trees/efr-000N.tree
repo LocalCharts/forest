@@ -2,6 +2,7 @@
 \author{eigil-rischel}
 \import{macros}
 \taxon{definition}
+\title{The category of random morphisms}
 \p{Let #{\cC = (\cC, \otimes, I)} be a Markov category. Then the category of \em{random morphisms in \cC}, denoted #{\cat{RandMor}(\cC)} is defined as follows:
 \ul{
     \li{The objects are the objects of \cC.}
