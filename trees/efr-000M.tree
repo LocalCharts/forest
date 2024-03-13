@@ -1,0 +1,29 @@
+\date{2024-03-13}
+\title{On Random Trajectories in Categorical Systems Theory}
+\author{eigil-rischel}
+\import{macros}
+
+\p{The [[djm-categorical-systems-theory]] of [[david-jaz-myers]] is a very general language for talking about "systems" - as a special case, dynamical systems. In that framework, the set of \em{trajectories} of a system is a \em{representable} functor, given by mapping out of some other system. For example, if #{s: X \to TX} is a vector field giving a smooth dynamical system, a trajectory in the usual sense is a map from the dynamical system #{\RR \to T(\RR)} given by #{\dfrac{\partial}{\partial x}}, ie the system which moves right at constant speed #{1}.}
+\p{This framework handles this type of trajectories very well, but it is less clear how to talk about \em{stochastic dynamical systems}, which generally have \em{random trajectories}.}
+
+\p{Let us look for a moment at discrete-time stochastic dynamical systems which are closed (that is, not open, with trivial interface). This consists of a set equipped with a map #{X \to \Delta(X)}, thought of as a section of the projection #{X \times \Delta(X) \to X}. A trajectory between such systems is then a map #{X \to Y} so that the obvious diagram commutes.}
+\p{The first thing we notice is that, if the composite #{X \to Y \to \Delta(Y)} is stochastic, the diagram has no hope of commuting unless either #{X \to \Delta(X)} is also stochastic, or the map #{\Delta(X) \to \Delta(Y)} is stochastic. Thus if we restrict ourselves to deterministic maps between systems, we can't have trajectories typed by deterministic systems in a stochastic system. But this doesn't seem to be desirable - we do want to have some system representing the (random) trajectories in the ordinary sense of a stochastic system, but if we look just at deterministic maps, this won't be possible}
+
+\p{But on the other hand, a stochastic map #{f: X \to Y} is also not what we want, because it doesn't allow us to talk about the correlation between #{f(x)} for different #{x}, which is exactly what the system is supposed to talk about.}
+
+\p{Indeed, in the ordinary theory of stochastic differential equations and stochastich processes, a solution is not a time-parameterized family of distributions, but a \em{random function}. And that is precisely what is necessary in this case as well. When mapping from #{X \times \Delta(X) \to Y \times \Delta(Y),} we need to express the idea that the two values we end up with are not supposed to be independent, but result from the \em{same (random) trajectory} applied to the current position #{x_t} and the distribution of possible next states #{x_{t+1}}.}
+
+\p{On the other hand, the notion of \em{commutativity} we have to ask for is just that two particular joint distributions are the same. Let #{s: \NN \to \NN} be the successor function considered as a (deterministic) dynamical system, and let #{s_X: X \to \Delta(X)} for some set #{X} be a discrete-time stochastic process. Let #{x : \NN \to X,} written #{x_n} be a random function between them. Then we have the random diagram in #{\FinStoch}:}
+
+\quiver{
+\begin{tikzcd}
+        \NN \ar[d, "{(1, s)}"] \ar[r, "x"] & X \ar[d, "{(1,s_X)}"]\\
+        \NN \times \NN \ar[r, swap, "{n,m \mapsto (x_n, x_m)}"] & X \times X
+\end{tikzcd}
+}
+
+\p{Each path around this diagram describes a random element of #{\Hom(\NN, \Delta(X \times X))}. The first takes #{n} to the distribution on #{X \times X} where the first coordinate is constantly #{x_n}, and the second is distributed according to #{s(x_n)}. The other path takes #{n} to the distribution which is deterministically #{x_n, x_{n+1}}. The condition for the random path #{x_n} to be a trajectory of the dynamical system #{s_X: X \to \Delta(X)} is that, for all #{n \in \NN}, the two distributions obtained by taking the expectation over the distribution of #{x} agree - which amounts to saying that the conditional of #{x_{n+1}} given #{x_n} is exactly given by #{s}.}
+
+\p{Note that the only place where we needed #{x_n} to be a random map, as opposed to a stochastic map, was to define the parallel composite #{\NN \times \NN \to X \times X} - here we need to express the idea that both of inputs are to be processed according to the \em{same} random trajectory, not to be sampled independently from some distributions #{x_n, x_m \in \Delta(X)}.}
+
+\p{It is not too hard to extend this discussion to trajectories of open systems with a \em{fixed} interface #{\binom{I}{O}}, but how to extend this idea to work with the rest of [[david-jaz-myers]]' framework seems to be an extremely complicated problem}
