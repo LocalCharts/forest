@@ -210,6 +210,7 @@
 \def\Open{#{\cO}}
 
 \def\Poly{#{\cat{Poly}}}
+\def\MonPoly{#{\cat{Mon}(\Poly)}}
 
 \def\Cospan{#{\cat{Cospan}}}
 \def\Csp{#{\cat{Csp}}}
@@ -298,6 +299,10 @@
 
 \def\example[head][body]{
   \subtree{\title{\head} \taxon{example} \body}
+}
+
+\def\proposition[head][body]{
+  \subtree{\title{\head} \taxon{proposition} \body}
 }
 
 % Figures

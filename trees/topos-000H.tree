@@ -1,0 +1,127 @@
+\title{Pattern Runs on Matter}
+\import{macros}
+\author{sophie-libkind}
+\author{owen-lynch}
+\meta{comments}{true}
+
+\def\fm{#{\mathfrak{m}}}
+
+\p{These are notes on Sophie's Berkeley Seminar written by Owen Lynch.}
+
+\subtree{
+  \title{Motivation}
+
+  \subtree{
+    \title{Interviews run on people}
+
+    \p{Sophie's favorite radio program is "Fresh Air", in which Terry Gross interviews people.}
+
+    \p{What does it mean to interview someone? Well, you start by picking a question, Q1, and then based on the answer to that question, you choose another question and so on until the interview is over. This looks like a tree.}
+
+    \p{The plan of the interviewer is to give a question, and then have a new question for any answer given (or decide to stop).}
+
+    \p{But asymmetrically, the plan of the interviewee is to \em{have an answer for every question}, and then given a question, update that function from question to answer.}
+
+    \p{The function from questions to answers is a dependent function, because the answer set depends on the question.}
+  }
+
+  \subtree{
+    \title{Programs run on computers}
+
+    \subtree{}
+
+    \pre{\startverb
+  def guessing_game(max_guesses, goal):
+    if max_guesses == 0:
+      return False
+    guess = read()
+    if guess == goal:
+      return True
+    return guessing_game(max_guesses - 1, goal)\stopverb}
+
+    \p{This program stops at certain points and gets information from the computer; it "runs on" the computer.}
+  }
+
+  \p{Voting schemes run on voters}
+
+  \p{Games run on players}
+
+  \p{The general scheme: pattern runs on matter}
+}
+
+\subtree{
+  \title{Pattern of type #{p}}
+
+  \p{Let #{p \colon \Poly},
+  ##{p = \sum_{P\colon p(1)}y^{p[P]}}
+  }
+
+  \transclude{topos-000I}
+
+  \definition{Composition monoidal product}{
+    \p{If #{p} and #{q} are polynomials, then we define
+      ##{p \tri q = \sum_{P \colon p(1)} \prod_{p[P]} \sum_{Q \colon q(1)} \prod_{q[Q]}y }
+    }
+    N.B. this is the same as composition of functors if we think of #{p} and #{q} as functors #{\Set \to \Set}
+  }
+
+  \example{Tea compose tea}{
+    Let #{p} be as in \ref{topos-000I}. Then the positions of #{p \tri p} represent two-question conversation plans for Terry Gross, and a direction of #{p \tri p} at a specific conversation plan represents a way that the conversation could go given the conversation plan, i.e. answers for the two questions.
+  }
+
+  \p{We can express an interview with at most 2 question via #{y + p \tri{y + p}}.}
+
+  \transclude{topos-000J}
+
+  \p{We think of the free monad on #{p} as describing finite conversation plans.}
+
+  \example{Free monad on y}{
+    If #{p = y}, then #{\fm_p = \NN y}
+  }
+
+  \proposition{Free monad is monad}{
+    #{\fm_p} is a #{\tri}-monoid, that is there are poly maps #{\eta \colon y \to \fm_p}, #{\mu \colon \fm_p \tri \fm_p \to \fm_p} which satisfy the monad laws.
+  }
+
+  \definition{Category of polynomial monads}{
+    #{\MonPoly} is the category of #{\tri}-monoids.
+  }
+
+  \proposition{Free monad is free monad}{
+    There is an adjunction between #{\Poly} and #{\MonPoly}, and the left adjoint is #{\fm_{(-)} \colon \Poly \to \MonPoly}.
+  }
+}
+
+\subtree{
+  \title{Matter of type #{q} aka cofree comonad}
+  \definition{Cofree comonad}{
+    For a polynomial #{q}, #{\fC_q} has as positions "infinite #{q}-trees" and as directions, finite paths up the tree. The comonad structure is given by #{\varepsilon \colon \fC_q \to y} and #{\delta \colon \fC_q \to \fC_q \tri \fC_q}.
+  }
+
+  \example{Dual of a polynomial}{
+    Define #{p \colon \Poly} by 
+
+    ##{q = [p,y] = \sum_{\prod_{P: p(1)} p[P]} y^{p(1)}}
+
+    This represents an answer strategy for a single #{p}-question.
+  }
+}
+
+\subtree{
+  \title{"Runs on"}
+
+  \proposition{A natural map}{
+    There is a natural map #{\fm_p \otimes \fC_q \to \fm_{p \otimes q}}. This is given by the sequence of transposes
+
+    ##{
+    \begin{align*}
+      \fm_p \otimes \fC_q &\to \fm_{p \otimes q} \\
+      \fm_p &\to [\fC_q, \fm_{p \otimes q}] \quad \text{in $\MonPoly$}\\
+      p &\to [\fC_q, \fm_{p \otimes q}] \\
+      p \otimes \fC_q &\to p \otimes q \to \fm_{p \otimes q}
+    \end{align*}
+    }
+  }
+
+  \p{Thus, we can make a map #{\fm_p \otimes \fC_{[p,y]} \to \fm_{p \otimes [p,y]} \to \fm_y}, using the natural map #{p \otimes [p,y] \to y}.}
+}

@@ -1,0 +1,3 @@
+\title{Tea}
+\taxon{example}
+##{ p = \{\mathtt{tea?}\}y^{\mathtt{Yes},\mathtt{No}} + \{\mathtt{kind?}\}y^{\mathtt{Black},\mathtt{Green}, \mathtt{Herbal}} = y^2 + y^3}
