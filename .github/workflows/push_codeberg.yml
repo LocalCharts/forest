@@ -12,7 +12,6 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.GIT_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          echo "${{ secrets.GIT_SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
-          git config --global core.sshCommand 'ssh -i ~/.ssh/id_rsa -o IdentitiesOnly=yes -o UserKnownHostsFile=~/.ssh/known_hosts'
+          git config --global core.sshCommand 'ssh -i ~/.ssh/id_rsa -o IdentitiesOnly=yes -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
           git remote add mirror ssh://git@codeberg.org/LocalCharts/forest.git
           git push --tags --force --prune mirror 'refs/remotes/origin/*:refs/heads/*'
