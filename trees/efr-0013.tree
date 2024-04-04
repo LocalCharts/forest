@@ -1,0 +1,5 @@
+\date{2024-04-04}
+\author{eigil-rischel}
+\title{Moore machine}
+\taxon{definition}
+\p{A \em{Moore machine} with input #{A}, output #{B} and state space #{S}, is a function #{A \times S \to B \times S}.}

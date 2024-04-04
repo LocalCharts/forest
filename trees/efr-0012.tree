@@ -1,0 +1,14 @@
+\date{2024-04-04}
+\author{eigil-rischel}
+\title{Moore and Mealy machines in CST}
+\p{Recall the classic definitions:}
+\transclude{efr-0013}
+\transclude{efr-0014}
+\p{The dynamical systems considered in [[djm-categorical-systems-theory]] are Moore-type machines - the output depends on the present state, but not (directly) on the input.}
+\p{However, we can actually account for Mealy machines as well - a mealy machine with interface #{A} (which is now an \em{arena}, i.e a pair of sets in the simplest case) and state space #{S} is a lens #{TS \otimes A \to I}, where #{I} is the monoidal unit (here we assume the dynamical systems doctrine has enough structure to make the category of lenses monoidal).}
+\p{In the simplest case, arenas are pairs of sets - then we have a lens #{\binom{S \times A'}{S \times A} \to \binom{*}{*}}, which amounts to a map #{S \times A \to S \times A'} as desired. But note that the input/output pairing has changed - now #{A'} is the output and #{A} the input}
+\ul{
+    \li{Given a Mealy machine and a Moore machine with the same interface, we can pair them to obtain a closed dynamical system #{T(S \otimes S') \to I}. In general we can plug the two types of machines into each others' interfaces}
+    \li{Mealy machines reindex along lenses, but in the opposite direction from Moore machines}
+    \li{Given Mealy machines #{TS \otimes A \to I} and #{TS' \otimes A' \to I}, and a chart #{A \rightrightarrows A'}, there is a set of "maps of systems over this chart", namely maps #{S \to S'} and 2-cells filling the resulting square. Thus we get something very similar to the usual double category of systems, lenses and charts, but with the lenses working in the opposite direction from what they usually do}
+}
