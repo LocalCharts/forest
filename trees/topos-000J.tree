@@ -1,0 +1,17 @@
+\title{Free Monad on a Polynomial Functor}
+\import{macros}
+\taxon{definition}
+
+\p{For #{p \colon \Poly} finitary (#{p[P]} is finite for all #{P \colon p(1)}), define
+  ##{\mathfrak{m}_p = \mathrm{colim} (y \to y + p \to y + y + p \tri (y + p) \to \cdots)}
+}
+
+\p{For general #{p} (i.e. #{p} such that #{p[P]} is of arbitrary cardinality), we define
+  ##{
+  \begin{align*}
+    p_{(0)} &= y \\
+    p_{(\alpha + 1)} &= y + p \tri p_{(\alpha)} \\
+    p_{\alpha} &= \mathrm{colim}_{\alpha' < \alpha} p_{(\alpha')} \quad \text{for limit ordinal $\alpha$}
+  \end{align*}
+  }
+}

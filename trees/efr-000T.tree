@@ -1,0 +1,31 @@
+\date{2024-03-30}
+\author{eigil-rischel}
+\import{macros}
+\def\det{\mathrm{det}}
+\def\Prob{\cat{Prob}}
+\def\Para{#{\cat{Para}}}
+\title{The double category of mixed probabilities}
+\p{In probability theory, a \em{random variable} is a (measurable) map #{x: \Omega \to S} from some implicit "background space" #{\Omega}, which is taken to be equipped with a probability measure \PP - the image measure #{x(\PP)} describes the distribution of #{x}.}
+\p{Since the background space itself is supposed not to matter too much, one might thing we could just as well replace #{x} with its image distribution, but in fact the explicit presentation plays a very important role, most notably because, given two variables #{x,y: \Omega \to S}, we get to talk about their joint distribution on #{S^2}}
+\p{(Of course, we could simply study this distribution in itself, but first, this is not always possible for infinite-dimensional cases such as the trajectories of stochastic dynamical systems, and second, it is often more convenient to work with variables than joint distributions)}
+\p{From a categorical point of view, we can think of "parameterized stochastic maps" as parameterized \em{deterministic} maps equipped with a distribution on the paramterizing object. Much of this drops out of well-known constructions: Given any monoidal category #{\cC}, the slice category #{\cC_{/I}} is again monoidal, and has a forgetful functor to #{\cC}, and therefore acts on it. We can therefore form the double category #{\dblcat{Para}_{\cC_{/I}}(\cC)} of parameterized morphisms (see \nlab{para construction} under "Generalizations, and [this talk](https://bryceclarke.github.io/virtual-double-categories-workshop/slides/david-jaz-myers.pdf) by [[david-jaz-myers]]). We will be restric.ting to the sub-double category of this containing only those horizontal morphisms where the map #{\Omega \otimes X \to Y} is deterministic.}
+\p{Since we are generally only interested in morphisms up to almost-certain equality, we may want to expand the set of 2-cells, requiring only that the square commutes up to #{\PP}-almost certain equality. This has the result of rendering two horizontal maps isomorphic if they are equal almost certainly, but note that for this to have well-defined composition requires some assumptions on #{\cC} (see [Fritz 2019, Prop. 13.9](fritz-markov-cats-2019))}
+\p{Explicitly, we have the following definition:}
+
+\transclude{efr-000S}
+
+\p{Given a parameterized map #{f: \Omega \otimes X \to Y, \PP: I \to \Omega}, there is an obvious stochastic map #{\hat{f}: X \to Y} given by composing. This is a sort of half-companion to #{f}: we have a canonical 2-cell filling this square: \quiver{
+  \begin{tikzcd}
+    X \ar[d, equals] \ar[r, equals] & X \ar[d, "{\hat{f}}"] \\
+    X \ar[r, "f"] & Y,
+  \end{tikzcd}
+} where the map #{I \to \Omega} giving the reparametrization is simply #{\PP}. Note that this requires us to allow stochastic reparametrizations, but we're not considering stochastic parameterized maps (nor do we want to), and so this is taking us further outside the realm of the #{\Para} construction.}
+\p{This 2-cell has a sort of universal property - if given another 2-cell from the identity horizontal cell #{1_A: A = A} to #{f}, it must factor over the above one (this amounts to the claim that, given such as 2-cell, the kernel #{A \to Y} is the composition of the kernel #{A \to X} and #{\hat{f},} which is not hard to see)}
+\quiver{
+  \begin{tikzcd}
+  A \ar[d, dashed] \ar[dd, bend right=20] \ar[r, equals] & A \ar[d, dashed] \ar[dd, bend left=20]\\
+  X \ar[r, equals] \ar[d, equals] & X \ar[d]\\
+  X \ar[r] & Y
+  \end{tikzcd}
+}
+\p{In the other direction, we have no hope of building a 2-cell, since that would require two maps #{X \times \Omega \to Y} to be (almost certainly) equal, one of which is given by first applying the deletion #{\Omega \to I}. We shouldn't expect these two maps to be proper companions, since this would entail that if #{\hat{f} = \hat{g}} then #{f = g}, defeating the whole point of the exercise}

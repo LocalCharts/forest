@@ -1,0 +1,16 @@
+\date{2024-03-26}
+\author{eigil-rischel}
+\taxon{definition}
+\import{macros}
+\def\det{\mathrm{det}}
+\def\Prob{\cat{Prob}}
+\p{Fix any Markov category \cC}
+\p{There is a (pseudo) double category where
+  \ul{
+    \li{The objects are objects of #{\cC}}
+    \li{The vertical category is precisely #{\cC}}
+    \li{The horizontal morphisms #{X \to Y} are tuples #{(\Omega \in \cC, \PP: I \to \Omega, f: \Omega \otimes X \to Y)}, where #{f} is deterministic, with composition given in the obvious way by tensoring and composing}
+    \li{A 2-cell consists of a map #{\Omega_1 \to \Omega_2} in #{\Prob(\cC)} making the obvious square commute }
+  }
+}
+\p{If \cC is causal, there is an extension of this double category with the same 0- and 1-cells, but where the 2-cells #{(\Omega_1, \PP_1, f_1) \to (\Omega_2, \PP_2, f_2)} are required to make the diagram commute only #{\PP_1}-almost certainly}
