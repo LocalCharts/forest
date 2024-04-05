@@ -1,0 +1,83 @@
+\title{Dependent Org}
+\author{Owen Lynch}
+\taxon{definition}
+\import{macros}
+\date{2024-04-04}
+
+\p{Let #{\DOrg} be the following double category. The objects are categories and the vertical morphisms are functors. A horizontal morphism from #{C} to #{D} is a diagram
+
+\quiver{
+\begin{tikzcd}
+	& X \\
+	C && D
+	\arrow[shift left, from=1-2, to=2-1]
+	\arrow["f"', shift right, from=1-2, to=2-1]
+	\arrow[shift right, from=1-2, to=2-3]
+	\arrow["g"', shift right, from=2-3, to=1-2]
+\end{tikzcd}
+}
+
+where #{X} is a category, #{f} is a functor and #{g} is a cofunctor. A 2-cell is a diagram
+
+\quiver{
+\begin{tikzcd}
+	C & X & D \\
+	{C'} & {X'} & {D'}
+	\arrow[shift right, from=1-1, to=2-1]
+	\arrow[shift right, from=1-2, to=2-2]
+	\arrow[shift right, from=1-3, to=2-3]
+	\arrow[shift left, from=1-3, to=2-3]
+	\arrow[shift left, from=1-2, to=2-2]
+	\arrow[shift left, from=1-1, to=2-1]
+	\arrow[shift left, from=1-2, to=1-1]
+	\arrow[shift right, from=1-2, to=1-1]
+	\arrow[shift right, from=1-2, to=1-3]
+	\arrow[shift right, from=1-3, to=1-2]
+	\arrow[shift right, from=2-2, to=2-3]
+	\arrow[shift right, from=2-3, to=2-2]
+	\arrow[shift left, from=2-2, to=2-1]
+	\arrow[shift right, from=2-2, to=2-1]
+\end{tikzcd}
+}
+}
+
+\p{
+To compose two maps
+
+\quiver{
+\begin{tikzcd}
+	& X && Y \\
+	C && D && E
+	\arrow[shift left, from=1-2, to=2-1]
+	\arrow["f"', shift right, from=1-2, to=2-1]
+	\arrow[shift right, from=1-2, to=2-3]
+	\arrow["g"', shift right, from=2-3, to=1-2]
+	\arrow[shift left, from=1-4, to=2-3]
+	\arrow["h"', shift right, from=1-4, to=2-3]
+	\arrow[shift right, from=1-4, to=2-5]
+	\arrow["k"', shift right, from=2-5, to=1-4]
+\end{tikzcd}
+}
+
+we let #{Z} be the category whose objects are the pullback of #{g} and #{h} on objects, and whose morphisms out of #{(x,y)} are the morphisms out of #{y \in Y}. There is a natural functor #{Z \to X} and cofunctor #{Z \to Y} given by following the arrows in the diagram around.
+
+\quiver{
+\begin{tikzcd}
+	&& Z \\
+	& X && Y \\
+	C && D && E
+	\arrow[shift left, from=2-2, to=3-1]
+	\arrow["f"', shift right, from=2-2, to=3-1]
+	\arrow[shift right, from=2-2, to=3-3]
+	\arrow["g"', shift right, from=3-3, to=2-2]
+	\arrow[shift left, from=2-4, to=3-3]
+	\arrow["h"', shift right, from=2-4, to=3-3]
+	\arrow[shift right, from=2-4, to=3-5]
+	\arrow["k"', shift right, from=3-5, to=2-4]
+	\arrow[shift right, from=1-3, to=2-4]
+	\arrow[shift right, from=2-4, to=1-3]
+	\arrow[shift left, from=1-3, to=2-2]
+	\arrow[shift right, from=1-3, to=2-2]
+\end{tikzcd}
+}
+}

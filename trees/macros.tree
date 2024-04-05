@@ -199,6 +199,10 @@
 \def\Prof{#{\dblcat{Prof}}}
 \def\Rel{#{\dblcat{Rel}}}
 \def\Mat{#{\dblcat{Mat}}}
+\def\Org{#{\dblcat{Org}}}
+\def\DOrg{#{\dblcat{DOrg}}}
+
+\def\cofree{#{\fC}}
 
 \def\Ob{#{\operatorname{\mathbf{Ob}}}}
 
