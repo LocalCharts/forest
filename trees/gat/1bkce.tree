@@ -1,0 +1,33 @@
+\title{FinMatC}
+\taxon{definition}
+\tag{model}\p{\code{function Ob(n::Int)
+    if n >= 0
+        n
+    else
+         @fail "expected nonnegative integer"
+    end
+end}}
+
+\p{\code{function Hom(A::Matrix{T}, n::Int, m::Int)
+    if size(A) == (n, m)
+        A
+    else
+         @fail "expected dimensions to be $((n, m))"
+    end
+end}}
+
+\p{\code{function id(n::Int)
+    T[T(i == j) for i = 1:n, j = 1:n]
+end}}
+
+\p{\code{function compose(A::Matrix{T}, B::Matrix{T})
+    A * B
+end}}
+
+\p{\code{function dom(A::Matrix{T})
+    (size(A))[1]
+end}}
+
+\p{\code{function codom(A::Matrix{T})
+    (size(A))[2]
+end}}

@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ id }}\left(\left(A\mathop{\mathrm{ ⊗ }}B\right)\right) = \left(\mathop{\mathrm{ id }}\left(A\right)\mathop{\mathrm{ ⊗ }}\mathop{\mathrm{ id }}\left(B\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }}]}

@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ hom }}\left(A,B\right) = \left(B\mathop{\mathrm{ ⊗ }}\mathop{\mathrm{ dual }}\left(A\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }}]}

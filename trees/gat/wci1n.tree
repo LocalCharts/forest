@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ pair }}\left(Π,\left(h\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ proj1 }}\left(Π\right)\right),\left(h\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ proj2 }}\left(Π\right)\right)\right) = h\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ Π::\mathop{\mathrm{ Product }}\left(A,B\right),\ h::\left(C\mathop{\mathrm{ → }}\mathop{\mathrm{ ob }}\left(Π\right)\right)]}

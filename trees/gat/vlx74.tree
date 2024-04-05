@@ -1,0 +1,16 @@
+  
+\title{OpCat}
+\tag{theorymap}
+\taxon{definition}
+
+\p{[ThCategory](y1xsx) #{\rightarrow} [ThCategory](y1xsx)}
+\subtree{\title{Type Mapping} 
+\scope{\p{[Ob](dswhf):}\p{#{#{\mathop{\mathrm{ Ob }}\dashv []}}}\p{#{#{\mathop{\mathrm{ Ob }}\dashv []}}}}
+
+\scope{\p{[Hom](esi6q):}\p{#{#{\left(dom\mathop{\mathrm{ → }}codom\right)\dashv [dom::\mathop{\mathrm{ Ob }},\ codom::\mathop{\mathrm{ Ob }}]}}}\p{#{#{\left(codom\mathop{\mathrm{ → }}dom\right)\dashv [dom::\mathop{\mathrm{ Ob }},\ codom::\mathop{\mathrm{ Ob }}]}}}}}
+
+\subtree{\title{Term Mapping} 
+\scope{\p{[id](xosie):}\p{#{#{\mathop{\mathrm{ id }}\left(a\right)\dashv [a::\mathop{\mathrm{ Ob }}]}}}\p{#{#{\mathop{\mathrm{ id }}\left(a\right)\dashv [a::\mathop{\mathrm{ Ob }}]}}}}
+
+\scope{\p{[compose](dfgkn):}\p{#{#{\left(f\mathop{\mathrm{ ⋅ }}g\right)\dashv [a::\mathop{\mathrm{ Ob }},\ b::\mathop{\mathrm{ Ob }},\ c::\mathop{\mathrm{ Ob }},\ f::\left(a\mathop{\mathrm{ → }}b\right),\ g::\left(b\mathop{\mathrm{ → }}c\right)]}}}\p{#{#{\left(g\mathop{\mathrm{ ⋅ }}f\right)\dashv [a::\mathop{\mathrm{ Ob }},\ b::\mathop{\mathrm{ Ob }},\ c::\mathop{\mathrm{ Ob }},\ f::\left(b\mathop{\mathrm{ → }}a\right),\ g::\left(c\mathop{\mathrm{ → }}b\right)]}}}}}
+

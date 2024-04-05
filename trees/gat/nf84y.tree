@@ -1,0 +1,2 @@
+\title{zeromap}
+#{\mathop{\mathrm{ zeromap }}\left(A,B\right)::\left(A\mathop{\mathrm{ → }}B\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }}]}

@@ -1,0 +1,17 @@
+  
+\title{ThSymmetricMonoidalDoubleCategory}
+\tag{theory}
+
+ \p{Theory of *symmetric monoidal double categories*}\p{Unlike the classical notion of strict double categories, symmetric monoidal double categories do not treat the two directions on an equal footing, even when everything (except the braiding) is strict. See [\code{ThMonoidalDoubleCategory}](@ref) for references.}\p{FIXME: Should also inherit \code{ThSymmetricMonoidalCategory{Ob,Hom}} but multiple inheritance is not supported.}
+\scope{  \put\transclude/heading{false} 
+\transclude{m70nq_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

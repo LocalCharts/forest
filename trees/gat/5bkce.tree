@@ -1,0 +1,17 @@
+\title{GATC}
+\taxon{definition}
+\tag{model}\p{\code{function id(x::GAT)
+    IdTheoryMap(x)
+end}}
+
+\p{\code{function compose(f::AbsTheoryMap, g::AbsTheoryMap)
+    TheoryMaps.compose(f, g)
+end}}
+
+\p{\code{function dom(f::AbsTheoryMap)
+    TheoryMaps.dom(f)
+end}}
+
+\p{\code{function codom(f::AbsTheoryMap)
+    TheoryMaps.codom(f)
+end}}

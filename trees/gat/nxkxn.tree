@@ -1,0 +1,2 @@
+\title{}
+#{\left(\left(u\mathop{\mathrm{ ⋅ }}v\right)\mathop{\mathrm{ ⋅ }}w\right) = \left(u\mathop{\mathrm{ ⋅ }}\left(v\mathop{\mathrm{ ⋅ }}w\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ W::\mathop{\mathrm{ Fib }}\left(A\right),\ X::\mathop{\mathrm{ Fib }}\left(A\right),\ Y::\mathop{\mathrm{ Fib }}\left(A\right),\ Z::\mathop{\mathrm{ Fib }}\left(A\right),\ u::\left(W\mathop{\mathrm{ ⇢ }}X\right),\ v::\left(X\mathop{\mathrm{ ⇢ }}Y\right),\ w::\left(Y\mathop{\mathrm{ ⇢ }}Z\right)]}

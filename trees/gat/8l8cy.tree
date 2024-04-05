@@ -1,0 +1,17 @@
+  
+\title{ThBiproductCategory}
+\tag{theory}
+
+ \p{Theory of *biproduct categories*}\p{Mathematically the same as [\code{ThSemiadditiveCategory}](@ref) but written multiplicatively, instead of additively.}
+\scope{  \put\transclude/heading{false} 
+\transclude{8l8cy_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

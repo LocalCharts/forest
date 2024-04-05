@@ -1,0 +1,2 @@
+\title{tabulator}
+#{\mathop{\mathrm{ tabulator }}\left(p\right)::\mathop{\mathrm{ Tab }}\left(p\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ p::\left(A\mathop{\mathrm{ ↛ }}B\right)]}

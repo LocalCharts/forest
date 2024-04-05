@@ -1,0 +1,2 @@
+\title{id}
+#{\mathop{\mathrm{ id }}\left(f\right)::\left(f\mathop{\mathrm{ ⇒ }}f\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

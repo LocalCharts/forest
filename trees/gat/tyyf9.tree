@@ -1,0 +1,2 @@
+\title{proj1}
+#{\mathop{\mathrm{ proj1 }}\left(m,n\right)::\mathop{\mathrm{ Cell }}\left(\left(m\mathop{\mathrm{ ⊗ }}n\right),m,\mathop{\mathrm{ proj1 }}\left(A,C\right),\mathop{\mathrm{ proj1 }}\left(B,D\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ D::\mathop{\mathrm{ Ob }},\ m::\left(A\mathop{\mathrm{ ↛ }}B\right),\ n::\left(C\mathop{\mathrm{ ↛ }}D\right)]}

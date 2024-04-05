@@ -1,0 +1,14 @@
+  
+\title{ThMagma}
+\taxon{definition}
+
+
+\subtree{\title{Type Constructors} 
+\transclude{eis7y}}
+
+\subtree{\title{Term Constructors} 
+\transclude{892ox}}
+
+\subtree{\title{Axioms} 
+}
+

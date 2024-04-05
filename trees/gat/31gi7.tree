@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ delete }}\left(\left(A\mathop{\mathrm{ ⊗ }}B\right)\right) = \left(\mathop{\mathrm{ delete }}\left(A\right)\mathop{\mathrm{ ⊗ }}\mathop{\mathrm{ delete }}\left(B\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }}]}

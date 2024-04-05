@@ -1,0 +1,2 @@
+\title{pid}
+#{\mathop{\mathrm{ pid }}\left(f\right)::\mathop{\mathrm{ Cell }}\left(\mathop{\mathrm{ pid }}\left(A\right),\mathop{\mathrm{ pid }}\left(B\right),f,f\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

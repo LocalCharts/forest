@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ pair }}\left(\mathop{\mathrm{ pid }}\left(f\right),\mathop{\mathrm{ pid }}\left(g\right)\right) = \mathop{\mathrm{ pid }}\left(\mathop{\mathrm{ pair }}\left(f,g\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(B\mathop{\mathrm{ → }}C\right)]}

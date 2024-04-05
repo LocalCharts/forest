@@ -1,0 +1,17 @@
+  
+\title{ThPreorder}
+\tag{theory}
+
+ \p{The theory of sets which have a preorder.}\p{This is equivalent to the theory of thin categories (\code{ThThinCategory}) where ≤ is the composition operation.}\p{Examples:}\p{  * The set of natural numbers ordered by b-a ≥ 0}\p{  * The set of natural numbers ordered by "a divides b"}
+\scope{  \put\transclude/heading{false} 
+\transclude{mp8i4_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} \transclude{ve11h}}
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} \transclude{eqj1q}}}
+

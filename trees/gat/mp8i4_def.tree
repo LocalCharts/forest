@@ -1,0 +1,18 @@
+  
+\title{ThPreorder}
+\taxon{definition}
+
+
+\subtree{\title{Type Constructors} 
+\transclude{eis7y}
+
+\transclude{op8i4}}
+
+\subtree{\title{Term Constructors} 
+\transclude{vp8i4}
+
+\transclude{xp8i4}}
+
+\subtree{\title{Axioms} 
+\transclude{yp8i4}}
+

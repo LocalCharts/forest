@@ -1,0 +1,17 @@
+  
+\title{ThCocartesianCategory}
+\tag{theory}
+
+ \p{Theory of *cocartesian (monoidal) categories*}\p{For the traditional axiomatization of coproducts, see [\code{ThCategoryWithCoproducts}](@ref).}
+\scope{  \put\transclude/heading{false} 
+\transclude{ma42v_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

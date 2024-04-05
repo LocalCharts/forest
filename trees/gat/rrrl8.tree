@@ -1,0 +1,17 @@
+  
+\title{ThLattice}
+\tag{theory}
+
+ \p{Theory of *lattices* as posets}\p{A (bounded) lattice is a poset with all finite meets and joins. Viewed as a thin category, this means that the category has all finite products and coproducts, hence the names for the inequality constructors in the theory. Compare with [\code{ThCartesianCategory}](@ref) and [\code{ThCocartesianCategory}](@ref).}\p{This is one of two standard axiomatizations of a lattice, the other being [\code{ThAlgebraicLattice}](@ref).}
+\scope{  \put\transclude/heading{false} 
+\transclude{rrrl8_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

@@ -1,0 +1,21 @@
+\title{IntPreorder}
+\taxon{definition}
+\tag{model}\p{\code{function Leq(ab::Tuple{Int, Int}, a::Int, b::Int)
+    if a ≤ b
+        ab
+    else
+         @fail "$(ab[1]) ≰ $(ab[2])"
+    end
+end}}
+
+\p{\code{function refl(i::Int)
+    (i, i)
+end}}
+
+\p{\code{function trans(ab::Tuple{Int, Int}, bc::Tuple{Int, Int})
+    if ab[2] == bc[1]
+        (ab[1], bc[2])
+    else
+        error("Cannot compose $(ab) and $(bc)")
+    end
+end}}

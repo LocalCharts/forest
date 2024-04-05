@@ -1,0 +1,2 @@
+\title{oplus}
+#{\left(f\mathop{\mathrm{ ⊕ }}g\right)::\left(\left(A\mathop{\mathrm{ ⊕ }}C\right)\mathop{\mathrm{ → }}\left(B\mathop{\mathrm{ ⊕ }}D\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ D::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(C\mathop{\mathrm{ → }}D\right)]}

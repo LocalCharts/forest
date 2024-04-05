@@ -1,0 +1,2 @@
+\title{}
+#{\left(\mathop{\mathrm{ conjoint_counit }}\left(f\right)\mathop{\mathrm{ * }}\mathop{\mathrm{ conjoint_unit }}\left(f\right)\right) = \mathop{\mathrm{ id }}\left(\mathop{\mathrm{ conjoint }}\left(f\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

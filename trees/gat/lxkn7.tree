@@ -1,0 +1,2 @@
+\title{}
+#{\left(f\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ delete }}\left(B\right)\right) = \mathop{\mathrm{ delete }}\left(A\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

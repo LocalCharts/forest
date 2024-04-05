@@ -1,0 +1,17 @@
+  
+\title{ThMonoidalCategoryWithCodiagonals}
+\tag{theory}
+
+ \p{Theory of *monoidal categories with codiagonals*}\p{A monoidal category with codiagonals is a symmetric monoidal category equipped with coherent collections of merging and creating morphisms (monoids). Unlike in a cocartesian category, the naturality axioms need not be satisfied.}\p{For references, see [\code{ThMonoidalCategoryWithDiagonals}](@ref).}
+\scope{  \put\transclude/heading{false} 
+\transclude{s5pjp_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

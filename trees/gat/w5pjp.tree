@@ -1,0 +1,2 @@
+\title{zero}
+#{\mathop{\mathrm{ zero }}\left(A\right)::\left(\mathop{\mathrm{ mzero }}\mathop{\mathrm{ → }}A\right)\dashv [A::\mathop{\mathrm{ Ob }}]}

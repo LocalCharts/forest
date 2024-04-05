@@ -1,0 +1,17 @@
+  
+\title{ThDistributiveMonoidalCategoryWithDiagonals}
+\tag{theory}
+
+ \p{Theory of a *distributive monoidal category with diagonals*}\p{FIXME: Should also inherit \code{ThMonoidalCategoryWithDiagonals}.}
+\scope{  \put\transclude/heading{false} 
+\transclude{vmaab_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

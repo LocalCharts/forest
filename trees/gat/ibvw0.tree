@@ -1,0 +1,17 @@
+  
+\title{ThAdditiveCategory}
+\tag{theory}
+
+ \p{Theory of *additive categories*}\p{An additive category is a biproduct category enriched in abelian groups. Thus, it is a semiadditive category where the hom-monoids have negatives.}
+\scope{  \put\transclude/heading{false} 
+\transclude{ibvw0_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

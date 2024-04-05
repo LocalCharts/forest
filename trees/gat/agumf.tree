@@ -1,0 +1,2 @@
+\title{ob}
+#{\mathop{\mathrm{ ob }}\left(⨆\right)::\mathop{\mathrm{ Ob }}\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ ⨆::\mathop{\mathrm{ Coproduct }}\left(A,B\right)]}

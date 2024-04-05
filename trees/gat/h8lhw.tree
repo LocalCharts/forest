@@ -1,0 +1,2 @@
+\title{ev}
+#{\mathop{\mathrm{ ev }}\left(A,B\right)::\left(\left(\mathop{\mathrm{ hom }}\left(A,B\right)\mathop{\mathrm{ ⊗ }}A\right)\mathop{\mathrm{ → }}B\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }}]}

@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ id }}\left(\left(m\mathop{\mathrm{ ⊗ }}n\right)\right) = \left(\mathop{\mathrm{ id }}\left(m\right)\mathop{\mathrm{ ⊗ }}\mathop{\mathrm{ id }}\left(n\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ Ob }},\ Y::\mathop{\mathrm{ Ob }},\ m::\left(A\mathop{\mathrm{ ↛ }}X\right),\ n::\left(B\mathop{\mathrm{ ↛ }}Y\right)]}

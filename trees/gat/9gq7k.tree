@@ -1,0 +1,17 @@
+  
+\title{ThDaggerSymmetricMonoidalCategory}
+\tag{theory}
+
+ \p{Theory of *dagger symmetric monoidal categories*}\p{Also known as a [symmetric monoidal dagger category](https://ncatlab.org/nlab/show/symmetric+monoidal+dagger-category).}\p{FIXME: This theory should also extend \code{ThDaggerCategory}, but multiple inheritance is not yet supported.}
+\scope{  \put\transclude/heading{false} 
+\transclude{9gq7k_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

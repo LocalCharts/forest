@@ -1,0 +1,27 @@
+  
+\title{ThCategory}
+\tag{theory}
+
+ \p{\code{ThCategory}}\p{The theory of a category with composition operations and associativity and identity axioms.}
+\scope{  \put\transclude/heading{false} 
+\transclude{y1xsx_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} \transclude{0bkce}
+
+\transclude{1bkce}
+
+\transclude{2bkce}
+
+\transclude{3bkce}
+
+\transclude{4bkce}
+
+\transclude{5bkce}}
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} \transclude{vlx74}\transclude{eqj1q}}
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} \transclude{vlx74}}}
+

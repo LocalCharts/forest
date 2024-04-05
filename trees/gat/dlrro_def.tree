@@ -1,0 +1,20 @@
+  
+\title{ThPoset}
+\taxon{definition}
+
+
+\subtree{\title{Type Constructors} 
+\transclude{vykoy}
+
+\transclude{uykoy}}
+
+\subtree{\title{Term Constructors} 
+\transclude{20loy}
+
+\transclude{40loy}}
+
+\subtree{\title{Axioms} 
+\transclude{50loy}
+
+\transclude{elrro}}
+

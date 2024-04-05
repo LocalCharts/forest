@@ -1,0 +1,2 @@
+\title{delete}
+#{\mathop{\mathrm{ delete }}\left(⊤,C\right)::\left(C\mathop{\mathrm{ → }}\mathop{\mathrm{ ob }}\left(⊤\right)\right)\dashv [⊤::\mathop{\mathrm{ Terminal }},\ C::\mathop{\mathrm{ Ob }}]}

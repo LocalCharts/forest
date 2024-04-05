@@ -1,0 +1,17 @@
+  
+\title{ThSemiadditiveCategory}
+\tag{theory}
+
+ \p{Theory of *semiadditive categories*}\p{Mathematically the same as [\code{ThBiproductCategory}](@ref) but written additively, instead of multiplicatively.}
+\scope{  \put\transclude/heading{false} 
+\transclude{o6snn_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

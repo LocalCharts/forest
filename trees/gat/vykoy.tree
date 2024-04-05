@@ -1,0 +1,2 @@
+\title{Leq}
+#{\left(lhs\mathop{\mathrm{ ≤ }}rhs\right)\dashv [lhs::\mathop{\mathrm{ El }},\ rhs::\mathop{\mathrm{ El }}]}

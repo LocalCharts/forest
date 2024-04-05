@@ -1,0 +1,17 @@
+  
+\title{ThCopresheaf}
+\tag{theory}
+
+ \p{Theory of *copresheaves*.}\p{Axiomatized as a covariant category action.}
+\scope{  \put\transclude/heading{false} 
+\transclude{vhkui_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

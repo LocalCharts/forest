@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ otimes }}\left(\left(f\mathop{\mathrm{ ⋅ }}g\right),X,Y\right) = \left(\mathop{\mathrm{ otimes }}\left(g,\left(X\mathop{\mathrm{ * }}f\right),\left(Y\mathop{\mathrm{ * }}f\right)\right)\mathop{\mathrm{ ⋅ }}\left(\mathop{\mathrm{ otimes }}\left(f,X,Y\right)\mathop{\mathrm{ * }}g\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(B\mathop{\mathrm{ → }}C\right),\ X::\mathop{\mathrm{ Fib }}\left(A\right),\ Y::\mathop{\mathrm{ Fib }}\left(A\right)]}

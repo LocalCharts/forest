@@ -1,0 +1,2 @@
+\title{}
+#{\left(\left(m\mathop{\mathrm{ * }}n\right)\mathop{\mathrm{ * }}p\right) = \left(m\mathop{\mathrm{ * }}\left(n\mathop{\mathrm{ * }}p\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ D::\mathop{\mathrm{ Ob }},\ m::\left(A\mathop{\mathrm{ ↛ }}B\right),\ n::\left(B\mathop{\mathrm{ ↛ }}C\right),\ p::\left(C\mathop{\mathrm{ ↛ }}D\right)]}

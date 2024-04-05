@@ -1,0 +1,2 @@
+\title{}
+#{\left(\left(m\mathop{\mathrm{ ⊗ }}n\right)\mathop{\mathrm{ * }}\left(p\mathop{\mathrm{ ⊗ }}q\right)\right) = \left(\left(m\mathop{\mathrm{ * }}p\right)\mathop{\mathrm{ ⊗ }}\left(n\mathop{\mathrm{ * }}q\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ Ob }},\ Y::\mathop{\mathrm{ Ob }},\ Z::\mathop{\mathrm{ Ob }},\ m::\left(A\mathop{\mathrm{ ↛ }}B\right),\ p::\left(B\mathop{\mathrm{ ↛ }}C\right),\ n::\left(X\mathop{\mathrm{ ↛ }}Y\right),\ q::\left(Y\mathop{\mathrm{ ↛ }}Z\right)]}

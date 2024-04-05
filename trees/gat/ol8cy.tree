@@ -1,0 +1,2 @@
+\title{}
+#{\left(\mathop{\mathrm{ create }}\left(A\right)\mathop{\mathrm{ ⋅ }}f\right) = \mathop{\mathrm{ create }}\left(B\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

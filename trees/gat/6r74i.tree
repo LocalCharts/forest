@@ -1,0 +1,13 @@
+\title{IntNatPlus}
+\taxon{definition}
+\tag{model}\p{\code{function Z()
+    0
+end}}
+
+\p{\code{function S(n::Int)
+    n + 1
+end}}
+
+\p{\code{function +(x::Int, y::Int)
+    x + y
+end}}

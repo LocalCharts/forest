@@ -1,0 +1,2 @@
+\title{proj2}
+#{\mathop{\mathrm{ proj2 }}\left(τ\right)::\left(\mathop{\mathrm{ ob }}\left(τ\right)\mathop{\mathrm{ → }}B\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ p::\left(A\mathop{\mathrm{ ↛ }}B\right),\ τ::\mathop{\mathrm{ Tab }}\left(p\right)]}

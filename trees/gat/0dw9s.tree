@@ -1,0 +1,2 @@
+\title{}
+#{\left(\mathop{\mathrm{ universal }}\left(τ,θ\right)\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ proj1 }}\left(τ\right)\right) = f\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ Ob }},\ p::\left(A\mathop{\mathrm{ ↛ }}B\right),\ f::\left(X\mathop{\mathrm{ → }}A\right),\ g::\left(X\mathop{\mathrm{ → }}B\right),\ τ::\mathop{\mathrm{ Tab }}\left(p\right),\ θ::\mathop{\mathrm{ Cell }}\left(\mathop{\mathrm{ pid }}\left(X\right),p,f,g\right)]}

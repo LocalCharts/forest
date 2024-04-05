@@ -1,0 +1,2 @@
+\title{act}
+#{\mathop{\mathrm{ act }}\left(x,f\right)::\mathop{\mathrm{ El }}\left(B\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ x::\mathop{\mathrm{ El }}\left(A\right),\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

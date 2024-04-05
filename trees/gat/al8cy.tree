@@ -1,0 +1,2 @@
+\title{pair}
+#{\mathop{\mathrm{ pair }}\left(f,g\right)::\left(A\mathop{\mathrm{ → }}\left(B\mathop{\mathrm{ ⊗ }}C\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(A\mathop{\mathrm{ → }}C\right)]}

@@ -1,0 +1,2 @@
+\title{dual}
+#{\mathop{\mathrm{ dual }}\left(A\right)::\mathop{\mathrm{ Ob }}\dashv [A::\mathop{\mathrm{ Ob }}]}

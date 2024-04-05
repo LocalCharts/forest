@@ -1,0 +1,2 @@
+\title{hom}
+#{\mathop{\mathrm{ hom }}\left(A,B\right)::\mathop{\mathrm{ Ob }}\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }}]}

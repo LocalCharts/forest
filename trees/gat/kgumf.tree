@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ copair }}\left(⨆,\left(\mathop{\mathrm{ coproj1 }}\left(⨆\right)\mathop{\mathrm{ ⋅ }}h\right),\left(\mathop{\mathrm{ coproj2 }}\left(⨆\right)\mathop{\mathrm{ ⋅ }}h\right)\right) = h\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ ⨆::\mathop{\mathrm{ Coproduct }}\left(A,B\right),\ h::\left(\mathop{\mathrm{ ob }}\left(⨆\right)\mathop{\mathrm{ → }}C\right)]}

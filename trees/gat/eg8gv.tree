@@ -1,0 +1,2 @@
+\title{factorize}
+#{\mathop{\mathrm{ factorize }}\left(eq,h,eq_h\right)::\left(\mathop{\mathrm{ ob }}\left(eq_h\right)\mathop{\mathrm{ → }}\mathop{\mathrm{ ob }}\left(eq\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(A\mathop{\mathrm{ → }}B\right),\ eq::\mathop{\mathrm{ Equalizer }}\left(f,g\right),\ h::\left(C\mathop{\mathrm{ → }}A\right),\ eq_h::\mathop{\mathrm{ Equalizer }}\left(\left(h\mathop{\mathrm{ ⋅ }}f\right),\left(h\mathop{\mathrm{ ⋅ }}g\right)\right)]}

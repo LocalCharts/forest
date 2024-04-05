@@ -1,0 +1,17 @@
+  
+\title{ThPointedSetCategory}
+\tag{theory}
+
+ \p{Theory of a pointed set-enriched category. We axiomatize a category equipped with zero morphisms.}\p{A functor from an ordinary category into a freely generated pointed-set enriched category, equivalently, a pointed-set enriched category in which no two nonzero maps compose to a zero map, is a good notion of a functor that's total on objects and partial on morphisms.}
+\scope{  \put\transclude/heading{false} 
+\transclude{lf84y_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

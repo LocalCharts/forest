@@ -1,0 +1,2 @@
+\title{ob}
+#{\mathop{\mathrm{ ob }}\left(Π\right)::\mathop{\mathrm{ Ob }}\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ Π::\mathop{\mathrm{ Product }}\left(A,B\right)]}

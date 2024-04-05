@@ -1,0 +1,2 @@
+\title{munit}
+#{\mathop{\mathrm{ munit }}\left(f\right)::\left(\mathop{\mathrm{ munit }}\left(B\right)\mathop{\mathrm{ ⇢ }}\left(\mathop{\mathrm{ munit }}\left(A\right)\mathop{\mathrm{ * }}f\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

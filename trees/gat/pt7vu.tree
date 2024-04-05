@@ -1,0 +1,17 @@
+  
+\title{ThMCategory}
+\tag{theory}
+
+ \p{Theory of an *ℳ-category*.}\p{The term "ℳ-category", used on the [nLab](https://ncatlab.org/nlab/show/M-category) is not very common, but the concept itself shows up commonly. An *ℳ-category* is a category with a distinguished wide subcategory, whose morphisms are suggestively called *tight*; for contrast, a generic morphism is called *loose*. Equivalently, an ℳ-category is a category enriched in the category ℳ of injections, the full subcategory of the arrow category of Set spanned by injections.}\p{In the following GAT, tightness is axiomatized as a property of morphisms: a dependent family of sets over the hom-sets, each having at most one inhabitant.}
+\scope{  \put\transclude/heading{false} 
+\transclude{pt7vu_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

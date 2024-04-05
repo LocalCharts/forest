@@ -1,0 +1,2 @@
+\title{}
+#{\left(\left(A\mathop{\mathrm{ ⊗ }}B\right)\mathop{\mathrm{ ⊗ }}C\right) = \left(A\mathop{\mathrm{ ⊗ }}\left(B\mathop{\mathrm{ ⊗ }}C\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }}]}

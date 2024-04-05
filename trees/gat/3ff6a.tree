@@ -1,0 +1,2 @@
+\title{}
+#{\left(f\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ proj }}\left(coeq\right)\right) = \left(g\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ proj }}\left(coeq\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(A\mathop{\mathrm{ → }}B\right),\ coeq::\mathop{\mathrm{ Coequalizer }}\left(f,g\right)]}

@@ -1,0 +1,2 @@
+\title{act}
+#{\left(X\mathop{\mathrm{ * }}f\right)::\mathop{\mathrm{ Fib }}\left(B\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ Fib }}\left(A\right),\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

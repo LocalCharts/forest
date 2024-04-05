@@ -1,0 +1,16 @@
+  
+\title{ThGraph}
+\taxon{definition}
+
+
+\subtree{\title{Type Constructors} 
+\transclude{eswhf}
+
+\transclude{gsi6q}}
+
+\subtree{\title{Term Constructors} 
+}
+
+\subtree{\title{Axioms} 
+}
+

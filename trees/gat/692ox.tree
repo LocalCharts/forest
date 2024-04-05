@@ -1,0 +1,17 @@
+  
+\title{ThMagma}
+\tag{theory}
+
+ \p{The theory of a set with a binary operation which does not guarantee associativity}\p{Examples:}\p{  * The integers with minus operation is not associative.}\p{    (a ⋅ b) ⋅ c = a - b - c}\p{    a ⋅ (b ⋅ c) = a - b + c}
+\scope{  \put\transclude/heading{false} 
+\transclude{692ox_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

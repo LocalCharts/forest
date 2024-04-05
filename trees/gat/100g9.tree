@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ proj2 }}\left(\mathop{\mathrm{ pid }}\left(A\right),\mathop{\mathrm{ pid }}\left(B\right)\right) = \mathop{\mathrm{ pid }}\left(\mathop{\mathrm{ proj2 }}\left(A,B\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }}]}

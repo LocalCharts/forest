@@ -1,0 +1,17 @@
+  
+\title{ThMonoidalCategoryAdditive}
+\tag{theory}
+
+ \p{Theory of *monoidal categories*, in additive notation}\p{Mathematically the same as [\code{ThMonoidalCategory}](@ref) but with different notation.}
+\scope{  \put\transclude/heading{false} 
+\transclude{0ck4n_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

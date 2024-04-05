@@ -1,0 +1,17 @@
+  
+\title{ThDoubleCategory}
+\tag{theory}
+
+ \p{Theory of *double categories*}\p{A *strict double category* #{D} is an internal category}\p{#{(S,T: D₁ ⇉ D₀, U: D₀ → D₁, *: D₁ ×_{D₀} D₁ → D₁)}}\p{in **Cat** where}\p{  * objects of #{D₀} are objects of #{D}}\p{  * morphisms of #{D₀} are arrows (vertical morphisms) of #{D}}\p{  * objects of #{D₁} are proarrows (horizontal morphisms) of #{D}}\p{  * morphisms of #{D₁} are cells of #{D}.}\p{The domain and codomain (top and bottom) of a cell are given by the domain and codomain in #{D₁} and the source and target (left and right) are given by the functors #{S,T}.}
+\scope{  \put\transclude/heading{false} 
+\transclude{it66w_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

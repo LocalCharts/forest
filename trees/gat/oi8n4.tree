@@ -1,0 +1,17 @@
+  
+\title{ThCompactClosedCategory}
+\tag{theory}
+
+ \p{Theory of *compact closed categories*}
+\scope{  \put\transclude/heading{false} 
+\transclude{oi8n4_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

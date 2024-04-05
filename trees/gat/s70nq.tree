@@ -1,0 +1,2 @@
+\title{}
+#{\left(\mathop{\mathrm{ braid }}\left(m,n\right)\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ braid }}\left(n,m\right)\right) = \mathop{\mathrm{ id }}\left(\left(m\mathop{\mathrm{ ⊗ }}n\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ D::\mathop{\mathrm{ Ob }},\ m::\left(A\mathop{\mathrm{ ↛ }}C\right),\ n::\left(B\mathop{\mathrm{ ↛ }}D\right)]}

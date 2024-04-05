@@ -1,0 +1,17 @@
+  
+\title{ThNat}
+\tag{theory}
+
+ \p{The theory of natural numbers}
+\scope{  \put\transclude/heading{false} 
+\transclude{x36x8_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+
