@@ -4,7 +4,7 @@
 \import{macros}
 \date{2024-04-04}
 
-\p{Suppose that #{f \colon p \otimes Sy^S \to q} is a morphism in #{\Org}. Then a trajectory of #{f} is a 2-cell in #{\DOrg} which looks like
+\p{Suppose that #{f \colon p \otimes Sy^S \to q} is a morphism in #{\Org}. Then a trajectory of #{f} is a 2-cell in #{\DOrg} (see \ref{ocl-001P}) which looks like
 
 \quiver{
 \begin{tikzcd}
