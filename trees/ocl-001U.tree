@@ -1,0 +1,141 @@
+\title{The #{\Fam} monad}
+\import{macros}
+\taxon{definition}
+\date{2024-04-05}
+
+\p{In this tree, we define a monad structure on #{\Fam}, which was defined in \ref{ocl-001T}.}
+
+\p{First recall the natural monad structure on #{\List}. The monadic operations #{\mu \colon \List^2 \to \List} and #{\eta \colon y \to \List} correspond to the operations of flattening a list of lists and forming the singleton list, respectively.}
+
+\p{We now must define natural transformations #{\mu_\sC \colon \Fam(\Fam(\sC)) \to \Fam(\sC)} and #{\eta_\sC \colon \sC \to \Fam(\sC)}.}
+
+\p{We start with #{\mu_\sC}. Recall that #{\Fam(\sC)_0 = \List(\sC_0)}, so we can use the monadic structure on #{\List} to define the action of #{\mu_\sC} on objects. More precisely, given #{x \colon [n] \to \Fam(\sC)}, we define
+  ##{\hat{x} \colon \left[\textstyle\sum_{i \in [n]} |x(i)| \right] \to \sC}
+
+  by #{\hat{x}(i,i') = x(i)(i')}, where #{|x(i)|} is the length of the list #{x(i) \in \Fam(\sC)} and we use the natural isomorphism of ordered finite sets
+
+  ##{\textstyle\sum_{i \in [n]} [|x(i)|] \cong \left[\textstyle\sum_{i \in [n]} |x(i)|\right]}
+
+  to identify an element of #{\left[\sum_{i \in [n]} |x(i)|\right]} with a tuple #{(i \in [n], i' \in [|x(i)|])}.
+}
+\p{To define #{\mu_\sC} on morphisms, let the following be a morphism in #{\Fam(\Fam(\sC))}.}
+
+\quiver{
+\begin{tikzcd}
+	{[n]} && {[n]} \\
+	& {\Fam(\sC)}
+	\arrow["\sigma", from=1-1, to=1-3]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "x"', from=1-1, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "y", from=1-3, to=2-2]
+	\arrow["f", shorten <=9pt, shorten >=9pt, Rightarrow, from=0, to=1]
+\end{tikzcd}
+
+}
+
+\p{Then let #{\mu_\sC(\sigma,f) = (\hat{\sigma}, \hat{f})}, where #{\hat{\sigma}} and #{\hat{f}} are to be defined. First of all, the types for #{\hat{\sigma}} and #{\hat{f}} are the following.
+
+\quiver{
+\begin{tikzcd}
+	{\left[\sum_{i \in [n]} |x(i)|\right]} && {\left[\sum_{i \in [n]} |y(i)|\right]} \\
+	& \sC
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{\hat{x}}"', from=1-1, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{\hat{y}}", from=1-3, to=2-2]
+	\arrow["{\hat{\sigma}}", from=1-1, to=1-3]
+	\arrow["{\hat{f}}", shorten <=10pt, shorten >=10pt, Rightarrow, from=0, to=1]
+\end{tikzcd}
+}
+
+where #{|x(i)|} is the length of the list #{x(i) \in \Fam(\sC)}.}
+
+\p{We now define #{\hat{\sigma}} and #{\hat{f}}. To do this, we use the natural isomorphism of ordered finite sets
+
+
+This allows us to write down an element of #{\left[\sum_{i \in [n]} |x(i)|\right]} as a tuple #{(i,i')} where #{i \in [n]} and #{i' \in [|x(i)|]}.}
+
+\p{We can then define #{\hat{\sigma}} by
+
+##{\hat{\sigma}{(i,i')} = (\sigma(i), \tilde{f}_i(i')) }
+
+where #{\tilde{f}_i} is the permutation component of #{f_i} in the diagram 
+
+\quiver{
+\begin{tikzcd}
+	{[|x(i)|]} && {[|y(\sigma(i))|]} \\
+	& \sC
+	\arrow["{\tilde{f_i}}", from=1-1, to=1-3]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{x(i)}"', from=1-1, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{y(\sigma(i))}", from=1-3, to=2-2]
+	\arrow["{f_i}", shorten <=7pt, shorten >=7pt, Rightarrow, from=0, to=1]
+\end{tikzcd}
+}
+}
+
+\p{Correspondingly, we can define #{\hat{f}} by
+##{\hat{f}_{(i,i')} = (f_i)_{i'} \colon \hat{x}(i,i') \to \hat{y}(\hat{\sigma}(i,i'))}
+}
+
+\p{The unit #{\eta_\sC \colon \sC \to \Fam(\sC)} is much easier to define; we send a morphism #{f \colon x \to y} to the diagram
+
+\quiver{
+\begin{tikzcd}
+	{[1]} && {[1]} \\
+	& \sC
+	\arrow[""{name=0, anchor=center, inner sep=0}, "x"', from=1-1, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "y", from=1-3, to=2-2]
+	\arrow["{1_{[1]}}", from=1-1, to=1-3]
+	\arrow["f", shorten <=6pt, shorten >=6pt, Rightarrow, from=0, to=1]
+\end{tikzcd}
+}
+}
+
+\p{We now must show that #{\mu_\sC} and #{\eta_\sC} are functors, and obey the monad laws. We have four options at this point
+\ol{
+  \li{Plow through this proof in traditional mathematical style, abusing notation and using single-letter variable names.}
+  \li{Use a proof assistant.}
+  \li{Wave our hands.}
+  \li{Figure out a way of defining #{\mu} and #{\eta} in a more elegant way, so that ideally their functoriality and the fact that they obey the monad laws becomes obvious.}
+}
+
+We choose option 4. In order to implement this, we need some technology.}
+
+\def\Full{\cat{Full}}
+\def\Fib{\cat{Fib}}
+\def\Ind{\cat{Ind}}
+
+\p{Suppose that #{G_{\to}} and #{G_{\downarrow}} are two subcategories of #{\Cat} on the same class of objects (which we assume to contain the terminal category), which we call the subcategories of \emph{reindexing} and \emph{families} respectively.}
+
+\p{Let #{\Fib(G)} be the category where objects are families #{P \colon \sE \to \sB} in #{G_{\downarrow}}, and morphisms are squares
+
+\quiver{
+\begin{tikzcd}
+	\sE & {\sE'} \\
+	\sB & {\sB'}
+	\arrow[from=1-1, to=2-1, "P"']
+	\arrow[from=1-2, to=2-2, "P'"]
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}
+}
+
+where the top and bottom are in #{G_{\to}}.}
+
+\p{Let #{\Ind(G)} be the category where objects are pairs #{(\sC \in G_{\to}, X \colon \sC \to G_{\to})} and morphisms are diagrams
+
+\quiver{
+  \begin{tikzcd}
+	\sC && \sD \\
+	& G_{\to}
+	\arrow[""{name=0, anchor=center, inner sep=0}, "X"', from=1-1, to=2-2]
+	\arrow["F", from=1-1, to=1-3]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "Y", from=1-3, to=2-2]
+	\arrow["\alpha", shorten <=6pt, shorten >=6pt, Rightarrow, from=0, to=1]
+\end{tikzcd}
+}
+
+where #{F \in G_{\to}}.} 
+
+\p{Then a \emph{strict Grothendieck construction} for #{G} is an \emph{isomorphism} of categories #{\Fib(G) \cong \Ind(G)} that is equivalent to the Grothendieck construction.}
+
+\p{For example, if we let #{G} be the subcategory on the discrete categories #{\{[n]\}_{n \in \NN}}, then we can let #{G_{\to}} be the wide subcategory of bijections and #{G_{\downarrow}} be the wide subcategory of order-preserving maps.}
+
+\p{I claim that given any such #{G}, there is an induced monad #{\Diag_G} on #{\Cat} defined by} 

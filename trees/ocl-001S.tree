@@ -1,0 +1,26 @@
+\import{macros}
+\title{#{\Cat} has finite limits}
+\taxon{theorem}
+\date{2024-04-05}
+
+\p{The 1-category #{\Cat} has finite limits.}
+
+\proof{
+  \p{This is well known, but we will reprove it here for the sake of explicitness.}
+
+  \p{It suffices to show that #{\Cat} has finite products, equalizers, and a terminal object. Intuitively, this is because we can construct the limit of #{D \colon J \to \Cat} where #{J} is a finite category as the subcategory of #{\prod_{j \in J} D(j)} consisting of "all the objects and morphisms which satisfy the equations given by all the commutative triangles in #{J}." Incidentally, this implies that if we work in a version of #{\Cat} that has strict cartesian products, then limits are also strict in a certain sense.}
+
+  \p{Product categories are well-known, and also it is clear that #{1} is the terminal category. It remains to show that we have equalizers. Consider a parallel pair #{F, G \colon \sC \to \sD}. As the forgetful functor #{U \colon \Cat \to \Graph} is a right adjoint, it must preserve limits when they exist. Thus, if #{E \colon \sE \into \sC} is an equalizer, the graph structure #{U(\sE)} must be the equalizer in #{\Graph} of #{U(F),U(G)}. Moreover the category structure on #{\sE} is uniquely determined by being a subcategory of {\sC}.}
+
+  \p{So we must show the following:
+    \ol{
+      \li{If we let #{E \colon \sE_0 \into U(\sC)} be the equalizer of #{U(f),U(g)} in #{\Graph}, then #{\sE_0} picks out a subcategory of #{\sC}, which we will call #{\sE}.}
+      \li{#{\sE} satisfies the universal property of equalizer.}
+    }
+
+  }
+
+  \p{We start with 1. We must show that #{\sE_0} is closed under units and composition. Suppose that #{x \in \sE_0} is an vertex. Then as #{F(x) = G(x)}, by functoriality of #{F} and #{G}, #{F(1_x) = G(1_x)}. Thus #{1_x \in \sE_0}. Similarly, suppose that #{x \xrightarrow{f} y \xrightarrow{g} z} is contained in #{\sE_0}. Then #{f;g} is also in #{\sE_0}, because #{F(f;g) = F(f);F(g) = G(f);G(g) = G(f;g)}.}
+
+  \p{Now for 2., suppose that we have another category #{\sE'} with a map #{E' \colon \sE' \to \sC} that equalizes #{F,G}. Then in fact the image of #{E'} must be contained in #{\sE}, by definition of #{\sE}. We are done.}
+}

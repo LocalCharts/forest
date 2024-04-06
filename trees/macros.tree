@@ -181,6 +181,7 @@
 \def\dblcat[name]{#{\cat{\mathbb \name}}}
 
 \def\Cat{#{\cat{Cat}}}
+\def\Graph{#{\cat{Graph}}}
 \def\dblCat{#{\dblcat{Cat}}} % equipment of cats, not to be confused with DblCat
 % it'd be cool to have it automatically linked, like so:
 % \def\dblCat{#{\dblcat{Cat}}}{[#{\dblcat{Cat}}](equipment-of-cats)}
@@ -191,6 +192,7 @@
 \def\dblSet{#{\dblcat{Set}}} % equipment of spans of sets, i.e. Span(Set)
 \def\Fin{#{\cat{Fin}}}
 \def\FinIso{#{\cat{Fin}_{\cong}}}
+\def\Fam{#{\cat{Fam}}}
 \def\Topos{#{\cat{Topos}}}
 \def\Logos{#{\cat{Logos}}}
 \def\Diag{#{\cat{Diag}}}
@@ -201,6 +203,8 @@
 \def\Mat{#{\dblcat{Mat}}}
 \def\Org{#{\dblcat{Org}}}
 \def\DOrg{#{\dblcat{DOrg}}}
+
+\def\List{#{\mathbf{List}}}
 
 \def\cofree{#{\fC}}
 
@@ -312,7 +316,7 @@
 % Figures
 
 \def\quiver[body]{
-  \xml{center}{\tex{\usepackage{quiver, amsopn, amssymb}}{\body}}
+  \xml{center}{\tex{\usepackage{quiver, amsopn, amssymb, mathrsfs}}{\body}}
 }
 
 \def\image[source]{

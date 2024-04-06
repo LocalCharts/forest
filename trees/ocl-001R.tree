@@ -1,0 +1,18 @@
+\title{Double Operads}
+\author{owen-lynch}
+\import{macros}
+\date{2024-04-05}
+
+\p{The purpose of this tree is to lay out a complete account of the 2-category of strict double operads. The intended definition for double operad can be succinctly termed as #{T}-multicategories for #{T} the free symmetric strict monoidal category 2-monad on #{\Cat}. However, we need to unpack this carefully to get it all to work as intended. The ouline for the rest of the tree is as follows.}
+
+\ol{
+  \li{Show that #{\Cat} as a 1-category has pullbacks.}
+  \li{Define a monad #{\Fam \colon \Cat \to \Cat}.}
+  \li{Show that #{\Fam \colon \Cat \to \Cat} is a cartesian monad on #{\Cat}.}
+  \li{Apply [[leinster-higher-operads-2004]] to define a double operad to be a #{\Fam}-multicategory.}
+  \li{Show that symmetric monoidal strict double categories correspond to representable double operads.}
+}
+
+\transclude{ocl-001S}
+
+\transclude{ocl-001T}
