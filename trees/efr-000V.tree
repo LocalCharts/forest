@@ -1,0 +1,9 @@
+\date{2024-03-13}
+\author{eigil-rischel}
+\title{On dynamics in metric spaces}
+
+\p{Suppose we want to talk about (discrete-time) dynamical systems on metric spaces, using [[categorical-systems-theory]]-type technology.}
+\p{We will have a function #{s: I \times X \to X,} #{X} the state space and #{I} the inputs. If these are metric spaces, we'll want to bound #{d(s(i,x),s(i',x'))} in some way in terms of the distances #{d(x,x'), d(i,i'),} but how?}
+\p{We probably can't say that #{s} should be distance nonincreasing for the \em{product metric}, because that means changing #{x} and #{i} simultaneously by #{\epsilon} only leads to a change of at most #{\epsilon} in the next state. This rules out for example a system where #{X = I} is a normed vector space and the input is added to the current state.}
+\p{The natural thing is to ask for a map #{I \otimes X \to X}. But since #{\otimes} is not Cartesian, this makes it unclear what the category of lenses and charts should be.}
+\p{A solution is to define the tangent bundle functor to take #{X}, not to the trivial bundle #{X \times X}, but the trivial bundle #{X \times \frac{1}{2}X,} where #{\frac{1}{2}X} is #{X} with all distances halved. Any map #{A \otimes B \to \frac{1}{2}X} is also a map #{A \times B \to X} (but not vice versa! this is an even weaker assumption than nonexpansiveness for #{A \otimes B}). Then we can just use ordinary lenses and charts for the interfaces}
