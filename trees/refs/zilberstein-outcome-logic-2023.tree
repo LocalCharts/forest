@@ -8,5 +8,5 @@
 \notes{
     \li{Recall that Hoare logic consists of triples #{\{P\} C \{Q\}}, the meaning of which is "for every program state satisfying #{P}, if we run #{C} in that state, every state we can end in satisfies #{Q}. The problem with this is that we can't easily check conditions like "program #{C} \em{can} cause an error"}
     \li{"Incorrectness logic" is a dual to Hoare logic where #{P C Q} instead means "every state satisfying Q is reachable by starting in a state satisfying P and running C". This is good, but has its own problems.}
-    \li{We can unify these by working with more complicated predicates, not on program states but on sets of program states (or a more complicated monoid of program states). So, for example, we can express both of the dual ideas "all these states are reachable" and "every reachable state has this property" as pre and postconditions of the logic}
+    \li{We can unify these by working with more complicated predicates, not on program states but on sets of program states (or a more complicated monoid of program states). So, for example, we can express both of the dual ideas "all these states are reachable" and "every reachable state has this property" as pre and postconditions of the logic. This is "outcome logic"}
 }
