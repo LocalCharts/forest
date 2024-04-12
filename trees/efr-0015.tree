@@ -1,0 +1,27 @@
+\date{2024-04-11}
+\author{eigil-rischel}
+\title{List of notions of "model abstraction"}
+\import{macros}
+\subtree{
+    \title{The morphisms in [[djm-categorical-systems-theory]]}
+    
+    \p{There are actually two notions of morphism between systems, here.
+    In both cases, you have a mapping on the "state space", and some sort of mapping on the input/output interface which needs to be compatible.}
+
+    \p{In the case of lenses, you have a map forwards on the output, and a map backwards on the input - this clearly allows you to change the interface of the system, and then you require that the map on state is dynamics-preserving after changing interface.}
+
+    \p{In the case of charts, everything goes in the same direction, and you can ask for compatibility between the systems, but you don't have a change-of-interface functor.}
+}
+\subtree{
+    \title{Abstractions of causal DAG models}
+    
+    \p{See eg [[chalupka-visual-causal-feature-2014]], [[chalupka-multilevel-cause-effect-2015]], [[chalupka-causal-feature-learning]], [[beckers-halpern-approximate-causal]], [[rischel-weichwald-category-causal]].}
+
+    \p{There is a complicated literature on these, but generally they are maps between the outcome space of causal models which in some sense preserve the interventional distributions.}
+
+    \p{There is a question of bidirectionality, discussed through these papers (eg in [[rischel-weichwald-category-causal]]), which precisely mirrors the distinction between lenses and charts in [[djm-categorical-systems-theory]]. Namely, in order to interpret high-level interventions as low-level interventions, we need a map "backwards" (this is muddled by the fact that the set of inputs, possible interventions, is usually \em{equal to} the set of outputs in this case).}
+}
+\subtree{
+    \title{Abstractions of Kripke Modal Transition Systems}
+    \p{A KMTS is a "partially-defined" transition system, and we are interested in binary relations from one such to another which have the property of being "directed bisimulation" with respect to the partiality - i.e, morally speaking, it would be a bisimulation if we replaced one system with a "more specific" one. See eg [[godefroid-jagadeesan-automatic-abstraction]]}
+}
