@@ -1,0 +1,13 @@
+\date{2024-04-13}
+\author{kevin-carlson}
+\title{Nondeterministic dynamical systems and crossing boundaries}
+\import{macros}
+
+\p{Manuel observed that the two kinds of subobject of discrete possibilitic dynamical systems (dpds, \ref{kdc-0005})
+have some semantic content directly relevant to boundaries. To wit, a subsystem #{A\nrightarrow X} in the tight
+category of dpds being a subset of states which can never be escaped, in cases where #{A} is like an agent in a world,
+this sounds like a purely impermeable boundary. But can we make sense of the semantics here? We've been imagining
+#{X} has a set (or whatever) of states, so the boundary of #{A} seems, here, like a boundary the \emph{world} can never cross. Could I think about this as if, if I'm #{A}, then I can never reach beyond by \emph{own} boundary into parts of the world outside of me, and vice versa if I'm #{B}, a lax subobject, then I have the option to stay within my own boundary but the option (if I'm a proper subobject) to reach outside as well, in certain states?}
+\p{OK, let's consider #{B} as the states of the world in which I most certainly continue to exist. It seems like we can produce an ultrametric on #{X} by counting how long it would take the world to reach a state #{x:X} from #{B}. Thus states not in #{B} but reachable directly from #{B} could be thought of as states in which I've been just moderately deformed--perhaps I've lost a finger, or converted to a different religion. A step further away, perhaps I'm dedicating my life to advocacy for those with less than ten fingers, and I'm further away from existing, in some sense, as the self I previously was. This is a somewhat satisfying story! I wonder if it could be useful for a multi-agent case.}
+\p{I guess one case you could consider: two lax subobjects #{B},#{C}, and a third lax subobject #{D<B\cap C} representing those states of the world in which a certain dyad of agents #{B,C} certainly continues to exist. If the dyad is, say, a happy marriage, then states one step away from #{D} might include those in which the marriage is strained, and states two steps away might include those in which the marriage has ended, all of which still lie within #{B\cap C}. I'm interested in the potential of this story to incorporate the creation and destruction of things-with-boundaries. It seems to handle a notion of boundary crossing as an agent modifying itself or being modified, but there's not enough structure yet to see two agents interacting in a way that can be described in detail. That seems workable, though: if we define the agents in more detail then we'll be able to construct the state spaces discussed above as a result of properties of those agents.}
+
