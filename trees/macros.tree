@@ -181,6 +181,7 @@
 \def\dblcat[name]{#{\cat{\mathbb \name}}}
 
 \def\Cat{#{\cat{Cat}}}
+\def\TwoCat{#{\cat{2\text{-}Cat}}}
 \def\Graph{#{\cat{Graph}}}
 \def\dblCat{#{\dblcat{Cat}}} % equipment of cats, not to be confused with DblCat
 % it'd be cool to have it automatically linked, like so:
@@ -263,6 +264,10 @@
 \def\src{#{\mathrm{src}}}
 \def\tgt{#{\mathrm{tgt}}}
 
+% Set theory
+
+\def\powerset{#{\cP}}
+\def\nepowerset{#{\cP_{+}}}
 
 % Links
 

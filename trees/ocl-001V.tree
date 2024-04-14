@@ -1,0 +1,149 @@
+\title{Grothendieck lenses for functors into 2Cat}
+\author{owen-lynch}
+\import{macros}
+\date{2024-04-13}
+
+\p{The classical story for morphisms between systems as given in [[myers_Categorical_2023]] requires a certain square to commute strictly. However, in the case of non-deterministic systems, which use morphims in the Kleisli category for the powerset monad, it makes sense to ask this square to be filled by a 2-cell.}
+
+\p{Specifically, a closed nondeterministic discrete system is a set #{S} with a function #{u \colon S \to \powerset(S)}, where #{\powerset} is the powerset monad. A morphism from #{(S, u)} to #{(S', u')} is a function #{f \colon S \to S'} such that the following commutes
+
+\quiver{
+\begin{tikzcd}
+	S & {\powerset(S)} \\
+	{S'} & {\powerset(S')}
+	\arrow["{\powerset(f)}", from=1-2, to=2-2]
+	\arrow["f"', from=1-1, to=2-1]
+	\arrow["u", from=1-1, to=1-2]
+	\arrow["{u'}"', from=2-1, to=2-2]
+\end{tikzcd}
+}}
+
+\p{However, the Kleisli category of the powerset monad is in fact a 2-category (or a poset-enriched category), because we can relate #{h,k \colon A \to \powerset(B)} via #{h \leq k} if for all #{a \in A}, #{h(a) \subseteq k(a)}. If we write the above square as a square in the Kleisli category of powerset, it looks like
+
+\quiver{
+\begin{tikzcd}
+	S & S \\
+	{S'} & S
+	\arrow["f", from=1-2, to=2-2]
+	\arrow["f"', from=1-1, to=2-1]
+	\arrow["u", from=1-1, to=1-2]
+	\arrow["{u'}"', from=2-1, to=2-2]
+\end{tikzcd}
+}
+
+and we can ask that rather than commuting, we have a filler 2-cell given by
+
+\quiver{
+\begin{tikzcd}
+	S & S \\
+	{S'} & S
+	\arrow["f", from=1-2, to=2-2]
+	\arrow["f"', from=1-1, to=2-1]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "u", from=1-1, to=1-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{u'}"', from=2-1, to=2-2]
+	\arrow["\leq"{description}, draw=none, from=1, to=0]
+\end{tikzcd}
+}}
+
+\p{How can we allow this in categorical systems theory?}
+
+\p{Essentially, the idea is to generalize Definition 4.1.0.1 from [[myers_Categorical_2023]] (see also Matteo's [[st-0001]] for more general context) in the following way. Instead of starting with an indexed category #{\cA \colon \cC^\op \to \Cat}, start with an indexed 2-category #{\cA \colon \cC^\op \to \TwoCat}.}
+
+\p{Then, we build the double category of lenses and charts in the following way. The horizontal and vertical morphisms (i.e. the lenses and the charts) are precisely the horizontal and vertical morphisms that we would get if we postcomposed #{\cA} with the forgetful functor #{\TwoCat \to \Cat}. However, a 2-cell filling the outer boundary
+
+\quiver{
+\begin{tikzcd}
+	{\arena{\bar{A}_1}{A_1}} & {\arena{\bar{B}_1}{B_1}} \\
+	{\arena{\bar{A}_2}{A_2}} & {\arena{\bar{B}_2}{B_2}}
+	\arrow["{h_1}"', shift right, from=1-1, to=1-2]
+	\arrow["f"', shift right, from=1-1, to=2-1]
+	\arrow["{f_\flat}", shift left, from=1-1, to=2-1]
+	\arrow["{h_1^\sharp}"', shift right, from=1-2, to=1-1]
+	\arrow["g"', shift right, from=1-2, to=2-2]
+	\arrow["{g_\flat}", shift left, from=1-2, to=2-2]
+	\arrow["{h_2}"', shift right, from=2-1, to=2-2]
+	\arrow["{h^\sharp_2}"', shift right, from=2-2, to=2-1]
+\end{tikzcd}
+}
+
+consists of the assertion that
+
+\quiver{
+\begin{tikzcd}
+	{A_1} & {B_1} \\
+	{A_2} & {B_2}
+	\arrow["{h_1}", from=1-1, to=1-2]
+	\arrow["f"', from=1-1, to=2-1]
+	\arrow["k"{description}, from=1-1, to=2-2]
+	\arrow["g", from=1-2, to=2-2]
+	\arrow["{h_2}"', from=2-1, to=2-2]
+\end{tikzcd}
+}
+
+commutes (we call the composite #{k}), and a 2-morphism
+
+\quiver{
+\begin{tikzcd}
+	{h_1^\ast(\bar{B}_1)} & {\bar{A}_1} \\
+	{k^\ast(\bar{B}_2)} & {f^\ast(\bar{A}_2)}
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{h_1^\sharp}", from=1-1, to=1-2]
+	\arrow["{h_1^\ast(g_\flat)}"', from=1-1, to=2-1]
+	\arrow["{f_\flat}", from=1-2, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{f^\ast(h_2^\sharp)}"', from=2-1, to=2-2]
+	\arrow["\alpha", shorten <=6pt, shorten >=6pt, Rightarrow, from=0, to=1]
+\end{tikzcd}
+}
+}
+
+\p{For example, consider the following indexed 2-category.}
+
+\transclude{ocl-001W}
+
+\p{Now, build a double category category of lenses and charts for the indexed 2-category for the non-empty powerset monad as described above. There is then a corresponding systems theory on this double category, built via the section #{T \colon (X \colon \Set) \to \cA(X)} defined by #{TX = \arena{X}{X}}.}
+
+\p{This systems theory allows us to have more morphisms between systems than we previously could. For instance, suppose that we have a closed system
+
+\quiver{
+\begin{tikzcd}
+	{\arena{S}{S}} & {\arena{1}{1}}
+	\arrow[shift right, from=1-1, to=1-2]
+	\arrow[shift right, from=1-2, to=1-1]
+\end{tikzcd}
+}
+
+Then for a subset #{U \subset S}, the existence of a \emph{strict} morphism (i.e. morphism in the systems theory for the indexed 1-category)
+
+\quiver{
+\begin{tikzcd}
+	{\arena{U}{U}} & {\arena{1}{1}} \\
+	{\arena{S}{S}} & {\arena{1}{1}}
+	\arrow[shift right, from=1-1, to=1-2]
+	\arrow[shift right, from=1-1, to=2-1]
+	\arrow[shift left, from=1-1, to=2-1]
+	\arrow[shift right, from=1-2, to=1-1]
+	\arrow[Rightarrow, no head, from=1-2, to=2-2]
+	\arrow[shift right, from=2-1, to=2-2]
+	\arrow[shift right, from=2-2, to=2-1]
+\end{tikzcd}
+}
+
+implies that \emph{all possible} paths according to the dynamics of #{S} that start in #{U} must stay in #{U} for all time. This is because the update function on #{U} must send a state #{u} to the same subset of #{S} that the update function on #{S} sends it to, which is only possible if this subset is a subset of #{U}.}
+
+\p{On the other hand, a \emph{lax} morphism (i.e. morphism in the systems theory for the indexed 2-category)
+
+\quiver{
+\begin{tikzcd}
+	{\arena{U}{U}} & {\arena{1}{1}} \\
+	{\arena{S}{S}} & {\arena{1}{1}}
+	\arrow[""{name=0, anchor=center, inner sep=0}, shift right, from=1-1, to=1-2]
+	\arrow[shift right, from=1-1, to=2-1]
+	\arrow[shift left, from=1-1, to=2-1]
+	\arrow[shift right, from=1-2, to=1-1]
+	\arrow[Rightarrow, no head, from=1-2, to=2-2]
+	\arrow[shift right, from=2-1, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, shift right, from=2-2, to=2-1]
+	\arrow["\leq"{description}, draw=none, from=0, to=1]
+\end{tikzcd}
+}
+
+just implies that for each state in #{U}, it is possible to stay in #{U} in the future. This is because we have more freedom in our choice of dynamics for #{U}, we only have to send #{u \in U} to a \emph{subset} of the possible states that the update function for #{S} would send it to. Because we chose the non-empty powerset monad, this subset must be non-empty, so the existence of this morphism implies that there is always a possibility to stay in #{U} when we update, assuming that we start in #{U}.}
