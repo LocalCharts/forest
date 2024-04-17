@@ -7,8 +7,7 @@
 
 \transclude{harmonic-sums}
 \transclude{quantitative-equipment}
-\transclude{kda-0002}
-\transclude{kda-0003}
-
+\transclude{kdc-0002}
+\transclude{kdc-0003}
 \transclude{ocl-001N}
 \transclude{ocl-001M}

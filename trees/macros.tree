@@ -181,8 +181,11 @@
 \def\dblcat[name]{#{\cat{\mathbb \name}}}
 
 \def\Cat{#{\cat{Cat}}}
+\def\TwoCat{#{\cat{2\text{-}Cat}}}
 \def\Graph{#{\cat{Graph}}}
 \def\dblCat{#{\dblcat{Cat}}} % equipment of cats, not to be confused with DblCat
+\def\Mult{#{\cat{Mult}}}
+
 % it'd be cool to have it automatically linked, like so:
 % \def\dblCat{#{\dblcat{Cat}}}{[#{\dblcat{Cat}}](equipment-of-cats)}
 % but it doesn't compile!
@@ -237,6 +240,8 @@
 
 \def\DiscInt{#{\II_0}}
 \def\Traj{#{\cat{Traj}}}
+\def\Man{#{\cat{Man}}}
+\def\Vect{#{\cat{Vect}}}
 
 % Poly
 
@@ -263,6 +268,10 @@
 \def\src{#{\mathrm{src}}}
 \def\tgt{#{\mathrm{tgt}}}
 
+% Set theory
+
+\def\powerset{#{\cP}}
+\def\nepowerset{#{\cP_{+}}}
 
 % Links
 

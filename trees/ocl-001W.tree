@@ -1,0 +1,11 @@
+\title{The two-categorical nondeterministic systems theory}
+\taxon{definition}
+\author{owen-lynch}
+\import{macros}
+\date{2024-04-13}
+
+\p{Let #{\cC = \Set} and consider the indexed category #{\cA \colon \cC^\op \to \TwoCat} defined in the following way. #{\cA(X)} is the biKleisli category (see \nlab{Kleisli category}, Proposition 2.7) of the powerset monad #{\powerset} and the comonad #{(-) \times X}. Said more concretely, let #{\cA} be the category where the objects are sets, and a morphism from #{A} to #{B} is a function #{A \times X \to \powerset(B)}.}
+
+\p{Then #{\cA(X)} has a natural poset enrichment, where #{f \leq g \colon A \times X \to \nepowerset(B)} iff for all #{(a, x) \in A \times X}, #{f(a,x) \subset g(a,x)}.}
+
+\p{We could also do the same thing for the non-empty powerset monad #{\nepowerset}.}

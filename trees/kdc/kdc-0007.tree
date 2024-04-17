@@ -1,0 +1,54 @@
+\date{2024-04-16}
+\author{kevin-carlson}
+\title{Multi-domain multi-physics?!}
+\import{macros}
+\meta{comments}{true}
+
+\p{In [Decapodes.jl](https://github.com/AlgebraicJulia/Decapodes.jl) and a couple of papers ([first](https://arxiv.org/abs/2204.01843),[second](https://arxiv.org/abs/2401.09751)), we've been working on the problem of diagrammatic physics and multiphysics. Physical systems are often specified by systems of differential equations, which can be modeled using diagrams in the category (really, additive operad/additive symmetric multicategory) of vector bundles on a manifold. The diagram allows us to make typing judgments explicitly, as opposed to what you traditionally get in something like Maxwell's equations, but more importantly,
+there is an algebra for the operad of UWD's that allows us to glue several systems together. That's the \emph{multi} part of multiphysics: you might have independently-modeled subsystems of a system, where the modeling could be coming from totally different fields of physics, and Decapodes will put them all together into one big crazy system for you. The theoretical papers, especially the second, are more about when two systems, viewed diagrammatically, are equivalent. There's actually a pretty simple answer, here, once you figure out what the right notion of equivalence is: if #{V} is my category of vector bundles, or whatever, and I have two systems of equations #{D,D':J\to V} in #{V}, then #{D} and #{D'} are equivalent, in the sense that there's a natural mapping between their solutions in every domain that makes sense to #{V}, if and only if there's a commutative diagram like this in which the maps to #{J''} are both [initial functors (see link for the case of plain categories):](https://ncatlab.org/nlab/show/final+functor) % https://q.uiver.app/#q=WzAsNCxbMCwwLCJKIl0sWzEsMCwiSicnIl0sWzIsMCwiSiciXSxbMSwxLCJWIl0sWzIsMywiRCciXSxbMCwzLCJEIiwyXSxbMCwxXSxbMSwzXSxbMiwxXV0=
+\quiver{
+  \begin{tikzcd}
+	J & {J''} & {J'} \\
+	& V
+	\arrow[from=1-1, to=1-2]
+	\arrow["D"', from=1-1, to=2-2]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-2]
+	\arrow["{D'}", from=1-3, to=2-2]
+  \end{tikzcd}}}
+\p{The first paper linked above also had a way of handling differential equations with boundary conditions via slicing. But from the categorical viewpoint, there's nothing particularly privileged about the boundary of a manifold: it's some other manifold with a map to the original one, and we have some coupling of the dynamics on the two manifolds. So we're now starting to think about \emph{multi-domain} multiphysics in general. The idea is to imagine a whole diagram of manifolds #{M:I\to \Man} together with diagrams of vector bundles #{D_i:J_i\to \Vect(M_i)} for each #{i\in I}. The #{J_i} are probably operads of some kind, but I think #{I} might just be a category, we'll see. To fit all this data together, we want to assume #{J_i} is also functorial in #{i}, in a manner that's consistent with the functoriality of #{\Vect} in #{M_i}. That is, we have an indexed additive multicategory #{\Vect:\Man^\op\to\Mult^\oplus} and we want a map of indexed multicategories over #{M}, like so:
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJJIl0sWzIsMCwiXFxNYW4iXSxbMSwxLCJcXE11bHReXFxvcGx1cyJdLFsxLDIsIlxcVmVjdCJdLFswLDEsIk0iXSxbMCwyLCJKIiwyXSxbNSwzLCIiLDIseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV1d
+\quiver{\begin{tikzcd}
+	I && \Man \\
+	& {\Mult^\oplus}
+	\arrow["M", from=1-1, to=1-3]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "J"', from=1-1, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "\Vect", from=1-3, to=2-2]
+	\arrow[shorten <=8pt, shorten >=8pt, Rightarrow, from=0, to=1]
+\end{tikzcd}}
+This is the same as a Cartesian functor #{\int J\to \int M\cdot \Vect} over #{I}, if you prefer fibrations--at least if the arrow in the triangle is supposed to be pseudonatural. But maybe it's not, see below!}
+\p{A simple motivating example, as mentioned above, is when #{I=0<1} is the arrow category and #{M=(\partial M\to M)} for some manifold #{M}. Then the setup amounts to a diagram #{D_1} in #{\Vect(M)}, a diagram #{D_0} in #{\Vect(\partial M)}, and a square-of-some-kind 
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJKJyJdLFswLDEsIkoiXSxbMSwxLCJcXFZlY3QoTSkiXSxbMSwwLCJcXFZlY3QoXFxwYXJ0aWFsIE0pIl0sWzEsMF0sWzIsM10sWzAsMywiRCciLDFdLFsxLDIsIkQiLDFdLFsxLDMsIj8iLDEseyJsZXZlbCI6Miwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV1d
+\quiver{\begin{tikzcd}
+	{J_0} & {\Vect(\partial M)} \\
+	J_1 & {\Vect(M)}
+	\arrow["{D_0}"{description}, from=1-1, to=1-2]
+	\arrow[from=2-1, to=1-1]
+	\arrow["{?}"{description}, Rightarrow, 2tail reversed, from=2-1, to=1-2]
+	\arrow["D_1"{description}, from=2-1, to=2-2]
+	\arrow[from=2-2, to=1-2]
+\end{tikzcd}}}
+\p{For an example-of-the-example, let's try to state Laplace's equation with Dirichlet boundary conditions in this language. So we have a fixed function #{h} on #{\partial M} and we want to find a function #{f} on #{M} with Laplacian equal to #{0} and restricting to #{h} on the boundary. Then we can take #{D_1=(\Delta,0:\Omega^0(M)\rightrightarrows \Omega^0(M))} and #{D_0=(f:1\to \Omega^0(M))} with #{J_1\to J_0} identifying the parallel arrows. The question mark above then becomes instantiated as a non-invertible #{\Rightarrow}, because we can need it to produce a diagram like this in #{\Vect(\partial M)}: 
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCIxIl0sWzEsMCwiXFxPbWVnYV4wX3tcXHBhcnRpYWwgTX0iXSxbMCwxLCJcXE9tZWdhXjBfe1xccGFydGlhbCBNfSJdLFsxLDEsIlxcT21lZ2FeMF97XFxwYXJ0aWFsIE19Il0sWzAsMSwiZiIsMix7Im9mZnNldCI6MX1dLFswLDEsImYiLDAseyJvZmZzZXQiOi0xfV0sWzIsMywiMCIsMix7Im9mZnNldCI6MX1dLFsyLDMsIlxcRGVsdGEiLDAseyJvZmZzZXQiOi0xfV0sWzIsMF0sWzMsMV1d
+\quiver{\begin{tikzcd}
+	1 & {\Omega^0_{\partial M}} \\
+	{\Omega^0_{\partial M}} & {\Omega^0_{\partial M}}
+	\arrow["f"', shift right, from=1-1, to=1-2]
+	\arrow["f", shift left, from=1-1, to=1-2]
+	\arrow[from=2-1, to=1-1]
+	\arrow["0"', shift right, from=2-1, to=2-2]
+	\arrow["\Delta", shift left, from=2-1, to=2-2]
+	\arrow[from=2-2, to=1-2]
+\end{tikzcd}}
+This is pretty interesting because it means our morphism of indexed categories is only \emph{lax} natural, and thus doesn't induce a morphism of fibrations at all! I'm not sure whether to feel bad about this; right now it feels perfectly natural. I would like to know what kind of weakened notion of morphism of fibration a lax natural map between indexed categories produces, if any, though. I would guess than one of lax and oplax corresponds to just arbitrary commutative squares that don't need to preserve Cartesian morphisms, and the other is totally useless? Weird?}
+\p{Anyway, I'm going to finish this post here, but there should be much more to come. Just one hint of motivation for more than boundary value problems is to imagine you have a system on a union of manifolds of non-constant dimension. It might be nice to glue together the good old PDE dynamics on each constant-dimensional component, rather than trying to figure out what in the world a system of PDEs on a non-constant-dimensional manifold even means. Next time, more about that, maybe? And definitely something about solutions of these things! Meanwhile, if you have examples of multi-domain multiphysics or thoughts or knowledge about lax maps of fibrations, I'll see you down there #{\downarrow}.}
