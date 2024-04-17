@@ -1,5 +1,5 @@
 \date{2024-04-04}
 \author{eigil-rischel}
-\title{Mealy machine}
+\title{Moore machine}
 \taxon{definition}
 \p{A \em{Moore machine} with input #{A}, output #{B} and state space #{S}, is a pair of functions #{S \to B}, #{A \times S \to S}}
