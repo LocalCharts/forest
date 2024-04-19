@@ -1,0 +1,18 @@
+\date{2024-04-17}
+\author{eigil-rischel}
+\import{macros}
+\def\Tr{#{\operatorname{Tr}}}
+\taxon{example}
+\p{Let \cC be symmetric monoidal. Consider the monoidal category where
+\ol{
+    \li{Objects are lists #{X_n, n\geq 0} of objects from \cC}
+    \li{A morphism is a sequence of objects #{S_n \in \cC}, and a family of morphisms #{X_n \otimes S_{n-1} \to Y_n \otimes S_n} (with #{S_{-1} = I}), up to the obvious sliding equivalence}
+    \li{Tensoring is given index-wise}
+}
+This admits a feedback structure given by
+\ol{
+    \li{#{F(X_\bullet)_n = X_{n-1}}}
+    \li{Observe that a map #{X \otimes TS \to Y \otimes S} amounts to a family of objects #{S'_n} and a sequence of maps #{X_n \otimes S_{n-1} \otimes S'_{n-1} \to Y_n \otimes S_n \otimes S'_n} - tracing is simply given by regarding this map as a map #{X \to Y} with state space #{S \otimes S'}.}
+}
+}
+\p{This category seems to have been rediscovered many times, see eg. [[di-lavore-et-al-monoidal-streams-2022]], Definition 3.4}

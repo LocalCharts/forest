@@ -1,0 +1,15 @@
+\date{2024-04-17}
+\author{eigil-rischel}
+\import{macros}
+\def\Tr{#{\operatorname{Tr}}}
+\title{Feedback monoidal category}
+\taxon{definition}
+\p{A feedback monoidal category consists of
+    \ol{
+        \li{A monoidal category #{\cC = (\cC, \otimes, I)}}
+        \li{A strong monoidal functor #{F: \cC \to \cC}, called the \em{delay}}
+        \li{For each triple of objects #{A,B,S \in \cC}, a map #{\Tr^S: \cC(A \otimes FS, B \otimes S) \to \cC(A,B)}}
+        \li{Obeying a number of axioms}
+    }
+}
+\p{See [[di-lavore-et-al-monoidal-streams-2022]], definition 3.1}
