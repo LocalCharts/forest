@@ -1,0 +1,20 @@
+\date{2024-04-17}
+\author{eigil-rischel}
+\title{Monoidal streams as Mealy machines}
+\import{macros}
+\p{See [[efr-0012]] for a discussion of Mealy machines. Recall from there that we can model a Mealy machine with interface #{A}, in some dynamical systems doctrine, as a map #{TS \otimes A \to I}.}
+\p{Recall also that, in a monoidal category #{\cC}, a monoidal stream from #{(X_n)_{n\in\NN}} to #{(Y_n)} is a sequence of objects #{S_n} and morphisms #{X_n \otimes S_{n-1} \to Y_n \otimes S_n} (with the convention that #{S_{-1} = I}).}
+\p{These seem like they should fit together, and they almost do. The problem is that this is defined in terms of a shift-backwards functor #{\partial: \cC^\NN \to \cC^\NN}. We would like to define #{T} in our dynamical systems doctrine so that #{TS = \binom{\partial^{-1}S}{S}} - then a Mealy machine would indeed be a monoidal stream. The problem is that #{\partial} generally doesn't have an inverse - there is no way to shift a sequence of objects backwards without simply destroying the beginning.}
+\p{However, if the set of scalars #{\cC(I,I)} is a singleton, because #{\partial} is then fully faithful, we can extend the domain and codomain to make it an equivalence. In the concrete situation, this means extending to the subcategory of #{\cC^\ZZ} spanned by the bounded-below sequences (those which are eventually #{I})}
+\p{In this case, we compute
+##{\int^S \cC(X \otimes S, Y \otimes \partial^{-1}S) \cong \int^S \cC(X \otimes \partial S, Y \otimes \partial^{-1}\partial S) \cong \cC(X \otimes \partial S, Y \otimes S),}
+where the first isomorphism holds because we're just precomposing our coend with an equivalence of categories, #{\partial}.}
+\p{Given a tuple #{\phi: S \to S', X \otimes \partial S' \to Y \otimes S} witnessing the identity of two stateful maps, #{\phi} itself is a homomorphism of Mealy machines between them. However, it is not obvious that this relationship goes the other way.}
+\p{But it does seem as though two Mealy machines will have the same observed behaviour if a morphism exists between them (note that such a morphism must preserve the initial state, i.e this diagram must commute:)}
+\quiver{
+    \begin{tikzcd}
+    X_0 \ar[rd] \ar[r] & Y_0 \otimes S_0 \ar[d]\\
+    & Y_0 \otimes S'_0
+    \end{tikzcd}
+}
+\p{Building on the above observation, it seems quite likely that Mealy machines connected by a homomorphism produce \em{observationally equivalent} streams, as in [[di-lavore-et-al-monoidal-streams-2022]], Definition 4.}
