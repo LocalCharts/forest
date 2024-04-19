@@ -1,5 +1,6 @@
 \author{eigil-rischel}
 \date{2024-04-17}
+\import{macros}
 \title{Mealy and Moore machines as coalgebras}
 \p{Let #{F: \cC \to \cC} be a strong monoidal endofunctor. Then there is a dynamical systems doctrine where the indexed category is the trivial fibration #{\cC \times \cC \to \cC} (so that the category of "lenses" is really the category of adaptors #{\cC^\op \times \cC}), and where the section is given by #{T(X) =  (F(X), X)}}
 \p{A dynamical system with interface #{\binom{A}{B}} is then an object #{S \in \cC} and a pair of maps #{S \to A, S \otimes B \to F(S).} Recall ([[efr-0012]]) that this is a generalized form of \em{Moore machine}.}
