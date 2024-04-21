@@ -1,0 +1,43 @@
+\title{Lax and Colax Diagram Categories as Charts and Lenses}
+\author{owen-lynch}
+\import{macros}
+\meta{comments}{true}
+\date{2024-04-19}
+
+\def\Shp{\cat{Shp}}
+
+\p{This is brief note to record a neat observation I just had.}
+
+\p{Let #{\Shp} be some subcategory of #{\Cat} consisting only of small categories, and fix a category #{\cC \colon \Cat}. Then consider the functor #{[-, \cC] \colon \Shp^\op \to \Cat} sending #{J} to the category of functors #{J \to \cC}, with action given by precomposition.}
+
+\p{Then if we construct the category of charts for #{[-, \cC]}, we get the category of diagrams in #{\cC} with shape taken from #{\Shp} and lax morphisms
+
+\quiver{
+\begin{tikzcd}
+	{D_1} && {D_2} \\
+	& \cC
+	\arrow["F", from=1-1, to=1-3]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{J_1}"', from=1-1, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{J_2}", from=1-3, to=2-2]
+	\arrow["\alpha"', shorten <=6pt, shorten >=6pt, Rightarrow, from=0, to=1]
+\end{tikzcd}
+}
+}
+
+\p{On the other hand, if we construct the category of lenses for #{[-, \cC]}, we get the category of diagrams with shape taken from #{\Shp} and colax morphisms
+
+\quiver{
+\begin{tikzcd}
+	{D_1} && {D_2} \\
+	& \cC
+	\arrow["F", from=1-1, to=1-3]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{J_1}"', from=1-1, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{J_2}", from=1-3, to=2-2]
+	\arrow["\alpha"', shorten <=6pt, shorten >=6pt, Rightarrow, from=1, to=0]
+\end{tikzcd}
+}
+}
+
+\p{Thus, we get a double category where the objects are diagrams, the vertical arrows are lax diagram morphisms, the horizontal arrows are colax diagram morphism, and the squares are compatibility squares. I'm not sure if anyone's thought about this double category before; it seems kind of neat?}
+
+\p{One question I have is that if we consider #{\Shp} a 2-category, can we extend the lens-chart double category construction so that the base squares are quintets, rather than commuting strictly?}
