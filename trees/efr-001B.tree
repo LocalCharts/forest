@@ -1,0 +1,19 @@
+\date{2024-04-21}
+\author{eigil-rischel}
+\import{macros}
+\title{Mealy machines as contexts in categorical systems theory}
+\def\Mealy{#{\mathsf{Mealy}}}
+\def\Stream{#{\operatorname{Stream}}}
+\def\Sys{#{\mathsf{Sys}}}
+\p{(Inspired by a conversation with [[dylan-braithwaite]], [[matteo-capucci]] and [[toby-smithe]])}
+\p{
+    A "context" is "something you can plug a system into, producing a closed system.
+    Recall that, given a (monoidal) theory of dynamical systems, a closed system is a system with interface #{I}. So we may say that, when #{A} is an interface, a context of type #{A} should give a functor #{\Sys(A) \to \Sys(I)}. 
+}
+\p{
+    Given a Mealy machine #{TS \otimes A \to I} (see [[efr-0012]]), plugging into it thus gives a context of type #{A}. Moreover, given a morphism of Mealy machines #{S \to S'}, we find a natural transformation between the induced functors - thus, we have a functor #{\Mealy(A) \to [\Sys(A),\Sys(I)]}.
+}
+\p{
+    On the other hand, this functor is not in general full.
+    To see this, suppose we're working with the theory #{\cC = \Set, \cA(X) = \Set_{/X}, T(X) = X \times X \to X,} i.e of simple discrete-time discrete-space systems. For an interface #{\binom{B}{A}}, let #{\Stream(\binom{B}{A})} be the terminal coalgebra of the functor #{S \mapsto \sum_{a \in A} S^{B_a}} - the set of "input-output streams". Let #{TS \otimes \binom{B}{A} \to I}, #{TS' \otimes \binom{B}{A} \to I} be two Mealy machines. Let #{f_w: S \to S'} be a family of morphisms between them indexed by #{w \in \Stream(\binom{B}{A})}. Given a dynamical system #{TX \to \binom{B}{A}}, consider the mapping #{X \times S \to X \times S'} which carries #{(x,s)} to #{(x,f_w(s))} where #{w} is the behaviour of #{x}. It's not hard to see that this is a mapping between the two closed systems, and since any map of dynamical systems #{X \to X'} must preserve the behaviour of points, this construction is a natural transformation. But clearly unless all the #{f_x} are constant, this does not come from a map of Mealy machines. 
+}
