@@ -1,0 +1,24 @@
+\date{2024-04-22}
+\taxon{example}
+\author{eigil-rischel}
+\import{macros}
+\p{
+    Consider the problem "Optimize #{f(Ax + b)}", where #{A: X \to Y} is linear. This is clearly equivalent (in an informal sense) to "Optimize #{f(y)} subject to #{y = Ax + b}".
+}
+\p{
+    The first of these problems corresponds to #{L_1 = (X,*,L_1(x,*) = f(Ax + b))}
+}
+\p{
+    The second corresponds to #{L_2 = (X \times Y, Y^*, L_2(x,y,\alpha) = f(y) + \alpha (Ax + b - y))}
+}
+\p{
+    There is a morphism #{\L_1 \to L_2}, defined by #{\pho^+(x) = (x, Ax+b)}.
+    The fact that this is a morphism gives the inequality #{(L_1)_*(x) \geq (L_2)_*(\phi^+(x)),} which is one part of the "equivalence".
+}
+\p{
+    In the other direction, we have the map #{(x,y) \mapsto x}, the first projection.
+    Now, it is true that #{(L_2)_*(x,y) \geq (L_1)_*(x)} - the former is #{\infty} unless #{y = Ax + b}, in which case they're both equal to the infimal value of #{f(Ax + b)}.
+    But there is no map #{* \to Y^*} picking out an #{\alpha} which witnesses this - even if we pass to some sort of extended reals, the signs we want to choose depend on the sign of #{Ax + b - y}, which could go either way.
+
+    This is one sense in which the problems are "equivalent but not isomorphic".
+}

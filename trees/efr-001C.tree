@@ -1,0 +1,15 @@
+\date{2024-04-22}
+\title{Minmax problem}
+\author{eigil-rischel}
+\import{macros}
+\taxon{definition}
+\p{
+    A \em{minmax problem} is a triple #{(X,Y,L),} where #{X,Y} are convex spaces (that is, algebras for the discrete distribution monad - more topological assumptions may be necessary here), and #{L: X \times Y \to \RR} is a function which is
+    \ol{
+        \li{Pointwise \em{convex} in #{X} - for each #{y}, given #{x_1,x_2 \in X, \theta \in [0,1]}, ##{L(\theta x_1 + (1-\theta)x-2,y) \leq \theta L(x_1,y) + (1-\theta)L(x_2,y)}}
+        \li{Pointwise \em{concave} in #{Y} - for each #{x}, given #{y_1,y_2 \in Y, \theta \in [0,1]}, ##{L(x,\theta y_1 + (1-\theta)y_2) \geq \theta L(x,y_1) + (1-\theta)L(x,y_2)}}
+    }
+}
+\p{
+    A \em{morphism of minmax problems} #{(X,Y,L) \to (X',Y',L')} is a pair of functions #{\phi^+: X \to X'} and #{\phi^-: Y' \to Y} so that #{L(x, \phi^-(y')) \geq L'(\phi(x),y')}
+}

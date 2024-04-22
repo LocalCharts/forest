@@ -1,0 +1,14 @@
+\date{2024-04-22}
+\import{macros}
+\author{eigil-rischel}
+\taxon{definition}
+\title{Standard form convex optimization problem}
+\p{
+    A \em{convex optimization problem in standard form} consists of
+    \ol{
+        \li{A convex function #{f_0: \RR^k \to \RR}}
+        \li{A list of convex functions #{f_1, \dots f_n: \RR^k \to \RR}}
+        \li{A list of \em{affine} functions #{g_1,\dots g_m: \RR^k \to \RR}}
+    }
+    The problem then is to find #{x \in \RR^k} which minimizes #{f_0(x)} subject to the constraints #{f_i(x) \leq 0, g_i(x)=0}
+}

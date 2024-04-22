@@ -1,0 +1,12 @@
+\date{2024-04-22}
+\title{Minimax theorem}
+\author{eigil-rischel}
+\import{macros}
+\taxon{theorem}
+\p{
+    Let #{L: X \times Y \to \RR} be a [minmax problem](efr-001C).
+    \ol{
+        \li{#{\inf_x L_*(x) \geq \sup_y L^*(y)}}
+        \li{If #{X,Y} are compact convex subspaces of finite-dimensional real vector spaces, then #{\inf_x L_*(x) = \sup_y L^*(y)}}
+    }
+}
