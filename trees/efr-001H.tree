@@ -18,8 +18,18 @@ defined on #{\RR^k \times \RR^n_+ \times \RR^m}, where #{\RR_+ = \lb 0,\infty \r
 \p{Observe that #{\sup_{\lambda,\nu} L(-,\lambda,\nu)} is #{\infty} if #{x} does not satisfy the constraints, and #{f_0(x)} if it does. Hence we can think of #{L} as a two-player zero-sum game, and the original problem is what we get if "we" control the #{x} variable, our adversary controls the other variables, and our adversary "moves second". We may think of this as replacing a hard constraint #{f_i(x) \leq 0} with a soft constraint (a cost which must be paid to violate that constraint), but letting the price be controlled by the adversary.}
 \p{This suggests that, perhaps, such two-player minmax games should be thought of as the fundamental object in the theory of convex optimization}
 
+
 \transclude{efr-001C}
 \transclude{efr-001D}
 \transclude{efr-001E}
 \transclude{efr-001F}
 \transclude{efr-001I}
+
+\subtree{
+    \title{The structure of minmax}
+    \transclude{efr-001J}
+    \transclude{efr-001K}
+    \transclude{efr-001L}
+    \transclude{efr-001M}
+    \transclude{efr-001N}
+}
