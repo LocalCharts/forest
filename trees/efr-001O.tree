@@ -1,0 +1,13 @@
+\date{2024-04-23}
+\author{eigil-rischel}
+\import{macros}
+\p{
+    Given a convex space #{X} and a convex function #{p: X \to \RR},
+    we may of course form the convex subspace #{\{x \mid p(x) \leq 0\}}.
+}
+\p{
+    Given some minmax problem involving #{X}, #{L: X \times Y \to \RR}, we can instead form
+    #{L' : X \times (Y \times \RR^+) \to RR} given by #{L'(x;y,\alpha) = L(x,y) + \alpha p(x)}.
+    We have a map into #{L} in this case, given by the identity on #{X} and carrying #{y} to #{(y,0)},
+    which is an alternative "version" of the inclusion of #{\{x \mid p(x) \leq 0\}}.
+}
