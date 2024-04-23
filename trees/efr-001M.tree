@@ -1,0 +1,13 @@
+\date{2024-04-23}
+\author{eigil-rischel}
+\import{macros}
+\title{Minmax problems are not star-autonomous}
+\p{
+    Since the category of [minmax problems](efr-001C) is very similar to a \nlab{Chu construction},
+    we might hope that we could define a similar star-autonomous structure on minmax problems. Unfortunately, this does not work. We do have the duality, [[efr-001J]], but it doesn't extend to a star-autonomous structure.
+}
+\p{
+    Morally speaking, the tensor product of #{(X,Y,L), (X',Y',L')} would be given by #{X \otimes X'} in the forwards direction, and pairs of affine functions #{f: X \to Y', g: X' \to Y} satisfying #{L(x,g(x')) = L'(x',f(x))} in the backwards direction, with either of these expressions giving the pairing.
+    Since the first formula implies the pairing is convex in #{x} (as it must be), but the latter implies it's concave in #{x}, #{g} must take values only those #{y} so that #{L(-,y)} is affine, and similarly for #{f}.
+    This can easily be an empty set, but in a star-autonomous category we always have a canonical costate #{L \otimes L^* \to I}, which would be impossible in that case.
+}

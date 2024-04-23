@@ -1,0 +1,16 @@
+\date{2024-04-23}
+\taxon{proposition}
+\author{eigil-rischel}
+\import{macros}
+\p{
+    The category of minmax problems has products, given by
+    ##{(X,Y,L) \times (X',Y',L') = (X \times X', Y \oplus Y', (L \times L')),}
+    ##{(L \times L')(x,x'; \alpha y + \beta y') = \alpha L(x,y) + \beta L'(x',y')}
+}
+\p{(L \times L')^+(x,x') = \max (L^+(x),L'^+(x'))}
+\p{
+    Here #{Y \oplus Y'} denotes the [coproduct of convex spaces](efr-001K), and #{\alpha y + \beta y'} is a generic element (note that #{\alpha,\beta \in [0,1], \alpha + \beta = 1})
+}
+\p{
+    By duality (with #{(-)^*}), it also has coproducts given by #{(X,Y,L) \oplus (X',Y',L') = (X \oplus X', Y \times Y', L(\alpha x + \beta x';y,y') = \alpha L(x,y) + \beta L'(x',y'))}.
+}

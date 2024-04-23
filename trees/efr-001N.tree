@@ -1,0 +1,24 @@
+\date{2024-04-23}
+\taxon{definition}
+\author{eigil-rischel}
+\import{macros}
+\p{
+    There is a monoidal structure on minmax problems, given by
+    #{(L \otimes L') = (X \otimes X', Y \otimes Y', (x,x',y,y') \mapsto L(x,y) + L(x',y')).}
+    The unit here is #{(*,*,0)}.
+}
+\p{
+    A state is a point #{x_0} so that #{L(x_0,y) \leq 0} for all #{y}.
+    More interesting is asking for a state of #{L \otimes L^*}.
+    This is a pair #{x \in X, y \in Y} so that the inequality
+    #{L(x,y') \leq L(x',y)} holds for all #{y',x'}
+}
+\p{
+    Note that #{\sup_{y'} L(x,y') \geq \inf_x L(x',y)} for all #{x,y}, this is the minmax inequality (or "weak duality").
+}
+\p{
+    Thus a choice of #{x,y} giving a state gives equality in that inequation - it is a \em{solution} of the minmax game. In other words, #{L \otimes L^*} has a state if and only if strong duality holds for #{L}, and the state is given by an optimal and dual optimal pair in that case. 
+}
+\p{
+    (By duality, and since #{(L \otimes L^*)^* \cong L \otimes L^*}, such an object has a state if and only if it has a costate)
+}

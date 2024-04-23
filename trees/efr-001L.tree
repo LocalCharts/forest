@@ -1,0 +1,12 @@
+\date{2024-04-23}
+\taxon{proposition}
+\author{eigil-rischel}
+\import{macros}
+\p{
+    Let #{\Delta: \Set \to Set} be the discrete probability distribution monad, so that its algebras are convex spaces.
+    #{\Delta} is finitary, so by abstract nonsense #{\Alg(\Delta)} has coproducts.
+    These are given by #{0 = \emptyset} (with a trivial convex structure),
+    and
+    ##{X + Y = X \sqcup X \times Y \times (0,1) \sqcup Y,}
+    with the convex structure given by regarding #{(x,y,\alpha)} as #{\alpha x + (1-\alpha) y}, and reducing any convex combination to one containing at most one element from each of #{X} and #{Y}.
+}
