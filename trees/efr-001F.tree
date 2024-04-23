@@ -4,5 +4,5 @@
 \import{macros}
 \p{
     Let #{\phi: L \to L'} be a [morphism of minmax problems](efr-001C).
-    Then #{L_*(x) \geq L'_*(\phi^+(x))} and #{L^*(\phi^-(y)) \geq (L')^*(y)}
+    Then #{L^+(x) \geq L'^+(\phi^+(x))} and #{L^-(\phi^-(y)) \geq (L')^-(y)}
 }
