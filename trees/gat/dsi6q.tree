@@ -1,0 +1,17 @@
+  
+\title{ThGraph}
+\tag{theory}
+
+ \p{\code{ThGraph}}\p{A graph where the edges are typed depending on dom/codom. Contains all necessary types for the theory of categories.}
+\scope{  \put\transclude/heading{false} 
+\transclude{dsi6q_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

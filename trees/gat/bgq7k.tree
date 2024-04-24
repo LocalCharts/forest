@@ -1,0 +1,2 @@
+\title{dagger}
+#{\mathop{\mathrm{ dagger }}\left(f\right)::\left(B\mathop{\mathrm{ → }}A\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

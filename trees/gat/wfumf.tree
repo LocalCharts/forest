@@ -1,0 +1,2 @@
+\title{Coproduct}
+#{\mathop{\mathrm{ Coproduct }}\left(foot1,foot2\right)\dashv [foot1::\mathop{\mathrm{ Ob }},\ foot2::\mathop{\mathrm{ Ob }}]}

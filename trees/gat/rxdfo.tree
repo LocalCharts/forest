@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ pair }}\left(f,g\right) = \left(\mathop{\mathrm{ mcopy }}\left(C\right)\mathop{\mathrm{ ⋅ }}\left(f\mathop{\mathrm{ ⊗ }}g\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ f::\left(C\mathop{\mathrm{ → }}A\right),\ g::\left(C\mathop{\mathrm{ → }}B\right)]}

@@ -1,0 +1,2 @@
+\title{copair}
+#{\mathop{\mathrm{ copair }}\left(f,g\right)::\left(\left(A\mathop{\mathrm{ ⊕ }}B\right)\mathop{\mathrm{ → }}C\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}C\right),\ g::\left(B\mathop{\mathrm{ → }}C\right)]}

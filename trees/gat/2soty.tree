@@ -1,0 +1,17 @@
+  
+\title{ThEquipment}
+\tag{theory}
+
+ \p{Theory of a *proarrow equipment*, or *equipment* for short}\p{Equipments have also been called "framed bicategories," "fibrant double categories," and "gregarious double categories" (?!).}\p{References:}\p{  * Shulman, 2008: Framed bicategories and monoidal fibrations}\p{  * Cruttwell & Shulman, 2010: A unified framework for generalized multicategories}
+\scope{  \put\transclude/heading{false} 
+\transclude{2soty_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

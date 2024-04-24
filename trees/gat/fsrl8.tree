@@ -1,0 +1,2 @@
+\title{coproj2}
+#{\mathop{\mathrm{ coproj2 }}\left(A,B\right)::\left(B\mathop{\mathrm{ ≤ }}\left(A\mathop{\mathrm{ ∨ }}B\right)\right)\dashv [A::\mathop{\mathrm{ El }},\ B::\mathop{\mathrm{ El }}]}

@@ -1,0 +1,2 @@
+\title{}
+#{\left(\mathop{\mathrm{ mcopy }}\left(A\right)\mathop{\mathrm{ ⋅ }}\left(\mathop{\mathrm{ delete }}\left(A\right)\mathop{\mathrm{ ⊗ }}\mathop{\mathrm{ id }}\left(A\right)\right)\right) = \mathop{\mathrm{ id }}\left(A\right)\dashv [A::\mathop{\mathrm{ Ob }}]}

@@ -1,0 +1,2 @@
+\title{refl}
+#{\mathop{\mathrm{ refl }}\left(p\right)::\left(p\mathop{\mathrm{ ≤ }}p\right)\dashv [p]}

@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ * }}\left(n,\mathop{\mathrm{ S }}\left(m\right)\right) = \mathop{\mathrm{ + }}\left(\mathop{\mathrm{ * }}\left(n,m\right),n\right)\dashv [n::\mathop{\mathrm{ ℕ }},\ m::\mathop{\mathrm{ ℕ }}]}

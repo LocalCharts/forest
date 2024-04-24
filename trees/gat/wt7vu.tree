@@ -1,0 +1,2 @@
+\title{reflexive}
+#{\mathop{\mathrm{ reflexive }}\left(A\right)::\mathop{\mathrm{ Tight }}\left(\mathop{\mathrm{ id }}\left(A\right)\right)\dashv [A::\mathop{\mathrm{ Ob }}]}

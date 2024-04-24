@@ -1,0 +1,2 @@
+\title{delete}
+#{\mathop{\mathrm{ delete }}\left(A\right)::\left(A\mathop{\mathrm{ → }}\mathop{\mathrm{ mzero }}\right)\dashv [A::\mathop{\mathrm{ Ob }}]}

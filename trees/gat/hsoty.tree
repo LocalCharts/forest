@@ -1,0 +1,2 @@
+\title{}
+#{\left(\mathop{\mathrm{ conjoint_unit }}\left(f\right)\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ conjoint_counit }}\left(f\right)\right) = \mathop{\mathrm{ pid }}\left(f\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

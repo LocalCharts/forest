@@ -1,0 +1,2 @@
+\title{proj2}
+#{\mathop{\mathrm{ proj2 }}\left(A,B\right)::\left(\left(A\mathop{\mathrm{ ⊗ }}B\right)\mathop{\mathrm{ → }}B\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }}]}

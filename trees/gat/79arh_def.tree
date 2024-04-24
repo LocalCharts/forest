@@ -1,0 +1,18 @@
+  
+\title{ThNatPlus}
+\taxon{definition}
+
+
+\subtree{\title{Type Constructors} 
+\transclude{046x8}}
+
+\subtree{\title{Term Constructors} 
+\transclude{246x8}
+
+\transclude{446x8}
+
+\transclude{99arh}}
+
+\subtree{\title{Axioms} 
+\transclude{a9arh}}
+

@@ -1,0 +1,17 @@
+  
+\title{ThAscCat}
+\tag{theory}
+
+ \p{\code{ThAsCat}}\p{The theory of a category with the associative law for composition.}
+\scope{  \put\transclude/heading{false} 
+\transclude{vkuq0_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

@@ -1,0 +1,17 @@
+  
+\title{ThDistributiveSemiadditiveCategory}
+\tag{theory}
+
+ \p{Theory of a *distributive semiadditive category*}\p{This terminology is not standard but the concept occurs frequently. A distributive semiadditive category is a semiadditive category (or biproduct) category, written additively, with a tensor product that distributes over the biproduct.}\p{FIXME: Should also inherit \code{ThSemiadditiveCategory}}
+\scope{  \put\transclude/heading{false} 
+\transclude{ar8p6_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

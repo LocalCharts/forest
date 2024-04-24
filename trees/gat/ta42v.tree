@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ copair }}\left(f,g\right) = \left(\left(f\mathop{\mathrm{ ⊕ }}g\right)\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ plus }}\left(C\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}C\right),\ g::\left(B\mathop{\mathrm{ → }}C\right)]}

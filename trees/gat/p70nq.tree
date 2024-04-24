@@ -1,0 +1,2 @@
+\title{braid}
+#{\mathop{\mathrm{ braid }}\left(A,B\right)::\left(\left(A\mathop{\mathrm{ ⊗ }}B\right)\mathop{\mathrm{ → }}\left(B\mathop{\mathrm{ ⊗ }}A\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }}]}

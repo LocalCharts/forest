@@ -1,0 +1,2 @@
+\title{braid}
+#{\mathop{\mathrm{ braid }}\left(m,n\right)::\mathop{\mathrm{ Cell }}\left(\left(m\mathop{\mathrm{ ⊗ }}n\right),\left(n\mathop{\mathrm{ ⊗ }}m\right),\mathop{\mathrm{ braid }}\left(A,B\right),\mathop{\mathrm{ braid }}\left(C,D\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ D::\mathop{\mathrm{ Ob }},\ m::\left(A\mathop{\mathrm{ ↛ }}C\right),\ n::\left(B\mathop{\mathrm{ ↛ }}D\right)]}

@@ -1,0 +1,2 @@
+\title{ob}
+#{\mathop{\mathrm{ ob }}\left(τ\right)::\mathop{\mathrm{ Ob }}\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ p::\left(A\mathop{\mathrm{ ↛ }}B\right),\ τ::\mathop{\mathrm{ Tab }}\left(p\right)]}

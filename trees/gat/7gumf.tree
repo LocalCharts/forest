@@ -1,0 +1,2 @@
+\title{create}
+#{\mathop{\mathrm{ create }}\left(⊥,C\right)::\left(\mathop{\mathrm{ ob }}\left(⊥\right)\mathop{\mathrm{ → }}C\right)\dashv [⊥::\mathop{\mathrm{ Initial }},\ C::\mathop{\mathrm{ Ob }}]}

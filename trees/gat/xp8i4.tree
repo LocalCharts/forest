@@ -1,0 +1,2 @@
+\title{trans}
+#{\mathop{\mathrm{ trans }}\left(f,g\right)::\left(p\mathop{\mathrm{ ≤ }}r\right)\dashv [p,\ q,\ r,\ f::\left(p\mathop{\mathrm{ ≤ }}q\right),\ g::\left(q\mathop{\mathrm{ ≤ }}r\right)]}

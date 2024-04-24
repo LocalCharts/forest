@@ -1,0 +1,14 @@
+  
+\title{SwapMonoid}
+\tag{theorymap}
+\taxon{definition}
+
+\p{[ThMonoid](ohwjw) #{\rightarrow} [ThMonoid](ohwjw)}
+\subtree{\title{Type Mapping} 
+\scope{\p{[default](dis7y):}\p{#{#{\mathop{\mathrm{ default }}\dashv []}}}\p{#{#{\mathop{\mathrm{ default }}\dashv []}}}}}
+
+\subtree{\title{Term Mapping} 
+\scope{\p{[⋅](792ox):}\p{#{#{\mathop{\mathrm{ ⋅ }}\left(x,y\right)\dashv [x,\ y]}}}\p{#{#{\mathop{\mathrm{ ⋅ }}\left(y,x\right)\dashv [x,\ y]}}}}
+
+\scope{\p{[e](phwjw):}\p{#{#{\mathop{\mathrm{ e }}\dashv []}}}\p{#{#{\mathop{\mathrm{ e }}\dashv []}}}}}
+

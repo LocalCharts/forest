@@ -1,0 +1,2 @@
+\title{otimes}
+#{\left(u\mathop{\mathrm{ ⊗ }}v\right)::\left(\left(X\mathop{\mathrm{ ⊗ }}W\right)\mathop{\mathrm{ ⇢ }}\left(Y\mathop{\mathrm{ ⊗ }}Z\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ W::\mathop{\mathrm{ Fib }}\left(A\right),\ X::\mathop{\mathrm{ Fib }}\left(A\right),\ Y::\mathop{\mathrm{ Fib }}\left(A\right),\ Z::\mathop{\mathrm{ Fib }}\left(A\right),\ u::\left(X\mathop{\mathrm{ ⇢ }}Y\right),\ v::\left(W\mathop{\mathrm{ ⇢ }}Z\right)]}

@@ -1,0 +1,17 @@
+  
+\title{ThPreorder}
+\tag{theory}
+
+ \p{Theory of *preorders*}\p{The generalized algebraic theory of preorders encodes inequalities #{A≤B} as dependent types `#{Leq(A,B)} and the axioms of reflexivity and transitivity as term constructors.}
+\scope{  \put\transclude/heading{false} 
+\transclude{qykoy_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

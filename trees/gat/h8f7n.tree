@@ -1,0 +1,17 @@
+  
+\title{ThPointedSetSchema}
+\tag{theory}
+
+ \p{No documentation found.}\p{\code{Catlab.Theories.##614} is of type \code{Nothing}.}\p{# Summary}\p{\code{struct Nothing}}
+\scope{  \put\transclude/heading{false} 
+\transclude{h8f7n_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

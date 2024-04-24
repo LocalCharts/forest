@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ ev }}\left(A,B\right) = \left(\mathop{\mathrm{ id }}\left(B\right)\mathop{\mathrm{ ⊗ }}\left(\mathop{\mathrm{ braid }}\left(\mathop{\mathrm{ dual }}\left(A\right),A\right)\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ dcounit }}\left(A\right)\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }}]}

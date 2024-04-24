@@ -1,0 +1,17 @@
+  
+\title{ThMonoidalCategory}
+\tag{theory}
+
+ \p{Theory of *monoidal categories*}\p{To avoid associators and unitors, we assume that the monoidal category is *strict*. By the coherence theorem this involves no loss of generality, but we might add a theory for weak monoidal categories later.}
+\scope{  \put\transclude/heading{false} 
+\transclude{hnjjp_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

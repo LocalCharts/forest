@@ -1,0 +1,2 @@
+\title{product}
+#{\mathop{\mathrm{ product }}\left(A,B\right)::\mathop{\mathrm{ Product }}\left(A,B\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }}]}

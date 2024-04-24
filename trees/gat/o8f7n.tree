@@ -1,0 +1,2 @@
+\title{zeromap}
+#{\mathop{\mathrm{ zeromap }}\left(A,X\right)::\mathop{\mathrm{ Attr }}\left(A,X\right)\dashv [A::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ AttrType }}]}

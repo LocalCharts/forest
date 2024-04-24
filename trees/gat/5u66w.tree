@@ -1,0 +1,2 @@
+\title{pcompose}
+#{\left(m\mathop{\mathrm{ * }}n\right)::\left(A\mathop{\mathrm{ ↛ }}C\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ m::\left(A\mathop{\mathrm{ ↛ }}B\right),\ n::\left(B\mathop{\mathrm{ ↛ }}C\right)]}

@@ -1,0 +1,2 @@
+\title{act}
+#{\left(u\mathop{\mathrm{ * }}f\right)::\left(\left(X\mathop{\mathrm{ * }}f\right)\mathop{\mathrm{ ⇢ }}\left(Y\mathop{\mathrm{ * }}f\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ Fib }}\left(A\right),\ Y::\mathop{\mathrm{ Fib }}\left(A\right),\ u::\left(X\mathop{\mathrm{ ⇢ }}Y\right),\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

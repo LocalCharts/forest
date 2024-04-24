@@ -1,0 +1,17 @@
+  
+\title{ThDistributiveBicategoryRelations}
+\tag{theory}
+
+ \p{Theory of a *distributive bicategory of relations*}\p{References:}\p{  * Carboni & Walters, 1987, "Cartesian bicategories I", Remark 3.7 (mention in passing only)}\p{  * Patterson, 2017, "Knowledge representation in bicategories of relations", Section 9.2}\p{FIXME: Should also inherit \code{ThBicategoryOfRelations}, but multiple inheritance is not yet supported.}
+\scope{  \put\transclude/heading{false} 
+\transclude{ynuj3_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

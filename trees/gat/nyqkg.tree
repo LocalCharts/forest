@@ -1,0 +1,2 @@
+\title{composeH}
+#{\left(α\mathop{\mathrm{ * }}β\right)::\left(\left(f\mathop{\mathrm{ ⋅ }}h\right)\mathop{\mathrm{ ⇒ }}\left(g\mathop{\mathrm{ ⋅ }}k\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(A\mathop{\mathrm{ → }}B\right),\ h::\left(B\mathop{\mathrm{ → }}C\right),\ k::\left(B\mathop{\mathrm{ → }}C\right),\ α::\left(f\mathop{\mathrm{ ⇒ }}g\right),\ β::\left(h\mathop{\mathrm{ ⇒ }}k\right)]}

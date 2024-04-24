@@ -1,0 +1,17 @@
+  
+\title{ThDoubleCategoryWithTabulators}
+\tag{theory}
+
+ \p{Theory of a *double category with tabulators*}\p{A tabulator of a proarrow is a double-categorical limit. It is a certain cell with identity domain to the given proarrow that is universal among all cells of that form. A double category "has tabulators" if the external identity functor has a right adjoint. The values of this right adjoint are the apex objects of its tabulators. The counit of the adjunction provides the universal cells. Tabulators figure in the double-categorical limit construction theorem of Grandis-Pare 1999. In the case where the double category is actually a 2-category, tabulators specialize to cotensors, a more familiar 2-categorical limit.}
+\scope{  \put\transclude/heading{false} 
+\transclude{icw9s_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

@@ -1,0 +1,2 @@
+\title{proj1}
+#{\mathop{\mathrm{ proj1 }}\left(Π\right)::\left(\mathop{\mathrm{ ob }}\left(Π\right)\mathop{\mathrm{ → }}A\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ Π::\mathop{\mathrm{ Product }}\left(A,B\right)]}

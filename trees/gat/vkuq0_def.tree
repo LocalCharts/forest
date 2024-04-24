@@ -1,0 +1,16 @@
+  
+\title{ThAscCat}
+\taxon{definition}
+
+
+\subtree{\title{Type Constructors} 
+\transclude{eswhf}
+
+\transclude{gsi6q}}
+
+\subtree{\title{Term Constructors} 
+\transclude{ffgkn}}
+
+\subtree{\title{Axioms} 
+\transclude{wkuq0}}
+

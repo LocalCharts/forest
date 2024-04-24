@@ -1,0 +1,17 @@
+  
+\title{ThDaggerCategory}
+\tag{theory}
+
+ \p{Theory of *dagger categories*}
+\scope{  \put\transclude/heading{false} 
+\transclude{55upr_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

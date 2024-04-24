@@ -1,0 +1,17 @@
+  
+\title{ThSymmetricMonoidalCopresheaf}
+\tag{theory}
+
+ \p{Theory of a *symmetric monoidal copresheaf*}\p{The name is not standard but refers to a lax symmetric monoidal functor into **Set**. This can be interpreted as an action of a symmetric monoidal category, just as a copresheaf (set-valued functor) is an action of a category. The theory is simpler than that of a general lax monoidal functor because (1) the domain is a strict monoidal category and (2) the codomain is fixed to the cartesian monoidal category **Set**.}\p{FIXME: This theory should also extend \code{ThCopresheaf} but multiple inheritance is not yet supported.}
+\scope{  \put\transclude/heading{false} 
+\transclude{3bm7t_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

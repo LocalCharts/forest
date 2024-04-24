@@ -1,0 +1,14 @@
+  
+\title{ThClass}
+\taxon{definition}
+
+
+\subtree{\title{Type Constructors} 
+\transclude{eswhf}}
+
+\subtree{\title{Term Constructors} 
+}
+
+\subtree{\title{Axioms} 
+}
+

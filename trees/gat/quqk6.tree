@@ -1,0 +1,17 @@
+  
+\title{ThRigCategory}
+\tag{theory}
+
+ \p{Theory of a *rig category*, also known as a *bimonoidal category*}\p{[Rig categories](https://ncatlab.org/nlab/show/rig+category) are the most general in the hierarchy of [distributive monoidal structures](https://ncatlab.org/nlab/show/distributivity+for+monoidal+structures).}\p{Question: Do we also want the distributivty and absorption isomorphisms? Usually we ignore coherence isomorphisms such as associators and unitors.}\p{FIXME: This theory should also inherit \code{ThMonoidalCategory}, but multiple inheritance is not supported.}
+\scope{  \put\transclude/heading{false} 
+\transclude{quqk6_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

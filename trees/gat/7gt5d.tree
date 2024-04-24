@@ -1,0 +1,2 @@
+\title{dcounit}
+#{\mathop{\mathrm{ dcounit }}\left(A\right)::\left(\left(A\mathop{\mathrm{ ⊕ }}A\right)\mathop{\mathrm{ → }}\mathop{\mathrm{ mzero }}\right)\dashv [A::\mathop{\mathrm{ Ob }}]}

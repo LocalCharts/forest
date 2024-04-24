@@ -1,0 +1,2 @@
+\title{antipode}
+#{\mathop{\mathrm{ antipode }}\left(A\right)::\left(A\mathop{\mathrm{ → }}A\right)\dashv [A::\mathop{\mathrm{ Ob }}]}

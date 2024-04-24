@@ -1,0 +1,2 @@
+\title{compose}
+#{\left(u\mathop{\mathrm{ ⋅ }}v\right)::\left(X\mathop{\mathrm{ ⇢ }}Z\right)\dashv [A::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ Fib }}\left(A\right),\ Y::\mathop{\mathrm{ Fib }}\left(A\right),\ Z::\mathop{\mathrm{ Fib }}\left(A\right),\ u::\left(X\mathop{\mathrm{ ⇢ }}Y\right),\ v::\left(Y\mathop{\mathrm{ ⇢ }}Z\right)]}

@@ -1,0 +1,17 @@
+  
+\title{ThDaggerCompactCategory}
+\tag{theory}
+
+ \p{Theory of *dagger compact categories*}\p{In a dagger compact category, there are two kinds of adjoints of a morphism \code{f::Hom(A,B)}, the adjoint mate \code{mate(f)::Hom(dual(B),dual(A))} and the dagger adjoint \code{dagger(f)::Hom(B,A)}. In the category of Hilbert spaces, these are respectively the Banach space adjoint and the Hilbert space adjoint (Reed-Simon, Vol I, Sec VI.2). In Julia, they would correspond to \code{transpose} and \code{adjoint} in the official \code{LinearAlegbra} module. For the general relationship between mates and daggers, see Selinger's survey of graphical languages for monoidal categories.}\p{FIXME: This theory should also extend \code{ThDaggerCategory}, but multiple inheritance is not yet supported.}
+\scope{  \put\transclude/heading{false} 
+\transclude{x3t4e_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

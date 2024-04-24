@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ incl }}\left(eq\right) = \mathop{\mathrm{ id }}\left(A\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ eq::\mathop{\mathrm{ Equalizer }}\left(f,f\right)]}

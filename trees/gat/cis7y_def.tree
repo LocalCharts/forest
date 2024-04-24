@@ -1,0 +1,14 @@
+  
+\title{ThSet}
+\taxon{definition}
+
+
+\subtree{\title{Type Constructors} 
+\transclude{eis7y}}
+
+\subtree{\title{Term Constructors} 
+}
+
+\subtree{\title{Axioms} 
+}
+

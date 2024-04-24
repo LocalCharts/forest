@@ -1,0 +1,2 @@
+\title{pair}
+#{\mathop{\mathrm{ pair }}\left(f,g\right)::\left(C\mathop{\mathrm{ ≤ }}\left(A\mathop{\mathrm{ ∧ }}B\right)\right)\dashv [A::\mathop{\mathrm{ El }},\ B::\mathop{\mathrm{ El }},\ C::\mathop{\mathrm{ El }},\ f::\left(C\mathop{\mathrm{ ≤ }}A\right),\ g::\left(C\mathop{\mathrm{ ≤ }}B\right)]}

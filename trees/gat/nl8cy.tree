@@ -1,0 +1,2 @@
+\title{}
+#{\left(\mathop{\mathrm{ mmerge }}\left(A\right)\mathop{\mathrm{ ⋅ }}f\right) = \left(\left(f\mathop{\mathrm{ ⊗ }}f\right)\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ mmerge }}\left(B\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

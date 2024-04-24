@@ -1,0 +1,17 @@
+  
+\title{ThLawlessCat}
+\tag{theory}
+
+ \p{\code{ThLawlessCat}}\p{The data of a category without any axioms of associativity or identities.}
+\scope{  \put\transclude/heading{false} 
+\transclude{cfgkn_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

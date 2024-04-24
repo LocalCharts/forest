@@ -1,0 +1,2 @@
+\title{}
+#{\left(\mathop{\mathrm{ pair }}\left(Π,f,g\right)\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ proj2 }}\left(Π\right)\right) = g\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ Π::\mathop{\mathrm{ Product }}\left(A,B\right),\ f::\left(C\mathop{\mathrm{ → }}A\right),\ g::\left(C\mathop{\mathrm{ → }}B\right)]}

@@ -1,0 +1,2 @@
+\title{trace}
+#{\mathop{\mathrm{ trace }}\left(X,A,B,f\right)::\left(A\mathop{\mathrm{ → }}B\right)\dashv [X::\mathop{\mathrm{ Ob }},\ A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(\left(X\mathop{\mathrm{ ⊗ }}A\right)\mathop{\mathrm{ → }}\left(X\mathop{\mathrm{ ⊗ }}B\right)\right)]}

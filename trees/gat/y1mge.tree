@@ -1,0 +1,17 @@
+  
+\title{ThHypergraphCategory}
+\tag{theory}
+
+ \p{Theory of *hypergraph categories*}\p{Hypergraph categories are also known as "well-supported compact closed categories" and "spidered/dungeon categories", among other things.}\p{FIXME: Should also inherit \code{ThClosedMonoidalCategory} and \code{ThDaggerCategory}, but multiple inheritance is not yet supported.}
+\scope{  \put\transclude/heading{false} 
+\transclude{y1mge_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

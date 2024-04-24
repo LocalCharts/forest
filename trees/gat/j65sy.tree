@@ -1,0 +1,2 @@
+\title{coact}
+#{\mathop{\mathrm{ coact }}\left(f,x\right)::\mathop{\mathrm{ El }}\left(A\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ x::\mathop{\mathrm{ El }}\left(B\right)]}

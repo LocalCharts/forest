@@ -1,0 +1,25 @@
+\title{NothingC}
+\taxon{definition}
+\tag{model}\p{\code{function Ob(var"##955"::Nothing)
+    nothing
+end}}
+
+\p{\code{function Hom(var"##956"::Nothing, var"##957"::Nothing, var"##958"::Nothing)
+    nothing
+end}}
+
+\p{\code{function dom(var"##959"::Nothing)
+    nothing
+end}}
+
+\p{\code{function codom(var"##960"::Nothing)
+    nothing
+end}}
+
+\p{\code{function compose(var"##961"::Nothing, var"##962"::Nothing)
+    nothing
+end}}
+
+\p{\code{function id(var"##963"::Nothing)
+    nothing
+end}}

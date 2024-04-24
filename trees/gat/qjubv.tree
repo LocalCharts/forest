@@ -1,0 +1,17 @@
+  
+\title{ThAbelianBicategoryRelations}
+\tag{theory}
+
+ \p{Theory of *abelian bicategories of relations*}\p{Unlike [\code{ThBicategoryRelations}](@ref), this theory uses additive notation.}\p{References:}\p{  * Carboni & Walters, 1987, "Cartesian bicategories I", Sec. 5}\p{  * Baez & Erbele, 2015, "Categories in control"}
+\scope{  \put\transclude/heading{false} 
+\transclude{qjubv_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

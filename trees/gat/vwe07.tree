@@ -1,0 +1,17 @@
+  
+\title{ThSymmetricRigCategory}
+\tag{theory}
+
+ \p{Theory of a *symmetric rig category*}\p{FIXME: Should also inherit \code{ThSymmetricMonoidalCategory}.}
+\scope{  \put\transclude/heading{false} 
+\transclude{vwe07_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

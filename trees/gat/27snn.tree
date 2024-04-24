@@ -1,0 +1,2 @@
+\title{plus}
+#{\mathop{\mathrm{ plus }}\left(f,g\right)::\left(A\mathop{\mathrm{ → }}B\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(A\mathop{\mathrm{ → }}B\right)]}

@@ -1,0 +1,17 @@
+  
+\title{ThDisplayedCategory}
+\tag{theory}
+
+ \p{Theory of a *displayed category*.}\p{More precisely, this is the theory of a category #{C} (\code{Ob},\code{Hom}) together with a displayed category over #{C} (\code{Fib},\code{FibHom}). Displayed categories axiomatize lax functors #{C → **Span**}, or equivalently objects of a slice category #{**Cat**/C}, in a generalized algebraic style.}\p{References:}\p{  * [nLab: displayed category](https://ncatlab.org/nlab/show/displayed+category)}\p{  * Ahrens & Lumsdaine, 2019: Displayed categories, Definition 3.1}
+\scope{  \put\transclude/heading{false} 
+\transclude{uw1wk_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

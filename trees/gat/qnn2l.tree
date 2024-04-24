@@ -1,0 +1,17 @@
+  
+\title{ThCoindexedMonoidalCategory}
+\tag{theory}
+
+ \p{Theory of an opindexed monoidal category with cocartesian indexing category.}\p{This is equivalent via the Grothendieck construction to a monoidal opfibration over a cocartesian monoidal base (Shulman 2008, Theorem 12.7). The terminology "coindexed monoidal category" used here is not standard and arguably not good, but I'm running out of ways to combine these adjectives.}\p{References:}\p{  * Shulman, 2008: Framed bicategories and monoidal fibrations}\p{  * Shulman, 2013: Enriched indexed categories}
+\scope{  \put\transclude/heading{false} 
+\transclude{qnn2l_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

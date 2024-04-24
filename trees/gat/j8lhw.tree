@@ -1,0 +1,2 @@
+\title{curry}
+#{\mathop{\mathrm{ curry }}\left(A,B,f\right)::\left(A\mathop{\mathrm{ → }}\mathop{\mathrm{ hom }}\left(B,C\right)\right)\dashv [C::\mathop{\mathrm{ Ob }},\ A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(\left(A\mathop{\mathrm{ ⊗ }}B\right)\mathop{\mathrm{ → }}C\right)]}

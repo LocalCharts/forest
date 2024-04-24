@@ -1,0 +1,2 @@
+\title{Hom2}
+#{\left(dom\mathop{\mathrm{ ⇒ }}codom\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ dom::\left(A\mathop{\mathrm{ → }}B\right),\ codom::\left(A\mathop{\mathrm{ → }}B\right)]}

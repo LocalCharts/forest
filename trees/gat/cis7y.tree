@@ -1,0 +1,17 @@
+  
+\title{ThSet}
+\tag{theory}
+
+ \p{The theory of a set with no operations}\p{A base theory for all algebraic theories so that multiple inheritance doesn't create multiple types.}
+\scope{  \put\transclude/heading{false} 
+\transclude{cis7y_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

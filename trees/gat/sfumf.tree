@@ -1,0 +1,17 @@
+  
+\title{ThCategoryWithCoproducts}
+\tag{theory}
+
+ \p{Theory of a *category with (finite) coproducts*}\p{Finite coproducts are presented in biased style, via the nullary case (initial objects) and the binary case (binary coproducts). The axioms are dual to those of [\code{ThCategoryWithProducts}](@ref).}\p{For a monoidal category axiomatization of finite coproducts, see [\code{ThCocartesianCategory}](@ref).}
+\scope{  \put\transclude/heading{false} 
+\transclude{sfumf_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

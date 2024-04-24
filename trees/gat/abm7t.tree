@@ -1,0 +1,2 @@
+\title{otimes}
+#{\left(x\mathop{\mathrm{ ⊗ }}y\right)::\mathop{\mathrm{ El }}\left(\left(A\mathop{\mathrm{ ⊗ }}B\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ x::\mathop{\mathrm{ El }}\left(A\right),\ y::\mathop{\mathrm{ El }}\left(B\right)]}

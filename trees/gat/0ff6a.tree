@@ -1,0 +1,2 @@
+\title{proj}
+#{\mathop{\mathrm{ proj }}\left(eq\right)::\left(B\mathop{\mathrm{ → }}\mathop{\mathrm{ ob }}\left(eq\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(A\mathop{\mathrm{ → }}B\right),\ eq::\mathop{\mathrm{ Coequalizer }}\left(f,g\right)]}

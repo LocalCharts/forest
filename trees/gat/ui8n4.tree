@@ -1,0 +1,2 @@
+\title{dcounit}
+#{\mathop{\mathrm{ dcounit }}\left(A\right)::\left(\left(A\mathop{\mathrm{ ⊗ }}\mathop{\mathrm{ dual }}\left(A\right)\right)\mathop{\mathrm{ → }}\mathop{\mathrm{ munit }}\right)\dashv [A::\mathop{\mathrm{ Ob }}]}
