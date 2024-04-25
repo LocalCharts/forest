@@ -1,0 +1,13 @@
+\date{2024-04-25}
+\author{eigil-rischel}
+\taxon{proposition}
+\p{
+    Given a minmax problem #{L = (X,Y,L)} where #{X} is a finite-dimensional real vector space, let
+    #{L|_{0} = (X, Y \oplus X^*, L \oplus - \langle -,- \rangle)}
+    Note that #{(L|_0)^+(x) = \infty} when #{x = 0} and #{L^+(0)} otherwise.
+    Thus this amounts to adding a constraint that #{x = 0}.
+    Analogously, define #{L|^0 = (L^*|_0)^* = (X \oplus Y^*, Y, L \oplus \langle -, - \rangle)} 
+}
+\p{
+    Then the Legendre transform #{f^* = ((f|_0)^*)^+} (viewing both #{f} and #{f^*} as minmax problems using the inclusion #{\Conv \to \Minmax})
+}
