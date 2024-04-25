@@ -26,6 +26,6 @@
     }
     \p{
         Clearly, for our #{L}, we have #{\inf_x\sup_\alpha L(x,\alpha) = f(0)}, since the supremum is #{\infty} unless #{x = 0}.
-        On the other hand, taking #{\alpha^* = -\alpha_0}, we have #{f(0) \leq f(x) - \alpha^*(x)} for all #{x} by construction, finishing the proof
+        On the other hand, taking #{\alpha^* = -\alpha_0}, we have #{f(0) \leq f(x) - \alpha^*(x)} for all #{x} by construction, finishing the proof.
     }
 }
