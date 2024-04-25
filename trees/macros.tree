@@ -178,9 +178,11 @@
 \def\twoto{#{\Rightarrow}}
 
 \def\cat[c]{#{\mathsf{\c}}}
+\def\twocat[c]{#{\mathcal{\c}}}
 \def\dblcat[name]{#{\cat{\mathbb \name}}}
 
-\def\Cat{#{\cat{Cat}}}
+\def\Cat{#{\cat{Cat}}} %should perhaps be a 2-category by default...or double?
+\def\CAT{#{\cat{CAT}}}
 \def\TwoCat{#{\cat{2\text{-}Cat}}}
 \def\Graph{#{\cat{Graph}}}
 \def\dblCat{#{\dblcat{Cat}}} % equipment of cats, not to be confused with DblCat

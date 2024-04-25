@@ -1,0 +1,34 @@
+\date{2024-04-16}
+\author{kevin-carlson}
+\title{Solutions of multi-domain multi-physics problems}
+\import{macros}
+\meta{comments}{true}
+
+\p{Let #{\cat{S}} be a category of "spaces", #{\cat{I}} a small category, and #{\twocat{K}} a 2-category of things that are sufficiently similar to categories. 
+Last time (\ref{kdc-0007}), we defined a multi-domain multiphysics problem as something like this: 
+\quiver{\begin{tikzcd}
+	\cat{I} && \cat{S} \\
+	& {\twocat{K}}
+	\arrow["M", from=1-1, to=1-3]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "\cat{J}"', from=1-1, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "\cat{V}", from=1-3, to=2-2]
+	\arrow["D",shorten <=8pt, shorten >=8pt, Rightarrow, from=0, to=1]
+\end{tikzcd}}}
+
+\p{Here #{\mathcal V} is an #{\cat{S}}-indexed "category" of "bundles" over "spaces" and #{\cat{J}} is an #{\cat{I}}-indexed "category" of "diagram shapes", with the 
+map #{D} of indexed "categories" giving an actual #{\cat{J}_i}-shaped diagram in #{\mathcal V(M_i)} for each #{i \in \cat{I}}.}
+
+\p{For an example other than the boundary value problems from last time, let #{M=(A\leftarrow *\stackrel{0}{\to} [0,1]\stackrel{1}{\leftarrow} *\to B)} be a diagram representing two tanks 
+linked by a one-dimensional pipe. The tanks might be rectangles, prisms, cylinders, whatever. The colimit of #{M} is a simple example of a space you probably don't want to do differential equations on, because it's something
+like a stratified manifold with corners.} 
+
+\p{Let #{\cat{V}=\Vect} send a manifold to its (additive symmetric multi)category of vector bundles. Then for #{D}
+we need to give a family of diagrams in #{\cat{V}(M_i)} for each #{i\in \cat{I}} that's natural in #{i}. For the moment, I'm not going to specify actual completely-explicit diagrams, though I want to do that soon. Instead, let's imagine whatever physical system on this family of domains we like.} 
+
+\p{For instance, James Fairbanks suggested the two tanks are being heated from below, so there's convective fluid flow inside each tank, while the pipe has flux of mass and temperature. Note that a more "honest" representation of the problem would replace #{[0,1]} with a tube of the same dimension as the tanks, and we'd explicitly model the vertical flow in each cross-section of the pipe. Intuitively, this should be a waste in this case since there's no heating applied to the pipe, and one goal of this project is to explicate approximation processes like this in terms of morphisms of multi-domain multi-physics problems and their induced maps on solutions.}
+
+\p{So, finally, what's a solution to a multi-domain multi-physics problem? Recall that given a single-domain multiphysics problem #{D:J\to \cat{X}}, where #{\cat{X}} is #{\mathcal V(M)} for some single space #{M}, a solution of #{D} is a lift along some discrete opfibration #{\pi:\cat{E}\to \cat{X}}. This definition is probably...not obvious if you haven't seen it before; see [the paper](https://arxiv.org/abs/2401.09751) and its predecessor for more explanation. But you're thinking first of all that #{\cat{E}} is a coslice, most particularly a coslice under #{\R}, so that a solution is a coherent choice of a point in each value of the diagram.}
+
+\p{For a multi-domain problem, the basic thing we need is just to know: what's  a discrete opfibration over the indexed category-like thing #{\mathcal V:\cat{S}\to \twocat{K}}? Well, I'll tell you: whatever a discrete opfibration is in #{\twocat{K}} (see the paper just linked for such a notion in any locally presentable 2-category), it's part of an orthogonal factorization system, which will lift to a levelwise factorization system #{\twocat{K}^{\cat{S}}}, at least when we consider strictly 2-natural transformations between 2-functors. So a discrete opfibration over #{\mathcal V} will just be a 2-natural transformation into #{\mathcal V} whose components are discrete opfibrations in #{\cat{K}}. The standard example will be, if you have a section of #{\mathcal V}, i.e. a 2-natural transformation from the terminal 2-functor, giving a natural choice of bundle over each space (such as #{\R}), then you can get a discrete opfibration over #{\mathcal V} by coslicing. This pretty much provides the desired notion of solution: give a lift of #{\alpha} against some discrete opfibration over #{\mathcal V}!} 
+
+\p{A remark on avoiding letting the formalism get too heavy: with #{\twocat{K}} a locally presentable 2-category, there should be another locally presentable 2-category whose objects are indexed "categories" with fibers from #{\cat{K}}, such as #{\cat{V}} and #{\cat{J}}, and whose morphisms are pairs like #{(M,D)}. This construction, over a \emph{category} instead of a 2-category #{\cat{K}}, is at the heart of the two papers in this program so far, which is cute: it gives the category (or 2-category) of diagrams in a fixed category. I'm hoping to be able to use a categorified version of this construction to say that the whole multi-domain multiphysics setup is just another case of the story in the second paper, so that we can import some theorems from there.}
