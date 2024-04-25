@@ -184,6 +184,7 @@
 \def\Cat{#{\cat{Cat}}} %should perhaps be a 2-category by default...or double?
 \def\CAT{#{\cat{CAT}}}
 \def\TwoCat{#{\cat{2\text{-}Cat}}}
+\def\Gray{#{\cat{Gray}}}
 \def\Graph{#{\cat{Graph}}}
 \def\dblCat{#{\dblcat{Cat}}} % equipment of cats, not to be confused with DblCat
 \def\Mult{#{\cat{Mult}}}

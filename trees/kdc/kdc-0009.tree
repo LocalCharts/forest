@@ -1,0 +1,10 @@
+\title{Weighted limits in enriched categories}
+\taxon{definition}
+\author{kevin-carlson}
+\import{macros}
+
+\p{Let #{\cat{V}} be a complete symmetric monoidal closed category. Let #{\cat{J},\cat{X}} be #{\cat{V}}-enriched categories 
+and let #{D:\cat{J}\to \cat{X},W:\cat{J}\to \cat{V}} be #{\cat{V}}-functors. We define the limit of #{D} weighted by #{W}, #{\lim^W D}, to be the object of #{\cat{X}} with the following universal property:}
+\p{#{\cat{X}(X,\lim^W D)=\cat{V}^{\cat{J}}(W,\cat{X}(D(-),X))}.}
+\p{Here, #{\cat{V}^{\cat{J}}} is the #{\cat{V}}-category of #{\cat{V}}-functors from #{\cat{J}} to #{\cat{V}}. The hom-objects in #{\cat{V}^{\cat{J}}} are given by the end}
+\p{#{\cat{V}^{\cat{J}}(F,G)=\int_{j\in\cat{J}}\cat{V}(F(j),G(j))}.}
