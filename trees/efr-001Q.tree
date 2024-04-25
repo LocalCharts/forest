@@ -8,3 +8,8 @@
 \p{
     Then #{(L^*)^+ = -L^- = f^*}
 }
+\p{
+    Note that the two uses of the asterisk in this equation conflict.
+    We have both the reversed optimization problem #{L^*} given by flipping the variables,
+    and the Legendre conjugate function #{f^*}. It may be good to alter this notation to resolve the conflict.
+}
