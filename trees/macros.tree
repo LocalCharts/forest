@@ -334,6 +334,6 @@
 
 % Convex duality
 
-\def\Minmax\cat{Minmax}
-\def\Conv\cat{Conv}
-\def\Conc\cat{Conc}
+\def\Minmax{\cat{Minmax}}
+\def\Conv{\cat{Conv}}
+\def\Conc{\cat{Conc}}
