@@ -2,6 +2,7 @@
 \author{kevin-carlson}
 \date{2024-04-25}
 \import{macros}
+\meta{comments}{true}
 
 \p{Let #{\cat{V}} be a complete symmetric monoidal closed category under #{\Cat}, such as #{\Cat} itself or any of the forms of #{\Gray} (including #{\TwoCat}, see \ref{kdc-000B}.) Consider the weight
 #{W:(1\to 1\leftarrow 1)\to \cat{V}} given by #{W= (1\stackrel{t}{\to} I\stackrel{s}{\leftarrow} 1)}, with #{I=(s\to t)} the arrow category. Then for any #{\cat{V}}-functor #{F:(1\to 1\leftarrow 1)\to \cat{X}}, say #{F=(x\to z\leftarrow y)}, we
