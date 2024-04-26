@@ -1,0 +1,18 @@
+\date{2024-04-26}
+\author{eigil-rischel}
+\def\braket[x]{#{\langle \x \rangle}}
+\title{Composition of minmax problems}
+\p{
+    Let #{Y} be a real vector space, and let #{(X,Y,L), (Y^*,Z,L)} be minmax problems.
+    Then we can try to define a composite minmax problem
+    ##{L\circ_Y L'(x,z) = \sup_y \inf_{y'} L(x,y) + L(y',z) - y'(y)}
+}
+\p{
+    For this composition to be associative relies on a strong duality property. We probably shouldn't want to treat this as well-defined unless it holds.
+}
+\p{
+    Note that by the convex duality stuff, the minmax problem #{Y^*,Y,\operatorname{ev}} acts as an identity for this composition.
+}
+\p{
+    This may fit together into a double category type structure for minmax problems (maybe restricted to linear maps between the spaces).
+}
