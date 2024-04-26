@@ -1,0 +1,26 @@
+\date{2024-04-26}
+\author{eigil-rischel}
+\title{weak duality}
+\import{macros}
+\p{
+    Let #{L} be a minmax problem.
+    Then
+    ##{\inf_x \sup_y L(x,y) = (L^+)^- \geq (L^-)^+ = \sup_x \inf_y L(x,y),}
+    where we abuse notation by identifying a minmax problem #{*,*, r} with the number #{r(*,*)}
+}
+\proof{
+    \p{
+        The equations are clearly true by definition.
+        Note that the inequality is equivalent to the existence of a morphism #{(L^+)^- \to (L^-)^+}
+    }
+    \p{
+        We have canonical morphisms
+        ##{L^+ \to L \to L^-}
+        Since #{L^+} is a right adjoint to the inclusion of #{\Conv}, the above composite induces a map
+        #{L^+ \to (L^-)^+}
+    }
+    \p{
+        Since #{(-)^-} is a left adjoint to the incluson of #{\Conc^\op}, that map induces a map
+        #{(L^+)^- \to (L^-)^+,} as desired.
+    }
+}
