@@ -1,0 +1,12 @@
+\title{Weighted limits in enriched categories}
+\taxon{definition}
+\author{kevin-carlson}
+\import{macros}
+
+\p{Let #{\cat{V}} be a complete symmetric monoidal closed category. Let #{\cat{J},\cat{X}} be #{\cat{V}}-enriched categories 
+and let #{D:\cat{J}\to \cat{X},W:\cat{J}\to \cat{V}} be #{\cat{V}}-functors. We define the limit of #{D} weighted by #{W}, #{\lim^W D}, to be the object of #{\cat{X}} with the following universal property:}
+\p{#{\cat{X}(X,\lim^W D)=\cat{V}^{\cat{J}}(W,\cat{X}(D(-),X))}.}
+\p{Here, #{\cat{V}^{\cat{J}}} is the #{\cat{V}}-category of #{\cat{V}}-functors from #{\cat{J}} to #{\cat{V}}. The hom-objects in #{\cat{V}^{\cat{J}}} are given by the end}
+\p{#{\cat{V}^{\cat{J}}(F,G)=\int_{j\in\cat{J}}\cat{V}(F(j),G(j))}.}
+\p{Notice that 2-morphisms in this comma-object are determined by natural transformations between functors of categories! That means there's no such thing as lax naturality; there are also no modifications, since the components would have to be 2-morphisms in #{\cat{S}}, and so the comma-object is really a 2-category. What I'd actually like to show is that the comma is locally presentable when #{\twocat{K}} is...Actually, I think it's probably true that the comma of a cospan of accessible, cocontinuous functors #{x\to z\leftarrow y} is locally presentable whenever just #{x,y} are; #{\twocat{K}} shouldn't come into it.}
+\p{This makes multi-domain multi-physics a special case of our previous paper: you're just working with the category of diagrams over #{\cat{V}} in the oplax comma 2-category over #{\twocat{K}}. The one interesting thing this allows is is for the notion of discrete opfibration to vary #{\cat{S}}, whereas my first notion of discrete opfibration over #{\cat{V}} did not allow such variation. But maybe this is good?}

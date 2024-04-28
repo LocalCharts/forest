@@ -1,0 +1,17 @@
+  
+\title{ThAlgebraicLattice}
+\tag{theory}
+
+ \p{Theory of *lattices* as algebraic structures}\p{This is one of two standard axiomatizations of a lattice, the other being [\code{ThLattice}](@ref). Because the partial order is not present, this theory is merely an algebraic theory (no dependent types).}\p{The partial order is recovered as #{A ≤ B} iff #{A ∧ B = A} iff #{A ∨ B = B}. This definition could be reintroduced into a generalized algebraic theory using an equality type \code{Eq(lhs::El, rhs::El)::TYPE} combined with term constructors \code{`meet_leq(eq::Eq(A∧B, A))::(A ≤ B)} and \code{join_leq(eq::Eq(A∨B, B))::(A ≤ B)}. We do not employ that trick here because at that point it is more convenient to just start with the poset structure, as in [\code{ThLattice}](@ref).}
+\scope{  \put\transclude/heading{false} 
+\transclude{opnfn_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

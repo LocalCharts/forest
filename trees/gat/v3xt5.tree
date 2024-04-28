@@ -1,0 +1,2 @@
+\title{}
+#{\left(\left(u\mathop{\mathrm{ ⊗ }}v\right)\mathop{\mathrm{ * }}f\right) = \left(\left(u\mathop{\mathrm{ * }}f\right)\mathop{\mathrm{ ⊗ }}\left(v\mathop{\mathrm{ * }}f\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ Fib }}\left(A\right),\ Y::\mathop{\mathrm{ Fib }}\left(A\right),\ Z::\mathop{\mathrm{ Fib }}\left(A\right),\ W::\mathop{\mathrm{ Fib }}\left(A\right),\ f::\left(A\mathop{\mathrm{ → }}B\right),\ u::\left(X\mathop{\mathrm{ ⇢ }}Z\right),\ v::\left(Y\mathop{\mathrm{ ⇢ }}W\right)]}

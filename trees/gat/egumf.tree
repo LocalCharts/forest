@@ -1,0 +1,2 @@
+\title{coproj2}
+#{\mathop{\mathrm{ coproj2 }}\left(⨆\right)::\left(B\mathop{\mathrm{ → }}\mathop{\mathrm{ ob }}\left(⨆\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ ⨆::\mathop{\mathrm{ Coproduct }}\left(A,B\right)]}

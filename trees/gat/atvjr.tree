@@ -1,0 +1,17 @@
+  
+\title{ThOpindexedMonoidalCategoryLax}
+\tag{theory}
+
+ \p{Theory of an opindexed monoidal category with lax transition functors.}\p{This is a pseudofunctor into **MonCatLax**, the 2-category of monoidal categories, *lax* monoidal functors, and monoidal natural transformations. In (Hofstra & De Marchi 2006), these are called simply "(op)indexed monoidal categories," but that is not the standard usage.}\p{References:}\p{  * Hofstra & De Marchi, 2006: Descent for monads}\p{  * Moeller & Vasilakopoulou, 2020: Monoidal Grothendieck construction, Remark 3.18 [this paper is about monoidal indexed categories, a different notion!]}
+\scope{  \put\transclude/heading{false} 
+\transclude{atvjr_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

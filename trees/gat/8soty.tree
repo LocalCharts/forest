@@ -1,0 +1,2 @@
+\title{companion_unit}
+#{\mathop{\mathrm{ companion_unit }}\left(f\right)::\mathop{\mathrm{ Cell }}\left(\mathop{\mathrm{ pid }}\left(A\right),\mathop{\mathrm{ companion }}\left(f\right),\mathop{\mathrm{ id }}\left(A\right),f\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

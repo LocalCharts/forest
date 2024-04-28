@@ -1,0 +1,2 @@
+\title{}
+#{\left(f̄\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ id }}\left(y\right)\right) = f̄\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ x::\mathop{\mathrm{ Fib }}\left(A\right),\ y::\mathop{\mathrm{ Fib }}\left(B\right),\ f̄::\mathop{\mathrm{ FibHom }}\left(f,x,y\right)]}

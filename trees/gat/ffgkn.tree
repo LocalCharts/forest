@@ -1,0 +1,2 @@
+\title{compose}
+#{\left(f\mathop{\mathrm{ ⋅ }}g\right)::\left(a\mathop{\mathrm{ → }}c\right)\dashv [a::\mathop{\mathrm{ Ob }},\ b::\mathop{\mathrm{ Ob }},\ c::\mathop{\mathrm{ Ob }},\ f::\left(a\mathop{\mathrm{ → }}b\right),\ g::\left(b\mathop{\mathrm{ → }}c\right)]}

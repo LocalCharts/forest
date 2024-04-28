@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ otimes }}\left(\mathop{\mathrm{ id }}\left(A\right),X,Y\right) = \mathop{\mathrm{ id }}\left(\left(X\mathop{\mathrm{ ⊗ }}Y\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ Fib }}\left(A\right),\ Y::\mathop{\mathrm{ Fib }}\left(A\right)]}

@@ -1,0 +1,30 @@
+  
+\title{ThSubobjectBiHeytingAlgebra}
+\taxon{definition}
+
+
+\subtree{\title{Type Constructors} 
+\transclude{9faxd}
+
+\transclude{bfaxd}}
+
+\subtree{\title{Term Constructors} 
+\transclude{mfaxd}
+
+\transclude{nfaxd}
+
+\transclude{ofaxd}
+
+\transclude{pfaxd}
+
+\transclude{6kjla}
+
+\transclude{7kjla}
+
+\transclude{x40lq}
+
+\transclude{y40lq}}
+
+\subtree{\title{Axioms} 
+}
+

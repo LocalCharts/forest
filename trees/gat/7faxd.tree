@@ -1,0 +1,17 @@
+  
+\title{ThSubobjectLattice}
+\tag{theory}
+
+ \p{Theory of lattice of subobjects in a coherent category, such as a pretopos.}\p{The axioms are omitted since this theory is the same as the theory [\code{Catlab.Theories.ThAlgebraicLattice}](@ref) except that the lattice elements are dependent on another type. In fact, if we supported GAT morphisms, it should be possible to define a projection morphism of GATs from \code{ThSubobjectLattice} to \code{ThAlgebraicLattice} that sends \code{Ob} to the unit type.}
+\scope{  \put\transclude/heading{false} 
+\transclude{7faxd_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

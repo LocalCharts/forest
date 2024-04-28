@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ braid }}\left(A,\left(B\mathop{\mathrm{ ⊗ }}C\right)\right) = \left(\left(\mathop{\mathrm{ braid }}\left(A,B\right)\mathop{\mathrm{ ⊗ }}\mathop{\mathrm{ id }}\left(C\right)\right)\mathop{\mathrm{ ⋅ }}\left(\mathop{\mathrm{ id }}\left(B\right)\mathop{\mathrm{ ⊗ }}\mathop{\mathrm{ braid }}\left(A,C\right)\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }}]}

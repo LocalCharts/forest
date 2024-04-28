@@ -1,0 +1,2 @@
+\title{mmerge}
+#{\mathop{\mathrm{ mmerge }}\left(A\right)::\left(\left(A\mathop{\mathrm{ ⊗ }}A\right)\mathop{\mathrm{ → }}A\right)\dashv [A::\mathop{\mathrm{ Ob }}]}

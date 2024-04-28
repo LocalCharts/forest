@@ -1,0 +1,17 @@
+  
+\title{ThOpindexedCategory}
+\tag{theory}
+
+ \p{Theory of an opindexed, or covariantly indexed, category.}\p{An *opindexed category* is a **Cat**-valued pseudofunctor. For simplicitly, we assume that the functor is strict.}\p{Just as a copresheaf, or **Set**-valued functor, can be seen as a category action on a family of sets, an opindexed category can be seen as a category action on a family of categories. This picture guides our axiomatization of an opindexed category as a generalized algebraic theory. The symbol \code{*} is used for the actions since a common mathematical notation for the "pushforward functor" induced by an indexing morphism #{f: A → B} is #{f_*: F(A) 	o F(B)}.}
+\scope{  \put\transclude/heading{false} 
+\transclude{7xkxn_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

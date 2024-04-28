@@ -1,0 +1,17 @@
+  
+\title{ThBicategoryRelations}
+\tag{theory}
+
+ \p{Theory of *bicategories of relations*}\p{TODO: The 2-morphisms are missing.}\p{References:}\p{  * Carboni & Walters, 1987, "Cartesian bicategories I"}\p{  * Walters, 2009, blog post, "Categorical algebras of relations", http://rfcwalters.blogspot.com/2009/10/categorical-algebras-of-relations.html}
+\scope{  \put\transclude/heading{false} 
+\transclude{mjl4r_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

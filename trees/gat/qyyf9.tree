@@ -1,0 +1,2 @@
+\title{}
+#{\left(\mathop{\mathrm{ pair }}\left(f,g\right)\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ proj2 }}\left(B,C\right)\right) = g\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(A\mathop{\mathrm{ → }}C\right)]}

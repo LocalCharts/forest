@@ -1,0 +1,17 @@
+  
+\title{ThCocompleteCategory}
+\tag{theory}
+
+ \p{Theory of a *(finitely) cocomplete category*}\p{Finite colimits are presented in biased style, via finite coproducts and coequalizers. The axioms are dual to those of [\code{ThCompleteCategory}](@ref).}
+\scope{  \put\transclude/heading{false} 
+\transclude{oef6a_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

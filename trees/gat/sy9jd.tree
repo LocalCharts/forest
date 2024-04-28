@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ coproj1 }}\left(A,B\right) = \left(\mathop{\mathrm{ id }}\left(A\right)\mathop{\mathrm{ ⊕ }}\mathop{\mathrm{ zero }}\left(B\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }}]}

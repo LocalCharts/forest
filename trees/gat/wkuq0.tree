@@ -1,0 +1,2 @@
+\title{assoc: }
+#{\left(\left(f\mathop{\mathrm{ ⋅ }}g\right)\mathop{\mathrm{ ⋅ }}h\right) = \left(f\mathop{\mathrm{ ⋅ }}\left(g\mathop{\mathrm{ ⋅ }}h\right)\right)\dashv [a::\mathop{\mathrm{ Ob }},\ b::\mathop{\mathrm{ Ob }},\ c::\mathop{\mathrm{ Ob }},\ d::\mathop{\mathrm{ Ob }},\ f::\left(a\mathop{\mathrm{ → }}b\right),\ g::\left(b\mathop{\mathrm{ → }}c\right),\ h::\left(c\mathop{\mathrm{ → }}d\right)]}

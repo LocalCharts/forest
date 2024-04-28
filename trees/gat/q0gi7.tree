@@ -1,0 +1,17 @@
+  
+\title{ThMonoidalCategoryWithDiagonals}
+\tag{theory}
+
+ \p{Theory of *monoidal categories with diagonals*}\p{A monoidal category with diagonals is a symmetric monoidal category equipped with coherent operations of copying and deleting, also known as a supply of commutative comonoids. Unlike in a cartesian category, the naturality axioms need not be satisfied.}\p{References:}\p{  * Fong & Spivak, 2019, "Supplying bells and whistles in symmetric monoidal categories" ([arxiv:1908.02633](https://arxiv.org/abs/1908.02633))}\p{  * Selinger, 2010, "A survey of graphical languages for monoidal categories", Section 6.6: "Cartesian center"}\p{  * Selinger, 1999, "Categorical structure of asynchrony"}
+\scope{  \put\transclude/heading{false} 
+\transclude{q0gi7_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

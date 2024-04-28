@@ -1,0 +1,2 @@
+\title{id}
+#{\mathop{\mathrm{ id }}\left(X\right)::\left(X\mathop{\mathrm{ ⇢ }}X\right)\dashv [A::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ Fib }}\left(A\right)]}

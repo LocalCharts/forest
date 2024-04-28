@@ -1,0 +1,17 @@
+  
+\title{ThCategoryWithProducts}
+\tag{theory}
+
+ \p{Theory of a *category with (finite) products*}\p{Finite products are presented in biased style, via the nullary case (terminal objects) and the binary case (binary products). The equational axioms are standard, especially in type theory (Lambek & Scott, 1986, Section 0.5 or Section I.3). Strictly speaking, this theory is not of a "category with finite products" (a category in which finite products exist) but of a "category with *chosen* finite products".}\p{For a monoidal category axiomatization of finite products, see [\code{ThCartesianCategory}](@ref).}
+\scope{  \put\transclude/heading{false} 
+\transclude{5ci1n_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

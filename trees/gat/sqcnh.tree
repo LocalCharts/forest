@@ -1,0 +1,2 @@
+\title{}
+#{\left(f\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ inv }}\left(f\right)\right) = \mathop{\mathrm{ id }}\left(A\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

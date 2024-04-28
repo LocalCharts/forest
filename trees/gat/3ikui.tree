@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ act }}\left(\mathop{\mathrm{ act }}\left(x,f\right),g\right) = \mathop{\mathrm{ act }}\left(x,\left(f\mathop{\mathrm{ ⋅ }}g\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(B\mathop{\mathrm{ → }}C\right),\ x::\mathop{\mathrm{ El }}\left(A\right)]}

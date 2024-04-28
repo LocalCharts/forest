@@ -1,0 +1,17 @@
+  
+\title{ThDistributiveMonoidalCategory}
+\tag{theory}
+
+ \p{Theory of a *distributive (symmetric) monoidal category*}\p{Reference: Jay, 1992, LFCS tech report LFCS-92-205, "Tail recursion through universal invariants", Section 3.2}\p{FIXME: Should also inherit \code{ThCocartesianCategory}.}
+\scope{  \put\transclude/heading{false} 
+\transclude{gy9jd_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

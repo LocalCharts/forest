@@ -1,0 +1,2 @@
+\title{dunit}
+#{\mathop{\mathrm{ dunit }}\left(A\right)::\left(\mathop{\mathrm{ mzero }}\mathop{\mathrm{ → }}\left(A\mathop{\mathrm{ ⊕ }}A\right)\right)\dashv [A::\mathop{\mathrm{ Ob }}]}

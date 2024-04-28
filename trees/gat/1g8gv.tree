@@ -1,0 +1,17 @@
+  
+\title{ThCompleteCategory}
+\tag{theory}
+
+ \p{Theory of a *(finitely) complete category*}\p{Finite limits are presented in biased style, via finite products and equalizers. The equational axioms for equalizers are obscure, but can found in (Lambek & Scott, 1986, Section 0.5), who in turn attribute them to "Burroni's pioneering ideas". Strictly speaking, this theory is not of a "finitely complete category" (a category in which finite limits exist) but of a "category with *chosen* finite limits".}
+\scope{  \put\transclude/heading{false} 
+\transclude{1g8gv_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

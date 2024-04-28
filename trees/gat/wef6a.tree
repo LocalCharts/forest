@@ -1,0 +1,2 @@
+\title{coequalizer}
+#{\mathop{\mathrm{ coequalizer }}\left(f,g\right)::\mathop{\mathrm{ Coequalizer }}\left(f,g\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(A\mathop{\mathrm{ → }}B\right)]}

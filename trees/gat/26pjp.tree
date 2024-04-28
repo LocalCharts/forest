@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ plus }}\left(\left(A\mathop{\mathrm{ ⊕ }}B\right)\right) = \left(\left(\left(\mathop{\mathrm{ id }}\left(A\right)\mathop{\mathrm{ ⊕ }}\mathop{\mathrm{ swap }}\left(B,A\right)\right)\mathop{\mathrm{ ⊕ }}\mathop{\mathrm{ id }}\left(B\right)\right)\mathop{\mathrm{ ⋅ }}\left(\mathop{\mathrm{ plus }}\left(A\right)\mathop{\mathrm{ ⊕ }}\mathop{\mathrm{ plus }}\left(B\right)\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }}]}

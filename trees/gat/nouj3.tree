@@ -1,0 +1,2 @@
+\title{meet}
+#{\mathop{\mathrm{ meet }}\left(R,S\right)::\left(A\mathop{\mathrm{ → }}B\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ R::\left(A\mathop{\mathrm{ → }}B\right),\ S::\left(A\mathop{\mathrm{ → }}B\right)]}

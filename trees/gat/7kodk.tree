@@ -1,0 +1,2 @@
+\title{Attr}
+#{\mathop{\mathrm{ Attr }}\left(dom,codom\right)\dashv [dom::\mathop{\mathrm{ Ob }},\ codom::\mathop{\mathrm{ AttrType }}]}

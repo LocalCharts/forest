@@ -1,0 +1,17 @@
+  
+\title{ThMonoid}
+\tag{theory}
+
+ \p{The theory of a semigroup with identity.}\p{Examples:}\p{  * The integers under multiplication}\p{  * Lists (nonempty and empty) under concatenation}
+\scope{  \put\transclude/heading{false} 
+\transclude{ohwjw_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} \transclude{c5dac}\transclude{ewum8}}
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} \transclude{c5dac}}}
+

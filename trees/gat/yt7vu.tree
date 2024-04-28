@@ -1,0 +1,2 @@
+\title{transitive}
+#{\mathop{\mathrm{ transitive }}\left(t,u\right)::\mathop{\mathrm{ Tight }}\left(\left(f\mathop{\mathrm{ ⋅ }}g\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(B\mathop{\mathrm{ → }}C\right),\ t::\mathop{\mathrm{ Tight }}\left(f\right),\ u::\mathop{\mathrm{ Tight }}\left(g\right)]}

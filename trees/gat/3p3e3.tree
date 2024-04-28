@@ -1,0 +1,2 @@
+\title{otimes}
+#{\left(A\mathop{\mathrm{ ⊗ }}B\right)::\mathop{\mathrm{ Ob }}\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }}]}

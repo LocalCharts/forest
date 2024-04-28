@@ -1,0 +1,2 @@
+\title{conjoint_unit}
+#{\mathop{\mathrm{ conjoint_unit }}\left(f\right)::\mathop{\mathrm{ Cell }}\left(\mathop{\mathrm{ pid }}\left(A\right),\mathop{\mathrm{ conjoint }}\left(f\right),f,\mathop{\mathrm{ id }}\left(A\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

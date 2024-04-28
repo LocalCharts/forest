@@ -1,0 +1,2 @@
+\title{}
+#{\left(\mathop{\mathrm{ plus }}\left(A\right)\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ delete }}\left(A\right)\right) = \left(\mathop{\mathrm{ delete }}\left(A\right)\mathop{\mathrm{ ⊕ }}\mathop{\mathrm{ delete }}\left(A\right)\right)\dashv [A::\mathop{\mathrm{ Ob }}]}

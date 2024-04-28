@@ -1,0 +1,2 @@
+\title{compose}
+#{\left(f\mathop{\mathrm{ ⋅ }}g\right)::\mathop{\mathrm{ Attr }}\left(A,X\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ AttrType }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\mathop{\mathrm{ Attr }}\left(B,X\right)]}

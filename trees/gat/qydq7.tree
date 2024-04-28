@@ -1,0 +1,17 @@
+  
+\title{ThCMonoid}
+\tag{theory}
+
+ \p{The theory of a monoid where multiplication enjoys commutativity.}\p{Examples:}\p{  * The set of classical 1-knots under "knot sum"}
+\scope{  \put\transclude/heading{false} 
+\transclude{qydq7_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

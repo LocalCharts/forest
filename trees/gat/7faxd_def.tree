@@ -1,0 +1,22 @@
+  
+\title{ThSubobjectLattice}
+\taxon{definition}
+
+
+\subtree{\title{Type Constructors} 
+\transclude{9faxd}
+
+\transclude{bfaxd}}
+
+\subtree{\title{Term Constructors} 
+\transclude{mfaxd}
+
+\transclude{nfaxd}
+
+\transclude{ofaxd}
+
+\transclude{pfaxd}}
+
+\subtree{\title{Axioms} 
+}
+

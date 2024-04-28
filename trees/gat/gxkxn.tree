@@ -1,0 +1,2 @@
+\title{FibHom}
+#{\left(dom\mathop{\mathrm{ ⇢ }}codom\right)\dashv [A::\mathop{\mathrm{ Ob }},\ dom::\mathop{\mathrm{ Fib }}\left(A\right),\ codom::\mathop{\mathrm{ Fib }}\left(A\right)]}

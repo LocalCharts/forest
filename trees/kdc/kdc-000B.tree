@@ -1,0 +1,21 @@
+\date{2024-04-25}
+\taxon{definition}
+\title{Gray}
+\author{Kevin Carlson}
+\import{macros}
+
+\p{The category of 2-categories and 2-functors admits four important closure operations. The most obvious one is adjoint to the cartesian product and produces the 3-category of 2-categories, 2-functors, strictly 2-natural transformations, and modifications. Since the squares in the cartesian product #{A\times B} of two categories are "filled in", this can be called the "black" product of 2-categories.}
+\p{The other closures correspond to weakening the notion of 2-natural transformation to, respectively, pseudo, lax, and oplax transformation. A oplax transformation between 2-functors #{F,G} means filling in the naturality squares in a direction that \emph{agrees} with the transformation's components, like so:}
+\quiver{% https://q.uiver.app/#q=WzAsNCxbMCwwLCJGeCJdLFsxLDAsIkZ5Il0sWzAsMSwiR3giXSxbMSwxLCJHeSJdLFswLDIsIlxcYWxwaGFfeCIsMl0sWzEsMywiXFxhbHBoYV95Il0sWzAsMSwiRmYiXSxbMiwzLCJHZiIsMl0sWzYsNywiXFxhbHBoYV9mIiwwLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfX1dXQ==
+\begin{tikzcd}
+	Fx & Fy \\
+	Gx & Gy
+	\arrow[""{name=0, anchor=center, inner sep=0}, "Ff", from=1-1, to=1-2]
+	\arrow["{\alpha_x}"', from=1-1, to=2-1]
+	\arrow["{\alpha_y}", from=1-2, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "Gf"', from=2-1, to=2-2]
+	\arrow["{\alpha_f}", shorten <=4pt, shorten >=4pt, Rightarrow, from=0, to=1]
+\end{tikzcd}}
+\p{For this reason, it sometimes feels like oplax transformations are actually more natural than lax ones. But in, say, monoidal categories the lax functors are more important--so it goes. Lax natural transformations reverse the direction of #{\alpha_f}, and pseudo-natural transformations make it an isomorphism. Of course, the #{\alpha_f} have to respect composition and identities.}
+\p{\emph{Without} changing the 2-functors or the modifications, we then produce our other three closures with respectively the pseudo, lax, and oplax transformations as morphisms in #{A^B}. These three functors are right adjoint to three different "gray" tensor products; the thing to remember about these is that the pseudo, lax, or oplax "gray" tensor product of an arrow with itself is a pseudo, lax, or oplax-commutative square. (The "white" tensor product is the "funny" tensor product that already exists for categories, where an arrow tensors with itself to a non-commutative square; this is adjoint to a fifth, mostly dumb, closure where the morphisms in #{A^B} are \emph{unnatural} transformations.)}
+\p{This gives four different symmetric monoidal closed categories of 2-categories, using the strict/black, pseudo, lax, and oplax tensor products. Inspired by the notation of 2-dimensional universal algebra, we denote these #{\Gray^w} for #{w\in \{s,p,\ell,o\}}. (Thus we're calling the black product the "strict" Gray tensor product. All flames will be forwarded to dev/null.)}

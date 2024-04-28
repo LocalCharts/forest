@@ -1,0 +1,16 @@
+  
+\title{PreorderCat}
+\tag{theorymap}
+\taxon{definition}
+
+\p{[ThCategory](y1xsx) #{\rightarrow} [ThPreorder](y1xsx)}
+\subtree{\title{Type Mapping} 
+\scope{\p{[Ob](dswhf):}\p{#{#{\mathop{\mathrm{ Ob }}\dashv []}}}\p{#{#{\mathop{\mathrm{ default }}\dashv []}}}}
+
+\scope{\p{[Hom](esi6q):}\p{#{#{\left(dom\mathop{\mathrm{ → }}codom\right)\dashv [dom::\mathop{\mathrm{ Ob }},\ codom::\mathop{\mathrm{ Ob }}]}}}\p{#{#{\left(dom\mathop{\mathrm{ ≤ }}codom\right)\dashv [dom,\ codom]}}}}}
+
+\subtree{\title{Term Mapping} 
+\scope{\p{[compose](dfgkn):}\p{#{#{\left(f\mathop{\mathrm{ ⋅ }}g\right)\dashv [a::\mathop{\mathrm{ Ob }},\ b::\mathop{\mathrm{ Ob }},\ c::\mathop{\mathrm{ Ob }},\ f::\left(a\mathop{\mathrm{ → }}b\right),\ g::\left(b\mathop{\mathrm{ → }}c\right)]}}}\p{#{#{\mathop{\mathrm{ trans }}\left(f,g\right)\dashv [a,\ b,\ c,\ f::\left(a\mathop{\mathrm{ ≤ }}b\right),\ g::\left(b\mathop{\mathrm{ ≤ }}c\right)]}}}}
+
+\scope{\p{[id](xosie):}\p{#{#{\mathop{\mathrm{ id }}\left(a\right)\dashv [a::\mathop{\mathrm{ Ob }}]}}}\p{#{#{\mathop{\mathrm{ refl }}\left(a\right)\dashv [a]}}}}}
+

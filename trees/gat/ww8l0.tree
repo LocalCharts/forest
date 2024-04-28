@@ -1,0 +1,2 @@
+\title{}
+#{\left(\left(X\mathop{\mathrm{ ⊗ }}Y\right)\mathop{\mathrm{ ⊗ }}Z\right) = \left(X\mathop{\mathrm{ ⊗ }}\left(Y\mathop{\mathrm{ ⊗ }}Z\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ Fib }}\left(A\right),\ Y::\mathop{\mathrm{ Fib }}\left(A\right),\ Z::\mathop{\mathrm{ Fib }}\left(A\right)]}

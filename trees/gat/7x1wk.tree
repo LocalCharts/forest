@@ -1,0 +1,2 @@
+\title{compose}
+#{\left(f̄\mathop{\mathrm{ ⋅ }}ḡ\right)::\mathop{\mathrm{ FibHom }}\left(\left(f\mathop{\mathrm{ ⋅ }}g\right),x,z\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ x::\mathop{\mathrm{ Fib }}\left(A\right),\ y::\mathop{\mathrm{ Fib }}\left(B\right),\ z::\mathop{\mathrm{ Fib }}\left(C\right),\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(B\mathop{\mathrm{ → }}C\right),\ f̄::\mathop{\mathrm{ FibHom }}\left(f,x,y\right),\ ḡ::\mathop{\mathrm{ FibHom }}\left(g,y,z\right)]}

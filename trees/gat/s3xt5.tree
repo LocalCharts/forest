@@ -1,0 +1,17 @@
+  
+\title{ThOpindexedMonoidalCategory}
+\tag{theory}
+
+ \p{Theory of an opindexed, or covariantly indexed, monoidal category.}\p{An *opindexed monoidal category* is a pseudofunctor into **MonCat**, the 2-category of monoidal categories, strong monoidal functors, and monoidal natural transformations. For simplicity, we take the pseudofunctor, the monoidal categories, and the monoidal functors all to be strict.}\p{References:}\p{  * [nLab: indexed monoidal category](https://ncatlab.org/nlab/show/indexed+monoidal+category)}\p{  * Shulman, 2008: Framed bicategories and monoidal fibrations}\p{  * Shulman, 2013: Enriched indexed categories}
+\scope{  \put\transclude/heading{false} 
+\transclude{s3xt5_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

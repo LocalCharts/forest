@@ -1,0 +1,38 @@
+\title{FinSetC}
+\taxon{definition}
+\tag{model}\p{\code{function Ob(x::Int)
+    if x >= 0
+        x
+    else
+         @fail "expected nonnegative integer"
+    end
+end}}
+
+\p{\code{function Hom(f::Vector{Int}, n::Int, m::Int)
+    if length(f) == n
+        for i = 1:n
+            if f[i] ∉ 1:m
+                 @fail "index not in codomain: $(i)"
+            end
+        end
+        f
+    else
+         @fail "length of morphism does not match domain: $(length(f)) != $(m)"
+    end
+end}}
+
+\p{\code{function id(x::Int)
+    collect(1:x)
+end}}
+
+\p{\code{function compose(f::Vector{Int}, g::Vector{Int})
+    g[f]
+end}}
+
+\p{\code{function dom(f::Vector{Int})
+    length(f)
+end}}
+
+\p{\code{function codom(var"##885"::Vector{Int}; context)
+    context[:codom]
+end}}

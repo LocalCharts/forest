@@ -1,0 +1,17 @@
+  
+\title{ThMonoidalCategoryWithBidiagonals}
+\tag{theory}
+
+ \p{Theory of *monoidal categories with bidiagonals*}\p{The terminology is nonstandard (is there any standard terminology?) but is supposed to mean a monoidal category with coherent diagonals and codiagonals. Unlike in a biproduct category, the naturality axioms need not be satisfied.}
+\scope{  \put\transclude/heading{false} 
+\transclude{ksjld_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

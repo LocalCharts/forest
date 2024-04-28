@@ -1,0 +1,2 @@
+\title{create}
+#{\mathop{\mathrm{ create }}\left(A\right)::\left(\mathop{\mathrm{ bottom }}\mathop{\mathrm{ ≤ }}A\right)\dashv [A::\mathop{\mathrm{ El }}]}

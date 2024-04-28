@@ -1,0 +1,2 @@
+\title{}
+#{\left(\left(f\mathop{\mathrm{ ⊗ }}g\right)\mathop{\mathrm{ ⊗ }}h\right) = \left(f\mathop{\mathrm{ ⊗ }}\left(g\mathop{\mathrm{ ⊗ }}h\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ Ob }},\ Y::\mathop{\mathrm{ Ob }},\ Z::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}X\right),\ g::\left(B\mathop{\mathrm{ → }}Y\right),\ h::\left(C\mathop{\mathrm{ → }}Z\right)]}

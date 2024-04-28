@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ dunit }}\left(A\right) = \left(\mathop{\mathrm{ create }}\left(A\right)\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ mcopy }}\left(A\right)\right)\dashv [A::\mathop{\mathrm{ Ob }}]}

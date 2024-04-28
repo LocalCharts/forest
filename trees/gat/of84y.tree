@@ -1,0 +1,2 @@
+\title{}
+#{\left(\mathop{\mathrm{ zeromap }}\left(A,B\right)\mathop{\mathrm{ ⋅ }}f\right) = \mathop{\mathrm{ zeromap }}\left(A,C\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ f::\left(B\mathop{\mathrm{ → }}C\right)]}

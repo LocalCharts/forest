@@ -1,0 +1,17 @@
+  
+\title{ThSemiGroup}
+\tag{theory}
+
+ \p{This theory contains an associative binary operation called multiplication. }\p{Examples:}\p{  * The integers under multiplication}\p{  * Nonempty lists under concatenation}
+\scope{  \put\transclude/heading{false} 
+\transclude{morqc_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

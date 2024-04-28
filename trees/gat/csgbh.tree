@@ -1,0 +1,17 @@
+  
+\title{ThNatPlusTimes}
+\tag{theory}
+
+ \p{The theory of nat-plus with multiplication}
+\scope{  \put\transclude/heading{false} 
+\transclude{csgbh_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

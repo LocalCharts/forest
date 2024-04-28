@@ -1,0 +1,2 @@
+\title{}
+#{\left(f\mathop{\mathrm{ ⊗ }}\mathop{\mathrm{ id }}\left(\mathop{\mathrm{ munit }}\right)\right) = f\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

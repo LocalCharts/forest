@@ -1,0 +1,2 @@
+\title{id}
+#{\mathop{\mathrm{ id }}\left(x\right)::\mathop{\mathrm{ FibHom }}\left(\mathop{\mathrm{ id }}\left(A\right),x,x\right)\dashv [A::\mathop{\mathrm{ Ob }},\ x::\mathop{\mathrm{ Fib }}\left(A\right)]}

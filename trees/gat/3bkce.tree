@@ -1,0 +1,25 @@
+\title{OpC}
+\taxon{definition}
+\tag{model}\p{\code{function Ob(x::ObT)
+    (Ob[model.cat])(x)
+end}}
+
+\p{\code{function Hom(x::HomT, d::ObT, cd::ObT)
+    (Hom[model.cat])(x, cd, d)
+end}}
+
+\p{\code{function id(x::ObT)
+    (id[model.cat])(x)
+end}}
+
+\p{\code{function dom(f::HomT; context)
+    (codom[model.cat])(f; context = rename(context, Dict(:dom => :codom, :codom => :dom)))
+end}}
+
+\p{\code{function codom(f::HomT; context)
+    (dom[model.cat])(f; context = rename(context, Dict(:dom => :codom, :codom => :dom)))
+end}}
+
+\p{\code{function compose(f::HomT, g::HomT; context = nothing)
+    (compose[model.cat])(g, f; context = rename(context, Dict(:a => :c, :c => :a, :b => :b)))
+end}}

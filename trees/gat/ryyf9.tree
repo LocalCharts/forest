@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ pair }}\left(\left(h\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ proj1 }}\left(B,C\right)\right),\left(h\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ proj2 }}\left(B,C\right)\right)\right) = h\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ h::\left(A\mathop{\mathrm{ → }}\left(B\mathop{\mathrm{ ⊗ }}C\right)\right)]}

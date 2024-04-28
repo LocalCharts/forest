@@ -1,0 +1,17 @@
+  
+\title{ThSubobjectHeytingAlgebra}
+\tag{theory}
+
+ \p{Theory of Heyting algebra of subobjects in a Heyting category, such as a topos.}
+\scope{  \put\transclude/heading{false} 
+\transclude{1kjla_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

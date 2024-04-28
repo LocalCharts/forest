@@ -1,0 +1,17 @@
+  
+\title{ThStrictMonCat}
+\tag{theory}
+
+ \p{The theory of monoidal categories with strict associativity}
+\scope{  \put\transclude/heading{false} 
+\transclude{p75jw_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

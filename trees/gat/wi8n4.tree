@@ -1,0 +1,2 @@
+\title{mate}
+#{\mathop{\mathrm{ mate }}\left(f\right)::\left(\mathop{\mathrm{ dual }}\left(B\right)\mathop{\mathrm{ → }}\mathop{\mathrm{ dual }}\left(A\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right)]}

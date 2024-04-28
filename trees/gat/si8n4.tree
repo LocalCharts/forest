@@ -1,0 +1,2 @@
+\title{dunit}
+#{\mathop{\mathrm{ dunit }}\left(A\right)::\left(\mathop{\mathrm{ munit }}\mathop{\mathrm{ → }}\left(\mathop{\mathrm{ dual }}\left(A\right)\mathop{\mathrm{ ⊗ }}A\right)\right)\dashv [A::\mathop{\mathrm{ Ob }}]}

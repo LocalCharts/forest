@@ -1,0 +1,2 @@
+\title{}
+#{\mathop{\mathrm{ id }}\left(\left(X\mathop{\mathrm{ ⊗ }}Y\right)\right) = \left(\mathop{\mathrm{ id }}\left(X\right)\mathop{\mathrm{ ⊗ }}\mathop{\mathrm{ id }}\left(Y\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ Fib }}\left(A\right),\ Y::\mathop{\mathrm{ Fib }}\left(A\right)]}

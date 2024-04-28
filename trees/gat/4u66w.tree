@@ -1,0 +1,2 @@
+\title{}
+#{\left(\mathop{\mathrm{ id }}\left(m\right)\mathop{\mathrm{ ⋅ }}α\right) = α\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ D::\mathop{\mathrm{ Ob }},\ m::\left(A\mathop{\mathrm{ ↛ }}B\right),\ n::\left(C\mathop{\mathrm{ ↛ }}D\right),\ f::\left(A\mathop{\mathrm{ → }}C\right),\ g::\left(B\mathop{\mathrm{ → }}D\right),\ α::\mathop{\mathrm{ Cell }}\left(m,n,f,g\right)]}

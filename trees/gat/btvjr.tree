@@ -1,0 +1,2 @@
+\title{otimes}
+#{\mathop{\mathrm{ otimes }}\left(f,X,Y\right)::\left(\left(\left(X\mathop{\mathrm{ * }}f\right)\mathop{\mathrm{ ⊗ }}\left(Y\mathop{\mathrm{ * }}f\right)\right)\mathop{\mathrm{ ⇢ }}\left(\left(X\mathop{\mathrm{ ⊗ }}Y\right)\mathop{\mathrm{ * }}f\right)\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ X::\mathop{\mathrm{ Fib }}\left(A\right),\ Y::\mathop{\mathrm{ Fib }}\left(A\right)]}

@@ -1,0 +1,2 @@
+\title{Hom}
+#{\left(dom\mathop{\mathrm{ → }}codom\right)\dashv [dom::\mathop{\mathrm{ Ob }},\ codom::\mathop{\mathrm{ Ob }}]}

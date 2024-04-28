@@ -1,0 +1,14 @@
+  
+\title{NatPlusMonoid}
+\tag{theorymap}
+\taxon{definition}
+
+\p{[ThMonoid](ohwjw) #{\rightarrow} [ThNatPlus](ohwjw)}
+\subtree{\title{Type Mapping} 
+\scope{\p{[default](dis7y):}\p{#{#{\mathop{\mathrm{ default }}\dashv []}}}\p{#{#{\mathop{\mathrm{ ℕ }}\dashv []}}}}}
+
+\subtree{\title{Term Mapping} 
+\scope{\p{[e](phwjw):}\p{#{#{\mathop{\mathrm{ e }}\dashv []}}}\p{#{#{\mathop{\mathrm{ Z }}\dashv []}}}}
+
+\scope{\p{[⋅](792ox):}\p{#{#{\mathop{\mathrm{ ⋅ }}\left(x,y\right)\dashv [x,\ y]}}}\p{#{#{\mathop{\mathrm{ + }}\left(x,y\right)\dashv [x::\mathop{\mathrm{ ℕ }},\ y::\mathop{\mathrm{ ℕ }}]}}}}}
+

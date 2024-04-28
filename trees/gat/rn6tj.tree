@@ -1,0 +1,17 @@
+  
+\title{ThCartesianClosedCategory}
+\tag{theory}
+
+ \p{Theory of *cartesian closed categories*, aka CCCs}\p{A CCC is a cartesian category with internal homs (aka, exponential objects).}\p{FIXME: This theory should also extend \code{ThClosedMonoidalCategory}, but multiple inheritance is not yet supported.}
+\scope{  \put\transclude/heading{false} 
+\transclude{rn6tj_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

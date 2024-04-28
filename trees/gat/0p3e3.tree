@@ -1,0 +1,17 @@
+  
+\title{ThMonoidalDoubleCategory}
+\tag{theory}
+
+ \p{Theory of *monoidal double categories*}\p{To avoid associators and unitors, we assume that the monoidal double category is fully *strict*: both the double category and its monoidal product are strict. Apart from assuming strictness, this theory agrees with the definition of a monoidal double category in (Shulman 2010) and other recent works.}\p{In a monoidal double category #{(D,⊗,I)}, the underlying categories #{D₀} and #{D₁} are each monoidal categories, #{(D₀,⊗₀,I₀)} and #{(D₁,⊗₁,I₁)}, subject to further axioms such as the source and target functors #{S, T: D₁ → D₀} being strict monoidal functors.}\p{Despite the apparent asymmetry in this setup, the definition of a monoidal double category unpacks to be nearly symmetric with respect to arrows and proarrows, except that the monoidal unit #{I₀} of #{D₀} induces the monoidal unit of #{D₁} as #{I₁ = U(I₀)}.}\p{References:}\p{  * Shulman, 2010: Constructing symmetric monoidal bicategories}\p{FIXME: Should also inherit \code{ThMonoidalCategory{Ob,Hom}} but multiple inheritance is not supported.}
+\scope{  \put\transclude/heading{false} 
+\transclude{0p3e3_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

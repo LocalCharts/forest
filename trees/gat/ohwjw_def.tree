@@ -1,0 +1,20 @@
+  
+\title{ThMonoid}
+\taxon{definition}
+
+
+\subtree{\title{Type Constructors} 
+\transclude{eis7y}}
+
+\subtree{\title{Term Constructors} 
+\transclude{892ox}
+
+\transclude{qhwjw}}
+
+\subtree{\title{Axioms} 
+\transclude{norqc}
+
+\transclude{rhwjw}
+
+\transclude{shwjw}}
+

@@ -1,0 +1,17 @@
+  
+\title{ThIdLawlessCat}
+\tag{theory}
+
+ \p{\code{ThIdLawlessCat}}\p{The theory of a category without identity axioms.}
+\scope{  \put\transclude/heading{false} 
+\transclude{wosie_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

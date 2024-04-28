@@ -1,0 +1,2 @@
+\title{Cell}
+#{\mathop{\mathrm{ Cell }}\left(dom,codom,src,tgt\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ D::\mathop{\mathrm{ Ob }},\ dom::\left(A\mathop{\mathrm{ ↛ }}B\right),\ codom::\left(C\mathop{\mathrm{ ↛ }}D\right),\ src::\left(A\mathop{\mathrm{ → }}C\right),\ tgt::\left(B\mathop{\mathrm{ → }}D\right)]}

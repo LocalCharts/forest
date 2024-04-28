@@ -1,0 +1,2 @@
+\title{}
+#{\left(f\mathop{\mathrm{ ⋅ }}\left(g\mathop{\mathrm{ ⋅ }}a\right)\right) = \left(\left(f\mathop{\mathrm{ ⋅ }}g\right)\mathop{\mathrm{ ⋅ }}a\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ AttrType }},\ f::\left(A\mathop{\mathrm{ → }}B\right),\ g::\left(B\mathop{\mathrm{ → }}C\right),\ a::\mathop{\mathrm{ Attr }}\left(C,X\right)]}

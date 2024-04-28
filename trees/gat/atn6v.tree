@@ -1,0 +1,17 @@
+  
+\title{ThLawlessMonCat}
+\tag{theory}
+
+ \p{The theory of monoidal categories }\p{\code{mcompose} is usually denoted with ⊗ and the munit is usually denoted by 1 or I.}
+\scope{  \put\transclude/heading{false} 
+\transclude{atn6v_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

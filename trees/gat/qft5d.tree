@@ -1,0 +1,17 @@
+  
+\title{ThHypergraphCategoryAdditive}
+\tag{theory}
+
+ \p{Theory of *hypergraph categories*, in additive notation}\p{Mathematically the same as [\code{ThHypergraphCategory}](@ref) but with different notation.}
+\scope{  \put\transclude/heading{false} 
+\transclude{qft5d_def}
+ }
+\subtree{\title{Models}
+ \put\transclude/expanded{false} }
+
+\subtree{\title{TheoryMaps} 
+
+\subtree{\title{As domain} \put\transclude/expanded{false} }
+
+\subtree{\title{As codomain} \put\transclude/expanded{false} }}
+

@@ -1,0 +1,2 @@
+\title{}
+#{\left(g\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ zeromap }}\left(A,B\right)\right) = \mathop{\mathrm{ zeromap }}\left(A,C\right)\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ g::\left(C\mathop{\mathrm{ → }}A\right)]}

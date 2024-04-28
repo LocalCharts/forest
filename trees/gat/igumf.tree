@@ -1,0 +1,2 @@
+\title{}
+#{\left(\mathop{\mathrm{ coproj2 }}\left(⨆\right)\mathop{\mathrm{ ⋅ }}\mathop{\mathrm{ copair }}\left(⨆,f,g\right)\right) = g\dashv [A::\mathop{\mathrm{ Ob }},\ B::\mathop{\mathrm{ Ob }},\ C::\mathop{\mathrm{ Ob }},\ ⨆::\mathop{\mathrm{ Coproduct }}\left(A,B\right),\ f::\left(A\mathop{\mathrm{ → }}C\right),\ g::\left(B\mathop{\mathrm{ → }}C\right)]}

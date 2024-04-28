@@ -1,0 +1,2 @@
+\title{mcompose}
+#{\left(f₁\mathop{\mathrm{ ⊗ }}f₂\right)::\left(\left(A₁\mathop{\mathrm{ ⊗ }}A₂\right)\mathop{\mathrm{ → }}\left(B₁\mathop{\mathrm{ ⊗ }}B₂\right)\right)\dashv [A₁::\mathop{\mathrm{ Ob }},\ A₂::\mathop{\mathrm{ Ob }},\ B₁::\mathop{\mathrm{ Ob }},\ B₂::\mathop{\mathrm{ Ob }},\ f₁::\left(A₁\mathop{\mathrm{ → }}B₁\right),\ f₂::\left(A₂\mathop{\mathrm{ → }}B₂\right)]}

@@ -1,0 +1,2 @@
+\title{plus}
+#{\mathop{\mathrm{ plus }}\left(A\right)::\left(\left(A\mathop{\mathrm{ ⊕ }}A\right)\mathop{\mathrm{ → }}A\right)\dashv [A::\mathop{\mathrm{ Ob }}]}

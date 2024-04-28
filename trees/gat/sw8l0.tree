@@ -1,0 +1,2 @@
+\title{otimes}
+#{\left(X\mathop{\mathrm{ ⊗ }}Y\right)::\mathop{\mathrm{ Fib }}\left(A\right)\dashv [A::\mathop{\mathrm{ Ob }},\ X::\mathop{\mathrm{ Fib }}\left(A\right),\ Y::\mathop{\mathrm{ Fib }}\left(A\right)]}
