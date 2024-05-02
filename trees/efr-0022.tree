@@ -1,0 +1,8 @@
+\date{2024-04-30}
+\author{eigil-rischel}
+\import{macros}
+\taxon{proposition}
+\p{
+  The category of convex spaces admits a closed symmetric monoidal structure, with the internal hom #{[X,Y]} being given by the set of homomorphisms #{X \to Y} with pointwise operations.
+}
+\p{The tensor product #{X \otimes Y} classifies "biaffine" functions #{X \times Y \to Z}, i.e those that are homomorphic in each variable separately.}

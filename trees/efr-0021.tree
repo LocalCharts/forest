@@ -1,0 +1,10 @@
+\date{2024-04-30}
+\taxon{definition}
+\author{eigil-rischel}
+\title{Convex function}
+\p{
+  Let #{X} be a convex space. Then a function #{f: X \to \RR} is called \em{convex} if, for all #{\theta \in [0,1], x,x' \in X}, it satisfies #{f(\theta x + (1-\theta)x') \leq \theta f(x) + (1-\theta)f(x')}.
+}
+\p{
+  #{f} is called \em{concave} if #{-f} is convex. It is called \em{strictly convex} if strict inequality holds above whenever #{x \neq x'} and #{\theta \in (0,1)}, and \em{strictly concave} if #{-f} is strictly convex.
+}

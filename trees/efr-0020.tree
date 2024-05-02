@@ -1,0 +1,11 @@
+\date{2024-04-30}
+\author{eigil-rischel}
+\import{macros}
+\taxon{definition}
+\title{Convex Space}
+\p{
+  The category of \em{convex spaces} is the category of algebras for the monad #{\Delta: \Set \to \Set} of discrete finite-support distributions. The morphisms are called \em{#{\Delta}-homomorphisms} or \em{homomorphisms of convex spaces}. (To avoid confusion, we reserve terms like \em{convex map} for the class of functions).
+}
+\p{
+  So as not to multiply notation unnecessarily, we simply denote the category of convex spaces by #{\Set^\Delta}, using the usual notation for the Eilenberg-Moore category.
+}

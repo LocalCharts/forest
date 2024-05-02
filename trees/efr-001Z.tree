@@ -1,0 +1,44 @@
+\date{2024-04-30}
+\author{eigil-rischel}
+\title{Convex Duality made Difficult}
+\import{macros}
+%Introduction
+
+%Convex optimization problems
+\subtree{
+  \title{Convex optimization}
+
+  %def: std. form convex
+  \transclude{efr-001G}
+
+  %Lagrangian and duality
+}
+
+\subtree{
+  \title{The Category of Minmax problems}
+
+  %def: minmax
+  \transclude{efr-001C}
+
+  %def: convex-affine
+
+  %fibration structure (min-maxing)
+
+  %conc/conv
+
+  %monoidal structure
+  
+  %duality structure
+
+}
+
+\subtree{
+  \title{Strong duality}
+}
+
+\subtree{
+  \title{The Legendre Transform}
+}
+%Strong duality, theorems
+
+%Convex duality as a theorem

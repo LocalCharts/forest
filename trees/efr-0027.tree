@@ -1,0 +1,20 @@
+\date{2024-05-01}
+\import{macros}
+\author{eigil-rischel}
+
+\p{
+  Let a morphism #{\phi = (\phi^+,\phi^-)} in #{\Set^\Delta \times \Set^{\Delta,\op}} be called \em{forwards} if #{\phi^-} is an isomorphism, and \em{backwards} if #{\phi^+} is an isomorphism.
+  Let #{F} denote the set of forwards morphisms, #{B} the set of backwards. Then clearly #{(F,B)} form an orthogonal factorization system - in fact, both #{(F,B)} and #{(B,F)} do.
+}
+\p{
+  Note that #{F} consists exactly of the local equivalences for the inclusion of #{* \times \Set^{\Delta,\op}}, so that the localization of #{(X,A)} can be formed as the terminal forwards map from it, which is clearly #{(X,A) \to (*,A)} (of course, this is not surprising).
+}
+\p{
+  These factorization systems lift over the functor #{\Minmax \to \Set^\Delta \times \Set^{\Delta,\op}}.
+  In fact, since this is a bifibration, we get a tenary factorization system #{(OB,V,CF)}, where #{OB} are the morphisms that are opCartesian over a backwards map, #{CF} the morphisms that are Cartesian over a forwards map, and #{V} the vertical morphisms (dually, we get #{(OF,V,CB)}).
+}
+\p{
+  Let us describe the maps in #{OB}. Up to relabeling they must have the form #{\phi = (1_X,\phi^-)}.
+  So let #{(X,A,L) \to (X,B,L')} be such a map. We already know the formula for the opCartesian lifts,
+  so the requirement is that #{L'}
+}

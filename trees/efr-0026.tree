@@ -1,0 +1,19 @@
+\date{2024-04-30}
+\author{eigil-rischel}
+\taxon{corrollary}
+\import{macros}
+\p{
+  Since #{\Minmax \to \Set^\Delta \times \Set^{\Delta,\op}} is topological, it is both a fibration and an opfibration.
+}
+\p{
+  Given #{\phi: (X,A) \to (Y,B)} and #{L = (Y,B,L),}, the Cartesian lift is
+  ##{\phi^*L(x,a) = \sup_{b \mid \phi^-(b)=a}L(\phi^+(x),b)}.
+  By duality, given #{\phi} as above and #{L = (X,A,L)}, the coCartesian lift is
+  ##{\phi_!L(y,b) = \inf_{x \mid \phi^+(x)=y}L(x,\phi^-(b))}
+  In particular:
+  \ol{
+    \li{If #{\phi^-} is an isomorphism, then #{\phi^*L(x,a) = L(\phi^+(x),(\phi^-)^{-1}(a))}}
+    \li{Dually...}
+    \li{If #{\phi^+} is a projection #{X = Y \times Z to Y}, then #{\phi_!L(y,b) = \inf_z L((y,z),\phi^-(b))}}
+  }
+}

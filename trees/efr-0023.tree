@@ -1,0 +1,34 @@
+\date{2024-04-30}
+\taxon{proposition}
+\import{macros}
+\author{eigil-rischel}
+\p{
+  The forgetful functor #{\Minmax \to \Set^\Delta \times \Set^{\Delta,\op}} displays #{\Minmax} as topological over #{\Set^\Delta \times \Set^{\Delta,\op}}
+}
+\proof{
+  \p{
+    Let #{(X,A)} be a pair of convex spaces, and let #{\phi_i: (X,A) \to (Y_i,B_i)} be a family of morphisms, with #{(Y_i,B_i,L_i)} a family of minmax problems. Then
+    ##{L(x,a) = \sup_i \sup_{b, \phi_i^-(b)=a} L_i(\phi_i(x),b)}
+    is the required universal lift.
+  }
+  \p{
+    To see this, we must first verify that #{\phi_i: (X,A,L) \to (Y_i,B_i,L_i)} really is a morphism.
+    We have
+    ##{L(x,\phi_i^-(b)) = \sup_j  \sup_{b', \phi_j^-(b')=a}_j(\phi_j(x),b') \geq \sup_{b', \phi_i^-(b')=\phi_i^-(b)}L_i(\phi_i(x),b') \geq L_i(\phi_i(x),b)}
+    which is exactly the required inequality.
+  }
+  \p{
+    Now let #{(Z,C,L')} be another minmax problem, and let
+    #{\psi: (Z,C) \to (X,Y)} be a morphism so that #{phi_i\circ\psi : (Z,C,L') \to (Y_i,B_i,L_i)} is a morphism of minmax problems for each #{i}. We must prove that #{\psi: (Z,C,L') \to (X,A,L)} is also a morphism. In other words we must prove
+    ##{L'(z,\psi^-(a)) \geq L(\psi^+(z),a) = \sup_i \sup_{b, \phi_i^-(b)=a} L_i(\phi_i^+(\psi(z)),b)}
+  }
+  \p{
+    Clearly this is equivalent to proving for each individual #{i}
+    ##{L'(z,\psi^-(a)) \geq \sup_{b, \phi_i^-(b)=a} L_i(\phi_i^+(\psi(z)),b)}
+  }
+  \p{
+    To prove this, it is sufficient to prove the following inequality for all #{b:}
+    ##{L'(z,\psi^-(\phi_i^-(b))) \geq L_i(\phi_i^+(\psi(z)),b),}
+    which is exactly the hypothesis that #{\phi_i \circ \psi} is a morphism.
+  }
+}
