@@ -222,6 +222,7 @@
 \def\Pt{#{\operatorname{\cP\mathrm{t}}}}
 \def\Sh{#{\operatorname{\cS\mathrm{h}}}}
 \def\Open{#{\cO}}
+\def\Spec{#{\mathrm{Spec}}}
 
 \def\Poly{#{\cat{Poly}}}
 \def\MonPoly{#{\cat{Mon}(\Poly)}}
