@@ -16,15 +16,32 @@
 
 \subtree{
   \title{The Category of Minmax problems}
-
   %def: minmax
   \transclude{efr-001C}
 
-  %def: convex-affine
+  We will see that various constructions on this category, which are natural and well-behaved from the point of view of category theory, capture relevant constructions from the theory of convex optimization.
+
+  \ol{
+    \li{#{\Minmax} is bifibred over #{\Set^\Delta \times \Set^{\Delta,\op}}, and the Cartesian and coCartesian lifts capture the operations of minimizing over the primal variables or maximizing over the dual variables}
+    \li{The property of \em{strong duality} amounts to the claim that a particular diagram has the local Beck-Chevalley property}
+    \li{Relatedly, the existence of a Nash equilibrium for the game corresponding to #{L} amounts to the existence of a certain morphism. The fact that this implies strong duality can be derived by purely categorical means.}
+  }
+
+  % Duality
+
+  \transclude{efr-001J}
+
+  \p{
+    We will often utilize this duality to abbreviate proofs, proving something, for example, for the forwards direction and arguing "by duality" that it holds for the backwards direction as well.
+  }
 
   %fibration structure (min-maxing)
-
+  
   \transclude{efr-0023}
+
+  \p{
+    What's "really" going on here is that #{\Minmax} is a two-sided fibration, the result of taking the functor #{\Set^{\Delta,\op} \times \Set^{\Delta,\op} \to \Cat} carrying a pair #{X,Y} to the poset of minmax problems #{L: X \times Y \to \RR} (in the opposite order), with morphisms acting by precomposition, and applying the Grothendieck construction "contravariantly in the first variable and covariantly in the second variable". (And then observing that the precomposition action has left/right adjoints given by #{\inf}/#{\sup}, to make this into a \em{bi}fibration). But the theory of bifibrations is quite complicated in general.
+  }
 
 
   %conc/conv
