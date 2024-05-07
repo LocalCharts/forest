@@ -19,7 +19,7 @@
   %def: minmax
   \transclude{efr-001C}
 
-  We will see that various constructions on this category, which are natural and well-behaved from the point of view of category theory, capture relevant constructions from the theory of convex optimization.
+  \p{We will see that various constructions on this category, which are natural and well-behaved from the point of view of category theory, capture relevant constructions from the theory of convex optimization.}
 
   \ol{
     \li{#{\Minmax} is bifibred over #{\Set^\Delta \times \Set^{\Delta,\op}}, and the Cartesian and coCartesian lifts capture the operations of minimizing over the primal variables or maximizing over the dual variables}
