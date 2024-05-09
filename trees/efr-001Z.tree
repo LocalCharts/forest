@@ -43,12 +43,14 @@
     What's "really" going on here is that #{\Minmax} is a two-sided fibration, the result of taking the functor #{\Set^{\Delta,\op} \times \Set^{\Delta,\op} \to \Cat} carrying a pair #{X,Y} to the poset of minmax problems #{L: X \times Y \to \RR} (in the opposite order), with morphisms acting by precomposition, and applying the Grothendieck construction "contravariantly in the first variable and covariantly in the second variable". (And then observing that the precomposition action has left/right adjoints given by #{\inf}/#{\sup}, to make this into a \em{bi}fibration). But the theory of bifibrations is quite complicated in general.
   }
 
-
-  %conc/conv
+  
 
   %monoidal structure
-  
-  %duality structure
+  \transclude{efr-001N}
+  %monoidal fibration
+  \transclude{efr-002D}
+  \p{In the case of a Cartesian base, a monoidal fibration (like the one we have here) is equivalent to a fibration with a monoidal structure on each fiber, compatible with the reindexing in a certain way. Our base is not Cartesian, but does seem to come from a monoidal structure on each fiber, given by addition of #{L}s. The point is that, given #{(X,A,L)}, there is a canonical way to obtain an #{L} on #{(X\times Y, A \times B)}, given by using a Cartesian lift of #{X \times Y \to X} and a \em{coCartesian} lift of #{A \times B \to A}. This suggests there should be a useful theory of \em{monoidal bifibrations}, but this notion does not appear to have been studied before.}
+
 
 }
 
@@ -59,6 +61,3 @@
 \subtree{
   \title{The Legendre Transform}
 }
-%Strong duality, theorems
-
-%Convex duality as a theorem
