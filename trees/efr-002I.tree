@@ -1,0 +1,7 @@
+\date{2024-05-10}
+\author{eigil-rischel}
+\taxon{example}
+\import{macros}
+\p{
+  Consider #{L(x,\lambda) = x + \lambda x^2, x \in \RR, \lambda \in \RR_+}. This corresponds to the convex optimization problem "minimize #{x} subject to #{x^2 \leq 0}. This problem satisfies strong duality, but does not have an equilibrium. Clearly #{(L^+)(x) = \infty} unless #{x=0}, so #{(L^+)^- = 0}. For fixed #{\lambda}, #{L(x,\lambda)} is minimized at #{x = \frac{-1}{2\lambda}}, where it takes the value #{\frac{-1}{4\lambda}}, which negative and goes to zero as #{\lambda \to \infty}, so the supremum is #{0}. But since there is no #{\lambda} which attains this supremum, there is no equilibrium.
+}

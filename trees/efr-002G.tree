@@ -1,0 +1,13 @@
+\date{2024-05-10}
+\author{eigil-rischel}
+\taxon{theorem}
+\title{Slater's Constraint Qualification}
+\p{
+  Consider a convex optimization problem in classical form:
+  \ul{
+    \li{Optimize #{f_0(x)}, for #{x \in \RR^n}}
+    \li{Subject to #{f_i(x) \leq 0} for #{i = 1,\dots,n}}
+    \li{And subject to #{g_i(x) = 0} for #{i = 1,\dots,m}}
+  }
+  Suppose there is some #{k} so that #{f_k, f_{k+1}, \dots f_n} are all affine, rather than merely convex. (Possibly #{k=n+1}, and none of the #{f_i} are affine). Suppose that there exists some feasible #{x_0} so that #{f_i(x), \dots,f_{k-1}(x) < 0,} i.e so that the non-affine inequality constraints are satisfied strictly. Then strong duality holds in the problem.
+}

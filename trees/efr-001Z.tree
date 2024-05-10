@@ -27,6 +27,19 @@
     \li{Relatedly, the existence of a Nash equilibrium for the game corresponding to #{L} amounts to the existence of a certain morphism. The fact that this implies strong duality can be derived by purely categorical means.}
   }
 
+  %Relation to ordinary ones
+  \transclude{efr-002H}
+  \p{
+    Observe that minmax problems affine in #{A} are thus very similar to standard-form convex optimization problems, the main difference being that the set of allowed points in #{A} may be constrained in some other way than by requiring certain coordinates to be nonnegative.
+  }
+  \p{
+    On the other hand, if #{A} is thus constrained, the proposition doesn't actually imply that #{f,g} are convex! The easiest way to see this is by considering #{A = \{a\}} for some nonzero #{a}. Then we have #{L(x,a) = f(x) + ag(x),}, and clearly we can choose this decomposition in such a way that these functions are not convex.
+  }
+  \p{
+    However, if #{A \subset \RR^m} contains the positive cone #{\RR^m_+,} for example, we do have both #{f} and all the coordinates of #{g} convex.
+  }
+
+
   % Duality
 
   \transclude{efr-001J}
@@ -58,6 +71,13 @@
   \title{Strong duality}
   %Definition:
   \transclude{efr-002F}
+
+  %Slater, classical
+  \transclude{efr-002G}
+  \p{
+    This theorem can be proven by entirely classical methods. However, we will derive it from a more abstract statement about minmax problems.
+  }
+  %Slater, my version
 }
 
 \subtree{

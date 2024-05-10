@@ -341,3 +341,5 @@
 \def\Minmax{\cat{Minmax}}
 \def\Conv{\cat{Conv}}
 \def\Conc{\cat{Conc}}
+
+\def\braket[contents]{#{\langle \contents \rangle}}
