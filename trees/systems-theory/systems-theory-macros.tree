@@ -6,7 +6,6 @@
 \def\doc[name]{#{\mathfrak{\name}}}
 
 \def\Theories{#{{\dblcat{Th}}}}
-\def\RAlg{#{{\dblcat{RAlg}}}}
 
 \def\Paradigm{#{{(\dblcat{E}, T)}}}
 \def\Doc{#{\doc{Doc}}}
@@ -15,3 +14,5 @@
 
 \def\SymOperads{#{S[-]}}
 \def\SymDblOperads{#{\cat{S}[-]}}
+
+\def\dblLens{\compth{Lens}}
