@@ -1,0 +1,7 @@
+\date{2024-05-08}
+\title{eigil-rischel}
+\taxon{proposition}
+\import{macros}
+\p{
+  The forgetful functor #{\Minmax \to \Set^\Delta \times \Set^{\Delta,\op}} is a monoidal fibration, in the sense of [Shulman](shulman-monfib-2016), (see also [Moeller-Vasilakopoulou](moeller-vasilakopoulou-2018)). It is also a monoidal opfibration - in other words, both the classes of Cartesian and coCartesian maps are stable under tensor product.
+}

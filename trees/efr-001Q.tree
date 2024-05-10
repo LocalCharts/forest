@@ -1,0 +1,15 @@
+\date{2024-04-25}
+\taxon{proposition}
+\author{eigil-rischel}
+\p{
+    Let #{f: V \to \RR} be convex, so that #{(V,*,f)} is a minmax problem.
+    Then we can form the modified minmax problem #{L = (V,V^*,(x,\alpha) \mapsto f(x) - \alpha(x))} - note that, up to a sign change in the domain, this amounts to adding the constraint #{x = 0}.
+}
+\p{
+    Then #{(L^*)^+ = -L^- = f^*}
+}
+\p{
+    Note that the two uses of the asterisk in this equation conflict.
+    We have both the reversed optimization problem #{L^*} given by flipping the variables,
+    and the Legendre conjugate function #{f^*}. It may be good to alter this notation to resolve the conflict.
+}

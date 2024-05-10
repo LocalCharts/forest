@@ -1,0 +1,31 @@
+\date{2024-04-25}
+\author{eigil-rischel}
+\taxon{proposition}
+\import{macros}
+\p{
+    Let #{f: X \to \RR} be a continuous convex function defined on a vector space.
+    Then there is strong duality in the minmax problem #{f|_0}
+}
+\proof{
+    \p{
+        Observe that #{\{x,t \mid f(x) \leq t\} \subseteq X \oplus \RR} is a closed convex set.
+        Hence there is a hyperplane through #{(0,f(0))} so that the entire set is in one half-space.
+        This means a nontrivial affine equation #{A(x,t) \geq b} which is satisfied whenever #{t \geq f(x)}, and where #{A(0,f(0)) = b}.
+    }
+    \p{
+        Clearly #{A(x,t) = \alpha_0(x) - at} for some #{\alpha_0 \in X^*, a \in \RR}.
+        If #{a = 0} we have #{\alpha_0(x) \leq b} for \em{all} #{x}, which impossible.
+        So by normalizing let's set #{a = 1}.
+        This means #{\alpha_0 (x) + f(x) \geq b = f(0)}.
+    }
+    \p{
+        Recall that the minmax problem #{f|_0} is given by #{(X,X^*,L(x,\alpha) \mapsto f(x) - \alpha(x))}.
+        Strong duality means #{\inf_x\sup_\alpha L(x,\alpha) = \sup_\alpha \inf_x L(x,\alpha)}.
+        We always have the inequality #{\geq}, so it suffices to identify an #{\alpha^*} so that
+        #{\inf_x \sup_\alpha L(x,\alpha) \leq \inf_x L(x,\alpha^*)}
+    }
+    \p{
+        Clearly, for our #{L}, we have #{\inf_x\sup_\alpha L(x,\alpha) = f(0)}, since the supremum is #{\infty} unless #{x = 0}.
+        On the other hand, taking #{\alpha^* = -\alpha_0}, we have #{f(0) \leq f(x) - \alpha^*(x)} for all #{x} by construction, finishing the proof.
+    }
+}

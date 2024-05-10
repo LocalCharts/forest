@@ -1,0 +1,17 @@
+\date{2024-04-26}
+\author{eigil-rischel}
+\import{macros}
+\taxon{proposition}
+\p{
+    Let #{L} be a minmax problem.
+    Suppose there exists #{\phi: I \to L \otimes L^*}.
+    Then strong duality holds, i.e #{(L^+)^- \cong (L^-)^+}
+}
+\p{
+    #{((\phi)^+)^-} gives a morphism
+    ##{I = (I^+)^- \to ((L \otimes L^*)^+)^- \cong (L^+)^- \otimes ((L^*)^+)^- \cong (L^+)^- \otimes ((L^-)^+)^*}
+    Here we use the isomorphisms #{(L^+)^* = (L^*)^-} and vice versa, as well as strong monoidality of #{(-)^-} and #{(-)^+}.
+    The existence of that morphism means that
+    #{(L^+)^- \leq (L^-)^+,}
+    which is the other direction of the morphism we wanted.
+}

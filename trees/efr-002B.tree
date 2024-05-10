@@ -1,0 +1,11 @@
+\date{2024-05-07}
+\author{eigil-rischel}
+\taxon{definition}
+\title{The Twisted Grothendieck Construction}
+\p{
+  Let #{\cA: \cC^\op \times \cD \to \Cat} be a pseudofunctor in two variables.
+  Then we may take the grothendieck construction with respect to the first coordinate, obtaining a pseudofuncot #{\int_{X \in \cC} \cA(X,-): \cD \to \Cat},which in fact factors over the 2-category of fibrations over #{\cC}. We may then apply the covariant Grothendieck construction to this to obtain a category #{\int^{A \in \cD}\int_{X \in \cC}\cA(X,A)} which is fibred over #{\cD}
+}
+\p{
+  Conversely, we can apply these constructions in the opposite direction and obtain a category fibred over #{\cC}, namely #{\int_{X \in \cC}\int^{A \in \cD}\cA(X,A)}. Now, by a theorem of Street(????) the two obtained categories are both canonically fibred over #{\cC \times \cD,} and isomorphic as such.
+}

@@ -1,0 +1,8 @@
+\date{2024-04-25}
+\author{eigil-rischel}
+\taxon{definition}
+\p{
+    Let #{V} be a (real) vector space, and #{f: V \to RR} be a function (not necessarily linear).
+    Then the \em{legendre conjugate} #{f^*: V^* \to \RR} is defined by
+    ##{f^*(\alpha) = \sup_x \alpha(x) - f(x)}
+}

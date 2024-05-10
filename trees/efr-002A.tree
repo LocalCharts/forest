@@ -1,0 +1,24 @@
+\date{2024-05-07}
+\import{macros}
+\author{eigil-rischel}
+\taxon{lemma}
+\p{
+  Let #{X,Y} be convex spaces and let #{A \subset X \times Y} be a convex subspace. Let #{f: A \to \RR} be a convex function.
+  Then #{x \mapsto #{\inf_{y: (x,y) \in A} f(x,y)}} is again convex.
+}
+
+\proof{
+  \p{
+    Let #{\theta \in [0,1],x,x' \in X} be given, and consider:
+  }
+  ##{inf_{y: (\theta x + (1-\theta)x',y) \in A}f(\theta x + (1-\theta x'),y).}
+  \p{Since if #{(x,y), (x',y') \in A} then #{(\theta x + (1-\theta)x',\theta y + (1-\theta)y') \in A}, we have that this is less than:
+  ##{\leq \inf_{y,y': (x,y),(x',y')\in A} f(\theta x + (1-\theta)x', \theta y + (1-\theta) y'),}
+  because in the latter we are taking the infimum over a smaller set of #{f}'s}
+  \p{
+    Applying convexity, we get
+    ##{\leq \inf_{y,y': (x,y),(x,y') \in A} \theta f(x,y) + (1-\theta)f(x',y')}
+    ##{\leq \theta \inf_{y: (x,y) \in A}f(x,y) + (1-\theta)\inf_{y': (x',y')\in A} f(x',y')}
+    This is precisely the desired inequality.
+  }
+}

@@ -1,0 +1,5 @@
+\title{Asking "How did I get here?" with dynamical systems via bicomodules}
+\import{macros}
+\date{2024-04-19}
+
+\p{One thing that I've learned from David Spivak's approach to dynamical systems in $\Poly$ is that while we typically think about a discrete-time dynamical system as having a \emph{set} of state, oftentimes it makes more sense to have a \emph{category} (or equivalently, polynomial comonoid) of states. A closed discrete-time dynamical system with a category #{\cS} of states is a cofunctor #{\cS \to y^{\NN}}, where #{y^\NN} is the category with one object corresponding to the monoid of natural numbers with addition.}

@@ -1,0 +1,14 @@
+\date{2024-04-30}
+\author{eigil-rischel}
+\taxon{lemma}
+\import{macros}
+\p{
+  Let #{p: \cD \to \cC} be a fibration, and let #{\cC_0 \into \cC} be a coreflexive subcategory (i.e a full subcategory whose inclusion admits a \em{right} adjoint).
+  Then #{\cD_0 := \cD \times_\cC \cC_0} is a reflexive subcategory of #{\cD}
+}
+\proof{
+  First, note that the property of being fully faithful is stable under pullback (this is routine), so that we may indeed identify #{\cD_0} with a subcategory of #{\cD}.
+  Now let #{R: \cC \to \cC_0} be the right adjoint of the inclusion, and take #{D \in \cD}.
+  It suffices to exhibit some #{D' \to D} where #{D' \in \cD_0} and which is terminal among such objects over #{D}. Let #{f: Rp(D) \to p(D)} be the universal morphism, and take a Cartesian lift #{f^*D \to D}.
+  Clearly by definition #{f^*D \in \cD_0}. Given some other #{f': D'' \to D}, by terminality of #{Rp(d)} there exists a unique factorization of #{p(f')} as #{p(D'') \to Rp(D) \xto{f} p(D)}, and then by Cartesian-ness, there exists a unique lift of this factorization to a factorization of #{f'} over #{D'}, which is exactly what was necessary.
+}

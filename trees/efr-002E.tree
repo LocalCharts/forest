@@ -1,0 +1,5 @@
+\date{2024-05-09}
+\title{eigil-rischel}
+\taxon{proposition}
+\import{macros}
+\p{#{(-)^*: \Minmax \to \Minmax} is strong monoidal.}

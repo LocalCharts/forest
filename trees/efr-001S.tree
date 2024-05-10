@@ -1,0 +1,32 @@
+\date{2024-04-25}
+\taxon{proposition}
+\author{eigil-rischel}
+\import{macros}
+\def\Minmax{\cat{Minmax}}
+\def\Conv{\cat{Conv}}
+\def\Conc{\cat{Conc}}
+\p{
+    The assignment
+    ##{(X,Y,L) \mapsto (X,L^+)}, #{(\phi^+,\phi^-): L \to L' \mapsto \phi^+}
+    define a functor #{(-)^+: \Minmax \to \Conv}
+}
+\p{
+    Similarly, #{(-)^-} defines a functor #{\Minmax^\op \to \Conc}.
+}
+\p{
+    The assignment #{(X,f) \mapsto (X,-f)} defines a functor (identity on morphisms) #{\Conc \to \Conv}, and vice versa. Then #{L^- = -(L^*)^+}
+}
+\p{
+    The assignment #{(X,f) \mapsto (X,*, f)} defines a fully faithful functor #{\Conv \to \Minmax},
+    whose essential image consists of those tuples #{(X,Y,L)} where #{Y} is singleton.
+    Analogously, #{(Y,f) \mapsto (*,Y,f)} defines a fully faithful functor #{\Conc^\op \to \Minmax}
+}
+\p{
+    We will abuse notation and identify #{\Conv} and #{\Conc} with their images under these inclusions - thus, for example, #{L^+} will be regarded as an object of #{\Minmax}.
+}
+\p{
+    #{(-)^+} is right adjoint to the inclusion of #{\Conv}, and #{(-)^-} (viewed as a functor #{\Minmax \to \Conc^\op}) is left adjoint to the inclusion of #{\Conc^\op}
+}
+\p{
+    Using these identifications, we have #{(-)^- = (((-)^*)^+)^*}
+}

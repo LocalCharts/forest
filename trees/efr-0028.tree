@@ -1,0 +1,11 @@
+\date{2024-05-06}
+\import{macros}
+\author{eigil-rischel}
+\taxon{proposition}
+\p{Consider the classes of backwards and forwards maps in #{\Minmax}, as well as the classes of Cartesian and coCartesian maps (over #{\Set^\Delta \times \Set^{\Delta,\op}})}
+\ol{
+  \li{A forwards morphism #{(\phi,1_A): (X,A,L) \to (Y,A,L')} is Cartesian if and only if #{L(x,a) = L'(\phi(x),a)} for all #{x,a}}
+  \li{A forwards morphism #{(\phi,1_A): (X,A,L) \to (Y,A,L')} is coCartesian if and only if #{L'(y,a) = \inf_{\phi(x) = y} L(x,a)}}
+  \li{A backwards morphism #{(1_X,\phi): (X,A,L) \to (X,B,L')} is Cartesian if and only if #{L(x,a) = \inf_{\phi(b)=a} L'(x,b)}}
+  \li{A backwards morphism #{(1_X,\phi): (X,A,L) \to (X,B,L')} is coCartesian if and only if #{L'(x,b) = L(x,\phi(b))}}
+}

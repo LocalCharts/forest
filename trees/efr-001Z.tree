@@ -1,0 +1,65 @@
+\date{2024-04-30}
+\author{eigil-rischel}
+\title{Convex Duality made Difficult}
+\import{macros}
+%Introduction
+
+%Convex optimization problems
+\subtree{
+  \title{Convex optimization}
+
+  %def: std. form convex
+  \transclude{efr-001G}
+
+  %Lagrangian and duality
+}
+
+\subtree{
+  \title{The Category of Minmax problems}
+  %def: minmax
+  \transclude{efr-001C}
+
+  \p{We will see that various constructions on this category, which are natural and well-behaved from the point of view of category theory, capture relevant constructions from the theory of convex optimization.}
+
+  \ol{
+    \li{#{\Minmax} is bifibred over #{\Set^\Delta \times \Set^{\Delta,\op}}, and the Cartesian and coCartesian lifts capture the operations of minimizing over the primal variables or maximizing over the dual variables}
+    \li{The property of \em{strong duality} amounts to the claim that a particular diagram has the local Beck-Chevalley property}
+    \li{Relatedly, the existence of a Nash equilibrium for the game corresponding to #{L} amounts to the existence of a certain morphism. The fact that this implies strong duality can be derived by purely categorical means.}
+  }
+
+  % Duality
+
+  \transclude{efr-001J}
+
+  \p{
+    We will often utilize this duality to abbreviate proofs, proving something, for example, for the forwards direction and arguing "by duality" that it holds for the backwards direction as well.
+  }
+
+  %fibration structure (min-maxing)
+  
+  \transclude{efr-0023}
+
+  \p{
+    What's "really" going on here is that #{\Minmax} is a two-sided fibration, the result of taking the functor #{\Set^{\Delta,\op} \times \Set^{\Delta,\op} \to \Cat} carrying a pair #{X,Y} to the poset of minmax problems #{L: X \times Y \to \RR} (in the opposite order), with morphisms acting by precomposition, and applying the Grothendieck construction "contravariantly in the first variable and covariantly in the second variable". (And then observing that the precomposition action has left/right adjoints given by #{\inf}/#{\sup}, to make this into a \em{bi}fibration). But the theory of bifibrations is quite complicated in general.
+  }
+
+  
+
+  %monoidal structure
+  \transclude{efr-001N}
+  %monoidal fibration
+  \transclude{efr-002D}
+  \p{In the case of a Cartesian base, a monoidal fibration (like the one we have here) is equivalent to a fibration with a monoidal structure on each fiber, compatible with the reindexing in a certain way. Our base is not Cartesian, but does seem to come from a monoidal structure on each fiber, given by addition of #{L}s. The point is that, given #{(X,A,L)}, there is a canonical way to obtain an #{L} on #{(X\times Y, A \times B)}, given by using a Cartesian lift of #{X \times Y \to X} and a \em{coCartesian} lift of #{A \times B \to A}. This suggests there should be a useful theory of \em{monoidal bifibrations}, but this notion does not appear to have been studied before.}
+
+
+}
+
+\subtree{
+  \title{Strong duality}
+  %Definition:
+  \transclude{efr-002F}
+}
+
+\subtree{
+  \title{The Legendre Transform}
+}

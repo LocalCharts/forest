@@ -1,0 +1,8 @@
+\date{2024-05-09}
+\taxon{definition}
+\title{Strong Duality}
+\author{eigil-rischel}
+\p{
+  Let #{L = (X,A,L)} be a minmax problem. By abstract nonsense, there is a morphism
+  #{(L^+)^- \to (L^-)^+}. We say #{L} \em{satisfies strong duality} if it is an isomorphism. (Note that this is really just an inequality of real numbers, which must be an equality).
+}

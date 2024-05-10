@@ -1,0 +1,12 @@
+\date{2024-04-30}
+\author{eigil-rischel}
+\taxon{proposition}
+\import{macros}
+\p{
+  The inclusion of the subcategory of #{\Minmax} spanned by objects of the form #{(X,*,L)} admits a right adjoint. Dually, the subcategory spanned by objects of the form #{(*,Y,L)} admits a left adjoint.
+}
+\proof{
+  \p{
+    The inclusion of the subcategory of #{\Set^\Delta \times \Set^{\Delta,\op}} spanned by pairs #{(X,*)} clearly admits a right adjoint, since this is #{\Set^\Delta \times (\{*\} \into \Set^{\Delta,\op})} - the inclusion of an initial object admits a (trivial) right adjoint, and products of adjoints in #{\Cat} are adjoints. The desired result now follows by [[efr-0024]]. (The dual case follows mutatis mutandem.)
+  }
+}

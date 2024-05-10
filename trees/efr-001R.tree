@@ -1,0 +1,9 @@
+\date{2024-04-25}
+\author{eigil-rischel}
+\taxon{definition}
+\p{
+    Let #{\Conv} be the category where objects are pairs #{(X,f: X \to \RR)} consisting of a convex space and a convex function, and where morphisms #{\phi: (X,f) \to (Y,g)} are affine maps so that #{g(\phi(x)) \leq f(x)}.
+}
+\p{
+    Let #{\Conc} be the category where objects are pairs #{(X,f: X \to \RR)} consisting of a convex space and a concave function, and where morphisms #{\phi: (X,f) \to (Y,g)} are affine maps so that #{g(\phi(x)) \geq f(x)}.
+}

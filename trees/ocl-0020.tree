@@ -1,0 +1,34 @@
+\title{Synthetic SDEs}
+\author{owen-lynch}
+\import{macros}
+\date{2024-05-03}
+
+\p{Intuitively, an SDE given by the following equation
+
+##{dX_t = v(X_t) dt + \sigma(X_t) dW_t}
+
+means that at each time step #{dt}, move by #{v(X_t) dt + \xi}, where #{\xi} is a normal random variable with mean #{0} and variance #{\sigma(X_t) dt}. Is there a nice way of seeing this as a "stochastic vector field"? Classically, no: this type of equation cannot be formalized by probability distributions over tangent spaces. But what if we could just formalize the intuition that an SDE is given by a infinitesimal deterministic step and then an infinitesimal normally-distributed step?}
+
+\p{In synthetic differential geometry, tangent vectors are maps #{D \to X}, where #{D := \{d \in \RR \mid d^2 = 0\}}.}
+
+\p{One model theory for synthetic differential geometry is in (sheaves on) #{C^\infty}-rings. In #{C^\infty}-rings, we can model #{D} by #{\RR[d]/(d^2)}.}
+
+\p{What if we could do a similar thing in stochastic land? There's an analogous "algebraic dual" to measurable spaces and probability distributions on them; [von Neumann algebras and positive linear maps](https://www.localcharts.org/t/variable-first-probability-theory/1875).}
+
+\p{I propose that if we allow nilpotents in some suitably generalized version of von Neumman algebras, then a "stochastic tangent vector to a point" should be a positive linear map #{\phi \colon A \to \RR[d]/(d^2)}, such that the postcomposition #{A \to \RR[d]/(d^2) \to \RR} is an algebra map.}
+
+\p{Why should this make sense? Well, the dual condition to #{A \to \RR} being an algebra map is that we have a point #{1 = \Spec(\RR) \to \Spec(A)}, rather than a distribution on #{\Spec(A)}.}
+
+\p{Now, write #{\phi(a)} suggestively as #{a(x) + L(a)(x)d \in \RR[x]/(d^2)}. This is suggestive because we are interpreting #{a} as the algebra of scalar-valued functions on some space, of which #{x} is a point, and #{L} is the generator of a Markov process, which would be defined by something like
+##{L(a)(x) = \frac{d}{dt} \EE_{X_0 = x}[a(X_t)]}
+What does it mean for #{\phi} to be positive?}
+
+\p{Well, the positive elements of #{\RR[d]/(d^2)} should be those of the form #{x + yd} where either #{x > 0} or #{x = 0} and #{y > 0}. So for #{\phi(a)} to be positive, it means that when #{a \geq 0} and #{a(x) = 0}, then #{L(a)(x) \geq 0}. This is actually a very meaningful condition; linear functionals that satisfy this are known as "almost positive." And it can be shown (see [[applebaum-semigroups-2019]], Proposition 7.2.6) that if a linear function #{T \colon C^\infty_c(\RR^d) \to \RR} is almost positive, then it is a distribution of order two; this is part of the proof of the Corrége theorem, and also tied to the positive maximum principle, which is one of the conditions for the Hille-Yosida theorem which characterizes generators of Markov processes.}
+
+\p{And so in particular, the above SDE fits into this, if we define
+
+##{L(a)(x) = \sum_{i=1}^d v^i(x) \partial_i f(x) + \sum_{i,j=1}^d \sigma^{ij}(x) \partial_{ij}f(x)}
+
+As long as #{\sigma(x)} is non-negative symmetrictric definite, I belive that #{L(-)(x)} is in fact an almost positive functional on #{A}.}
+
+\p{I am certainly not experienced enough at functional analysis that I can say with confidence that this will all work out and give the beautiful theory of SDEs of my dreams. But the fact that positivity for a map #{A \to \RR[d]/(d^2)} seems to be connected to "almost positivity", and thus to the positive maximum principle, Hille-Yosida, and Corrége, is telling me that there ought to be \em{something} here if only someone could work it out.}

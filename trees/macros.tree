@@ -222,6 +222,7 @@
 \def\Pt{#{\operatorname{\cP\mathrm{t}}}}
 \def\Sh{#{\operatorname{\cS\mathrm{h}}}}
 \def\Open{#{\cO}}
+\def\Spec{#{\mathrm{Spec}}}
 
 \def\Poly{#{\cat{Poly}}}
 \def\MonPoly{#{\cat{Mon}(\Poly)}}
@@ -334,3 +335,9 @@
 \def\image[source]{
   \xml{center}{\xml{img}[src]{\source}{}}
 }
+
+% Convex duality
+
+\def\Minmax{\cat{Minmax}}
+\def\Conv{\cat{Conv}}
+\def\Conc{\cat{Conc}}

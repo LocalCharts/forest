@@ -1,0 +1,20 @@
+\date{2024-05-06}
+\taxon{proposition}
+\author{eigil-rischel}
+\import{macros}
+\p{
+  Let #{(X,Y,L)} be a minmax problem.
+  Then there is a canonical commutative diagram
+  \quiver{
+    \begin{tikzcd}
+    (X,*) \ar[r, "\pi_X"] \ar[d, "\pi_A"] & (*,*)\ar[d, "\pi_A"]\\
+    (X,A) \ar[r, "\pi_X"] & (*,A)
+    \end{tikzcd}
+  }
+  in #{\Set^\Delta \times \Set^{\Delta,\op},} which is a pullback.
+  Then #{L} obeys strong duality if and only if this square has the local Beck-Chevalley condition for #{L}, in the sense that the canonical map #{\pi_{X,!}\pi_A^*L \to \pi_A^*\pi_{X,!}L} is an isomorphism.
+}
+\proof{
+  Recall that #{\pi_{X,!}(L) = L^-, \pi_Y^*(L) = L^+}.
+  Hence the claim is just that #{\inf_x \sup_a L(x,a) = (L^+)^- = (L^-)^+ = \sup_a\inf_x L(x,a),} which is precisely strong duality.
+}

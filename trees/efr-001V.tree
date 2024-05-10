@@ -1,0 +1,40 @@
+\date{2024-04-25}
+\author{eigil-rischel}
+\taxon{proposition}
+\import{macros}
+\p{
+    Let #{f} be a convex function.
+    Then #{f = (f^*)^*} (where #{f^*} denotes the Legendre transform), under the identification #{(X^*)^* = X} of a finite-dimensional vector space with its double dual. 
+}
+\proof{
+    \p{
+        Recall that #{f^* = ((f|_0)^*)^+,} as a minmax problem.
+        Then the claim is that ##{(((((f|_0)^*)^+)|_0)^*)^+ = f}.
+        Using first the rewrite #{((-)^*)^+ = ((-)^-)^*,} and the notation #{((-)^*|_0)^* = -|^0,}
+        we can rewrite that as
+        ##{((f|_0)^-|^0)^+}
+    }
+    \p{
+        Now observe that, restricted to the subcategory #{\Minmax_l} given by minmax problems #{(X,Y,L)} where #{X,Y} are real vector spaces, and those homomorphisms given by linear (rather than merely affine) maps, #{(-)|_0} and #{-|^0} form endofunctors, and #{(-)|_0 \dashv (-)|^0}.
+    }
+    \p{
+        Since #{(-)^-} is left adjoint to the inclusion, we have #{(-)|_0^- \dashv -|^0}.
+        Hence there is a canonical map, the unit of the adjunction, #{L \to (L|_0)^-|^0} for any #{L}.
+        If #{L = (X,*,f)} is an element of #{\Conv}, then by the universal property, this map factors over #{((f|_0)^-|^0)^+}. This gives us the inequality #{f \geq (f^*)^*}.
+    }
+    \p{
+        (Note that this inequality actually holds even if #{f} is not convex, and indeed we haven't really used convexity yet).
+    }
+    \p{
+        Consider the constructed morphism #{f \to (f|_0)^-|^0}.
+        This witnesses the inequality
+        ##{\forall \alpha, x: f(x) \geq \inf_{x'} f(x') - \alpha(x') + \alpha(x)}
+        A splitting of this map would consist of a choice #{\alpha^* \in X^*} so that the inequality
+        ##{f(x) \leq \inf_{x'} f(x') - \alpha^*(x') + \alpha^*(x),}
+        (which would necessarily be an equality), holds.
+    }
+    \p{
+        The fact that such an #{\alpha} does exist is ultimately due to strong duality in the problem
+        #{f|_0}, which amounts to the existence of a state #{I \to f|_0 \otimes (f|_0)^*}, so it seems plausible that one can make a category-theoretic argument for this, but the details are not obvious.
+    }
+}

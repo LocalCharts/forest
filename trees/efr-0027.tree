@@ -1,0 +1,15 @@
+\date{2024-05-01}
+\import{macros}
+\author{eigil-rischel}
+\taxon{definition}
+
+\p{
+  Let a morphism #{\phi = (\phi^+,\phi^-)} in #{\Set^\Delta \times \Set^{\Delta,\op}} be called \em{forwards} if #{\phi^-} is an isomorphism, and \em{backwards} if #{\phi^+} is an isomorphism.
+  Let #{F} denote the set of forwards morphisms, #{B} the set of backwards. Then clearly #{(F,B)} form an orthogonal factorization system - in fact, both #{(F,B)} and #{(B,F)} do.
+}
+\p{
+  Note that #{F} consists exactly of the local equivalences for the inclusion of #{* \times \Set^{\Delta,\op}}, so that the localization of #{(X,A)} can be formed as the terminal forwards map from it, which is clearly #{(X,A) \to (*,A)} (of course, this is not surprising).
+}
+\p{
+  We will say a morphism in #{\Minmax} is forwards, respectively backwards, if it is so considered as a morphism in #{\Set^\Delta \times \Set^{\Delta,\op}}, and reuse the notation #{F,B} for these subclasses of morphism.
+}

@@ -1,0 +1,35 @@
+\date{2024-04-30}
+\taxon{proposition}
+\import{macros}
+\author{eigil-rischel}
+\p{
+  The forgetful functor #{\Minmax \to \Set^\Delta \times \Set^{\Delta,\op}} is a bifibration. Moreover, we have the following description of the (co)Cartesian morphisms over backwards and forwards maps.
+  \ol{
+  \li{A forwards morphism #{(\phi,1_A): (X,A,L) \to (Y,A,L')} is Cartesian if and only if #{L(x,a) = L'(\phi(x),a)} for all #{x,a}}
+  \li{A forwards morphism #{(\phi,1_A): (X,A,L) \to (Y,A,L')} is coCartesian if and only if #{L'(y,a) = \inf_{\phi(x) = y} L(x,a)}}
+  \li{A backwards morphism #{(1_X,\phi): (X,A,L) \to (X,B,L')} is Cartesian if and only if #{L(x,a) = \inf_{\phi(b)=a} L'(x,b)}}
+  \li{A backwards morphism #{(1_X,\phi): (X,A,L) \to (X,B,L')} is coCartesian if and only if #{L'(x,b) = L(x,\phi(b))}}
+}
+}
+\proof{
+  \p{
+    Note that it suffices to provide Cartesian and coCartesian lifts for backwards and forwards morphisms ([[efr-0027]]), since such lifts compose. Hence it suffices to verify that the given descriptions are correct, since clearly they suffice to compute a (co)Cartesian lift over any such morphism.
+  }
+  \p{
+    Note also that, since the forgetful functor is faithful, to verify a morphism #{\phi} is (co)Cartesian, it suffices to prove that any factorization in the base lifts - uniqueness is automatic.
+  }
+  \p{Thus let #{\phi = (\phi,1_A): (X,A,L) \to (Y,A,L')} be so that #{L(x,a) = L'(\phi(x),a)}. Note that composition of a #{\Delta}-homomorphism with a convex function is again convex, so this is indeed an object of #{\Minmax}
+  }
+  \p{
+  Now let #{\psi = (\psi^-,\psi^+): (Z,B,K) \to (Y,A,L')} be some morphism so that we have the factorization #{\psi = \phi\psi'} in #{\Set^\Delta\times\Set^{\Delta,\op}}. The goal is now to prove #{\psi' : (Z,B,K) \to (X,A,L)} is a homomorphism. This is the inequality
+  ##{K(z,(\psi')^-(a)) \geq L((\psi')^+(z),a) = L'((\phi\psi')^+(z),a),} which holds by assumption}
+
+  \p{Let #{\phi} be as above, but suppose #{L'(y,a) = \inf{\phi(x)=y}L(x,a)}. First, observe that by [[efr-002A]], this function is in fact convex in #{y} as desired.}
+  \p{
+    Let #{\psi: (X,A,L) \to (Z,B,K)} be given, and now suppose we have a factorization #{\psi = \psi'\phi} in the base. We must prove that #{L'(y,(\psi')^-(b)) \geq K((\psi')^+(y),b),}
+    but since #{L'(y,(\psi')^-(b)) = \inf_{\phi(x)=y}L(x,(\psi')^-(b)),} this amounts to the equation
+    #{L(x,(\psi')^-(b)) \geq K((\psi')^+\phi(x),b),}
+    which is again true by assumption.
+  }
+  \p{Now the case for backwards morphisms simply follows by duality.}
+}
