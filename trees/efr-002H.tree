@@ -1,0 +1,9 @@
+\date{2024-05-10}
+\author{eigil-rischel}
+\import{macros}
+\taxon{proposition}
+\p{
+  Let #{(X,A,L)} be a minmax problem.
+  Suppose #{A} is a convex subspace of a vector space #{V}, and #{L(x,-): A \to \RR} is affine for each #{x}.
+  Then there exists functions #{f: X \to \RR, g: X \to V^*}, so that #{L(x,a) = f(x)+\braket{g(x),a}}.
+}
