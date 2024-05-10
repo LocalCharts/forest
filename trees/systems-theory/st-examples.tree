@@ -1,0 +1,11 @@
+
+\title{A zoo of theories of systems}
+\tag{categorical systems theory}
+\import{macros}
+\import{systems-theory-macros}
+
+\p{
+	A list of examples.
+}
+
+\transclude{st-ex-0001}
