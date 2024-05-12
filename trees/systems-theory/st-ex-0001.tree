@@ -1,0 +1,30 @@
+\title{Fully observable open dynamical systems}
+\tag{categorical systems theory}
+\author{matteo-capucci}
+\import{macros}
+\import{systems-theory-macros}
+
+\p{
+	The doctrine #{\doc{FullObs}} is parametrized by cartesian categories.
+	Given #{\cat{C}}, the theory #{\systh{FullObs}_{\cat{C}}} has as its theory of compositions the cartesian double category #{\dblLens_v(\cat{C})} of lenses whose forward part is an identity.
+	Its indexing part is the doubly indexed functor sending #{{I \choose O}} to the discrete category of maps
+	##{
+		\systh{FullObs}_{\cat{C}}{I \choose O} := \{\delta : I \times O \to O\}
+	}
+	which are functorially acted upon by forward-trivial lenses #{{p^\sharp \choose O} : {I \choose O} \leftrightarrows {I' \choose O}} as follows:
+	##{
+		\systh{FullObs}_{\cat{C}}{p^\sharp \choose O} : I \times O \xrightarrow{\delta} O \mapsto I' \times O \xrightarrow{(p^\sharp, O)} I \times O \xrightarrow{\delta} O
+	}
+	Indexing by charts is works as usual, sending a chart #{{h^\flat \choose h} : {I \choose O} \rightrightarrows {J \choose Q}} to the discrete profunctor
+	##{
+		\systh{FullObs}_{\cat{C}}{h^\flat \choose h}(\delta, \upsilon) =
+	}
+	\quiver{\begin{tikzcd}
+		{I \times O} && {J \times Q} \\
+		O && Q
+		\arrow["{(h^\flat,h\pi_O)}", from=1-1, to=1-3]
+		\arrow["\delta"', from=1-1, to=2-1]
+		\arrow["\upsilon", from=1-3, to=2-3]
+		\arrow["h"', from=2-1, to=2-3]
+	\end{tikzcd}}
+}
