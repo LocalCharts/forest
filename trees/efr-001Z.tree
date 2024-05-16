@@ -67,7 +67,8 @@
   \transclude{efr-002D}
   \p{In the case of a Cartesian base, a monoidal fibration (like the one we have here) is equivalent to a fibration with a monoidal structure on each fiber, compatible with the reindexing in a certain way. Our base is not Cartesian, but does seem to come from a monoidal structure on each fiber, given by addition of #{L}s. The point is that, given #{(X,A,L)}, there is a canonical way to obtain an #{L} on #{(X\times Y, A \times B)}, given by using a Cartesian lift of #{X \times Y \to X} and a \em{coCartesian} lift of #{A \times B \to A}. This suggests there should be a useful theory of \em{monoidal two-sided fibrations}, but this notion does not appear to have been studied before.}
 
-
+  \p{As noted, convex spaces admit both a Cartesian product (given by the product of the underlying sets equipped with pointwise operations) and a tensor product, which (co)represents "bihomomorphisms". This is analogous to the situation for vector spaces. Unlike vector spaces, however, since all constant maps are homomorphisms, the projections #{X \times Y \to X,Y} are bihomomorphisms, which induces a map #{X \otimes Y \to X \times Y}. Thus homomorphisms #{X \times Y \to Z} are a subset of bihomomorphisms.}
+  \p{There is sometimes some subtlety about which of these two spaces to use when defining monoidal structure. We generally use the Cartesian product, though.}
 }
 
 \subtree{
