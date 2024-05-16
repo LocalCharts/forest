@@ -7,7 +7,7 @@
 \def\Conc{\cat{Conc}}
 \p{
     The assignment
-    ##{(X,Y,L) \mapsto (X,L^+)}, #{(\phi^+,\phi^-): L \to L' \mapsto \phi^+}
+    ##{(X,Y,L) \mapsto (X,L^+),} ##{(\phi^+,\phi^-): L \to L' \mapsto \phi^+}
     define a functor #{(-)^+: \Minmax \to \Conv}
 }
 \p{
