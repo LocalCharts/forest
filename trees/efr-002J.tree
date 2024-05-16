@@ -1,0 +1,16 @@
+\date{2024-04-25}
+\author{eigil-rischel}
+\import{macros}
+\title{Notes on the JCGM GUM}
+\p{
+  The \em{guide to the expression of uncertainty in measurement} is a 134-page document describing best practices for expressing measurement uncertainties. From a mathematical point of view, the problem is this: given a function #{y = f(x_1, \dots x_n)}, and probability distributions for each of the #{x_n}, describe the distribution of #{y}.
+}
+\p{
+  Note that I say \em{describe} - the goal here is generally the pragmatic one of obtaining some sort of summary statistics for use by consumers of your measurement. There are, generally speaking, two ways of doing this:
+}
+\ol{
+  \li{You can replace #{f} by a linear approximation - this amounts to saying that the mean of #{y} is #{f} applied to the means of the #{x_i}, and the variance is the sum
+  #{\sum_i \frac{\partial f}{\partial x_i} \sigma_i} of the variances of the individual variables weighed by the partial derivatives. (This generally involves an assumption that the distributions on the #{x_i} are Gaussian or uniform on an interval or something)}
+  \li{You can use a simple Monte Carlo calculation to estimate the distribution. The problem with this is, obviously, whether you can effectively and accurately cut down your sample to a few summary statistics.}
+}
+\p{An important property of distributions from this point of view is a "coverage interval", the width of an interval around the mean containing (for example) #{0.95} of the distribution.}
