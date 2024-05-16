@@ -94,7 +94,7 @@
   \transclude{efr-001V}
 
   \p{
-    The fact that strong duality holds in the minmax problems #{f|_0} can be used as the basis for 
+    The strong duality in problems of the form #{f|_0} is a (very) special case of the strong duality necessary to make composition well-defined in a double category of minmax problems, see [[efr-001Y]]. In terms of such a double category, we can say that the theorem #{(f^*)^* = f} (for convex #{f}) is a case of the unitality of composition.
   }
 }
 
@@ -107,5 +107,4 @@
   \transclude{efr-001R}
   \transclude{efr-001S}
   \transclude{efr-001M}
-
 }
