@@ -1,0 +1,7 @@
+\date{2024-05-17}
+\author{eigil-rischel}
+\taxon{definition}
+\import{macros}
+\p{
+  Let #{f_0: \RR^k \to \RR, f_1, \dots f_n, g_1 , \dots g_m} be a standard-form convex optimization problem, as in [[efr-001G]]. Then the \em{Lagrangian} of this problem is the function #{L: \RR^k \times \RR^n_+ \times \RR^m \to \RR} defined by ##{L(x;\lambda,\nu) = f_0(x) + \sum_i \lambda_i f_i(x) + \sum_i \nu_i g_i(x)}. Recall that #{\RR_+} denotes the \em{nonnegative} reals.
+}

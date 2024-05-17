@@ -10,8 +10,18 @@
 
   %def: std. form convex
   \transclude{efr-001G}
+  %def: Lagrangian
+  \transclude{efr-001K}
 
-  %Lagrangian and duality
+  \p{
+    Observe that #{\sup_{\lambda,\nu} L(x,\lambda,\nu)} is #{f_0(x)} if #{x} satisfies the constraints of the problem, and #{\infty} otherwise. Hence we can think of this minimization problem as playing a zero-sum game: we choose #{x}, our adversary chooses #{\lambda,\nu}, and our loss function is #{L}.
+  }
+  \p{
+    It is natural to ask about the existence of Nash equilibria in this game - observe that the existence of an equilibrium #{(x^*,\lambda^*,\nu^*)} means that #{\inf_x \sup_{\lambda,\nu} L(x,\lambda,\nu) = \sup_{\lambda,\nu} \inf_x L(x,\lambda,\nu) = L(x^*,\lambda^*,\nu^*)}. This is of great utility in solving the original problem.
+  }
+  \p{
+    The \em{dual problem} is the problem of \em{maximizing} the function #{\inf_x L(x,\lambda,\nu)}. This is always a concave problem.
+  }
 }
 
 \subtree{
