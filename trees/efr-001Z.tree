@@ -22,6 +22,9 @@
   \p{
     The \em{dual problem} is the problem of \em{maximizing} the function #{\inf_x L(x,\lambda,\nu)}. This is always a concave problem.
   }
+  \p{
+    In the world of convex optimization, two problems whose constraints carve out the same subset of #{\RR^k} would be called \em{equivalent}. But they can clearly not be regarded as \em{isomorphic}, because the choice of constraint functions makes an important difference to the theory of optimization (for example, it can lead to different dual problems). Here we take the viewpoint that the \em{lagrangian} is really the fundamental object in convex optimization - by passing to a suitable category of Lagrangians, we can make the dual problem into an actual self-duality on this category.
+  }
 }
 
 \subtree{
