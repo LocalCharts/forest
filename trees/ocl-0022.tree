@@ -1,0 +1,8 @@
+\title{Prolynomial}
+\author{owen-lynch}
+\import{macros}
+\taxon{definition}
+\date{2024-05-17}
+\def\horiz{\mathcal{h}}
+
+\p{A \defcase{prolynomial} is a category #{\cC} with a pseudo double functor #{D \colon \horiz(\cC) \to \Prof}, where #{\horiz(\cC)} is the vertically discrete double category whose objects are the objects in #{\cC} and whose proarrows are the morphisms of #{\cC}. See [[spivak-proly-2022]] for more details.}

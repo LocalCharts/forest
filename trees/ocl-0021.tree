@@ -1,0 +1,22 @@
+\title{Prolynomials are lax endofunctors on Span}
+\author{owen-lynch}
+\import{macros}
+\date{2024-05-17}
+
+\p{This is a stub article, but I'd like to record some thoughts from a discussion I've been having with David Spivak.}
+
+\transclude{ocl-0022}
+
+\p{For this current article, we will recall that lax double functors to #{\Span} are the same as normal lax functors to #{\Prof}. Say that a lax double functor to #{\Span} is \emph{monadically-pseudo} if its corresponding normal lax functor to #{\Prof} is in fact pseudo.}
+
+\p{Thus, equivalently, a prolynomial is a category #{\cC} with a monadically-pseudo double functor #{D \colon \horiz(\cC) \to \Span}.}
+
+\p{Given a prolynomial #{(\cC, D)}, we can form an endofunctor #{P} on #{\Span} in the following way. First of all, let #{p} be the underlying polynomial functor of #{(\cC, D)}, i.e.
+
+##{ p = \sum_{i \in \cC_0} y^{D(i)} }
+
+Then for a span #{A \from X \to B}, let
+
+##{P(A \from X \to B) = \sum_{i \in \cC_0} A^{D(i)} \from \sum_{f \in \cC_1} X^{D(f)} \to \sum_{i \in \cC_0} B^{D(i)}}}
+
+\p{This has to be worked out in more detail; again this is a stub!}
