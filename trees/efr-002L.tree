@@ -1,0 +1,48 @@
+\date{2024-05-18}
+\author{eigil-rischel}
+\taxon{proposition}
+\import{macros}
+\title{Slater's Constraint Qualification}
+\p{
+  Consider an optimization problem in standard form:
+  \ol{
+    \li{Minimize #{f_0(x), x \in \RR^k} }
+    \li{Subject to #{f_1(x), \dots, f_n(x) \leq 0}}
+    \li{And #{g_1(x), \dots, g_m(x) = 0}}
+    \li{With each #{f_i} convex and each #{g_i} affine}
+  }
+  Now assume that #{l} is such that #{f_1, \dots, f_l} are all affine (possibly #{l=0}, and none of the #{f_i} are affine), and suppose there exists #{x_0 \in \RR^k} so that #{f_i(x) < 0} for all #{i > l}, and #{f_i(x) \leq 0} for all other #{i}, #{g_i(x) = 0} for all #{i}. Then strong duality holds for this optimization problem, and the dual optimal value is attained.
+}
+\p{
+  Note: This is usually stated for a function defined on an arbitrary convex subset of #{\RR^k}. In this case we must further ask that #{x_0} is in the relative interior of this domain.
+}
+\proof{
+  \p{For simplicity, we will assume #{l = 0}, i.e we will not assume any of the #{f_i} are affine, and #{f_u(x_0) \leq 0} for all #{i \geq 1}. (This is the standard form of Slater's constraint qualification).}
+  \p{
+    Let #{A, b} be a matrix and vector so that #{(g_i(x)) = Ax - b}. Then assume withour loss of generality that #{A} has full rank. (Suppose #{g_j} is in the span of the other #{g_i}s. Then if the affine constraints are feasible at all, the equation corresponding to #{g_j} must be a consequence of the others. Hence we can delete #{g_j} without altering the primal optimal value, and given a dual optimal value for the problem with #{g_j} deleted, just set #{\nu_j = 0}.)
+  }
+  \p{
+    Let ##{\cA = \{(u,v,t) \mid x \in \RR^k, u_i \geq f_i(x), v_i = g_i(x), t \geq f_0(x)\}}
+    Observe that the optimal value is #{p^* = \inf_{(0,0,t) \in \cA} t}.
+    Let #{\cB = \{(0,0,t) \mid s \leq p^*\}. It's not hard to see that these sets are disjoint and convex, and hence there exists a hyperplane separating them.
+    In other words, there exists #{\tilde{\lambda},\tilde{\nu},\tilde{\mu},\alpha} (not all #{0}) so that
+    ##{(u,v,t) \in \cA \Rightarrow \braket{\tilde{\lambda},u} + \braket{\tilde{\nu},v} + \mu t \geq \alpha}
+    ##{(u,v,t) \in \cB \Rightarrow \braket{\tilde{\lambda},u} + \braket{\tilde{\nu},v} + \mu t \leq \alpha}
+    By the first inequality, we must have #{\tilde{\lambda} \geq 0} (or the right-hand side would be unbounded below on #{\cA}, which is impossible). Similarly we have #{\mu \geq 0}.
+    The latter of the two statements is equivalent to the statement that #{\mu t \leq \alpha} when #{t \leq p^*}, which simply means #{\mu p^* \leq \alpha}. Combining this with the first statement,
+    we get for all #{x,}
+    ##{\sum_i \tilde{\lambda}_i f_i(x) + \sum_i \tilde{nu}_i g_i(x) + \mu f_0(x) \geq \alpha \geq \mu p^*.}
+  }
+  \p{
+    First assume #{\mu \neq 0}. Then we can divide out and get #{L(x, \tilde{\lambda}/\mu, \tilde{\nu}/\mu) \geq p^*}, which proves that #{(\tilde{\lambda}/\mu, \tilde{\nu}/\mu)} is a dual optimal value and that strong duality holds.
+  }
+  \p{
+    If #{\mu=0}, we have for all #{x}
+    ##{\sum_i \tilde{\lambda}_i f_i(x) + \sum_i \tilde{nu}_i g_i(x) \geq 0}
+  }
+  \p{
+    Inserting #{x_0}, we find #{\sum_i \tilde{\lambda}_i f_i(x_0) \geq 0,}
+    and since #{f_i(x_0) = 0,} we must have #{\tilde{\lambda} = 0}.
+    This then implies #{\sum_i \tilde{\nu}_i g_i(x) \geq 0 = \braket{\tilde{nu},Ax - b}} for all #{x}. But since this is an affine function, this can only be true if it's constantly zero. Since #{\tilde{\nu}} is nonzero and #{A} has full rank, this is impossible.
+  }
+}
