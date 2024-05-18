@@ -17,6 +17,7 @@
   Note: This is usually stated for a function defined on an arbitrary convex subset of #{\RR^k}. In this case we must further ask that #{x_0} is in the relative interior of this domain.
 }
 \proof{
+  \p{(Proof adapted from [[boyd-vandenberghe-convexopt-2004]])}
   \p{For simplicity, we will assume #{l = 0}, i.e we will not assume any of the #{f_i} are affine, and #{f_u(x_0) \leq 0} for all #{i \geq 1}. (This is the standard form of Slater's constraint qualification).}
   \p{
     Let #{A, b} be a matrix and vector so that #{(g_i(x)) = Ax - b}. Then assume withour loss of generality that #{A} has full rank. (Suppose #{g_j} is in the span of the other #{g_i}s. Then if the affine constraints are feasible at all, the equation corresponding to #{g_j} must be a consequence of the others. Hence we can delete #{g_j} without altering the primal optimal value, and given a dual optimal value for the problem with #{g_j} deleted, just set #{\nu_j = 0}.)
