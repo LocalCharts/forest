@@ -210,6 +210,8 @@
 \def\Org{#{\dblcat{Org}}}
 \def\DOrg{#{\dblcat{DOrg}}}
 
+\def\horiz{\mathcal{h}}
+
 \def\List{#{\mathbf{List}}}
 
 \def\cofree{#{\fC}}
