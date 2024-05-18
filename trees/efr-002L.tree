@@ -25,7 +25,7 @@
   \p{
     Let ##{\cA = \{(u,v,t) \mid x \in \RR^k, u_i \geq f_i(x), v_i = g_i(x), t \geq f_0(x)\}}
     Observe that the optimal value is #{p^* = \inf_{(0,0,t) \in \cA} t}.
-    Let #{\cB = \{(0,0,t) \mid s \leq p^*\}. It's not hard to see that these sets are disjoint and convex, and hence there exists a hyperplane separating them.
+    Let #{\cB = \{(0,0,t) \mid s \leq p^*\}}. It's not hard to see that these sets are disjoint and convex, and hence there exists a hyperplane separating them.
     In other words, there exists #{\tilde{\lambda},\tilde{\nu},\tilde{\mu},\alpha} (not all #{0}) so that
     ##{(u,v,t) \in \cA \Rightarrow \braket{\tilde{\lambda},u} + \braket{\tilde{\nu},v} + \mu t \geq \alpha}
     ##{(u,v,t) \in \cB \Rightarrow \braket{\tilde{\lambda},u} + \braket{\tilde{\nu},v} + \mu t \leq \alpha}
