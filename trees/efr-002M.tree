@@ -1,0 +1,11 @@
+\date{2024-05-20}
+\author{eigil-rischel}
+\import{macros}
+\taxon{definition}
+\p{
+  Let #{X} be a convex space. A \em{convex function on #{X}} is a function #{f: X \to \RR} so that
+  ##{f(\theta x + (1-\theta)x') \leq \theta f(x) + (1-\theta)f(x')}
+}
+\p{
+  A \em{concave function} is a function so that #{-f} is convex (in other words, #{f} satisfies the opposite inequality).
+}

@@ -1,0 +1,20 @@
+\date{2024-05-20}
+\author{eigil-rischel}
+\import{macros}
+\taxon{proposition}
+\p{
+  A function between vector spaces is [affine](efr-002N) if and only if it is a [#{\Delta}-homomorphism](efr-0020).
+}
+\proof{
+  \p{
+    It's clear that an affine function is a #{\Delta}-homomorphism.
+    Suppose #{f: X \to Y} is a #{\Delta}-homomorphism. Note it suffices to prove #{f} preserves binary affine combinations #{\theta x + (1-\theta)x'} (for #{\theta} not necessarily in #{[0,1]}).
+    If #{\theta \in [0,1]}, we are done by assumption. Otherwise suppose #{\theta > 1} (if not, replace it by #{1-\theta} by symmetry). Then
+    ##{x = (1/\theta)(\theta x + (1-\theta)x') + (1 - 1/\theta)x'}
+    This is a convex combination, so
+    ##{f(x) = (1/\theta)f(\theta x + (1-\theta)x') + (1-1/\theta)f(x')}
+    Rearranging, we find
+    ##{\theta f(x) + (1-\theta)f(x') = f(\theta x + (1-\theta')x)}
+    as desired.
+  }
+}

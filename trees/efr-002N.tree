@@ -1,0 +1,7 @@
+\date{2024-05-20}
+\author{eigil-rischel}
+\import{macros}
+\taxon{definition}
+\p{
+  A function between vector spaces is called \em{affine} if it preserves those linear combinations #{\sum_i \lambda_i x_i} where #{\sum_i \lambda_i = 1}
+}

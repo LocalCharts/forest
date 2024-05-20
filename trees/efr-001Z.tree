@@ -28,6 +28,21 @@
 }
 
 \subtree{
+  \title{Convex spaces}
+  \transclude{efr-0020}
+
+  \transclude{efr-002N}
+  \transclude{efr-002M}
+  \p{
+    The term "convex function" in this sense clashes with the usual practice of naming structure-preserving functions after the structure they preserve (since convex functions do not preserve the convex structure). Unfortunately this usage is far too established to alter. (Convex functions are called convex because they are exactly those functions where the area above their graph is a convex subset of #{X \times \RR}. Although there appears to be no particular reason why the terms convex and concave should not be interchanged, other than convention).
+  }
+  \transclude{efr-002O}
+  \p{
+    Justified by \ref{efr-002O}, we will appropriate the term \em{affine} to refer to #{\Delta}-homomorphisms, even between convex spaces which are not vector spaces. There is generally no chance of confusion, but it's worth emphasizing that the use of this term does not entail that the domain is closed under arbitrary affine combinations, for example.
+  }
+}
+
+\subtree{
   \title{The Category of Minmax problems}
   %def: minmax
   \transclude{efr-001C}
