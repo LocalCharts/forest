@@ -121,7 +121,6 @@
     Note also that the reflexive subcategory #{\Conc^\op \subseteq \Minmax} is the local subcategory with respect to the forwards morphisms - a morphism is forward if and only if #{\phi^-} is an isomorhism (by definition), and the unit #{L \to L^-} is the terminal forwards morphism with domain #{L}. A dual statement holds for #{\Conv \subseteq \Minmax} (it is the \em{colocalization} with respect to the class of backwards morphisms).
   }
 
-
   %monoidal structure
   \transclude{efr-001N}
   %monoidal fibration
@@ -141,12 +140,22 @@
   %Definition:
   \transclude{efr-002F}
 
-  %Slater, classical
-  \transclude{efr-002G}
+  %Equilibrium/state formulation
+  \transclude{efr-001X}
+
   \p{
-    This theorem can be proven by entirely classical methods. However, we will derive it from a more abstract statement about minmax problems.
+    If a minmax problem is a zero-sum game, a point #{I \to L \otimes L^*} is a choice of Nash equilibrium for this game.
   }
-  %Slater, my version
+
+  %Beck-Chevalley
+  \transclude{efr-0029}
+
+  %Slater, classical
+  \transclude{efr-002L}
+
+  %Von Neumann
+  
+
 }
 
 \subtree{
@@ -154,7 +163,6 @@
   
   \transclude{efr-001P}
   \transclude{efr-001Q}
-  \transclude{efr-001X}
   \transclude{efr-001U}
   \transclude{efr-001T}
 
