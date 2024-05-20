@@ -7,14 +7,9 @@
 \def\Conc{\cat{Conc}}
 \p{
     The assignment
-<<<<<<< HEAD
     ##{(X,Y,L) \mapsto (X,L^+),}
     ##{(\phi^+,\phi^-): L \to L' \mapsto \phi^+}
     defines a functor #{(-)^+: \Minmax \to \Conv}
-=======
-    ##{(X,Y,L) \mapsto (X,L^+),} ##{(\phi^+,\phi^-): L \to L' \mapsto \phi^+} (see \ref{efr-001D})
-    define a functor #{(-)^+: \Minmax \to \Conv}
->>>>>>> 926c1741e225c1a0ec9e9b99ea6e67c6264602d8
 }
 \p{
     Similarly, #{(-)^-} defines a functor #{\Minmax \to \Conc^\op}. (The reason for this idiosyncratic way of writing a contravariant functor will become apparent in a minute)
