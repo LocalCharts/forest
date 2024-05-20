@@ -142,6 +142,9 @@
 
 \subtree{
   \title{The Legendre Transform}
+  
+  \transclude{efr-001P}
+  \transclude{efr-001Q}
   \transclude{efr-001X}
   \transclude{efr-001U}
   \transclude{efr-001T}
@@ -157,9 +160,5 @@
 \subtree{
   \title{Misc stuff (sorting)}
   \transclude{efr-001Y}
-  \transclude{efr-001P}
-  \transclude{efr-001Q}
-  \transclude{efr-001R}
-  \transclude{efr-001S}
   \transclude{efr-001M}
 }
