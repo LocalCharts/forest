@@ -3,7 +3,15 @@
 \title{Convex Duality made Difficult}
 \import{macros}
 %Introduction
-
+\subtree{
+  \title{Introduction}
+  \p{
+    The study of convex functions - in particular, of their optimization (really \em{minimization}) is one of the most important fields of applied mathematics. Convexity seems to be one of those incredibly well-chosen hypotheses which is just specific enough to admit a wealth of theorems, just general enough to produce a nontrivial theory (and a large amount of important examples).
+  }
+  \p{
+    Convex optimization, possibly because it has an "analytical" rather than "algebraic" feel, has not been very thoroughly studied by applied category theorists. The one notable exception is [[hanks-etal-convex-2024]], which studies the decomposition of optimization problems by categorical means. This paper takes a different approach, attempting to define a category with optimization problems as the objects, and to derive theorems about optimization by categorical means.
+  }
+}
 %Convex optimization problems
 \subtree{
   \title{Convex optimization}
