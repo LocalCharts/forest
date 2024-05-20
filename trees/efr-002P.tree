@@ -1,0 +1,7 @@
+\date{2024-05-19}
+\taxon{proposition}
+\author{eigil-rischel}
+\import{macros}
+\p{
+  The localization (resp. colocalization) #{\Conc^\op \into \Minmax} (#{\Conv \into \Minmax}) is monoidal, in the sense that the class local equivalences is stable under tensor products. The thus induced monoidal structure on #{\Conc^\op} is given by #{(X,f) \otimes (Y,g) = (X \times Y, (x,y) \mapsto f(x) + g(y))} (and the same for #{\Conv}). In particular the (co)localization functor is strong monoidal.
+}
