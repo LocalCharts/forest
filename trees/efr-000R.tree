@@ -1,0 +1,13 @@
+\date{2024-03-13}
+\author{eigil-rischel}
+\title{Enriched profunctors vs stochastic matrices}
+\import{macros}
+\p{Consider the lawvere quantale #{\RR = ([0,\infty],+,\geq)}, such that #{\RR}-enriched categories are generalized metric spaces, and functors are nonexpansive maps. Then \em{profunctors} #{X \proto Y} are maps #{p: X \times Y \to \RR} so that #{p(x,y) \leq p(x',y') + d(x,x') + d(y',y)}. Given a map #{f: X \to Y}, the induced profunctor is #{(x,y) \mapsto d(f(x),y)}}
+\p{Since a profunctor is a sort of #{X \times Y} matrix, it is natural to ask whether we can relate this to a stochastic matrix #{X \to Y} (or a more general class of matrices, or a more general class of stochastic map). Where matrix composition is given by taking a sum over #{y \in Y} of products, profunctor composition is given by taking an #{\inf} over #{y} of sums. You can replace sums by products by working with the exponentials instead, but turning an #{\inf} into a sum is not, on the face of it, possible - #{\inf} is defined by a universal property in the poset, whereas #{\sum} doesn't have one (and, for example, #{\inf} is idempotent).}
+\p{However, we do have the following partial result. Suppose #{X,Y,Z} are (extended) metric spaces in the ordinary sense (i.e. with symmetric and "reduced" metrics). Let #{\Delta(-)} denote the Kantorovich monad on metric spaces. Consider two nonexpansive maps #{f: X \to \Delta(Y), g: Y \to \Delta(Z)}. They induce profunctors #{X \proto Y, Y \proto Z} given by #{p_f(x,y) = d_{\Delta(Y)}(f(x),\delta_y)} (and #{p_g} analogously). This is the composite of the induced profunctor #{X \proto \Delta(Y)} and the transpose of the induced profunctor of #{\delta: Y \to \Delta(Y)}. Then we have #{p_{f;g} \leq p_f ; p_g} - in other words, this mapping from #{Kl(\Delta) \to \Prof_\RR} is a lax functor}
+\p{To see this, we compare
+##{\inf_y d(f(x),\delta_y) + d(g(y), \delta_z)}
+and
+##{d(g^\#(f(x)), \delta_z),} where #{g^\# : \Delta(Y) \to \Delta(Z)} is the Kleisli extension. But by nonexpansiveness, we have #{d(f(x),\delta_y) \geq d(g^\# f(x), g^\#(\delta_y)) = d(g^\# f(x), g(y)),} and so by the triangle inequality we have ##{d(f(x),\delta_y) + d(g(y), \delta_z) \geq d(g^\#(f(x)), \delta_z),} and hence this holds for the infimum as well, finishing the proof}
+
+\p{For a counterexample showing the functor is not strict, let ##{X = *, Y = (\{0,1\}, d(0,1)=1), Z = *,} with #{f(*)} being uniform. The composite #{f;g} is trivial, and so gives the trivial profunctor #{p(*,*) = 0}. But #{d(f(x),\delta_y)} is #{1/2} for all #{y}, and so the profunctor composite is #{1/2}}

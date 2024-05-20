@@ -1,0 +1,31 @@
+\date{2024-04-03}
+\author{eigil-rischel}
+\import{macros}
+
+\p{Let #{B: \cC^\op \to \Cat} be an indexed category. Recall in the vein of [[djm-categorical-systems-theory]] the categories of \em{charts}, given as the Grothendieck construction #{\int B}, and the category of \em{lenses} which is the fiberwise opposite #{\int B(-)^\op}.}
+\p{Suppose #{\cC} has pullbacks, each #{B(X)} has pullbacks, and these are preserved by each #{B(f) =: f^*}. Then also the Grothendieck construction #{\int B} has pullbacks. Then we can form #{\Span(\int B)}.}
+
+\p{In this situation, we have an obvious identity-on-objects embedding of the charts #{\int B \into \Span(\int B)}, and a not-so-obvious embedding of the lenses #{\int B^\op \into \Span(\int B)}, given by carrying a lens #{\binom{f^\#: f^*B \to A}{f: X \to X'}: \binom{A}{X} \leftrightarrows \binom{B}{Y
+}} to the span whose apex is #{\binom{f^*B}{X}}, whose backwards leg is #{\binom{f^\#}{1_X}}, and whose forwards leg is #{\binom{\bar{f}}{f}}. where #{\bar{f}} is the unique Cartesian lift of #{f} to #{f^*B \to B}
+  \quiver{
+    \begin{tikzcd}
+    & {f^*B} \ar[ld, swap, "{f^\#}"] \ar[rd] & \\
+    A & X \ar[ld, equals] \ar[rd, "f"] & B \\
+    X & & Y 
+    \end{tikzcd}
+  }
+}
+
+\p{As usual, we can form a double category of spans and morphisms (ie charts), which would receive a functor from the usual double category of lenses and charts. However, in this case, it may in fact be just as useful to take the double category of spans and \em{lenses}, since, if we use these to compare systems with the objects of #{\int B} as interfaces, we get a profunctor associated with a span - and this is the role usually played by charts in categorical systems  theory}
+
+\p{It's worth noting that the assumptions about pullbacks are fairly strong - for example, the category of (smooth) manifolds does not have pullbacks.}
+
+\p{Now suppose #{T: \cC \to \int B} is a tangent bundle functor in the sense of Myers, let #{X, X' \in \int B} be interfaces, and let #{S,S'} be state spaces. A span #{X \proto X'} is suitable for thinking about \em{bisimulation} - for example, a 2-cell filling this square:
+  \quiver{
+    \begin{tikzcd}
+    TS \ar[r, shift right] \ar[d, "\shortmid"{marking}] & X \ar[l, shift right] \ar[d, "\shortmid"{marking}]\\
+    TS'\ar[r, shift right]& Y \ar[l, shift right]
+    \end{tikzcd}
+  }
+is a witness that those two span form a bisimulation between the open systems}
+\p{However, by including lenses as well as charts, these spans(or the relations they present) can describe some additional situations. For example, in [[badings-robust-control-2023]], we consider a partition of a state space #{\RR^n} into a discrete set of convex pieces. This is essentially a lens (see [[efr-0010]] for more on this), but there is the small issue of how to define the forwards direction on the boundaries between the pieces. We can sidestep this by noting that we can easily define a span of charts as discussed here. This span is seen to have the property that any controller for the codomain (i.e a lens #{Y \to I}) lifts to one for the domain which is related by bisimulation.}

@@ -1,0 +1,49 @@
+\date{2024-04-18}
+\author{eigil-rischel}
+\title{Computing transformations of models}
+\import{macros}
+\subtree{
+    \title{Introduction}
+    \p{}
+}
+\subtree{
+    \title{Categorical Systems Theory}
+    \p{[[djm-categorical-systems-theory]] introduces the following very general approach to dynamical systems:}
+    \definition{Theory of Dynamical System}{
+        \author{david-jaz-myers}
+        \p{A \em{theory of dynamical systems} is an indexed category #{\cA: \cC^\op \to \Cat} equipped with a section #{T} of the associated fibration #{\int \cA \to \cC}}
+    }
+    \p{The idea is that
+        \ol{
+            \li{The objects of #{\cC} are "spaces" which the dynamics can happen in - we could have #{\cC = \Top}, #{\cC = \Man}, or even more simply, #{\cC = \Set}}
+            \li{#{\cA(X \in \cC)} assigns to each space a category of "bundles over #{X}", families of objects indexed over #{X} in a suitable way. For example, if the spaces are manifolds, we could have #{\cA(X)} be the category of bundles over #{X}, or just the vector bundles and linear maps. If #{\cC} is the category of sets, we could have #{\cA(X) = \Set_{/X}}.}
+            \li{The section takes each space to its "tangent bundle" - a collection of "possible changes" in #{X}.}
+        }    
+    }
+    \p{In this situation, a \em{dynamical system} is an object #{S \in \cC} and a morphism #{TS \leftrightarrows A} in the fiberwise opposite #{\int \cA(-)^\op}. In the case where #{\cC} is the category of smooth manifolds and smooth maps, and #{\cA(X)} is the category of bundles over #{X}, and #{T} is the tangent bundle functor, this means that #{A = A \to B} is some bundle, and a dynamical system consists of maps #{f: S \to B} and #{f^\#: f^*A \to TS}. The idea is that #{A \to B} is the "interface" of the dynamical system, #{f} computes the \em{output} associated to each state, #{A_b} is the space of possible inputs for a certain output, and #{f^\#} computes the tangent vector given an input - hence, this is a form of parameterized smooth dynamical system}
+}
+\subtree{
+    \title{Categories of Stochastic Dynamical Systems}
+}
+\subtree{
+    \title{Transformations as reductions}
+    \p{
+        The central idea of this paper is
+        \ol{
+            \li{A costate #{c: A \to I} gives a controller for dynamical systems with interface #{A}}
+            \li{Let #{\alpha: TS \to A} be a system with interface #{A}, #{\beta: TS' \to B} one with interface #{B}, #{\lambda: A \leftrightarrows B} a lens, #{c: B \to I} be a controller, and #{f: \lambda_*\alpha \to \beta} be a morphism. Then #{f} implements a bisimulation between the systems #{\alpha \star \lambda^*c} and #{\beta \star c}}
+            \li{Hence the problem of controlling #{\alpha} reduces to the problem of controlling #{\beta}, at least as long as we only care about controlling properties observed by #{\lambda}}
+        }
+    }
+    \p{For example, in the doctrine of stochastic discrete-time dynamical systems, controlling certain systems amounts to solving a Markov Decision Problem, which, while not necessarily trivial, is a well-studied problem. Hence, we can control more general systems by finding #{\lambda, f, \beta} as above. We think of this as finding an \em{abstraction} of the system}
+    
+}
+\subtree{
+    \title{Computing transformations}
+}
+\subtree{
+    \title{Approximate transformations}
+}
+\subtree{
+    \title{Conservative transformations of possibilistic systems}
+}

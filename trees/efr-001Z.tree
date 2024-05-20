@@ -67,6 +67,8 @@
     However, if #{A \subset \RR^m} contains the positive cone #{\RR^m_+,} for example, we do have both #{f} and all the coordinates of #{g} convex.
   }
 
+  %Primal dual problem
+  \transclude{efr-001D}
 
   % Duality
 
@@ -75,6 +77,11 @@
   \p{
     We will often utilize this duality to abbreviate proofs, proving something, for example, for the forwards direction and arguing "by duality" that it holds for the backwards direction as well.
   }
+
+
+  %backwards/forwards maps
+  \transclude{efr-0027}
+
 
   %fibration structure (min-maxing)
   
@@ -91,6 +98,17 @@
   }
   
 
+  %Conv/Conc
+  \transclude{efr-001R}
+  \transclude{efr-001S}
+  \p{
+    Note that if #{\phi = (\phi^+,\phi^-): L \to L'} is a morphism of #{\Minmax}, the two meanings of the notation #{\phi^+} agree, and the same is true of #{\phi^-}.
+  }
+  \p{
+    Note also that the reflexive subcategory #{\Conc^\op \subseteq \Minmax} is the local subcategory with respect to the forwards morphisms - a morphism is forward if and only if #{\phi^-} is an isomorhism (by definition), and the unit #{L \to L^-} is the terminal forwards morphism with domain #{L}. A dual statement holds for #{\Conv \subseteq \Minmax} (it is the \em{colocalization} with respect to the class of backwards morphisms).
+  }
+
+
   %monoidal structure
   \transclude{efr-001N}
   %monoidal fibration
@@ -100,6 +118,8 @@
   \p{As noted, convex spaces admit both a Cartesian product (given by the product of the underlying sets equipped with pointwise operations) and a tensor product, which (co)represents "bihomomorphisms". This is analogous to the situation for vector spaces. Unlike vector spaces, however, since all constant maps are homomorphisms, the projections #{X \times Y \to X,Y} are bihomomorphisms, which induces a map #{X \otimes Y \to X \times Y}. Thus homomorphisms #{X \times Y \to Z} are a subset of bihomomorphisms.}
   \p{There is sometimes some subtlety about which of these two spaces to use when defining monoidal structure. We generally use the Cartesian product, though.}
 }
+
+
 
 \subtree{
   \title{Strong duality}

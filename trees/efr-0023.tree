@@ -13,7 +13,7 @@
 }
 \proof{
   \p{
-    Note that it suffices to provide Cartesian and coCartesian lifts for backwards and forwards morphisms ([[efr-0027]]), since such lifts compose. Hence it suffices to verify that the given descriptions are correct, since clearly they suffice to compute a (co)Cartesian lift over any such morphism.
+    Note that it suffices to provide Cartesian and coCartesian lifts for backwards and forwards morphisms (\ref{efr-0027}), since such lifts compose. Hence it suffices to verify that the given descriptions are correct, since clearly they suffice to compute a (co)Cartesian lift over any such morphism.
   }
   \p{
     Note also that, since the forgetful functor is faithful, to verify a morphism #{\phi} is (co)Cartesian, it suffices to prove that any factorization in the base lifts - uniqueness is automatic.
