@@ -4,9 +4,30 @@
 \import{macros}
 \taxon{theorem}
 \p{
-    Let #{L: X \times Y \to \RR} be a [minmax problem](efr-001C).
-    \ol{
-        \li{#{\inf_x L^+(x) \geq \sup_y L^-(y)}}
-        \li{If #{X,Y} are compact convex subspaces of finite-dimensional real vector spaces, then #{\inf_x L^+(x) = \sup_y L^-(y)}}
+    Let #{(L,X,A) \in \Minmax}. If #{X,A} are both convex, compact subspaces of finite-dimensional vector spaces, and #{L} is continuous. Then strong duality holds for #{L}, and moreover an equilibrium exists.
+}
+\proof{
+    \p{
+        This theorem can be derived from the Kakutani fixpoint theorem in a very similar way to the usual proof of Nash's theorem about general, non-zerosum games - although note that it is not a special case, since #{X} and #{A} may not be simplices, and the payoff function here is merely convex, not necessarily \em{affine} as it is for a game-theoretic game.
+        However, we will give a different proof.
+    }
+    \p{
+        First note that if #{L} takes infinite values, by continuity it must be constant, making the whole thing trivial. So #{L} is finite (and even bounded, by compactness).
+    }
+    \p{
+        We claim that for any minmax problem of this form, there exists either a morphism #{I \to L} or a morphism #{L \to I}. Note that this immediately implies the theorem, because #{L \otimes L^*} also has this form, and therefore there exists either a morphism #{I \to L \otimes L^*}, in which case we are done, or #{L \otimes L^* \to I}, in which case we can apply the contravariant functor #{(-)^*} to finish.
+    }
+    \p{
+        A morphism #{I \to L} is a choice of #{x^*} so that #{L(x^*,a) \leq 0} for all #{a}.
+        Dually a morphism #{L \to I} is an #{a^*} so that #{L(x,a^*) \geq 0} for all #{a}.
+        We essentially claim that at least one of the players has a strategy which guarantees them a "nonpositive loss" (in a suitable sense).
+    }
+    \p{
+        So assume without loss of generality that there are no morphisms #{L \to I}. This means for all #{a}, there exists #{x} so that #{L(x,a) < 0}. For each #{a \in A}, let #{N_a \subseteq X} be the subset of #{x} so that #{L(x,a) \leq 0} - clearly, they are all nonempty and closed.
+    }
+    \p{
+        Given a finite set #{a_1, \dots a_n}, let #{x_1, \dots, x_n} be so that #{L(x_i,a_i) \leq 0} for all #{i}. Consider the function #{P: \Delta^n \to \RR^n} given by #{P_k((\theta_i)) = \sum_i \theta_i L(x_i,a_k)}. This extends to a linear map #{\RR^{n} \to \RR^n}. The assumptions #{L(x_i,a_i)} means this map has negative trace.
+
+        (TO BE CONTINUED)
     }
 }
