@@ -44,11 +44,12 @@
   \p{
     The term "convex function" in this sense clashes with the usual practice of naming structure-preserving functions after the structure they preserve (since convex functions do not preserve the convex structure). Unfortunately this usage is far too established to alter. (Convex functions are called convex because they are exactly those functions where the area above their graph is a convex subset of #{X \times \RR}. Although there appears to be no particular reason why the terms convex and concave should not be interchanged, other than convention).
   }
+  \transclude{efr-002R}
+  \transclude{efr-002Q}
   \transclude{efr-002O}
   \p{
     Justified by \ref{efr-002O}, we will appropriate the term \em{affine} to refer to #{\Delta}-homomorphisms, even between convex spaces which are not vector spaces. There is generally no chance of confusion, but it's worth emphasizing that the use of this term does not entail that the domain is closed under arbitrary affine combinations, for example.
   }
-  
   \p{Convex spaces admit both a Cartesian product (given by the product of the underlying sets equipped with pointwise operations) and a tensor product, which (co)represents "bihomomorphisms". This is analogous to the situation for vector spaces. Unlike vector spaces, however, since all constant maps are homomorphisms, the projections #{X \times Y \to X,Y} are bihomomorphisms, which induces a map #{X \otimes Y \to X \times Y}. Thus homomorphisms #{X \times Y \to Z} are a subset of bihomomorphisms.}
 
   \p{Since we are generally dealing with convex or concave functions, which can't freely be extended to the tensor product, we will work with the Cartesian product in this paper. But it's very possible that most of our constructions would work also with the tensor product, and maybe there is some situation where the extra generality is necessary.}

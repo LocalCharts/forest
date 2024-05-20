@@ -3,17 +3,11 @@
 \author{eigil-rischel}
 \title{Convex optimization with a categorical point of view}
 \meta{comments}{true}
-
-
-\def\lp{#{\startverb(\stopverb}}
-\def\rp{#{\startverb)\stopverb}}
-\def\lb{#{\startverb[\stopverb}}
-\def\rb{#{\startverb]\stopverb}}
 \p{Recall the usual definition of convex optimization problem} 
 \transclude{efr-001G}
 \p{Given such a problem, the \em{Lagrangian} is the function given by
 ##{L(x,\lambda,\nu) = f_0(x) + \sum_i \lambda_i f_i(x) + \sum_i \nu_i g_i(x),}
-defined on #{\RR^k \times \RR^n_+ \times \RR^m}, where #{\RR_+ = \lb 0,\infty \rp }.}
+defined on #{\RR^k \times \RR^n_+ \times \RR^m}, where #{\RR_+ = \lsqb 0,\infty \rpar }.}
 \p{In the theory of convex optimization, the Lagrangian, and data derived from it, plays a central role. Note that replacing the constraints of the problem with different, equivalent ones, would result in a totally different Lagrangian. Thus problems that are "equivalent", in the sense of having the same solutions (or solutions that are readily translated to each other) may not always be freely replaced with each other.}
 \p{Observe that #{\sup_{\lambda,\nu} L(-,\lambda,\nu)} is #{\infty} if #{x} does not satisfy the constraints, and #{f_0(x)} if it does. Hence we can think of #{L} as a two-player zero-sum game, and the original problem is what we get if "we" control the #{x} variable, our adversary controls the other variables, and our adversary "moves second". We may think of this as replacing a hard constraint #{f_i(x) \leq 0} with a soft constraint (a cost which must be paid to violate that constraint), but letting the price be controlled by the adversary.}
 \p{This suggests that, perhaps, such two-player minmax games should be thought of as the fundamental object in the theory of convex optimization}

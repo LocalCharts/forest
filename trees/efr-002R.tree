@@ -1,0 +1,11 @@
+\date{2024-05-19}
+\title{Jensen's Inequality}
+\author{eigil-rischel}
+\import{macros}
+\p{
+  The inequality
+  ##{f(\theta x + (1-\theta)x') \leq \theta f(x) + (1-\theta)f(x'),}
+  which holds whenever #{f} is convex, is called \em{Jensen's inequality}.
+  Sometimes this name is used for a stronger version of this inequality,
+  like the claim that #{f(\EE X) \leq \EE f(X)} if #{X} is a random variable valued in the domain of #{f}. These generally follow just from convexity of #{f}.
+}
