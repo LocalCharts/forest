@@ -78,10 +78,12 @@
 
   %fibration structure (min-maxing)
   
+  \transclude{efr-002A}
+
   \transclude{efr-0023}
 
   \p{
-    What's "really" going on here is that #{\Minmax} is a two-sided fibration, the result of taking the functor #{\Set^{\Delta,\op} \times \Set^{\Delta,\op} \to \Cat} carrying a pair #{X,Y} to the poset of minmax problems #{L: X \times Y \to \RR} (in the opposite order), with morphisms acting by precomposition, and applying the Grothendieck construction "contravariantly in the first variable and covariantly in the second variable". (And then observing that the precomposition action has left/right adjoints given by #{\inf}/#{\sup}, to make this into a \em{bi}fibration). But the theory of bifibrations is quite complicated in general.
+    What's "really" going on here is that #{\Minmax} is a two-sided fibration, the result of taking the functor #{\Set^{\Delta,\op} \times \Set^{\Delta,\op} \to \Cat} carrying a pair #{X,Y} to the poset of minmax problems #{L: X \times Y \to \RR} (in the opposite order), with morphisms acting by precomposition, and applying the Grothendieck construction "contravariantly in the first variable and covariantly in the second variable". (And then observing that the precomposition action has left/right adjoints given by #{\inf}/#{\sup}, to make this into a \em{bi}fibration). But the theory of bifibrations is quite complicated in general, and we will not go into it here.
   }
 
   \p{
