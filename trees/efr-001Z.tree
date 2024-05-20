@@ -118,6 +118,9 @@
   %monoidal fibration
   \transclude{efr-002D}
   \p{In the case of a Cartesian base, a monoidal fibration (like the one we have here) is equivalent to a fibration with a monoidal structure on each fiber, compatible with the reindexing in a certain way. Our base is not Cartesian, but does seem to come from a monoidal structure on each fiber, given by addition of #{L}s. The point is that, given #{(X,A,L)}, there is a canonical way to obtain an #{L} on #{(X\times Y, A \times B)}, given by using a Cartesian lift of #{X \times Y \to X} and a \em{coCartesian} lift of #{A \times B \to A}. This suggests there should be a useful theory of \em{monoidal two-sided fibrations}, but this notion does not appear to have been studied before.}
+  
+  %monoidal localization
+  \transclude{efr-002P}
 }
 
 
