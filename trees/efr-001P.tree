@@ -1,5 +1,6 @@
 \date{2024-04-25}
 \author{eigil-rischel}
+\import{macros}
 \taxon{definition}
 \p{
     Let #{V} be a (real) vector space, and #{f: V \to RR} be a function (not necessarily linear).
