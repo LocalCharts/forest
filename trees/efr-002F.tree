@@ -1,6 +1,6 @@
 \date{2024-05-09}
 \taxon{definition}
-\title{Strong Duality}
+\title{Strong duality}
 \author{eigil-rischel}
 \p{
   Let #{L = (X,A,L)} be a minmax problem. By \ref{efr-001W}, there is a morphism

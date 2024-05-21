@@ -2,8 +2,9 @@
 \author{eigil-rischel}
 \import{macros}
 \taxon{definition}
+\title{Legendre conjugate}
 \p{
-    Let #{V} be a (real) vector space, and #{f: V \to RR} be a function (not necessarily linear).
-    Then the \em{legendre conjugate} #{f^*: V^* \to \RR} is defined by
+    Let #{V} be a (real) vector space, and #{f: V \to \RR} be a function (not necessarily linear).
+    Then the \em{Legendre conjugate} #{f^*: V^* \to \RR} is defined by
     ##{f^*(\alpha) = \sup_x \alpha(x) - f(x)}
 }

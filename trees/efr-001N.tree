@@ -1,6 +1,7 @@
 \date{2024-04-23}
 \taxon{definition}
 \author{eigil-rischel}
+\title{Monoidal structure on minmax problems}
 \import{macros}
 \p{
     There is a monoidal structure on minmax problems, given by

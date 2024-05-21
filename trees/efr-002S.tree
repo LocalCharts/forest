@@ -1,0 +1,9 @@
+\date{2024-05-21}
+\author{eigil-rischel}
+\taxon{definition}
+\import{macros}
+\title{Simplex}
+\p{
+  The free convex space on a finite set #{\{0, \dots n\}} of #{n+1} elements is called the \em{#{n}-simplex} and denoted #{\Delta^n} (the reason for the apparent mismatch of numbering is that the #{n}-simplex is #{n}-dimensional). Note that an element of #{\Delta^n} is a tuple #{(s_i)_{i=0,\dots, n}} so that #{\sum_i s_i = 1} and #{s_i \geq 0}.
+  In particular, #{\Delta^1 \cong [0,1]}.
+}

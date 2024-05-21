@@ -53,7 +53,8 @@
   \p{Convex spaces admit both a Cartesian product (given by the product of the underlying sets equipped with pointwise operations) and a tensor product, which (co)represents "bihomomorphisms". This is analogous to the situation for vector spaces. Unlike vector spaces, however, since all constant maps are homomorphisms, the projections #{X \times Y \to X,Y} are bihomomorphisms, which induces a map #{X \otimes Y \to X \times Y}. Thus homomorphisms #{X \times Y \to Z} are a subset of bihomomorphisms.}
 
   \p{Since we are generally dealing with convex or concave functions, which can't freely be extended to the tensor product, we will work with the Cartesian product in this paper. But it's very possible that most of our constructions would work also with the tensor product, and maybe there is some situation where the extra generality is necessary.}
-  
+
+  \transclude{efr-002S}
 }
 
 \subtree{

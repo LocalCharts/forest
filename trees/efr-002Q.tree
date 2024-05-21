@@ -5,7 +5,7 @@
     There is an natural way to extend the convex structure of #{\RR} to both #{\lsqb -\infty, \infty \rpar} and #{\lpar -\infty, \infty \rsqb}, by the convention that any nontrivial convex combination involving an infinity is equal to that infinity. This also gives the adjectives convex and concave a meaning when applied to functions #{X \to \lpar -\infty, \infty \rsqb}. For example, a function #{f: X \to \lpar -\infty, \infty \rsqb} is convex if and only if the subset where it's finite is a convex subset of #{X}, and it's a convex function in the ordinary sense on this set.
   }
   \p{
-    This doesn't work for the extended real line #{\eRR = \lsqb -\infty, \infty \rsqb}, since there is no sensible interpretation of #{\theta -\infty + (1-\theta)\infty}. We will inescapably meet some functions which take value in the full extended reals, but where we still wish to speak of their convexity (or concavity).
+    This doesn't work for the extended real line #{\eRR = \lsqb -\infty, \infty \rsqb}, since there is no sensible interpretation of #{\theta \cdot -\infty + (1-\theta)\infty}. We will inescapably meet some functions which take value in the full extended reals, but where we still wish to speak of their convexity (or concavity).
   }
   \p{
     Hence we adopt the convention that a function #{f: X \to \eRR} is convex if it obeys Jensen's inequality whenever it makes sense, i.e whenever we do not have #{f(x) = -\infty, f(x') = \infty} or vice versa. 

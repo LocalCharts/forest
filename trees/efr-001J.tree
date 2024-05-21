@@ -1,6 +1,7 @@
 \date{2024-04-23}
 \taxon{definition}
 \author{eigil-rischel}
+\title{Dual minmax problem}
 \import{macros}
 \p{Let #{L = (X,Y,L)} be a [minmax problem](efr-001C). Then let #{L^*} denote the \em{dual} problem given by #{(Y,X,L^*(y,x) = -L(x,y))}.}
 \p{If #{\phi = (\phi^+,\phi^-) : L \to L'} is a morphism of minmax problems, then #{\phi^* = (\phi^-,\phi^+): L'^* \to L^*} is again a morphism in the other direction. This assignment makes #{(-)^*} into a self-inverse functor on the category of minmax problems}
