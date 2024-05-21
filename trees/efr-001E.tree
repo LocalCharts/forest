@@ -4,30 +4,60 @@
 \import{macros}
 \taxon{theorem}
 \p{
-    Let #{(L,X,A) \in \Minmax}. If #{X,A} are both convex, compact subspaces of finite-dimensional vector spaces, and #{L} is continuous. Then strong duality holds for #{L}, and moreover an equilibrium exists.
+    Let #{(L,X,A) \in \Minmax}. If #{X,A} are both convex, compact subspaces of finite-dimensional vector spaces, and #{L} is continuous, then strong duality holds for #{L}, and moreover an equilibrium #{I \to L \otimes L^*} exists.
 }
 \proof{
     \p{
         This theorem can be derived from the Kakutani fixpoint theorem in a very similar way to the usual proof of Nash's theorem about general, non-zerosum games - although note that it is not a special case, since #{X} and #{A} may not be simplices, and the payoff function here is merely convex, not necessarily \em{affine} as it is for a game-theoretic game.
-        However, we will give a different proof.
+        However, we will give a different proof which uses the structure of #{\Minmax}. Our proof was inspired by a proof given in [[weinstein-elementary-minimax-2022]], although note that Weinstein's proof is only for the case of games on simplices with affine payoff functions.
     }
     \p{
         First note that if #{L} takes infinite values, by continuity it must be constant, making the whole thing trivial. So #{L} is finite (and even bounded, by compactness).
     }
     \p{
-        We claim that for any minmax problem of this form, there exists either a morphism #{I \to L} or a morphism #{L \to I}. Note that this immediately implies the theorem, because #{L \otimes L^*} also has this form, and therefore there exists either a morphism #{I \to L \otimes L^*}, in which case we are done, or #{L \otimes L^* \to I}, in which case we can apply the contravariant functor #{(-)^*} to finish.
+        We claim that for any minmax problem of this form, there exists either a morphism #{I \to L} (a state) or a morphism #{L \to I} (a costate). Note that this immediately implies the theorem, because #{L \otimes L^*} also has this form, and therefore there exists either a morphism #{I \to L \otimes L^*}, in which case we are done, or #{L \otimes L^* \to I}, in which case we can apply the contravariant functor #{(-)^*} to finish.
     }
     \p{
-        A morphism #{I \to L} is a choice of #{x^*} so that #{L(x^*,a) \leq 0} for all #{a}.
-        Dually a morphism #{L \to I} is an #{a^*} so that #{L(x,a^*) \geq 0} for all #{a}.
-        We essentially claim that at least one of the players has a strategy which guarantees them a "nonpositive loss" (in a suitable sense).
+        Now our argument will proceed as follows:
+        \ul{
+            \li{First, we will use compactness of #{X} to reduce to the case where #{A} is a simplex #{\Delta^n}}
+            \li{The case #{n=0} is trivial. We will give a direct proof of the case #{n=1}, and prove the general case by an inductive argument.}
+        }
     }
     \p{
-        So assume without loss of generality that there are no morphisms #{L \to I}. This means for all #{a}, there exists #{x} so that #{L(x,a) < 0}. For each #{a \in A}, let #{N_a \subseteq X} be the subset of #{x} so that #{L(x,a) \leq 0} - clearly, they are all nonempty and closed.
+        So let #{(L,X,A)} be given. Consider a map #{\sigma: \Delta^n \to A}, which induces a backwards morphism in #{\Minmax} #{L \to (\sigma_!L,X,\Delta^n)} (where #{\sigma_!L(x,s) = L(x,\sigma(s))}). Clearly if #{\sigma_!L} has a costate for any #{\sigma}, so does #{L}.
     }
     \p{
-        Given a finite set #{a_1, \dots a_n}, let #{x_1, \dots, x_n} be so that #{L(x_i,a_i) \leq 0} for all #{i}. Consider the function #{P: \Delta^n \to \RR^n} given by #{P_k((\theta_i)) = \sum_i \theta_i L(x_i,a_k)}. This extends to a linear map #{\RR^{n} \to \RR^n}. The assumptions #{L(x_i,a_i)} means this map has negative trace.
-
-        (TO BE CONTINUED)
+        Now suppose for every such #{\sigma}, #{\sigma_!L} has a state, that is, an #{x_\sigma} so that #{L(x_\sigma,\sigma(s)) \leq 0} for every #{s \in \Delta^n}. In particular, for every finite set #{a_0, \dots, a_n}, there exists an #{x} so that #{L(x,a_i) \leq 0} for all the #{a_i}. But by compactness of #{X}, and the fact that the sets #{\{x \mid L(x,a) \leq 0\}} are closed for each #{a}, this implies these sets have nonempty intersection - but an element of their intersection is exactly a state of #{L}.
+    }
+    \p{
+        Hence it suffices to prove for each #{(L,X,\Delta^n)} that, if it does not have a costate, it has a state.
+    }
+    \p{
+        Since #{\Delta^0 = \{*\}} is a singleton, it is clear in this case - if #{L(x,*)} is not nonnegative for all #{x}, there must be some counterexample, which is then a state.
+    }
+    
+    \p{
+         Now assume for induction that this is true for all #{k < n}, and that #{n \geq 2}. Write an element of #{\Delta_n} as #{(s_i)_{i=0,\dots,n}}, with #{\sum_i s_i = 1}. Then there is a map #{p: \Delta^n \to \Delta^1} which takes #{(s_i)} to the pair #{(s_0, sum_{i=1} s_i)}. This gives a backwards map #{(p^*L,X,\Delta^1) \to (L,X,\Delta^n)}, where
+        ##{p^*L(x,(\theta, (1-\theta))) = \sup_{s \in \Delta^n, s_0 = \theta} L(x,s)}
+    }
+    \p{
+        Clearly it suffices to exhibit a state of #{p^*L}, which, by the inductive hypothesis, means it suffices to show it has no costate. So suppose it has a costate. Concretely, this means there exists some #{\theta} so that, for all #{x}, #{L(x,\theta) \geq 0}. But now consider the minmax problem #{(L_\theta,X,\Delta^{n-1})} given by #{L_\theta(x,s') = L(x,(\theta, (1-\theta)s'))}.
+        This receives a map from #{L}, so if it has a costate, so does #{L}. Hence without loss of generality, it has no costate, which by the inductive hypothesis means it has a state #{x_\theta}. But note that every #{s} with #{s_0 = \theta} has the form #{(\theta, (1-\theta)s')} for some #{s'}, so #{p^*L(x_\theta,\theta) \leq 0}.
+    }
+    \p{
+        This is not quite enough to prove #{p^*L} has no costate (we would need a strong inequality).
+        But consider #{\sup_\theta \inf_x p^*L(x,\theta) \leq \inf_x \sup_\theta p^*L(x,\theta)}.
+        If they are equal, then by the above we have #{\inf_x \sup_\theta p^*L(x,\theta) \leq 0}. By compactness the infimum is attained, and the minimizing #{x} is then a state. So suppose they are distinct and the right-hand is strictly greater than zero. Then there is some #{\epsilon > 0} so #{\sup_\theta \inf_x p^*L(x,\theta) - \epsilon < 0 < \inf_x \sup_\theta p^*L(x,\theta) - \epsilon}. Then #{(p^*L - \epsilon, X, \Delta^1)} has no state and no costate, so by contradiction we are done.  
+    }
+    \p{
+        Since the case #{n=0} is trivial, this reduces to the case #{n=1}.
+        Since #{\Delta^1} is compact, we can apply the same argument to #{X}, reducing to the case of a minmax problem #{(L,[0,1],[0,1])}.
+    }
+    \p{
+        Suppose this game has no state and no costate. This means for all #{s} there exists #{\theta} so that #{L(s,\theta) > 0}, and dually, for all #{\theta} there exists #{s} so that #{L(s,\theta) < 0}.
+    }
+    \p{
+        Consider the set #{P = \{(s,\theta) \mid L(s,\theta) > 0\}}. By assumption the first projection #{P \to [0,1]} is surjective. Since each fiber is convex, and hence connected, and the projection #{[0,1] \times [0,1] \to [0,1]} is open, #{P} is connected. As an open connected subset of a convex space, it is path connected. Hence there exists some path #{\gamma(t) \in P} where #{\gamma(0) = (0,\theta_0)} and #{\gamma(1) = (1,\theta_1)}. In other words (picturing the square with the first coordinate horizontal), there exists a path from the left to the right side of the cube so that #{L(\gamma(t)) > 0} everywhere on the path. Dually, there also exists a path from top to bottom so that #{L} is strictly negative everywhere on that path. But they must intersect somewhere, and this is a contradiction. Hence #{L} must have a state or a costate, finishing the proof.   
     }
 }

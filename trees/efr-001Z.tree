@@ -153,10 +153,15 @@
   %Slater, classical
   \transclude{efr-002L}
 
-  %
+  %Minimax theorem
   \transclude{efr-001E}
   
-
+  \p{
+    It is interesting to note the use of compactness here. Recall that topological compactness is closely connected with the property, also called compactness, of #{\Hom(X,-)} preserving filtered colimits (this property, instantiated in #{\Top}, is not actually the same thing as topological compactness). Our use of compactness here, to derive from the existence of a state in the "finitary" subproblems #{(L,X,\Delta^n)} the existence of a state in the entire problem, does not have this form (nor is it even the case that #{A} is the colimit of its subsimplices), but it's possible that the proof could be rewritten to make this step more categorical.
+  }
+  \p{
+    Note also that the induction step is a sort of fiber sequence argument, involving the sequence #{\Delta^{n-1} \into \Delta^n \to \Delta^1}.
+  }
 }
 
 \subtree{
