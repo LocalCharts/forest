@@ -26,6 +26,8 @@
       tlDist = pkgs.texliveFull;
     in {
       packages = flake-utils.lib.flattenTree rec {
+        forester = forester-pkg;
+        tldist = tlDist;
         new = pkgs.writeScriptBin "new"
         ''
           ${forester-pkg}/bin/forester new --dirs=trees --dest=trees --prefix=$1
