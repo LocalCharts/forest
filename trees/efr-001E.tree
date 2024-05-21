@@ -21,7 +21,8 @@
         Now our argument will proceed as follows:
         \ul{
             \li{First, we will use compactness of #{X} to reduce to the case where #{A} is a simplex #{\Delta^n}}
-            \li{The case #{n=0} is trivial. We will give a direct proof of the case #{n=1}, and prove the general case by an inductive argument.}
+            \li{By an inductive argument, we will reduce to the case #{n = 1}.}
+            \li{Dualizing this reduction, we are left with the case of a minmax problem #{(L,\Delta^1,\Delta^1),} which we prove directly}
         }
     }
     \p{
