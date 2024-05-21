@@ -1,0 +1,16 @@
+\title{Piecewise-affine maps land inside affine geometric realizations}
+\taxon{theorem}
+\author{owen-lynch}
+\import{macros}
+\date{2024-05-21}
+
+\p{Suppose that #{f} is a piecewise affine map from #{(V, S)} to #{(V', S')}, and let #{x' \colon V' \to \RR^n} induce the affine geometric realization #{|S'|_{x'}}.
+Then we can define a map #{x = f^\ast(x') \colon V \to \RR^n} by
+
+##{ x(v) = \sum_{v' \in f_1(v)} f_2(v)(v') x(v') }
+
+Essentially, this interpolates the coordinates given by #{x'} using the convex combinations in #{f}.}
+
+\p{The statement of this theorem is then simply #{|S|_x \subset |S'|_{x'}}.}
+
+\p{Before we go onto prove this, note that it is fairly easy to come up with a counterexample if we did not have the condition in \ref{ocl-0026}. Specifically, if #{S'} is just the boundary of the triforce, and we have the map on vertices as before, then #{|S|_x \not \subset |S'|_{x'}}. So the condition in \ref{ocl-0026} is really essential.}

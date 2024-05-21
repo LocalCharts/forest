@@ -1,0 +1,76 @@
+\title{Piecewise-affine morphisms between simplicial sets}
+\author{owen-lynch}
+\import{macros}
+\date{2024-05-02}
+
+\p{James Fairbanks wants multi-domain multi-scale multi-physics. Well, in fact many people want this, but they don't explicitly know it. Kevin Carlson has been working on some of the categorical story for the "multi-domain" part in [[kdc-0007]] and [[kdc-0008]].}
+
+\p{In order to get the "multi-scale" part, however, we need to be able to "pull and push" #{n}-forms between different scales. Scales in this case means finer/coarser triangulations of a manifold. We would like to "pull and push" along a morphism between meshes (i.e. [simplicial sets](https://github.com/AlgebraicJulia/CombinatorialSpaces.jl)). However, the problem is that for the standard notion of a morphism between simplicial sets, there isn't a morphism}
+
+\xml{center}{\tex{\usepackage{tikz}\usetikzlibrary{positioning,calc}}{
+\begin{tikzpicture}
+
+  % Define vertices of the original triangle
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3,0);
+  \coordinate (C) at (1.5,2.533);
+
+  \coordinate (A2) at (5,0);
+  \coordinate (B2) at (8,0);
+  \coordinate (C2) at (6.5,2.533);
+
+  % Midpoints of sides
+  \coordinate (AB) at ($(A)!0.5!(B)$);
+  \coordinate (BC) at ($(B)!0.5!(C)$);
+  \coordinate (CA) at ($(C)!0.5!(A)$);
+
+  % Centroid
+  \coordinate (G) at (barycentric cs:A=1,B=1,C=1);
+
+  % Draw the original triangle
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (A2) -- (B2) -- (C2) -- cycle;
+
+  % Draw lines from vertices to centroid
+  \draw (A) -- (G);
+  \draw (B) -- (G);
+  \draw (C) -- (G);
+
+  % Draw lines from midpoints to opposite vertices
+  \draw (AB) -- (C);
+  \draw (BC) -- (A);
+  \draw (CA) -- (B);
+
+  \draw[->] (3.25, 1.265) -- (4.75, 1.265);
+\end{tikzpicture}
+}}
+
+\p{that "sends the middle vertex on the left to the middle of the triangle on the right".}
+
+\p{There are several ways of solving this problem. One way is with left Kan extensions. Another is with the codensity monad. As fun as these are, we are going to take a practical approach.}
+
+\p{First of all, let's assume that we are working with simplicial \em{complexes} instead of simplicial sets.}
+
+\transclude{ocl-0023}
+
+\p{We then define a geometric map in the following way.}
+
+\transclude{ocl-0024}
+
+
+\p{To understand this condition, let us do some examples. Let #{U \in S} be a 2-simplex, so #{|U| = 3}. Then if each of the vertices in #{U} are sent to 0-simplices in #{S'} (i.e. singleton subsets of #{V'}), the map is valid if and only if there exists a 2-simplex in #{S'} that has all of these singleton subsets as corners.}
+
+\p{But this is not the only place we could send the vertices in #{U}. For instance, the triforce below depicts sending each of the vertices in #{U} (the inner triangle) to the middles of the edges in the outer triangle. The condition of \ref{ocl-0024} says that when we union together all of the edges in the outer triangle, we get a 2-simplex that exists in #{S'}.}
+
+\xml{center}{\tex{\usepackage{tikz}\usetikzlibrary{positioning,calc}}{
+\begin{tikzpicture}
+  \draw (-2, 0) -- (2, 0) -- (0, 3.46) -- cycle;
+  \draw (0, 0) -- (1, 1.73) -- (-1, 1.73) -- cycle;
+\end{tikzpicture}
+}}
+
+\p{The relevant proposition to prove is the following. First we must give the following definition.}
+
+\transclude{ocl-0026}
+
+\transclude{ocl-0025}

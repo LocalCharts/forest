@@ -1,0 +1,23 @@
+\title{Piecewise Affine Maps Between Simplicial Complexes}
+\author{owen-lynch}
+\taxon{definition}
+\import{macros}
+\date{2024-05-21}
+\def\interior{#{\mathop{\mathrm{int}}}}
+
+\p{Given simplicial complexes #{(V, S \subset \powerset(V))} and #{(V', S' \subset \powerset(V'))}, a piecewise affine map between them is a function
+
+##{ f \colon V \to \sum_{U \in S'} \interior(\Delta(U)) }
+
+where
+
+##{ \Delta(U) = \{ x \colon U \to \RR \mid 0 \leq x \leq 1, \sum_{v \in U} x(v) = 1 \} }
+
+and #{\interior} denotes the topological interior.
+
+such that the following holds. For any simplex #{U \in S},
+
+##{ \bigcup_{v \in U} f_1(v) \in S' }
+
+where #{f_1(v) \in S'} is the first component of #{f(v) \colon \sum_{U \in S'} \Delta(U)}.
+}
