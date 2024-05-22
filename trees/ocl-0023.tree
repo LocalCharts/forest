@@ -1,0 +1,7 @@
+\title{Simplicial Complex}
+\author{owen-lynch}
+\taxon{definition}
+\import{macros}
+\date{2024-05-20}
+
+\p{A \defcase{simplicial complex} consists of a set #{V} along with a subset #{S \subset \powerset(V)} that is \em{downwards-closed}; that is if #{U \subset S} and #{U' \subset U}, then #{U' \subset S}.}

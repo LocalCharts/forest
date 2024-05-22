@@ -1,0 +1,12 @@
+\title{Affine Geometric realization of a Simplicial Complex}
+\taxon{definition}
+\author{owen-lynch}
+\import{macros}
+\date{2024-05-21}
+
+\p{Let #{(V, S)} be a [simplicial complex](ocl-0023). Then an affine geometric realization of #{(V, S)} is constructed by taking a vector space #{\RR^n} along with a function #{x \colon V \to \RR^n} and then
+
+##{|S|_x = \left\{ y \in \RR^n \mid \exists U \in S, \gamma \in \Delta(U), \sum_{v \in U} \gamma(v) x(v) = y\right\}}
+}
+
+\p{In other words, the affine geometric realization of #{(V, S)} is constructed by "convexly filling in" all of the simplices in #{S} from an assignment of the points in #{V} to a space.}
