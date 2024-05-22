@@ -1,0 +1,8 @@
+\date{2024-05-21}
+\title{Topological convex space}
+\taxon{definition}
+\import{macros}
+\author{eigil-rischel}
+\p{
+  A \em{topological convex space} is a convex space #{X} equipped with a topology so that any affine map #{\Delta^n \to X} is continuous (when #{\Delta^n \subseteq \RR^{n+1}} is given the subspace topology).
+}

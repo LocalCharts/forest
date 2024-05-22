@@ -1,0 +1,26 @@
+\date{2024-05-22}
+\title{The separating hyperplane theorem (general case)}
+\taxon{theorem}
+\author{eigil-rischel}
+\import{macros}
+\p{
+  Let #{X,Y \subseteq \RR^k} be disjoint convex subsets. Then there exists #{v,\alpha} so that #{\braket{v,x} + \alpha \leq 0 \leq \braket{v,y} + \alpha} for all #{x \in X, y \in Y}.
+}
+\proof{
+  \p{
+    Let #{K_i, L_i, i=1, \dots} be two sequences of sets with the following properties:
+    \ul{
+      \li{For each #{i}, #{K_i,L_i} are disjoint.}
+      \li{For each #{i}, #{K_i \subseteq K_{i+1}}}
+      \li{Each of the #{K_i,L_i} are compact and convex}
+      \li{#{\cup_i K_i = X, \cup_i L_i = Y}}
+    }
+    These can be constructed for example by taking the intersection of #{X} and #{Y} with the boxes #{[-i,i]^k} to obtain compact, convex, disjoint subsets which exhaust #{X} and #{Y}.
+  }
+  \p{
+    Now apply \ref{efr-002Z} to obtain a sequence of #{v_i \in \overline{B(0,1)}} so that #{\braket{v_i,-}} is negative on #{K_i} and positive on #{L_i}. By compactness of the unit ball, this sequence has a point of density #{v^*}. Now for every pair #{x \in X, y \in Y}, we can find some #{i} so that #{\braket{v_i,x}} is within an arbitrary #{\epsilon} of #{\braket{v^*,x}} and the same is true for #{y}, and so that #{x \in K_i, y \in L_i}. But then #{\braket{v^*,y-x}} is within #{2\epsilon} of #{\braket{v_i,y-x},} which is positive, so that #{\braket{v^*,y-x} \geq 0}.
+  }
+  \p{
+    Now for each #{i}, #{\braket{v^*,-}} has a maximizer #{x_i^*} on #{K_i} and a minimizer #{y_i^*} on #{L_i}. Hence, by an argument analogous to the proof of \ref{efr-002Z}, there is a nonempty closed interval #{[a_i,b_i]} so that, if #{\alpha \in [a_i,b_i],} we have #{\braket{v^*,-} + \alpha} #{\leq 0} on #{K_i} and #{\geq 0} on #{L_i}. But since the sets #{K_i, L_i} are increasing this sequence of intervals must be decreasing, and hence the intersection must be nonempty - and then any #{\alpha} in this intersection will make #{\braket{v^*,-} + \alpha} nonpositive on #{X}, nonnegative on #{Y}, as desired.
+  }
+}

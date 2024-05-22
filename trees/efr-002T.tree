@@ -1,0 +1,8 @@
+\date{2024-05-21}
+\title{Solvable pair}
+\taxon{definition}
+\import{macros}
+\author{eigil-rischel}
+\p{
+  Let #{X,A} be [topological convex spaces](efr-002U). We say the pair #{(X,A)} is a \em{solvable pair} if, for any continuous minmax problem #{L: X \times A \to \RR}, strong duality holds.
+}

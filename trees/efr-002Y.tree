@@ -1,0 +1,10 @@
+\date{2024-05-21}
+\taxon{corollary}
+\import{macros}
+\author{eigil-rischel}
+\p{
+  If #{X} is compact, #{(X,A)} is solvable for any #{A}.
+}
+\proof{
+  By \ref{efr-002W} and its corollary, applied to \ref{efr-002V}, we have #{([0,1],\Delta^n)} solvable for all #{n}. Since #{[0,1]} is compact, this means #{([0,1],A)} is solvable for all #{A}, by \ref{efr-002X}. Now by duality we have #{(X,[0,1])} solvable for all #{X,} which means #{(X,\Delta^n)} is solvable, and by using \ref{efr-002X} again, we're done.
+}

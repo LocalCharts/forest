@@ -9,7 +9,7 @@
     The study of convex functions - in particular, of their optimization (really \em{minimization}) is one of the most important fields of applied mathematics. Convexity seems to be one of those incredibly well-chosen hypotheses which is just specific enough to admit a wealth of theorems, just general enough to produce a nontrivial theory (and a large amount of important examples).
   }
   \p{
-    Convex optimization, possibly because it has an "analytical" rather than "algebraic" feel, has not been very thoroughly studied by applied category theorists. The one notable exception is [[hanks-etal-convex-2024]], which studies the decomposition of optimization problems by categorical means. This paper takes a different approach, attempting to define a category with optimization problems as the objects, and to derive theorems about optimization by categorical means.
+    Convex optimization, possibly because it has an "analytical" rather than "algebraic" feel, has not been very thoroughly studied by applied category theorists. The one notable exception is \ref{hanks-etal-convex-2024}, which studies the decomposition of optimization problems by categorical means. This paper takes a different approach, attempting to define a category with optimization problems as the objects, and to derive theorems about optimization by categorical means.
   }
 }
 %Convex optimization problems
@@ -55,6 +55,8 @@
   \p{Since we are generally dealing with convex or concave functions, which can't freely be extended to the tensor product, we will work with the Cartesian product in this paper. But it's very possible that most of our constructions would work also with the tensor product, and maybe there is some situation where the extra generality is necessary.}
 
   \transclude{efr-002S}
+
+  \transclude{efr-002U}
 }
 
 \subtree{
@@ -157,13 +159,37 @@
 
   %Minimax theorem
   \transclude{efr-001E}
+  \p{
+        This theorem can be derived from the Kakutani fixpoint theorem in a very similar way to the usual proof of Nash's theorem about general, non-zerosum games - although note that it is not a special case, since #{X} and #{A} may not be simplices, and the payoff function here is merely convex, not necessarily \em{affine} as it is for a game-theoretic game.
+  }
+  \p{
+    However, we will give a different proof, which uses the structure of #{\Minmax} in a more direct way. Essentially, we will use compactness to reduce to the case of simplexes, then use an inductive argument to reduce to the case where #{X = A = \Delta^1 = [0,1],} which can be shown by a direct topological argument. The inductive step is a fiber sequence argument, where we use the characterization of strong duality in terms of the Beck-Chevalley property, \ref{efr-0029}.
+  }
+  %
+  \transclude{efr-002T}
+  \transclude{efr-002V}
+  \transclude{efr-002W}
+  \transclude{efr-002X}
+  \transclude{efr-002Y}
   
+  \subtree{
+    \title{Proof of \ref{efr-001E}}
+    \p{
+      By \ref{efr-002Y}, the pair #{(X,A)} is solvable, and strong duality holds. Since #{X,A} are both compact, there must exist #{x^*,a^*} attaining the infimum #{\inf_x \sup_a L(x,a)} and the supremum #{\sup_a \inf_x L(x,a)}. These form an equilibrium.
+    }
+  }
+
+
   \p{
     It is interesting to note the use of compactness here. Recall that topological compactness is closely connected with the property, also called compactness, of #{\Hom(X,-)} preserving filtered colimits (this property, instantiated in #{\Top}, is not actually the same thing as topological compactness). Our use of compactness here, to derive from the existence of a state in the "finitary" subproblems #{(L,X,\Delta^n)} the existence of a state in the entire problem, does not have this form (nor is it even the case that #{A} is the colimit of its subsimplices), but it's possible that the proof could be rewritten to make this step more categorical.
   }
   \p{
-    Note also that the induction step is a sort of fiber sequence argument, involving the sequence #{\Delta^{n-1} \into \Delta^n \to \Delta^1}.
+    The idea of proceeding by induction on #{n} was inspired by \ref{weinstein-elementary-minimax-2022}, although our proof is rather different - they are only looking at \em{affine} games, and hence their induction step is completely different (and they have no need for the complicated #{n=1} base case that we do), and since we are not merely interested in games on simplices, we need an additional compactness argument.
   }
+
+  \p{We can use the minimax theorem to derive other statements of interest about convex optimization}
+  \transclude{efr-002Z}
+  \transclude{efr-0030}
 }
 
 \subtree{

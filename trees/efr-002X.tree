@@ -1,0 +1,10 @@
+\date{2024-05-21}
+\taxon{lemma}
+\import{macros}
+\author{eigil-rischel}
+\p{
+  Let #{X} be a compact topological convex space. Suppose #{(X,\Delta^n)} is solvable for all #{n}. Then #{(X,A)} is solvable for all topological convex spaces #{A}.
+}
+\proof{
+  Suppose for contradiction #{L: X \times A \to \RR} does not have strong duality, and assume without loss of generality that #{\sup_a \inf_x L(x,a) < 0 < \inf_x \sup_a L(x,a)}. For each #{a \in A} let #{X_a} consist of those #{x \in X} so that #{L(x,a) \leq 0}. Given some finite family #{a_0, \dots a_n,} consider the induced map #{a: \Delta^n \to A} and apply solvability to the problem #{(a_!L,X,\Delta^n)} - this implies in particular that #{\inf_x \sup_i L(x,a_i) \leq 0}. This means the family #{X_a} has the finite intersection property, so by compactness it has nonempty intersection. But then an element #{x^*} of the intersection must satisfy #{\sup_a L(x^*,a) \leq 0,} which is a contradiction.
+}

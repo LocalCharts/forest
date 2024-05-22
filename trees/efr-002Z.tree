@@ -1,0 +1,23 @@
+\date{2024-05-22}
+\title{The separating hyperplane theorem (compact case)}
+\taxon{theorem}
+\author{eigil-rischel}
+\import{macros}
+\p{
+  Let #{X,Y \subset \RR^k} be disjoint, compact, convex subspaces. Then there exists #{v \in \RR^k} and #{\alpha \in \RR} so that #{\braket{v,x} + \alpha < 0 \braket{v,y} + \alpha} whenever #{x \in X, y \in Y}.
+}
+\proof{
+  \p{Consider the minmax problem} 
+  ##{(L,X \times Y, A = \overline{B(0,1)} \subseteq \RR^k), L(x,y,v) = \braket{v,y-x}.}
+  \p{
+    Since the closed unit ball is compact, by the minimax theorem there exists an equilibrium #{x^*,y^*,v^*}, which then satisfies
+    ##{\braket{v,y^*-x^*} \leq \braket{v^*,y^*-x^*} \leq \braket{v^*,y-x}}
+  }
+  \p{
+    By disjointness, #{y^*-x^*} must be nonzero, so with a suitable choice of #{v} we can clearly make the left-hand item strictly positive. Hence #{\braket{v^*,y^*-x^*} =: \delta > 0}. Now there must exist some #{\alpha \in \RR} so that #{\braket{v^*,y^*} + \alpha = -\braket{v^*,x^*} - \alpha = \delta /2 > 0}.
+  }
+  \p{
+    By the equilibrium property, we see that #{y^*} must minimize #{\braket{v^*,y}} on #{Y}, and analogously #{x^*} must maximize #{\braket{v^*,x}} on #{X}. Hence for all #{x,y}, we have
+    ##{\braket{v^*,x^*} + \alpha \leq -\delta /2 < 0 < \delta /2 \leq \braket{v^*,y^*} + \alpha,} which concludes the proof.
+  }
+}

@@ -1,0 +1,16 @@
+\date{2024-05-21}
+\taxon{proposition}
+\import{macros}
+\author{eigil-rischel}
+\p{
+  The pair #{([0,1],[0,1])} (in other words, #{(\Delta^1,\Delta^1)}) is solvable.
+}
+\proof{
+  \p{
+    Let #{L: [0,1] \times [0,1] \to \RR} be a continuous minmax problem. Suppose strong duality does not hold. Then by adding a constant to #{L}, we can arrange that
+    ##{\sup_\theta \inf_s L(s,\theta) < 0 < \inf_s \sup_\theta L(s,\theta).}
+  }
+  \p{
+        Consider the set #{P = \{(s,\theta) \mid L(s,\theta) > 0\}}. Since we must have #{\sup_\theta L(s,\theta) > 0} for each #{s}, the first projection #{P \to [0,1]} must be surjective. Since each fiber is convex, and hence connected, and the projection #{[0,1] \times [0,1] \to [0,1]} is open, #{P} is connected. As an open connected subset of a convex space, it is path connected. Hence there exists some path #{\gamma(t) \in P} where #{\gamma(0) = (0,\theta_0)} and #{\gamma(1) = (1,\theta_1)}. In other words (picturing the square with the first coordinate horizontal), there exists a path from the left to the right side of the cube so that #{L(\gamma(t)) > 0} everywhere on the path. Dually, there also exists a path from top to bottom so that #{L} is strictly negative everywhere on that path. But they must intersect somewhere, and this is a contradiction. Hence #{L} must have a state or a costate, finishing the proof.   
+  }
+}

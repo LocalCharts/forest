@@ -1,0 +1,41 @@
+\date{2024-05-21}
+\taxon{proposition}
+\import{macros}
+\author{eigil-rischel}
+\p{
+  Let #{E \to B} be a continuous, affine map between topological convex spaces. Let #{A} be another topological convex space, and suppose
+  \ul{
+    \li{#{(B,A)} is solvable.}
+    \li{For every #{b \in B}, #{(E_b,A)} is solvable, where #{E_b \subseteq E} is the fiber.}
+  }
+  Then also #{(E,A)} is solvable. 
+}
+\proof{
+  \p{
+  Recall that #{(E,A)} being solvable means the following square has the Beck-Chevalley condition for continuous #{L}:}
+  \quiver{
+    \begin{tikzcd}
+      (E,*) \ar[d] \ar[r] & (*,*) \ar[d]\\
+      (E,A) \ar[r] & (*, A)
+    \end{tikzcd}
+  }
+  \p{Now we can factor this as follows:}
+  \quiver{
+    \begin{tikzcd}
+      (E,*) \ar[d] \ar[r] & (B,*) \ar[r] \ar[d] & (*,*) \ar[d]\\
+      (E,A) \ar[r] & (B,A) \ar[r] & (*, A)
+    \end{tikzcd}
+  }
+  \p{
+    Note that the right-hand square here has the Beck-Chevalley condition by assumption. So it suffices to show the left-hand square does. For a given #{L}, this means showing that these two functions on #{B} are the same
+    ##{b \mapsto \inf_{e \mapsto b} \sup_a L(e,a)}
+    ##{b \mapsto \sup_a \inf_{e \mapsto b} L(e,a)}
+    But this equation, for some given #{b}, is exactly strong duality in the restriction of #{L} to #{(E_b,A)}, which must hold because this is a solvable pair by assumption.
+  }
+}
+\subtree{
+  \title{Corollary}
+  \p{
+    If #{(X,[0,1])} is solvable, so is #{(X,\Delta^n)} for each #{n}, because the map #{\Delta^n \to [0,1]} which picks out the first coordinate has fibers isomorphic to #{\Delta^{n-1},} so we can proceed by induction (the case #{n=0} being trivial.)
+  }
+}
