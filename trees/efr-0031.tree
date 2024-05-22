@@ -1,0 +1,9 @@
+\date{2024-05-22}
+\author{eigil-rischel}
+\title{Online Convex Optimization}
+\taxon{definition}
+\p{
+  The problem of online convex optimization is as follows: A game is played over #{N} rounds.
+  In each round, the player picks #{x_i \in \RR^k}, and then the adversary chooses some convex #{f_i: \RR^k \to \RR}, which may depend on #{x_i}. The goal of the player is to minimize (and the goal of the adversary, to maximize) the \em{regret:}
+  ##{R = \sup_{x^*} \sum_{i=1}^N f_i(x_i) - f_i(x^*)}
+}
