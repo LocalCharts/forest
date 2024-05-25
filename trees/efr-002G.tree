@@ -1,5 +1,6 @@
 \date{2024-05-10}
 \author{eigil-rischel}
+\import{macros}
 \taxon{theorem}
 \title{Slater's Constraint Qualification}
 \p{

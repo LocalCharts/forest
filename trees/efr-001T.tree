@@ -1,5 +1,6 @@
 \date{2024-04-25}
 \author{eigil-rischel}
+\import{macros}
 \taxon{proposition}
 \p{
     Given a minmax problem #{L = (X,Y,L)} where #{X} is a finite-dimensional real vector space, let
