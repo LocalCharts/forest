@@ -18,9 +18,9 @@
 
   %def: std. form convex
   \transclude{efr-001G}
-  %def: Lagrangian
-  \transclude{efr-001K}
 
+  %Def: Lagrangian
+  \transclude{efr-002K}
   \p{
     Observe that #{\sup_{\lambda,\nu} L(x,\lambda,\nu)} is #{f_0(x)} if #{x} satisfies the constraints of the problem, and #{\infty} otherwise. Hence we can think of this minimization problem as playing a zero-sum game: we choose #{x}, our adversary chooses #{\lambda,\nu}, and our loss function is #{L}.
   }
@@ -212,4 +212,6 @@
   \title{Misc stuff (sorting)}
   \transclude{efr-001Y}
   \transclude{efr-001M}
+  %def: Lagrangian
+  \transclude{efr-001K}
 }
