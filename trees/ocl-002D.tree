@@ -1,0 +1,9 @@
+\title{The bicategory of noise-driven Markov kernels}
+\taxon{definition}
+\import{macros}
+
+\p{Let #{\Meas} be the category of measurable spaces, and #{\Prob \colon \Meas \to \Set} be the covariant functor sending a measurable space to the set of probability measures on it. Then #{\Prob} is lax monoidal with respect to Cartesian product on #{\Meas} and #{\Set}, via
+##{\Prob(A) \times \Prob(B) \to \Prob(A \times B)}
+given by independent product. Thus, the Grothendieck construction #{\int \Prob} is a monoidal category with a strict monoidal functor #{\int \Prob \to \Meas}.}
+
+\p{Let #{\NoiseStoch} be the Markov bicategory given by the Para construction applied to the action of #{\int \Prob} on #{\Meas}.}

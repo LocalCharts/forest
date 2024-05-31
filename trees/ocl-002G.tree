@@ -1,0 +1,18 @@
+\title{Structural Lift of a Graphical Causal Model}
+\taxon{definition}
+\import{macros}
+
+\p{Let #{P \colon \CausDiag(V, \parents) \to \Stoch} be a graphical causal model. Then a \defcase{structural lift} #{S} of #{P} is a commuting triangle
+
+\quiver{
+% https://q.uiver.app/#q=WzAsMyxbMCwxLCJcXENhdXNEaWFnKFYsIFxccGFyZW50cykiXSxbMSwwLCJcXE5vaXNlU3RvY2giXSxbMSwyLCJcXFN0b2NoIl0sWzEsMiwiTSJdLFswLDIsIlAiLDJdLFswLDEsIlMiXV0=
+\begin{tikzcd}
+	& \NoiseStoch \\
+	{\CausDiag(V, \parents)} \\
+	& \Stoch
+	\arrow["M", from=1-2, to=3-2]
+	\arrow["S", from=2-1, to=1-2]
+	\arrow["P"', from=2-1, to=3-2]
+\end{tikzcd}
+}
+}

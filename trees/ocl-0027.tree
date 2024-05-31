@@ -1,0 +1,24 @@
+\title{Graphical and Structural Causal Models}
+\author{owen-lynch}
+\import{macros}
+\date{2024-05-31}
+
+\p{I recently had the precise distinction between graphical and structural causal models explained to me by [[jeremy-zucker]] and I figured out how to express the differences and commonalities in a neat categorical way.}
+
+\p{First of all, graphical and structural causal models share the same syntax, which I will call [causal diagrams](ocl-002B).}
+
+\transclude{ocl-0028}
+
+\p{Now, the natural thing to do with a free Markov category is to consider Markov functors into specific Markov categories. The simplest case of this gives us graphical causal models.}
+
+\transclude{ocl-002C}
+
+\p{In order to define structural causal models, we have to go slightly beyond Markov categories, however.}
+
+\transclude{ocl-002D}
+
+\transclude{ocl-002F}
+
+\transclude{ocl-002E}
+
+\transclude{ocl-002G}
