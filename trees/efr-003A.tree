@@ -1,0 +1,12 @@
+\date{2024-06-02}
+\taxon{definition}
+\author{eigil-rischel}
+\import{macros}
+\p{
+  Let #{G} be a directed graph. A \em{flow} on #{G} valued in an abelian group #{A} is a choice of #{a_e \in A} for each edge #{e \in E(G)},
+  in such a way that for each vertex #{v}, we have ##{\sum_{e : s(e) = v} a_e - \sum_{e : t(e) = v} a_e = 0,}
+  where these sums are over the sets of edges with source and target #{v} respectively.
+}
+\p{
+  The values #{a_e} are called the \em{capacities} of the edges. A flow is called \em{proper} if #{a_e \neq 0} for all #{e}.
+}
