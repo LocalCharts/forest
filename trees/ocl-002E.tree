@@ -1,0 +1,5 @@
+\title{Structural Causal Model}
+\taxon{definition}
+\import{macros}
+
+\p{A \defcase{structural causal model} is a Markov bifunctor from #{\CausDiag(V, \parents)} to #{\NoiseStoch}.}

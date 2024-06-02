@@ -1,0 +1,15 @@
+\title{Diagrams for Causal Models}
+\author{owen-lynch}
+\import{macros}
+
+\p{Typically, causal models are expressed as directed acyclic graphs (DAGs). When you draw a DAG, it might look something like a commutative diagram or a string diagram, however neither of these interpretations actually makes much sense for the purposes that causal models are used for.}
+
+\p{Instead, one should think of the DAG for a causal model as a certain type of presentation for a free Markov category.}
+
+\transclude{ocl-0029}
+
+\transclude{ocl-002A}
+
+\transclude{ocl-002B}
+
+\p{If #{(\{v_1,\ldots,v_n\}, \parents)} is a finite DAG, then there is a distinguished morphism in #{\CausDiag(V, \parents)} ##{\sample \colon I \to #{v_1 \otimes \cdots \otimes v_n}} built using each #{\sample_v} morphism precisely once.}

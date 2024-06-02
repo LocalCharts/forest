@@ -210,6 +210,12 @@
 \def\Org{#{\dblcat{Org}}}
 \def\DOrg{#{\dblcat{DOrg}}}
 
+\def\Meas{#{\cat{Meas}}}
+\def\Stoch{#{\cat{Stoch}}}
+\def\NoiseStoch{#{\cat{NoiseStoch}}}
+
+\def\Prob{#{\operatorname{\mathbf{Prob}}}}
+
 \def\horiz{\mathcal{h}}
 
 \def\List{#{\mathbf{List}}}
@@ -233,6 +239,11 @@
 \def\Csp{#{\cat{Csp}}}
 \def\Edit{#{\dblcat{Edit}}}
 
+\def\parents{#{\operatorname{\mathrm{pa}}}}
+
+\def\CPN{#{\operatorname{\mathbf{CPN}}}}
+\def\CausDiag{#{\operatorname{\mathbf{CausDiag}}}}
+\def\sample{#{\mathbf{sample}}}
 
 % Universal Algebra
 
