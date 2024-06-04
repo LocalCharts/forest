@@ -13,3 +13,4 @@
 }
 \p{
   However, rather than making the #{\epsilons} an external feature of the judgments, it is more useful to put them "inside" the propositions. This leads to the idea of error credits - #{P \ast \epsilon} meaning "#{P} holds, and we have a budget of #{\epsilon} of error to work with". Then #{\{P \ast \epsilon\} f\{Q\}} is the replacement of the Hoare triple above.
+}
