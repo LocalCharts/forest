@@ -25,16 +25,27 @@
     \p{
         (Note that this inequality actually holds even if #{f} is not convex, and indeed we haven't really used convexity yet).
     }
+
     \p{
-        Consider the constructed morphism #{f \to (f|_0)^-|^0}.
-        This witnesses the inequality
-        ##{\forall \alpha, x: f(x) \geq \inf_{x'} f(x') - \alpha(x') + \alpha(x)}
-        A splitting of this map would consist of a choice #{\alpha^* \in X^*} so that the inequality
-        ##{f(x) \leq \inf_{x'} f(x') - \alpha^*(x') + \alpha^*(x),}
-        (which would necessarily be an equality), holds.
+        Observe that, using the natural identification #{(X^*)^* = X}, we have ##{(f|_0)|^0 = (X \oplus X, X^*, (x,x';\alpha) \mapsto f(x) - \alpha(x) + \alpha(x'))}. Clearly #{\inf_x \sup_\alpha f(x) - \alpha(x) + \alpha(x') = f(x'),} since the supremum is infinite unless #{x = x'}. But observe that #{(f^*)^*(x') = \sup_\alpha \inf_x f(x) - \alpha(x) + \alpha(x')}
     }
     \p{
-        The fact that such an #{\alpha} does exist is ultimately due to strong duality in the problem
-        #{f|_0}, which amounts to the existence of a state #{I \to f|_0 \otimes (f|_0)^*}, so it seems plausible that one can make a category-theoretic argument for this, but the details are not obvious.
+        Our claim now is that we may exchange these extremizers by strong duality. This amounts to the claim that the local Beck-Chevalley property holds for this square at #{(f|_0)|^0}:
+        \quiver{
+            \begin{tikzcd}
+            (X \oplus (X^*)^*, *) \ar[d] \ar[r] & ((X^*)^*, *) \ar[d]\\
+            (X \oplus (X^*)^*, X^*) \ar[r] & ((X^*)^*, X^*)
+            \end{tikzcd}
+        }
+    }
+    \p{
+        But by \ref{efr-001U}, strong duality holds in every square of the form
+        \quiver{
+            \begin{tikzcd}
+            (X, *) \ar[d] \ar[r] & (*, *) \ar[d]\\
+            (X, X^*) \ar[r] & (*, X^*)
+            \end{tikzcd}
+        }
+        and by \ref{efr-003C}, this is establishes that the previous square has the Beck-Chevalley condition as well, which finishes the proof.
     }
 }

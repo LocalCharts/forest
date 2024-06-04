@@ -1,0 +1,22 @@
+\date{2024-06-04}
+\author{eigil-rischel}
+\taxon{lemma}
+\import{macros}
+\p{
+  Given a commutative square:
+  \quiver{
+    \begin{tikzcd}
+    (X_1,A_1) \ar[r] \ar[d] & (Y_1,B_1) \ar[d]\\
+    (X_2,A_2) \ar[r] & (Y_2,B_2)
+    \end{tikzcd}
+  }
+  in #{\Set^\Delta \times \Set^{\Delta,\op},} with the Beck-Chevalley property for the fibration from #{\Minmax,}
+  let #{(Z,C)} be some other pair of convex spaces. Then the square 
+  \quiver{
+    \begin{tikzcd}
+    (X_1 \times Z,A_1 \times C) \ar[r] \ar[d] & (Y_1 \times Z,B_1 \times C) \ar[d]\\
+    (X_2 \times Z,A_2 \times C) \ar[r] & (Y_2 \times Z,B_2 \times C)
+    \end{tikzcd}
+  }
+  also has the Beck-Chevalley condition
+}

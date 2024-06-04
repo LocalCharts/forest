@@ -196,15 +196,24 @@
   \title{The Legendre Transform}
   
   \transclude{efr-001P}
+  \p{
+    The convex conjugate is also called the \em{Legendre transform} or the \em{Fenchel-Legendre transform}. It is intimately related to convex duality. We will prove the following fundamental property of the convex conjugate using the categorical language of minmax problems, and along the way we will see the role that convex duality plays. Note that our invocation of the term "strong duality" here is somewhat more complicated than strictly necessary - normally one would merely invoke the separating hyperplane theorem directly.
+  }
+
+  %Proposition: dual of dual is id
   \transclude{efr-001Q}
-  \transclude{efr-001U}
+
+  %defns of restriction to zero
   \transclude{efr-001T}
+
+  %strong duality in restriction
+  \transclude{efr-001U}
+
+  \transclude{efr-003C}
 
   \transclude{efr-001V}
 
-  \p{
-    The strong duality in problems of the form #{f|_0} is a (very) special case of the strong duality necessary to make composition well-defined in a double category of minmax problems, see [[efr-001Y]]. In terms of such a double category, we can say that the theorem #{(f^*)^* = f} (for convex #{f}) is a case of the unitality of composition.
-  }
+
 }
 
 
