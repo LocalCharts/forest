@@ -1,0 +1,17 @@
+\date{2024-05-28}
+\author{eigil-rischel}
+\taxon{proposition}
+\import{macros}
+\p{
+  Let #{1 : \NN \to \CC} denote the constant function at #{1}. Then #{(\mu \ast 1) = \delta_1}, where #{\delta_1} is the Kronecker delta (#{1} at #{1}, zero everywhere else).
+}
+\proof{
+ \p{
+    #{(\mu \ast 1)(1) = \sum_{d | 1}\mu(d)1(1/d) = \mu(1) = 1}.
+    Now let #{n > 1} and consider #{\sum_{d | n} \mu(d).} We must prove this is zero.
+    Since #{\mu(d)} is nonzero only if #{d} is a product of distinct primes, this amounts to the claim that the set of prime divisors of #{n} contains the same number of even-cardinality and odd-cardinality subsets. This is true of any finite nonempty set, as can be easily proven by induction:
+ }
+ \p{
+  Let #{A} be finite and nonempty, and let #{a \in A} be some element. Then among subsets of #{A} not containing #{a}, by the induction hypothesis there must be an equal number of even and odd sets. Since removing #{a} from a set containing it changes the cardinality, there must also be an equal number of even and odd sets containing #{a}, which finishes the argument (the base case when #{A} has a single element is trivial).
+ }
+}

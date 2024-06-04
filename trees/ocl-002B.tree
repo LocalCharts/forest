@@ -1,0 +1,5 @@
+\title{The causal diagram for a DAG}
+\taxon{definition}
+\import{macros}
+
+\p{Given a [DAG](ocl-0029) #{(V, \parents)}, let #{\CausDiag(V, \parents)} be the free Markov category on #{\CPN(V, \parents)}.}

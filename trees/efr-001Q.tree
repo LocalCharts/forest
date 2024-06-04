@@ -2,6 +2,7 @@
 \import{macros}
 \taxon{proposition}
 \author{eigil-rischel}
+\import{macros}
 \p{
     Let #{f: V \to \RR} be convex, so that #{(V,*,f)} is a minmax problem.
     Then we can form the modified minmax problem #{L = (V,V^*,(x,\alpha) \mapsto f(x) - \alpha(x))} - note that, up to a sign change in the domain, this amounts to adding the constraint #{x = 0}.

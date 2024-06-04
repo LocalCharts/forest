@@ -1,0 +1,16 @@
+\date{2024-05-28}
+\author{eigil-rischel}
+\taxon{proposition}
+\import{macros}
+\p{
+  #{\ast} is a commutative and associative operation on the set of functions ##{\NN \to \CC}.
+}
+\proof{
+  To see that #{f \ast g = g \ast f}, consider the following rewrite:
+  ##{(f \ast g)(n) = \sum_{a,b : a \cdot b = n} f(a)g(b).}
+  It is clear that the right-hand side of this is commutative, because multiplication is.
+
+  For associativity, similarly observe that
+  ##{((f \ast g) \ast h)(n) = \sum_{a,b : a \cdot b = n}\sum_{c,d : c \cdot d = a} f(c)g(d)h(b) = \sum_{x,y,z : xyz = n} f(x)g(y)h(z),}
+  which is clearly associative.
+}

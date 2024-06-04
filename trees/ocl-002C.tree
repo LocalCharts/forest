@@ -1,0 +1,5 @@
+\title{Graphical Causal Model}
+\taxon{definition}
+\import{macros}
+
+\p{A \defcase{graphical causal model} consists of a [DAG](ocl-0029) #{(V, \parents)} and a Markov functor ##{P \colon \CausDiag(V, \parents) \to \Stoch}}

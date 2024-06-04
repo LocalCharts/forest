@@ -1,0 +1,8 @@
+\date{2024-05-28}
+\author{eigil-rischel}
+\import{macros}
+\taxon{definition}
+\p{
+  Let #{f,g: \NN \to \CC} be two functions. Then their Möbius convolution is the function
+  ##{(f \ast g)(n) = \sum_{d | n} f(d) g(n/d)}
+}

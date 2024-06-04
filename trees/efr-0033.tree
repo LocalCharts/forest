@@ -1,0 +1,13 @@
+\date{2024-05-28}
+\author{eigil-rischel}
+\import{macros}
+\taxon{definition}
+\title{Möbius function}
+\p{
+  For a positive integer #{n,} #{\mu(n),} define
+  \ul{
+    \li{#{\mu(n) = +1} if #{n} is squarefree with an even number of prime factors}
+    \li{#{\mu(n) = -1} if #{n} is squarefree with an odd number of prime factors}
+    \li{#{\mu(n) = 0} if #{n} has a squared prime factor}
+  }
+}

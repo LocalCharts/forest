@@ -1,0 +1,18 @@
+\date{2024-05-28}
+\author{eigil-rischel}
+\title{Categories as Sheaves}
+\import{macros}
+\def\inert{#{\operatorname{inert}}}
+\taxon{proposition}
+\p{
+  Let #{\Delta} be the simplex category, and let #{\Delta_{\inert} \subseteq \Delta} be the subcategory of inert morphisms (those that are "distance-preserving").
+}
+\p{
+  There is an obvious Grothendieck topology on #{\Delta_\inert} where a family is covering if it is "surjective on intervals".
+}
+\p{
+  Then a simplicial set #{X} is a category if and only if the restriction to #{\Delta_\inert} is a sheaf for this topology.
+}
+\proof{
+  \p{Sketch: to be a sheaf for this topology is easily seen to amount to the claim that an #{n}-simplex is uniquely determined by its spine (a family of #{n} composible 1-cells).}
+}

@@ -1,0 +1,25 @@
+\date{2024-06-02}
+\author{eigil-rischel}
+\taxon{theorem}
+\import{macros}
+\p{
+  Given a directed graph #{G}, let #{p_G(\lambda)} be the number of #{\ZZ /(\lambda)}-valued \em{proper} flows on #{G}.
+  Then for any #{G}, #{p_G} is a polynomial in #{\lambda}
+}
+\proof{
+  \p{
+    Let a \em{wide subgraph} be one which contains all the vertices (and is thus given by a subset of the edges).
+    Clearly any flow on #{G} is a proper flow on a unique wide subgraph, namely the one given by those edges where the flow is nonzero.
+  }
+  \p{
+    Hence if we let #{p'_G(\lambda)} be the number of flows, not necessarily proper, on a graph, we have
+    ##{p'_G(\lambda) = \sum_{G' \subseteq G \text{ wide}} p_{G'}(\lambda),}
+    where the sum runs over all the wide subgraphs of #{G}
+  }
+  \p{
+    By a Möbius inversion argument, we get #{p_G(\lambda) = \sum_{G' \subseteq G \text{ wide}} p'_{G'}(\lambda) \mu(G',G)} for some Möbius function #{\mu}. Hence, regardless of what #{\mu} is, it suffices to prove that #{p'_G} is a polynomial for any graph #{G}.
+  }
+  \p{
+    To see this, first observe that a flow on a disjoint union of graphs is clearly just a choice of flows on each component, so we may assume #{G} connected. Suppose #{G} has #{n} vertices, and choose a spanning set of #{n-1} edges. Given any assignment on the remaining edges, there is a unique way of choosing the capacity of these edges in order to make this assignment into a flow, so the number of flows is #{\lambda^{|E(G)| - n + 1}}.
+  }
+}

@@ -1,0 +1,5 @@
+\title{Marginalization of noise-driven Markov kernels}
+\taxon{proposition}
+\import{macros}
+
+\p{There is a functor #{M \colon \NoiseStoch \to \Stoch} which is the identity on objects, and sends a morphism #{(X, \mu \colon \Prob(X), f \colon A \times X \to B)} to the Markov kernel #{M(f) \colon A \to \Prob(B)} defined by #{M(f)(a) = f(a, \cX)} where #{\cX \sim \mu}.}

@@ -1,0 +1,31 @@
+\date{2024-05-28}
+\author{eigil-rischel}
+\import{macros}
+\p{
+  This is the Möbius inversion theorem:
+}
+\transclude{efr-0032}
+\p{
+  A priori, it seems highly non-obvious that there should even exist a function #{\mu} making this true. Here is the definition of #{\mu:}
+}
+\transclude{efr-0033}
+\p{
+  To prove the theorem, we introduce some more notation:
+}
+\transclude{efr-0035}
+\transclude{efr-0036}
+\transclude{efr-0037}
+\p{
+  Now the theorem is trivial: #{g = (1 \ast f),} and so #{\mu \ast g = \mu \ast 1 \ast f = \delta_1 \ast f = f}.
+}
+\p{
+  I think this is a very neat example of the power of abstraction in mathematics. The statement in \ref{efr-0032} seems complicated and gnarly, until we observe certain simplifying features, which allow us to simply check a special case. But once we have the idea of thinking of #{\sum_{d | n}f(d)} as a special case of a \em{binary} operation on functions, and notice that it's associative, we just need to ask whether #{1} is invertible. Of course, I made the whole thing seem a bit more mystical by pulling #{\mu} from thin air - but it would not have been \em{too} hard to derive it from the formula #{\sum_{d | n}\mu(d) = \delta_1(n),} either.
+}
+\p{
+  We can go even further and apply Möbius inversion outside of number theory. Let me give, for now, just an application, without spelling out how it works:
+}
+\transclude{efr-003A}
+\transclude{efr-0039}
+\p{
+  This theorem is due to Rota, see also \ref{rota-foundations-mobius-1964} for more details.
+}
