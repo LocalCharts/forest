@@ -1,0 +1,18 @@
+\title{Obstructions to Compositionality}
+\date{2023-12-14}
+\taxon{reference}
+\meta{doi}{10.4204/EPTCS.397.14}
+\author{Caterina Puca}
+\author{amar-hadzihasanovic}
+\author{Fabrizio Genovese}
+\author{Bob Coecke}
+\meta{bibtex}{\startverb
+ @article
+{Puca_Hadzihasanovic_Genovese_Coecke_2023, title={Obstructions to Compositionality}, volume={397}, ISSN={2075-2180}, DOI={10.4204/EPTCS.397.14}, abstractNote={Compositionality is at the heart of computer science and several other areas of applied category theory such as computational linguistics, categorical quantum mechanics, interpretable AI, dynamical systems, compositional game theory, and Petri nets. However, the meaning of the term seems to vary across the many different applications. This work contributes to understanding, and in particular qualifying, different kinds of compositionality. Formally, we introduce invariants of categories that we call zeroth and first homotopy posets, generalising in a precise sense the pi0 and pi1 of a groupoid. These posets can be used to obtain a qualitative description of how far an object is from being terminal and a morphism is from being iso. In the context of applied category theory, this formal machinery gives us a way to qualitatively describe the “failures of compositionality”, seen as failures of certain (op)lax functors to be strong, by classifying obstructions to the (op)laxators being isomorphisms. Failure of compositionality, for example for the interpretation of a categorical syntax in a semantic universe, can both be a bad thing and a good thing, which we illustrate by respective examples in graph theory and quantum theory.}, note={arXiv:2307.14461 [cs, math]}, journal={Electronic Proceedings in Theoretical Computer Science}, author={Puca, Caterina and Hadzihasanovic, Amar and Genovese, Fabrizio and Coecke, Bob}, year={2023}, month={Dec}, pages={226–245} }
+\stopverb}
+\subtree{\title{Abstract}
+\p{
+  Compositionality is at the heart of computer science and several other areas of applied category theory such as computational linguistics, categorical quantum mechanics, interpretable AI, dynamical systems, compositional game theory, and Petri nets. However, the meaning of the term seems to vary across the many different applications. This work contributes to understanding, and in particular qualifying, different kinds of compositionality. Formally, we introduce invariants of categories that we call zeroth and first homotopy posets, generalising in a precise sense the pi0 and pi1 of a groupoid. These posets can be used to obtain a qualitative description of how far an object is from being terminal and a morphism is from being iso. In the context of applied category theory, this formal machinery gives us a way to qualitatively describe the “failures of compositionality”, seen as failures of certain (op)lax functors to be strong, by classifying obstructions to the (op)laxators being isomorphisms. Failure of compositionality, for example for the interpretation of a categorical syntax in a semantic universe, can both be a bad thing and a good thing, which we illustrate by respective examples in graph theory and quantum theory.
+}
+}
+
