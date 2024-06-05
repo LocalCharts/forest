@@ -1,0 +1,13 @@
+\date{2024-06-05}
+\author{eigil-rischel}
+\contributor{amar-hadzihasanovic}
+\taxon{theorem}
+\import{macros}
+\p{
+  Let #{x \xto{f} y \xto{g} z}. Recall the definitions of #{\pi_1, \pi_0} of a morphism from \ref{puca-etal-obstructions-2023}, and the definition of #{\pi_1(g,f)}, \ref{efr-003D}.
+}
+\p{
+  Then the sequence of pointed posets
+  ##{0 \to \pi_1(f) \to \pi_1(fg) \to \pi_1(g,f) \to \pi_0(f) \to \pi_0(fg) \to \pi_0(g) \to 0} is exact,
+  in the sense that the image of each map is the kernel of the next.
+}

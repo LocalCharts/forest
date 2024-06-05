@@ -1,0 +1,17 @@
+\date{2024-06-05}
+\import{macros}
+\author{eigil-rischel}
+\contributor{amar-hadzihasanovic}
+\taxon{definition}
+\p{
+  Let #{f: x \to y, g: y \to z} be a pair of composable morphisms in a category #{\cC}. Then the first homotopy poset of #{g} relative to #{f} is given as follows:
+  \ol{
+    \li{Take the set of all tuples #{a \in \cC, k: a \to x, h: a \to y} so that #{kfg = hg}}
+    \li{Equip this with the "natural" partial order, where #{(a,k,h) \leq (a',k',h')} if there exists a morphism #{a \to a'} so that the two obvious triangles commute}
+    \li{Quotient this by the subset of those pairs where #{kf = h}}
+  }
+  This is a pointed subset. Denote it #{\pi_1(g,f)}.
+}
+\p{
+  Note that there are canonical maps #{\pi_1(fg) \to \pi_1(g,f),} carrying a pair #{k,h: a \to x} to #{k, hf}, and #{\pi_1(g,f) \to \pi_0(f),} carrying a pair #{k,h} to the morphism #{h}
+}
