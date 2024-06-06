@@ -22,5 +22,8 @@
   There is a duality between coalgebraic modal logic in this sense (expressing subsets of the state space) and categorical universal algebra (which reasons about equations, i.e equivalence relations on, or quotients of, the algebra in question).
 }
 \p{
+  One can ask how to apply this idea to the dynamical systems of [[djm-categorical-systems-theory]], which are not directly coalgebras, and where, crucially, the set of input/output trajectories (which is the cofree coalgebra) is much more complicated, and problematic to define in general.
+}
+\p{
   Read: [[cirsea-etal-modal-logic]], [[kupke-pattinson-modal-2011]].
 }
