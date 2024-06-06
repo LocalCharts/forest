@@ -1,0 +1,22 @@
+\date{2024-06-05}
+\author{eigil-rischel}
+\title{Modal logics and coalgebra}
+\p{
+  Let #{T: X \to \Delta(X)} be a (discrete) stochastic dynamical system.
+  Then for each #{\epsilon}, we obtain an operator #{\diamond_\epsilon: P(X) \to P(X),} where #{\diamond_\epsilon(\phi)(x)} if #{P_{x' \sim Tx}(\phi(x')) \geq \epsilon}. But where do these come from?  
+}
+\p{
+  Clearly, one step is to take a property of distributions on #{X} ("the probability of #{\phi} is at least #{\epsilon}) and pull it back to a property of points in #{X} via the map #{P(T): P(X) \leftarrow P(\Delta(X)),} given by the contravariant powerset functor. The other step involves building a map #{[0,1] \times PX \to P(\Delta(X))}.
+  This is a sort of distributive law-type deal between the functor #{[0,1]} and #{\Delta(X)} (and #{P}).
+}
+\p{
+  Conceptually, defining a modal logic means giving #{P(X)} some sort of \em{algebra} structure, which is naturally dual to the \em{coalgebra} structure of #{X} - and this is logical, since #{P} is contravariant. The question is the relationship between the functor (or monad) of the algebra and the functor (or comonad) of the coalgebra.
+}
+\p{
+  For example, consider #{T: X \to X^A}, a transition system with input alphabet #{A}. Note that #{P(X^A) = 2^{X^A}.} There is a natural evaluation map #{X^A \times A \to X,} which induces #{(2^{X^A})^A = 2^{X^A \times A} \leftarrow 2^X,\}
+  which is then mated to a map #{2^X \times A \to 2^{X^A},} or in other words #{P(X) \times A \to P(X^A),} taking #{\phi, a} to the proposition "#{f(a)} satisfies #{\phi}".
+  Applying this to #{T} gives you the modality #{\diamond_a(\phi)}, meaning "if the next input is #{a}, then #{\phi} will hold after the next step".
+}
+\p{
+  Read: [[cirsea-etal-modal-logic]], [[kupke-pattinson-modal-2011]].
+}

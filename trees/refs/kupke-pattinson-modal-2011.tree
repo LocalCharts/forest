@@ -1,0 +1,15 @@
+\title{Coalgebraic semantics of modal logics: An overview}
+\date{2011-09-02}
+\taxon{reference}
+\meta{doi}{10.1016/j.tcs.2011.04.023}
+\author{Clemens Kupke}
+\author{Dirk Pattinson}
+\meta{bibtex}{\startverb
+ @article
+{Kupke_Pattinson_2011, series={CMCS Tenth Anniversary Meeting}, title={Coalgebraic semantics of modal logics: An overview}, volume={412}, ISSN={0304-3975}, DOI={10.1016/j.tcs.2011.04.023}, abstractNote={Coalgebras can be seen as a natural abstraction of Kripke frames. In the same sense, coalgebraic logics are generalised modal logics. In this paper, we give an overview of the basic tools, techniques and results that connect coalgebras and modal logic. We argue that coalgebras unify the semantics of a large range of different modal logics (such as probabilistic, graded, relational, conditional) and discuss unifying approaches to reasoning at this level of generality. We review languages defined in terms of the so-called cover modality, languages induced by predicate liftings as well as their common categorical abstraction, and present (abstract) results on completeness, expressiveness and complexity in these settings, both for basic languages as well as a number of extensions, such as hybrid languages and fixpoints.}, number={38}, journal={Theoretical Computer Science}, author={Kupke, Clemens and Pattinson, Dirk}, year={2011}, month={Sep}, pages={5070–5094}, collection={CMCS Tenth Anniversary Meeting} }
+\stopverb}
+\subtree{\title{Abstract}
+\p{
+Coalgebras can be seen as a natural abstraction of Kripke frames. In the same sense, coalgebraic logics are generalised modal logics. In this paper, we give an overview of the basic tools, techniques and results that connect coalgebras and modal logic. We argue that coalgebras unify the semantics of a large range of different modal logics (such as probabilistic, graded, relational, conditional) and discuss unifying approaches to reasoning at this level of generality. We review languages defined in terms of the so-called cover modality, languages induced by predicate liftings as well as their common categorical abstraction, and present (abstract) results on completeness, expressiveness and complexity in these settings, both for basic languages as well as a number of extensions, such as hybrid languages and fixpoints.
+}}
+
