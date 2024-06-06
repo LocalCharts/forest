@@ -1,5 +1,6 @@
 \date{2024-06-05}
 \author{eigil-rischel}
+\import{macros}
 \title{Modal logics and coalgebra}
 \p{
   Let #{T: X \to \Delta(X)} be a (discrete) stochastic dynamical system.
