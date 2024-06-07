@@ -3,5 +3,8 @@
 \author{eigil-rischel}
 \import{macros}
 \p{
-  Let #{\cA: \cC^\op \to \Cat, T: \cC \to \int \cA} be a theory of dynamical systems in the sense of [[djm-categorical-systems-theory]]. Let #{A,B \in \int \cA} be arenas. Then a \em{controlled cybernetic system} #{A \proto B} is a pair consisting of a pair #{S \in \cC} and a lens #{TS \otimes A \leftrightarrows B}
+  Let #{\cA: \cC^\op \to \Cat, T: \cC \to \int \cA} be a theory of dynamical systems in the sense of [[djm-categorical-systems-theory]]. Let #{A,B \in \int \cA} be arenas. Then a \em{controlled cybernetic system} #{A \proto B} is a tuple consisting of a third interface #{X}, a system #{TS \to X,} and a lens #{A \otimes X \leftrightarrow Y}
+}
+\p{
+  It may seem that we should ask simply for a morphism #{A \otimes TS \to B}. However, the above definition turns out to be more natural. Since there are multiple interacting notions of reparametrization for a controlled cybernetic system, it is not at all obvious that we can always feel free to replace every system with one of this simplified form (as we would be able to for parameterized morphisms), hence we choose this definition.
 }
