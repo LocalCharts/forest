@@ -4,6 +4,7 @@
 \import{macros}
 \def\Para{#{\dblcat{Para}}}
 \def\Arena{#{\dblcat{Arena}}}
+\def\Sys{#{\dblcat{Sys}}}
 \p{
   Let a dynamical systems theory be given, and let #{\Sys} be the double category of open dynamical systems, lenses and charts.
   There is a forgetful functor #{\Sys \to \Arena}. If the theory is monoidal, this functor is a strong monoidal functor of monoidal double categories.
