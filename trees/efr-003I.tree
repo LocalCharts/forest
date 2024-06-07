@@ -1,0 +1,19 @@
+\date{2024-06-07}
+\taxon{definition}
+\author{eigil-rischel}
+\import{macros}
+\p{
+  Let a dynamical systems theory be given, and let #{\Sys} be the double category of open dynamical systems, lenses and charts.
+  There is a forgetful functor #{\Sys \to \Lens}. If the theory is monoidal, this functor is a strong monoidal functor of monoidal double categories.
+}
+\p{
+  Recall that given a monoidal functor #{F: \cC \to \cD}, there is a double category #{\Para_\cC(\cD)}, where the vertical category is #{\cD}, the horizontal cells are pairs #{C \in \cC, A \otimes F(C) \to B}, and the 2-cells are morphisms #{C \to C'} making the obvious square commute.
+}
+\p{
+  Since a monoidal double category is a category internal to monoidal categories (commutativity of internalizations), we can apply this construction "levelwise" to the double functor #{\Sys \to \Lens} and obtain a category of double categories - a triple category - of [[efr-003H]].
+}
+\p{
+  The "base" double category of this triple category will be the double category of arenas, lenses and charts.
+  The third class of 1-cells consist of lenses #{A \otimes X \to B} (with #{A,B,X} arenas), equipped with a system #{TS \to X}.
+  There are two new classes of 2-cell - one has charts #{A \to A', B \to B'} on the edges and consists of a map #{S \to S'} and a chart #{X \to X'} making an obvious diagram commute, the other is the same thing for lenses. The existence of a 3-cell filling a cube expresses the commutativity of a particular diagram in #{\cC}.
+}

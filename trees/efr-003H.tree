@@ -1,0 +1,7 @@
+\date{2024-06-07}
+\taxon{definition}
+\author{eigil-rischel}
+\import{macros}
+\p{
+  Let #{\cA: \cC^\op \to \Cat, T: \cC \to \int \cA} be a theory of dynamical systems in the sense of [[djm-categorical-systems-theory]]. Let #{A,B \in \int \cA} be arenas. Then a \em{controlled cybernetic system} #{A \proto B} is a pair consisting of a pair #{S \in \cC} and a lens #{TS \otimes A \leftrightarrows B}
+}
