@@ -1,0 +1,15 @@
+\date{2024-06-08}
+\author{eigil-rischel}
+\import{macros}
+\title{Subsets of cofree coalgebras are modal operations}
+\p{
+  Fix a functor #{F}, and let #{F^\infty(-)} be the cofree #{F}-coalgebra functor (let's assume it exists).
+  By definition, a coalgebra homomorphism #{X \to F^\infty(A)} is equivalent to an ordinary morphism #{X \to A}.
+}
+\p{
+  Suppose our ambient category contains a subobject classifier #{\Omega}.
+  Then a subobject #{\phi} of the carrier of a coalgebra is equivalent to a homomorphism #{\chi_\phi: X \to F^\infty(\Omega)}. Thus, given any subobject #{M \subseteq F^\infty(\Omega)} (a subobject of the \em{carrier} - not necessarily a subalgebra), we obtain #{\chi_\phi^*(M)}. This defines an operation #{\diamond^M(-)} which operates on subobjects of #{X} - similarly given a subobject of #{F^\infty(\Omega^2),} we get a binary modal operator.
+}
+\p{
+  For example, let #{F=1_{\Set}}. Then #{F^\infty(X) = X^\omega}, so a subset of #{F^\infty(\Omega = \{\bot,\top\})} is just a set of streams of truth values. The modal operator #{\box}, where #{x} satisfies #{\box(\phi)} if #{x} and all its successor states satisfy #{\phi}, corresponds to the singleton set #{\{(\top,\top,\top \dots)\}}. The "eventually" operator #{\diamond}, where #{x} satisfies #{\diamond(\phi)} if \em{any} of its successor states satisfy #{\phi}, corresponds to the set of all streams with at least one occurrence of #{\top}.  
+}
