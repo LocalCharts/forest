@@ -1,0 +1,9 @@
+\date{2024-06-04}
+\title{Version control}
+\taxon{feature}
+
+\p{It should be possible to commit and push work from a silviculture session to a git repository.}
+
+\p{Currently, if you run silviculture locally, you can just go into the folder that the files are stored and run git as normal. This is how I am currently writing this tree. This is also a practical solution for a focused collaborative editing session, for instance if you were to spin up an instance of silviculture in a talk to collaboratively take notes. However, long term, git should be exposed from within the silviculture UI, \em{or} we should build our own version control system...}
+
+\p{\strong{Feasibility.} It's unclear how hard it will be to make this a smooth experience, and how much we can reuse existing git web apps if they exist.}

@@ -1,0 +1,7 @@
+\date{2024-06-04}
+\title{LaTeX/PDF export}
+\taxon{feature}
+
+\p{We should have a collection of xsl style sheets for various journal formats (ams, acm, ieee, beamer, etc.), and you should be able to export the current tree to latex or pdf with your choice of style via pushing a button.}
+
+\p{\strong{Feasibility.} LaTeX (and thus PDF) export is well-supported by forester, this is just a matter of writing some glue code.}

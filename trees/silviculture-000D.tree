@@ -1,0 +1,7 @@
+\date{2024-06-04}
+\title{Quiver popup}
+\taxon{feature}
+
+\p{With a keyboard shortcut, we should be able to open up a popup frame with [quiver](https://q.uiver.app) embedded, and then be able to export into a \code{tex} block in the current tree.}
+
+\p{\strong{Feasibility.} Definitely possible, but requires some wrangling of the quiver library. I spent a day on this and got maybe halfway there before deciding to prioritize other features.}

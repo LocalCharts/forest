@@ -1,0 +1,7 @@
+\date{2024-06-04}
+\title{Markdown import}
+\taxon{feature}
+
+\p{Via ocaml-pandoc, we should be able to do a best-effort conversion from markdown into forest, which may require some manual cleanup, but should help with importing old projects. This should be done via a simple text box that you can paste into, or a zip file upload that does a bulk conversion.}
+
+\p{\strong{Feasibility.} This requires hacking on some OCaml code, and sending a patch to forester, and would be a significant amount of work, but there aren't any real technical unknowns that would cause this to be a \em{surprising} amount of work.}

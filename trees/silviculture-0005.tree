@@ -1,0 +1,5 @@
+\date{2024-06-04}
+\title{Collaborative editing}
+\taxon{feature}
+
+\p{Silviculture uses [Y.js](https://yjs.dev/) along with [codemirror](https://codemirror.net/) to support realtime collaborative editing of all of the trees in a forest.}

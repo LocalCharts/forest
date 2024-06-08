@@ -1,0 +1,27 @@
+\date{2024-06-04}
+\title{Silviculture 0.1}
+\taxon{release}
+\author{owen-lynch}
+\author{kevin-carlson}
+
+\p{This is the first release of silviculture! Note that this is \em{alpha-quality} software, and might do anything, including releasing hordes of angry beavers that eat all of your nice trees.}
+
+\scope{
+\put\transclude/numbered{false}
+
+\transclude{silviculture-0005}
+
+\transclude{silviculture-0006}
+
+\transclude{silviculture-000C}
+
+\transclude{silviculture-0008}
+
+\transclude{silviculture-0009}
+
+\transclude{silviculture-000A}
+
+\transclude{silviculture-000B}
+
+\transclude{silviculture-0007}
+}

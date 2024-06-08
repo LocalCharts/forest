@@ -1,0 +1,7 @@
+\date{2024-06-04}
+\title{Accounts and private trees}
+\taxon{feature}
+
+\p{If silviculture is going to be run on a public server (as is needed to support LocalCharts), we need to put some thought into permissions, both for editing and viewing.}
+
+\p{\strong{Feasibility.} It is known how to implement user accounts. However, there are design decisions to be made about how to integrate permissions with forester; we might need to store permission metadata in a database but not in the files themselves? Or get really into git submodules? To be determined.}

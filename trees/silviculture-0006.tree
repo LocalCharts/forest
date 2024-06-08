@@ -1,0 +1,4 @@
+\title{Switch between edit, view, and edit-and-view}
+\taxon{feature}
+
+\p{Silviculture works with just an editor, just a viewer, or a vertical split-screen editor and viewer combo, similar to overleaf or hedgedoc.}

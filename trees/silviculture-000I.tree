@@ -1,0 +1,7 @@
+\date{2024-06-04}
+\title{Multiple workspaces}
+\taxon{feature}
+
+\p{A single silviculture server should support multiple "workspaces", which would allow different groups of people to collaborate on different projects without seeing each others changes until synced with [[silviculture-000E]].}
+
+\p{\strong{Feasibility.} Requires semi-major refactor, but there aren't too many tricky design decisions about how it should work, or technical questions on how to make it work.}
