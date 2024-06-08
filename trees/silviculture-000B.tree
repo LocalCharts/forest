@@ -1,0 +1,4 @@
+\title{Easy transcludes}
+\taxon{feature}
+
+\p{Hitting \code{Ctrl-i} opens up a menu to quickly create a new tree and transclude it in the current tree, wrapping \code{forester new}.}

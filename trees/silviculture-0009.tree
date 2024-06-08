@@ -1,0 +1,4 @@
+\title{Error reporting}
+\taxon{feature}
+
+\p{Errors from forester or from LaTeX are propagated into the web app and replace the preview pane.}

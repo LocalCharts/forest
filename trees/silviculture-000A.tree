@@ -1,0 +1,4 @@
+\title{Easy navigation}
+\taxon{feature}
+
+\p{If you click on a link to another tree in the preview pane, it opens up an edit view on that tree. Additionally, \code{Ctrk-k} works as it does in a normal forest, opening up a menu to rapidly jump between trees by search.}

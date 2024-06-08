@@ -1,0 +1,5 @@
+\date{2024-06-04}
+\title{Build-on-demand preview}
+\taxon{feature}
+
+\p{By pressing \code{Ctrl-s}, \code{Ctrl-enter}, hitting the build button, or using \code{:w} in vim mode, you can ask the server to rebuild the forest, wrapping \code{forester build}. Thankfully because forester is so fast this normally only takes a second or two! This also refreshes the preview pane of any other connected clients to show the latest build.}

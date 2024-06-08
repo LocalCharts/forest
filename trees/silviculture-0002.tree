@@ -1,0 +1,7 @@
+\date{2024-06-04}
+\title{Silviculture changelog}
+
+\scope{
+\put\transclude/numbered{false}
+\transclude{silviculture-0004}
+}

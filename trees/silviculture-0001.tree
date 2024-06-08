@@ -1,0 +1,34 @@
+\title{Silviculture}
+\import{macros}
+\author{owen-lynch}
+
+\blockquote{
+\p{\em{Silviculture} involves the methods for establishing and maintaining communities of trees and other vegetation that have value to people.... Silviculture also ensures the long-term continuity of essential ecologic functions, and the health and productivity of forested ecosystems.}
+
+\p{-- [[silviculture-nyland-1996]]}
+}
+
+\blockquote{
+\p{Isn't this just overleaf but with forester instead of LaTeX?}
+
+\p{-- Someone, probably}
+}
+
+\p{Silviculture is a web app for collaborative editing of a [forest](http://www.jonmsterling.com/jms-005P.xml). It looks like this:}
+
+\p{\xml{img}[src]{/st-0001-screenshot.png}{}}
+
+\p{For a 3-minute introduction to the main features, see [this video](https://www.youtube.com/watch?v=UN4bvquLg4g).}
+
+\p{If you would like to support silviculture development (specifically, the features in the [[silviculture-0003]]), you can [donate to the Topos Institute](https://topos.institute/contact); if you put "silviculture development" in the donation memo, we will use those funds for silviculture development.}
+
+\p{Thanks to [[toposinstitute]] and [[good-forever]] for supporting development of silviculture.}
+
+\scope{
+\put\transclude/numbered{false}
+\scope{
+\put\transclude/title{Changelog}
+\transclude{silviculture-0002}
+}
+\transclude{silviculture-0003}
+}
