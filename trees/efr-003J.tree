@@ -1,0 +1,20 @@
+\date{2024-06-08}
+\taxon{definition}
+\author{eigil-rischel}
+\import{macros}
+\title{Logics for Categorical Systems Theory}
+\p{
+  What sort of logic can we use for reasoning about open dynamical systems in the style of [[djm-categorical-systems-theory]]?
+}
+\p{
+  One idea would be to attempt to use some form of modal logic. It is tempting to try to see if we can draw on the connection betweens modal logic and coalgebra ([[efr-003G]]). However, while we can \em{sometimes} concoct a functor so that its coalgebras are precisely the open systems of a given signature, this is far from always the case.
+}
+\p{
+  Another question here is how this logic should interact with the change-of-interface functors, or with the compositional structure of categorical systems theory in general.
+}
+\p{
+  In terms of modal or temporal logic, the interpretation of a formula should be a subobject of the state space. In coalgebras there is a neat thing where a formula is a subset of a cofree coalgera (this is perhaps easier to think about in the dual case - a system of equations for algebras of #{T} in a set #{X} of variables is the same thing as a quotient of #{T}, namely the quotient obtained by imposing those equations). This seems like a promising starting point for building up a modal logic for categorical systems theory.
+}
+\p{
+  On the other hand, it may be interesting to apply the ideas of monoidal Hoare logic to the monoidal categories of [controlled cybernetic processes](efr-003H). This may be of interest for control theory - we can reason about the control guarantees implied by a process. It may even be possible to combine the two approaches.
+}
