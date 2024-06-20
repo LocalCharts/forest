@@ -1,0 +1,215 @@
+\date{2024-06-18}
+\title{Logic via hyperdoctrines: equivalence relation example}
+\meta{comments}{true}
+
+\def\bussproofs[body]{
+  \tex{\usepackage{bussproofs, oz}}{\body}
+}
+
+\def\brack[arg]{#{\lbrack\hspace{-0.15em}\lbrack \arg \rbrack\hspace{-0.15em}\rbrack}}
+
+
+\blockquote{This was a tutorial / challenge problem made up by [Kevin Carlson](kevin-carlson) on the fly - any errors are my own!}
+
+\subtree{\title{The challenge}
+\p{Consider a theory of equivalence relations. Let's express the theory syntactically. We start by declaring a primitive type:}
+
+\bussproofs{
+  \AxiomC{}
+  \UnaryInfC{$A$ type}
+  \DisplayProof
+}
+
+\p{We next say that there is a binary relation on #{A}:}
+
+\bussproofs{
+  \AxiomC{}
+  \UnaryInfC{$R: A\pfun A$}
+  \DisplayProof
+}
+
+\p{And then the axioms of reflexivity}
+
+\bussproofs{
+  \AxiomC{$x:R$}
+  \UnaryInfC{$xRx$}
+  \DisplayProof
+}
+
+\p{And reflexivity}
+
+
+\bussproofs{
+  \AxiomC{$(x,y):R, xRy$}
+  \UnaryInfC{$yRx$}
+  \DisplayProof
+}
+\p{And transitivity}
+
+\bussproofs{
+  \AxiomC{$(x,y,z):R, xRy \wedge yRz$}
+  \UnaryInfC{$xRz$}
+  \DisplayProof
+}
+}
+
+\subtree{\title{Approaches to mathematical semantics}
+\p{There are many mathematical techniques for giving a semantics to this logical syntax. Standardly one assigns a set for each type declaration, a relation for each relation declaration, etc.}
+
+\p{One reason this is inadequate is that we'd like characterize what it means to be a model of a theory \em{structurally}, without having to commit to what a model of a theory \em{actually is}. Looking for models "in the category of sets and functions" will result in the same old-fashioned way of doing things, but we shouldn't have to precommit to where we'll look for models.}
+
+\p{So, more categorically, \em{functorial semantics} says one could interpret this to be saying we can have a model in any [regular category](https://ncatlab.org/nlab/show/regular+category) with an object #{A} and a distinguished monomorphism #{R \rightarrowtail A \times A} that satisfies certain properties.}
+
+\p{(One downside of this approach is that we can't semantically distinguish \em{relations} from \em{functions} that happen to be monic, and these are things for which even our semantics ought to keep separate books.)}
+
+\p{However, we can work with much less heavy machinery while also being more general. This is the \em{fibrational approach} to categorical logic. The basic data of a [hyperdoctrine](https://ncatlab.org/nlab/show/hyperdoctrine) is a functor}
+
+##{P: \tau^{op} \rightarrow \mathbb{C}}
+
+\p{Here #{\tau} is a category of types or contexts. We merely ask that #{\tau} have finite \em{products} which are preserved by #{P}. }
+
+\p{#{\mathbb{C}} is the 2-category whose internal logic we wish to work in. Let's focus on the case of a subcategory of posets #{\mathsf{Pos}} with Boolean algebras as objects and, as morphisms, the Boolean algebra morphisms which have left + right adjoints in #{\mathsf{Pos}} (we include those adjoints too). We can call this category #{\mathbb{C}=\mathsf{BoolAlg}'}.}
+
+\p{One obtains classical propositional logic by choosing #{\tau = 1}. The data of #{P} chooses the free Boolean Algebra with #{n} generators (if modeling logic on #{n} atomic sentences). One would obtain intuitionistic logic by changing #{\mathbb{C}=\mathsf{HeytingAlg}'}.}
+}
+
+\subtree{\title{Encoding a theory of equivalence relations}
+
+\subtree{\title{Setup}
+\p{Let's go back to our scenario: what can we say about #{P} such that it models our theory of equivalence relations? We will need an object of #{\tau} to represent our primitive type #{A}.}
+
+##{\brack{A} \in ob(\tau)}
+
+\p{Thinking of a relation as a subset of a product, we can best represent this in #{\mathbb{C}} rather than in #{\tau}.}
+
+##{\brack{R} \in P(\brack{A^2})}
+
+\p{Because #{P(\brack{A^2})} is a Boolean algebra, it has an underlying set (thought of as a power set), so it makes sense to talk about #{R} as an element of that set.}
+}
+
+\p{Also, in defining the axioms it will be convenient to assert some element of a Boolean Algebra is a subobject of another. We can use the language of the Boolean algebra (#{\neg, \land, \vee}) to do this:}
+
+##{A \leq B := A \land B = A}
+
+\p{For any morphism #{f \in Hom_\tau(X, Y)}, we have #{f^* := P(f)}. This morphism sends elements of #{P(Y)} (thought of as subsets of #{Y}) to the coproduct of elementwise preimages, yielding an element of #{P(X)}. Furthermore, #{f^*} has two (dual) approximations of the inverse of #{f^*}; they map elements of #{P(X)} to elements of #{P(Y)}. The right adjoint encodes universal quantification:}
+
+##{Y \subseteq f_\forall X \iff f^{*} Y \subseteq X}
+
+##{f_\forall(X) = \{b\ |\ \forall a \in f^{-1}(b): a \in X \}}
+
+\p{We also have the left adjoint which encodes existential quantification:}
+
+##{Y \subseteq f^* X \iff f_\exists Y \subseteq X}
+
+##{f_\exists(X) = \{b\ |\ \exists a \in f^{-1}(b): a \in X \}}
+
+\subtree{\title{Reflexivity}
+\p{Now let's try to encode reflexivity. If thinking of sets, we'd want to say that the diagonal relation #{\Delta: A \rightarrow A^2} is a subset of #{R}. To do this, we first need to identify which element of #{P(\brack{A^2})} is the diagonal. Once we do, we can simply declare}
+
+##{\text{Reflexivity }:= \brack{\Delta} \leq \brack{R}}
+
+\p{To define #{\brack{\Delta}} using the tools at our disposal, we note that we have a morphism #{{\Delta \in Hom_\tau(\brack{A}, \brack{A}^2)}}. This is sent to a morphism #{\Delta^*: P(\brack{A}^2)\rightarrow P(\brack{A})} which is a coproduct of elementwise preimages. E.g., in a scenario where #{{P(\brack{A})=\mathcal{P}(\{a,b,c\})}}:}
+
+##{\{(a,a),(a,c),(b,b)\} \xmapsto{\Delta^*} \{a\} + \{\} + \{b\} = \{a,b\}}
+
+\p{Now let's look at the behavior of #{\Delta_\exists}:}
+
+##{\{a,c\} \xmapsto{\Delta_\exists} \{(a,a),(c,c)\}}
+
+\p{What happens if we apply the existence adjoint to #{\top_{P(\brack{A})}}? This effectively picks out the full image of the #{\Delta} function as a subset of #{A^2}.}
+
+##{\brack{\Delta} := \Delta_\exists(\top_{P(\brack{A})})}
+}
+\subtree{\title{Symmetry}
+\p{Now let's tackle symmetry. We will want to use the morphism #{\sigma: \brack{A}^2\rightarrow \brack{A}^2} and its pullback morphism #{\sigma^*: P(\brack{A}^2)\rightarrow P(\brack{A}^2)}.}
+
+##{\text{Symmetry} := \sigma^*(\brack{R}) = \brack{R}}
+}
+
+\subtree{\title{Transitivity}
+\p{Here the #{\wedge} in the top of the sequent would normally correspond to a pullback in #{\tau}, if we were doing functorial semantics. A common way to encode transitivity would be to assert that a certain object #{R \times_R R} (pairs which agree on the middle term) is a subobject of #{R} (after you project out the first and last coordinates of the pullback). However, we will make do without assuming #{\tau} has pullbacks.}
+
+\p{Let #{\pi_{14}, \pi_{23}: \brack{A}^4 \rightarrow \brack{A}^2} be projections in #{\tau}. Supposing that we could construct an element #{\brack{R \times_R R} \in P(\brack{A}^4)}, we will have solved encoding transivity via:}
+
+##{\text{Transitivity }:= \pi_{14\exists}(\brack{R \times_R R}) \leq \brack{R}}
+
+\p{Now #{\brack{R \times_R R}} is itself a subset of all possible quadruples which agree on the middle two coordinates, which we denote as #{\brack{A^2 \times_A A^2}}. Which subset? We want the intersection of #{\brack{A^2 \times_A A^2}} with all pairs of elements of #{R}. Let #{\Delta^2} be the copy morphism in #{Hom_\tau(\brack{A}^2,\brack{A}^4)}:}
+
+##{\brack{R \times_R R} := \Delta^2_\exists(R) \land \brack{A^2 \times_A A^2}}
+
+\p{To see this in action, consider this example:}
+
+##{\{(a,b)(b,c)\} \xmapsto{\Delta^2_\exists} \{(a,b,a,b),(a,b,b,c),(b,c,a,b),(b,c,b,c)\}}
+
+\p{We lastly have to define #{\brack{A^2 \times_A A^2}}:}
+
+##{\brack{A^2 \times_A A^2} := \pi_{23}^*(\brack{\Delta})}
+
+\p{E.g., if #{A} has just two generators:}
+
+##{
+\{(a,a),(b,b)\} \xmapsto{\pi_{23}^*} \{(a,a,a,a),(a,a,a,b),(b,a,a,a),(b,a,a,b)\}
+}
+##{+\{(a,b,b,a),(a,b,b,b),(b,b,b,a),(b,b,b,b)\}}
+
+\p{Kevin notes another solution using the morphisms #{\Pi_{12}, \Pi_{23},\Pi_{13}: A^3 \rightarrow A^2}}
+
+##{\text{Transitivity } := \Pi_{13\exists}(\Pi_{12}^*(\brack{R}) \land \Pi_{23}^*(\brack{R})) \leq \brack{R} }
+}
+}
+\subtree{\title{Conclusion}
+\p{Our notion of a model of the logical syntax we originally used to declare equivalence relations is:}
+\ul{
+\li{A category #{\tau} with products and a distinguished object #{\brack{A}}}
+\li{A product-preserving functor #{P:\tau\rightarrow \mathsf{BoolAlg}'}, which assigns #{\brack{A}} (and all its powers) a boolean algebra}
+\li{A choice of an element of #{P(\brack{A^2})} to be #{\brack{R}}}
+\li{Letting #{\brack{\Delta} := \Delta_\exists(\top_{P(\brack{A})})}}
+\li{Such that #{R} is reflexive: #{\brack{\Delta} \leq \brack{R}}}
+\li{Such that #{R} is symmetric: #{\sigma^*(\brack{R}) = \brack{R}}}
+\li{Such that #{R} is transitive: #{\pi_{14\exists}(\Delta^2_\exists(\brack{R}) \land \pi_{23}^*(\brack{\Delta})) \leq \brack{R}}}
+}
+
+\p{Some stray thoughts:}
+\ul{
+
+\li{If we wanted to be even more specific, such as saying we only care about models where #{A} is a #{3} element set (or even a specific set like #{\{\heartsuit,\spadesuit,\clubsuit,\diamondsuit\}}), we could simply stipulate that #{P} maps #{\brack{A}} to the Boolean algebra with those generators.}
+
+\li{This construction only used the existential adjoints - this is not worrisome because this theory can be expressed in a regular category. We only need a [regular hyperdoctrine](https://ncatlab.org/nlab/show/regular+hyperdoctrine) to model it.}
+
+\li{The fibrational approach was proposed to have an advantage over ordinary functorial semantics via distinguishing relations and functions; however, \em{double-categorical} functorial semantics wouldn't have this issue. Understanding the trade-offs between these two ways of doing logic is an active area of research.}
+}
+}
+
+\subtree{\title{Bonus: adding a \em{compatible} function}
+\p{Let's extend the theory to include a map #{A\rightarrow B}...}
+
+\bussproofs{
+  \AxiomC{}
+  \UnaryInfC{$f: A\rightarrow B$}
+  \DisplayProof
+}
+
+\p{that is \em{compatible} with an equivalence relation on #{A}.}
+
+\bussproofs{
+  \AxiomC{$aRb$}
+  \UnaryInfC{$f(a)=f(b)$}
+  \DisplayProof
+}
+
+\p{We first represent #{f} by picking a morphism in #{\tau}}
+
+##{\brack{f} \in Hom_\tau(A, B)}
+
+\p{Our new axiom intuitively says that the image of #{R} is a subobject of the diagonal #{\Delta_B}, which we represent using the same trick as before:}
+
+##{\brack{\Delta_B} := \Delta_{B\exists}(\top_{P(\brack{B})})}
+
+\p{We'll use the existential adjoint to get a map #{(f\times f)_\exists: P(\brack{A^2})\rightarrow P(\brack{B^2})}. For example, supposing that #{f^*} is induced by a function #{\{a_1\mapsto b_2, a_2 \mapsto b_2, a_3 \mapsto b_3\}}:}
+
+##{\{(a_1,a_2),(a_2,a_3),(a_1,a_3)\} \xmapsto{(f\times f)_\exists} \{(b_2,b_2),(b_2,b_3)\} }
+
+\p{Putting these together:}
+
+##{\text{ Compatibility: } (f\times f)_\exists(\brack{R}) \leq \brack{\Delta_B}}
+}
