@@ -32,7 +32,7 @@
 \p{And then the axioms of reflexivity}
 
 \bussproofs{
-  \AxiomC{$x:R$}
+  \AxiomC{$x:A$}
   \UnaryInfC{$xRx$}
   \DisplayProof
 }
@@ -41,14 +41,14 @@
 
 
 \bussproofs{
-  \AxiomC{$(x,y):R, xRy$}
+  \AxiomC{$(x,y):A,\ xRy$}
   \UnaryInfC{$yRx$}
   \DisplayProof
 }
 \p{And transitivity}
 
 \bussproofs{
-  \AxiomC{$(x,y,z):R, xRy \wedge yRz$}
+  \AxiomC{$(x,y,z):A,\ xRy \wedge yRz$}
   \UnaryInfC{$xRz$}
   \DisplayProof
 }
@@ -193,7 +193,7 @@
 \p{that is \em{compatible} with an equivalence relation on #{A}.}
 
 \bussproofs{
-  \AxiomC{$aRb$}
+  \AxiomC{$(a,b):A,\ aRb$}
   \UnaryInfC{$f(a)=f(b)$}
   \DisplayProof
 }
