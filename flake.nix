@@ -52,7 +52,7 @@
             forester-pkg
           ];
           buildPhase = ''
-            forester build --root ${default-tree}-0001 trees/
+            forester build forest.toml
             mv output/ $out/
             cp pdfbuilds.json $out/
           '';
