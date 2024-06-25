@@ -34,7 +34,7 @@
         '';
         build = pkgs.writeScriptBin "build"
         ''
-          ${forester-pkg}/bin/forester build --dev --root ${default-tree}-0001 trees/
+          ${forester-pkg}/bin/forester build forest.toml
         '';
         serve = pkgs.writeScriptBin "serve"
         ''
@@ -42,7 +42,7 @@
         '';
         forester-dev = pkgs.writeScriptBin "forester-dev"
         ''
-          ${forest-server.packages.${system}.default}/bin/forest watch $@ -- "build --dev --root ${default-tree}-0001 trees/"
+          ${forest-server.packages.${system}.default}/bin/forest watch $@ -- "build forest.toml"
         '';
         forest = pkgs.stdenv.mkDerivation {
           name = "localcharts-forest-xml";

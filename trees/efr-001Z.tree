@@ -173,7 +173,8 @@
   \transclude{efr-002Y}
   
   \subtree{
-    \title{Proof of \ref{efr-001E}}
+    % BUG: \ref doesn't work in titles any more
+    %\title{Proof of \ref{efr-001E}}
     \p{
       By \ref{efr-002Y}, the pair #{(X,A)} is solvable, and strong duality holds. Since #{X,A} are both compact, there must exist #{x^*,a^*} attaining the infimum #{\inf_x \sup_a L(x,a)} and the supremum #{\sup_a \inf_x L(x,a)}. These form an equilibrium.
     }

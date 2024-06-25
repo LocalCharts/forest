@@ -1,13 +1,14 @@
 \title{HTML Tags}
 
-\def\table[body]{\xml{table}{\body}}
-\def\th[body]{\xml{th}{\body}}
-\def\tr[body]{\xml{tr}{\body}}
-\def\td[body]{\xml{td}{\body}}
+\xmlns:html{http://www.w3.org/1999/xhtml}
+\def\table[body]{\<html:table>{\body}}
+\def\th[body]{\<html:th>{\body}}
+\def\tr[body]{\<html:tr>{\body}}
+\def\td[body]{\<html:td>{\body}}
 
 \p{The most basic commands just produce html tags, as can be found in the table below.}
 
-\xml{table}{
+\table{
   \tr{\th{Name} \th{HTML} \th{Forester}}
   \tr{\td{[Paragraph](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)} \td{\code{\startverb<p>...</p>\stopverb}} \td{\code{\startverb\p{...}\stopverb}}}
   \tr{\td{[Unordered list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)} \td{\code{\startverb<ul><li>...</li><li>...</li></ul>\stopverb}} \td{\code{\startverb\ul{\li{...}\li{...}}\stopverb}}}

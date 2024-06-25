@@ -18,7 +18,9 @@
 
 \p{Silviculture is a web app for collaborative editing of a [forest](http://www.jonmsterling.com/jms-005P.xml). It looks like this:}
 
-\p{\xml{img}[src]{/st-0001-screenshot.png}{}}
+\xmlns:html{http://www.w3.org/1999/xhtml}
+
+\p{\<html:img>[src]{/st-0001-screenshot.png}{}}
 
 \p{For a 3-minute introduction to the main features, see [this video](https://www.youtube.com/watch?v=UN4bvquLg4g).}
 

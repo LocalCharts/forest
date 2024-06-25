@@ -7,7 +7,9 @@
 
 \p{In order to get the "multi-scale" part, however, we need to be able to "pull and push" #{n}-forms between different scales. Scales in this case means finer/coarser triangulations of a manifold. We would like to "pull and push" along a morphism between meshes (i.e. [simplicial sets](https://github.com/AlgebraicJulia/CombinatorialSpaces.jl)). However, the problem is that for the standard notion of a morphism between simplicial sets, there isn't a morphism}
 
-\xml{center}{\tex{\usepackage{tikz}\usetikzlibrary{positioning,calc}}{
+\xmlns:html{http://www.w3.org/1999/xhtml}
+
+\<html:center>{\tex{\usepackage{tikz}\usetikzlibrary{positioning,calc}}{
 \begin{tikzpicture}
 
   % Define vertices of the original triangle
@@ -62,7 +64,7 @@
 
 \p{But this is not the only place we could send the vertices in #{U}. For instance, the triforce below depicts sending each of the vertices in #{U} (the inner triangle) to the middles of the edges in the outer triangle. The condition of \ref{ocl-0024} says that when we union together all of the edges in the outer triangle, we get a 2-simplex that exists in #{S'}.}
 
-\xml{center}{\tex{\usepackage{tikz}\usetikzlibrary{positioning,calc}}{
+\<html:center>{\tex{\usepackage{tikz}\usetikzlibrary{positioning,calc}}{
 \begin{tikzpicture}
   \draw (-2, 0) -- (2, 0) -- (0, 3.46) -- cycle;
   \draw (0, 0) -- (1, 1.73) -- (-1, 1.73) -- cycle;

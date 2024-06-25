@@ -294,8 +294,10 @@
 
 % Links
 
-\def\nlab[article]{\xml{span}[class]{nlab}{[\article](https://ncatlab.org/nlab/show/\article)}}
-\def\wikipedia[article]{\xml{span}[class]{wikipedia}{[\article](https://en.wikipedia.org/wiki/\article)}}
+\xmlns:html{http://www.w3.org/1999/xhtml}
+
+\def\nlab[article]{\<html:span>[class]{nlab}{[\article](https://ncatlab.org/nlab/show/\article)}}
+\def\wikipedia[article]{\<html:span>[class]{wikipedia}{[\article](https://en.wikipedia.org/wiki/\article)}}
 
 % Semantic markup
 
@@ -344,11 +346,11 @@
 % Figures
 
 \def\quiver[body]{
-  \xml{center}{\tex{\usepackage{quiver, amsopn, amssymb, mathrsfs}}{\body}}
+  \<html:center>{\tex{\usepackage{quiver, amsopn, amssymb, mathrsfs}}{\body}}
 }
 
 \def\image[source]{
-  \xml{center}{\xml{img}[src]{\source}{}}
+  \<html:center>{\<html:img>[src]{\source}{}}
 }
 
 % Convex duality

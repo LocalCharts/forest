@@ -9,8 +9,9 @@
 \def\fragileslide[name][body]{\subtree{\taxon{fragileslide} \title{\name} \body}}
 \def\hiddenslide[name][body]{\subtree{\taxon{hiddenslide} \title{\name} \body}}
 \def\notes[body]{\subtree{\taxon{notes} \meta{toc}{false} \body}}
-\def\quotes[body]{\xml{inquotes}{\body}}
-\def\pause{\xml{pause}{}}
+\xmlns:html{http://www.w3.org/1999/xhtml}
+\def\quotes[body]{\<html:inquotes>{\body}}
+\def\pause{\<html:pause>{}}
 
 \slide{Overview}{
   \p{Follow along at [forest.localcharts.org/aria-0001.xml](https://forest.localcharts.org/aria-0001.xml)!}
