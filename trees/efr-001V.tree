@@ -9,7 +9,7 @@
 \proof{
     \p{
         Recall that #{f^* = ((f|_0)^*)^+,} as a minmax problem.
-        Then the claim is that ##{(((((f|_0)^*)^+)|_0)^*)^+ = f}.
+        Then the claim is that ##{(((((f|_0)^*)^+)|_0)^*)^+ = f.}
         Using first the rewrite #{((-)^*)^+ = ((-)^-)^*,} and the notation #{((-)^*|_0)^* = -|^0,}
         we can rewrite that as
         ##{((f|_0)^-|^0)^+}
@@ -27,7 +27,7 @@
     }
 
     \p{
-        Observe that, using the natural identification #{(X^*)^* = X}, we have ##{(f|_0)|^0 = (X \oplus X, X^*, (x,x';\alpha) \mapsto f(x) - \alpha(x) + \alpha(x'))}. Clearly #{\inf_x \sup_\alpha f(x) - \alpha(x) + \alpha(x') = f(x'),} since the supremum is infinite unless #{x = x'}. But observe that #{(f^*)^*(x') = \sup_\alpha \inf_x f(x) - \alpha(x) + \alpha(x')}
+        Observe that, using the natural identification #{(X^*)^* = X}, we have ##{(f|_0)|^0 = (X \oplus X, X^*, (x,x';\alpha) \mapsto f(x) - \alpha(x) + \alpha(x')).} Clearly #{\inf_x \sup_\alpha f(x) - \alpha(x) + \alpha(x') = f(x'),} since the supremum is infinite unless #{x = x'}. But observe that #{(f^*)^*(x') = \sup_\alpha \inf_x f(x) - \alpha(x) + \alpha(x')}
     }
     \p{
         Our claim now is that we may exchange these extremizers by strong duality. This amounts to the claim that the local Beck-Chevalley property holds for this square at #{(f|_0)|^0}:

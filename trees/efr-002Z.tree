@@ -4,7 +4,7 @@
 \author{eigil-rischel}
 \import{macros}
 \p{
-  Let #{X,Y \subset \RR^k} be disjoint, compact, convex subspaces. Then there exists #{v \in \RR^k} and #{\alpha \in \RR} so that #{\braket{v,x} + \alpha < 0 \braket{v,y} + \alpha} whenever #{x \in X, y \in Y}.
+  Let #{X,Y \subset \RR^k} be disjoint, compact, convex subspaces. Then there exists #{v \in \RR^k} and #{\alpha \in \RR} so that #{\braket{v,x} + \alpha < 0 < \braket{v,y} + \alpha} whenever #{x \in X, y \in Y}.
 }
 \proof{
   \p{Consider the minmax problem} 
@@ -18,6 +18,6 @@
   }
   \p{
     By the equilibrium property, we see that #{y^*} must minimize #{\braket{v^*,y}} on #{Y}, and analogously #{x^*} must maximize #{\braket{v^*,x}} on #{X}. Hence for all #{x,y}, we have
-    ##{\braket{v^*,x^*} + \alpha \leq -\delta /2 < 0 < \delta /2 \leq \braket{v^*,y^*} + \alpha,} which concludes the proof.
+    ##{\braket{v^*,x} + \alpha \leq -\delta /2 < 0 < \delta /2 \leq \braket{v^*,y} + \alpha,} which concludes the proof.
   }
 }
