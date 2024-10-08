@@ -5,4 +5,15 @@
 \author{Matthew Hale}
 \author{james-fairbanks}
 \meta{doi}{10.48550/arXiv.2403.05711}
+\meta{bibtex}{\startverb
+@misc{hanks-etal-convex-2024,
+      title={A Compositional Framework for First-Order Optimization}, 
+      author={Tyler Hanks and Matthew Klawonn and Evan Patterson and Matthew Hale and James Fairbanks},
+      year={2024},
+      eprint={2403.05711},
+      archivePrefix={arXiv},
+      primaryClass={math.OC},
+      url={https://arxiv.org/abs/2403.05711}, 
+}
+\stopverb}
 \taxon{reference}
