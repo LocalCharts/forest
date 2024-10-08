@@ -12,7 +12,7 @@
     \end{tikzcd}
   }
   in #{\Set^\Delta \times \Set^{\Delta,\op},} which is a pullback.
-  Then #{L} obeys strong duality if and only if this square has the local Beck-Chevalley condition for #{L}, in the sense that the canonical map #{\pi_{X,!}\pi_A^*L \to \pi_A^*\pi_{X,!}L} is an isomorphism.
+  #{L} obeys strong duality if and only if this square has the local Beck-Chevalley condition for #{L}, in the sense that the canonical map #{\pi_{X,!}\pi_A^*L \to \pi_A^*\pi_{X,!}L} is an isomorphism.
 }
 \proof{
   Recall that #{\pi_{X,!}(L) = L^-, \pi_Y^*(L) = L^+}.

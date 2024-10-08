@@ -1,0 +1,10 @@
+\title{Categorical interpolation: Descent and the Beck-Chevalley condition without direct images}
+\date{1991}
+\taxon{reference}
+\meta{doi}{10.1007/BFb0084229}
+\author{Duško Pavlović}
+\meta{bibtex}{\startverb
+ @inproceedings
+{Pavlović_1991, address={Berlin, Heidelberg}, title={Categorical interpolation: Descent and the Beck-Chevalley condition without direct images}, ISBN={978-3-540-46435-8}, DOI={10.1007/BFb0084229}, booktitle={Category Theory}, publisher={Springer}, author={Pavlović, Duško}, editor={Carboni, Aurelio and Pedicchio, Maria Cristina and Rosolini, Guiseppe}, year={1991}, pages={306–325},language={en} }
+\stopverb}
+

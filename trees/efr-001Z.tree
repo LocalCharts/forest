@@ -154,6 +154,8 @@
   %Beck-Chevalley
   \transclude{efr-0029}
 
+  (For more on the Beck-Chevalley condition, see \ref{pavlovic-descent-beck-chevalley-1991} or [nlab: Beck-Chevalley Condition](https://ncatlab.org/nlab/show/Beck-Chevalley+condition))
+
   %Slater, classical
   \transclude{efr-002L}
 
