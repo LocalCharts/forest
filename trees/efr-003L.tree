@@ -1,0 +1,29 @@
+\date{2024-10-09}
+\title{Quantitative Topos Theory}
+\author{eigil-rischel}
+
+\definition{Metric Stalks}{
+  \p{
+    Let #{S} be a topological space, and let #{X: O(X)^\op \to \EMet} be a sheaf of (extended) metric spaces. Let #{\mu \in \Delta(X)} be a (Radon) probability measure on #{S}. Define #{\int_{s \in S} X_s d\mu(s)} to be the set #{\{(U \subset S, f \in X(U)) \mid \mu(U) = 1\}} equipped with the metric #{d((U,f),(V,g)) = \int_{s \in U \cap V}d_{X_s}(f_s, g_s)d\mu(s)} (quotiented by the equivalence relation of distance zero).
+  }
+}
+\p{
+  Observe that if #{\mu = \delta_{s},} this is simply the stalk at #{s}.
+}
+
+\definition{Normed Set}{
+  \p{
+    A \em{normed set} is a set equipped with a function #{\abs{\cdot}: X \to [0,\infty]}. A morphism of normed sets is a norm-nonincreasing function, so that the category of normed sets is equivalent to the category #{\operatorname{Fam}([0,\infty],\geq)}. The tensor product of normed sets is defined by #{X \otimes Y = (X \times Y, \abs{(x,y)} = \abs{x} + \abs{y})}. Note that the Cartesian product of normed sets is defined instead by #{\max}. This is a semicartesian symmetric monoidal structure.
+  }
+}
+\definition{Quantitative sheaf}{
+  A presheaf of normed sets #{X} on a topological space #{S} is a \em{quantitative sheaf} if
+  \ol{
+    \li{For each pair of open subsets, #{X(U_1 \cup U_2)} is, as a set, the pullback #{X(U_1) \times_{X(U_1 \cap U_2)} X(U_2)}, equipped with the norm #{\abs{(f,g)} = \abs{f} + \abs{g} - \abs{f|_{U_1 \cap U_2}}}.}
+    \li{#{X(\emptyset)} is the monoidal unit #{(*,0)}}
+    \li{For each countable filtration #{U_1 \subseteq U_2 \dots,} #{X(\cup_i U_i) = \lim_i X(U_i)} - concretely, this means the norm of a compatible family of sections #{f_i \in X(U_i)} is the supremum of the increasing sequence #{\abs{f_i}_{X(U_i)}}}
+  }
+}
+\p{
+  These should (possibly with some extra assumptions) correspond to Radon measures on #{S}.
+}
