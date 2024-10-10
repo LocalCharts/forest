@@ -1,5 +1,11 @@
 \title{Monoidal Grothendieck Construction}
+\date{2018}
 \author{Joe Moeller}
 \author{Christina Vasilakopoulou}
 \taxon{reference}
 \meta{doi}{10.48550/arXiv.1809.00727}
+\meta{bibtex}{\startverb
+ @article
+{moeller-vasilakopoulou-2018, title={Monoidal grothendieck construction}, journal={arXiv preprint arXiv:1809.00727}, author={Moeller, Joe and Vasilakopoulou, Christina}, year={2018} }
+\stopverb}
+

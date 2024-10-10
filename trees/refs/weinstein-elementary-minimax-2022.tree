@@ -2,3 +2,11 @@
 \author{Jonathan Weinstein}
 \taxon{reference}
 \meta{url}{https://bpb-us-w2.wpmucdn.com/sites.wustl.edu/dist/d/2034/files/2022/05/minimax.pdf}
+\meta{bibtex}{\startverb
+@article{weinstein-elementary-minimax-2022,
+url={https://bpb-us-w2.wpmucdn.com/sites.wustl.edu/dist/d/2034/files/2022/05/minimax.pdf},
+author={Weinstein, Jonathan},
+date={2022},
+title={Two Elementary Proofs of the Minimax Theorem}
+}
+\stopverb}
