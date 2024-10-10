@@ -1,7 +1,7 @@
 \date{2024-10-09}
 \title{Quantitative Topos Theory}
 \author{eigil-rischel}
-
+\import{macros}
 \definition{Metric Stalks}{
   \p{
     Let #{S} be a topological space, and let #{X: O(X)^\op \to \EMet} be a sheaf of (extended) metric spaces. Let #{\mu \in \Delta(X)} be a (Radon) probability measure on #{S}. Define #{\int_{s \in S} X_s d\mu(s)} to be the set #{\{(U \subset S, f \in X(U)) \mid \mu(U) = 1\}} equipped with the metric #{d((U,f),(V,g)) = \int_{s \in U \cap V}d_{X_s}(f_s, g_s)d\mu(s)} (quotiented by the equivalence relation of distance zero).
