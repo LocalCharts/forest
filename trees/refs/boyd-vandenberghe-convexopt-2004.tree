@@ -6,6 +6,6 @@
 \meta{isbn}{978-0-521-83378-3}
 \meta{bibtex}{\startverb
  @book
-{boyd-vandenberghe-convexopt-2004 , address={Cambridge, UK ; New York}, title={Convex optimization}, ISBN={978-0-521-83378-3}, callNumber={QA402.5 .B69 2004}, publisher={Cambridge University Press}, author={Boyd, Stephen P. and Vandenberghe, Lieven}, year={2004},language={en} }
+{boyd-vandenberghe-convexopt-2004 , address={Cambridge, UK; New York}, title={Convex optimization}, ISBN={978-0-521-83378-3}, callNumber={QA402.5 .B69 2004}, publisher={Cambridge University Press}, author={Boyd, Stephen P. and Vandenberghe, Lieven}, year={2004},language={en} }
 \stopverb}
 
