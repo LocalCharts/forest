@@ -319,7 +319,7 @@
 }
 
 \def\proof[body]{
-  \subtree{\title{Proof.} \body}
+  \subtree{\taxon{proof} \body}
 }
 
 \def\definition[head][body]{
