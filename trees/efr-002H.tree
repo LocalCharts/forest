@@ -2,6 +2,7 @@
 \author{eigil-rischel}
 \import{macros}
 \taxon{proposition}
+
 \p{
   Let #{(X,A,L)} be a minmax problem.
   Suppose #{A} is a convex subspace of a vector space #{V}, and #{L(x,-): A \to \RR} is affine for each #{x}.

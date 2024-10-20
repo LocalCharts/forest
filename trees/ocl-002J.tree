@@ -1,0 +1,9 @@
+\date{2024-07-15}
+\title{Propagation Domain}
+\taxon{definition}
+\import{macros}
+\import{ocl-002I}
+
+\p{A \defcase{propagation domain} is a poset with all joins. So, in particular, it has a bottom element (the empty join), a top element (the join of all elements), finite joins, and directed joins. We will simply refer to these as "domains" when the context is clear.}
+
+\p{There is a 2-category #{\PD}, whose objects are propagation domains, morphisms are join-preserving maps, and 2-cells are given by natural transformation (i.e., pointwise inequality).}

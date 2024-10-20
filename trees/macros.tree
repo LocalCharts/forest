@@ -252,6 +252,7 @@
 \def\Alg{#{\cat{Alg}}}
 \def\Coalg{#{\cat{Coalg}}}
 \def\EPres{#{\cat{EPres}}}
+\def\mnd{#{\mathbf{mnd}}}
 
 % Dynamical systems
 

@@ -1,0 +1,9 @@
+\title{Propagator Network}
+\taxon{definition}
+\import{macros}
+\import{ocl-002I}
+\date{2024-07-15}
+
+\p{A \defcase{propagator network} consists of a [propagation domain](ocl-002J) along with an monad #{\upsilon \colon P \to P} which we call the update.}
+
+\p{Then define the 2-category of propagator networks #{\PN := \mnd(\PD)}, the 2-category of monads in #{\PD}.}

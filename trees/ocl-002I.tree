@@ -1,0 +1,133 @@
+\title{Propagator Networks}
+\date{2024-07-15}
+\import{macros}
+
+\def\PD{#{\cat{PD}}}
+\def\PDAdj{#{\cat{PD}_{\leftrightarrows}}}
+\def\PN{#{\cat{PN}}}
+\def\PNAdj{#{\cat{PN}_{\leftrightarrows}}}
+
+\transclude{ocl-002J}
+
+\transclude{ocl-002H}
+
+\subtree{
+  \title{Function propagator}
+  \taxon{example}
+
+  \p{Given a domain morphism #{f \colon P \to Q}, we can make a single-step propagator network with state space #{P \times Q}, and update #{(p, q) \mapsto (p, q \vee f(p))}.}
+}
+
+\subtree{
+  \title{Isomorphism propagator}
+  \taxon{example}
+
+  \p{If #{f \colon P \to Q} and #{g \colon Q \to P} are mutually inverse domain morphisms, we can make a propagator network with state space #{P \times Q} and update #{(p, q) \mapsto (p \vee g(q), q \vee f(p))}.}
+}
+
+\subtree{
+  \title{Product propagator}
+  \taxon{example}
+
+  \p{If #{(P, \upsilon)} and #{(Q, \nu)} are propagator networks, then #{(P \times Q, \upsilon \times \nu)} is also a propagator network. Moreover, this is the categorical product in #{\PN}.}
+}
+
+\subtree{
+  \title{Propagation step}
+  \taxon{definition}
+
+  \p{A \defcase{propagation step} consists of an endomorphism #{s \colon P \to P} such that #{1_P \leq s}.}
+}
+
+\subtree{
+  \title{Fundamental lemma of propagation networks}
+  \taxon{proposition}
+
+  \p{If #{\{s_i\}_{i \in I}} is any collection of propagation steps on a domain #{P}, then there exists a monad #{s^\ast \colon P \to P} such that
+
+  ##{s^\ast(p) = \bigwedge_{\substack{p' \geq p \\ \forall i \in I, s_i(p') = p'}} p'}
+  }
+
+  \p{Note that this is a strong claim, because it's not even trivial that that meet exists.}
+
+  \subtree{
+    \taxon{proof}
+
+    \p{Let #{M_I} be the free monoid on #{I}. Then for #{m = (i_1,\ldots,i_n) \in M_I}, define #{s_{(m)} \colon P \to P} by #{s_{i_1} ; \cdots ; s_{i_n}}. Finally, let
+
+    ##{s^\ast(p) = \bigvee_{m \in M_I} s_{(m)}(p)}
+
+    For any #{i \in I},
+
+    ##{s^\ast(p) \leq s_i(s^\ast(p)) = s_i\left( \bigvee_{m \in M_I} s_{(m)}(p) \right) = \bigvee_{m \in M_I} s_i(s_{(m)}(p)) = \bigvee_{m \in M_I} s_{(m;i)}(p) \leq s^\ast(p)}
+
+    Thus, #{s^\ast(p)} is a fixpoint of #{s_i}. Note that we have crucially used that #{s_i} preserves joins.}
+
+    \p{Moreover, if #{p'} is a fixpoint of #{s_i} for all #{i \in I}, and #{p' \geq p}, then #{p' = s_{(m)}(p') \geq s_{(m)}(p)} for all #{m \in M_I}. Thus, #{s^\ast(p)} is the meet of all fixpoints of #{\{s_i\}_{i \in I}}.}
+  }
+}
+
+\subtree{
+  \title{Join of propagators}
+  \taxon{proposition}
+
+  \p{The poset of monads on a domain #{P} has all joins.}
+
+  \subtree{
+    \taxon{proof}
+
+    \p{The poset of "endomorphisms with unit" has all joins, and thus the join of monads can be computed via join of the underlying endomorphisms with unit, and then the fixpoint operator.}
+  }
+}
+
+\p{Note that for a propagator network #{(P, \upsilon)}, the Eilenberg-Moore object #{P^\upsilon} is the domain of fixpoints for #{\upsilon}, with #{p \vee_{P^\upsilon} q = \upsilon(p \vee_P q)}. As this always exists, the forgetful functor #{U \colon \PN \to \PD} has both left and right adjoints.}
+
+\subtree{
+  \title{Adjoints for domains and propagators}
+  \taxon{definition}
+
+  \p{Let #{\PDAdj} be the 2-category of adjunctions in the 2-category #{\PD}.}
+
+  \p{Let #{\PNAdj} be the 2-category of adjunctions in the 2-category #{\PN}.}
+
+  \p{Note that any morphism in #{\PD} should automatically have a right adjoint by the adjoint functor theorem, as all morphisms presere colimits. Thus, the interesting case is when a morphism has a left adjoint.}
+}
+
+\subtree{
+  \title{#{\PDAdj} has products}
+  \taxon{proposition}
+
+  \p{Idea: the projection #{P \times Q \to P} has a left adjoint given by #{p \mapsto (p, \bot)}.}
+}
+
+\subtree{
+  \title{#{\PDAdj} has equalizers}
+  \taxon{proposition}
+
+  \p{Idea: let #{f, g \colon P \to Q} be domain morphisms with left adjoints #{f^\sharp, g^\sharp \colon Q \to P}. Let #{\iota \colon E \to P} be the equalizer in #{\PD}; we will show that #{\iota} also has a left adjoint. The intuition behind this left adjoint is that it should be a reflection of #{\iota}, "throwing an error" (i.e. returning #{\top} or something like it) when applied to elements of #{P} not in #{E}.}
+
+  \p{Define the left adjoint to #{\iota} in the following way. Both #{p \mapsto p \vee f^\sharp(g(p))} and #{p \mapsto p \vee g^\sharp(f(p))} are endomorphisms on #{P}. Let #{\upsilon \colon P \to P} be the joint fixpoint. Then #{\upsilon(p) \geq f^\sharp(g(\upsilon(p)))} and #{\upsilon(p) \geq g^\sharp(f(\upsilon(p)))}. Consequently, #{f(\upsilon(p)) \geq f(f^\sharp(g(\upsilon(p)))) \geq g(\upsilon(p))}, and #{g(\upsilon(p)) \geq g(g^\sharp(f(\upsilon(p)))) \geq f(\upsilon(p))}, whence #{f(\upsilon(p)) = g(\upsilon(p))}.}
+
+  \p{Thus, #{\upsilon} factors through the inclusion #{\iota \colon E \to P}, via #{\upsilon = \iota^\sharp ; \iota}. As #{\upsilon} is a monad and #{\iota ; \iota^\sharp} is the identity, and consequently #{\iota^\sharp} is a left adjoint to #{\iota}, as required.}
+}
+
+\subtree{
+  \title{Adjoints and monads}
+
+  \p{If we have a morphism #{f \colon P \to Q} with left adjoint #{f^\sharp \colon Q \to P}, along with a monad #{\nu \colon Q \to Q}, is #{f ; \nu ; f^\sharp} a monad on #{P}? No, this is definitely not true.}
+
+  \p{However, if we have a monad #{\upsilon} on #{P}, then this pushes forward to a monad #{f_\ast(\upsilon) := f^\sharp ; \upsilon ; f} on #{Q}. Moreover, #{f_\ast \colon \mnd(P) \to \mnd(Q)} should be a functor.}
+}
+
+\subtree{
+  \title{Equalizers in #{\PNAdj}}
+  \taxon{proposition}
+
+  \p{Consider two morphisms #{f, g \colon (P, \upsilon) \to (Q, \nu)} in #{\PNAdj}, with corresponding left adjoints #{f^\sharp, g^\sharp \colon Q \to P}. If #{\iota \colon E \to P} is the equalizer of #{f} and #{g} in #{\PD}, then there exists a (necessarily unique) monad #{\epsilon} on #{E} such that #{(E, \epsilon)} is the equalizer of #{f} and #{g} in #{\PNAdj}.}
+
+  \subtree{
+    \taxon{proof}
+
+
+  }
+}
