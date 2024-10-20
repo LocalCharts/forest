@@ -30,7 +30,7 @@
         tldist = tlDist;
         new = pkgs.writeScriptBin "new"
         ''
-          ${forester-pkg}/bin/forester new --dirs=trees --dest=trees --prefix=$1
+          ${forester-pkg}/bin/forester new forest.toml --dest=trees --prefix=$1
         '';
         build = pkgs.writeScriptBin "build"
         ''
