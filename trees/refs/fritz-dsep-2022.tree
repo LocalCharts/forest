@@ -1,0 +1,16 @@
+\title{The d-separation criterion in Categorical Probability}
+\date{2023-02-20}
+\taxon{reference}
+\meta{doi}{10.48550/arXiv.2207.05740}
+\meta{external}{http://arxiv.org/abs/2207.05740}
+\author{Tobias Fritz}
+\author{Andreas Klingler}
+\meta{bibtex}{\startverb
+ @article
+{Fritz_Klingler_2023, title={The d-separation criterion in Categorical Probability}, url={http://arxiv.org/abs/2207.05740}, DOI={10.48550/arXiv.2207.05740}, abstractNote={The d-separation criterion detects the compatibility of a joint probability distribution with a directed acyclic graph through certain conditional independences. In this work, we study this problem in the context of categorical probability theory by introducing a categorical definition of causal models, a categorical notion of d-separation, and proving an abstract version of the d-separation criterion. This approach has two main benefits. First, categorical d-separation is a very intuitive criterion based on topological connectedness. Second, our results apply both to measure-theoretic probability (with standard Borel spaces) and beyond probability theory, including to deterministic and possibilistic networks. It therefore provides a clean proof of the equivalence of local and global Markov properties with causal compatibility for continuous and mixed random variables as well as deterministic and possibilistic variables.}, note={arXiv:2207.05740}, number={arXiv:2207.05740}, publisher={arXiv}, author={Fritz, Tobias and Klingler, Andreas}, year={2023}, month={Feb} }
+\stopverb}
+\subtree{\title{Abstract}
+\p{
+The d-separation criterion detects the compatibility of a joint probability distribution with a directed acyclic graph through certain conditional independences. In this work, we study this problem in the context of categorical probability theory by introducing a categorical definition of causal models, a categorical notion of d-separation, and proving an abstract version of the d-separation criterion. This approach has two main benefits. First, categorical d-separation is a very intuitive criterion based on topological connectedness. Second, our results apply both to measure-theoretic probability (with standard Borel spaces) and beyond probability theory, including to deterministic and possibilistic networks. It therefore provides a clean proof of the equivalence of local and global Markov properties with causal compatibility for continuous and mixed random variables as well as deterministic and possibilistic variables.
+}}
+

@@ -1,0 +1,14 @@
+\title{A proof of the Krohn–Rhodes Decomposition Theorem}
+\date{2000}
+\taxon{reference}
+\meta{doi}{https://doi.org/10.1016/S0304-3975(99)00315-1}
+\author{Z. Ésik}
+\meta{bibtex}{\startverb
+ @article
+{Ésik_2000, title={A proof of the Krohn–Rhodes Decomposition Theorem}, volume={234}, ISSN={0304-3975}, DOI={https://doi.org/10.1016/S0304-3975(99)00315-1}, abstractNote={We give a new proof of one part of the Krohn–Rhodes decomposition theorem for automata.}, number={1}, journal={Theoretical Computer Science}, author={Ésik, Z.}, year={2000}, pages={287–300} }
+\stopverb}
+\subtree{\title{Abstract}
+\p{
+We give a new proof of one part of the Krohn–Rhodes decomposition theorem for automata.
+}}
+

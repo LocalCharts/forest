@@ -1,0 +1,17 @@
+\title{Causal Inference by String Diagram Surgery}
+\date{2019-07-28}
+\taxon{reference}
+\meta{doi}{10.48550/arXiv.1811.08338}
+\meta{external}{http://arxiv.org/abs/1811.08338}
+\author{Bart Jacobs}
+\author{Aleks Kissinger}
+\author{Fabio Zanasi}
+\meta{bibtex}{\startverb
+ @article
+{Jacobs_Kissinger_Zanasi_2019, title={Causal Inference by String Diagram Surgery}, url={http://arxiv.org/abs/1811.08338}, DOI={10.48550/arXiv.1811.08338}, abstractNote={Extracting causal relationships from observed correlations is a growing area in probabilistic reasoning, originating with the seminal work of Pearl and others from the early 1990s. This paper develops a new, categorically oriented view based on a clear distinction between syntax (string diagrams) and semantics (stochastic matrices), connected via interpretations as structure-preserving functors. A key notion in the identification of causal effects is that of an intervention, whereby a variable is forcefully set to a particular value independent of any prior propensities. We represent the effect of such an intervention as an endofunctor which performs `string diagram surgery’ within the syntactic category of string diagrams. This diagram surgery in turn yields a new, interventional distribution via the interpretation functor. While in general there is no way to compute interventional distributions purely from observed data, we show that this is possible in certain special cases using a calculational tool called comb disintegration. We demonstrate the use of this technique on a well-known toy example, where we predict the causal effect of smoking on cancer in the presence of a confounding common cause. After developing this specific example, we show this technique provides simple sufficient conditions for computing interventions which apply to a wide variety of situations considered in the causal inference literature.}, note={arXiv:1811.08338}, number={arXiv:1811.08338}, publisher={arXiv}, author={Jacobs, Bart and Kissinger, Aleks and Zanasi, Fabio}, year={2019}, month={Jul} }
+\stopverb}
+\subtree{\title{Abstract}
+\p{
+Extracting causal relationships from observed correlations is a growing area in probabilistic reasoning, originating with the seminal work of Pearl and others from the early 1990s. This paper develops a new, categorically oriented view based on a clear distinction between syntax (string diagrams) and semantics (stochastic matrices), connected via interpretations as structure-preserving functors. A key notion in the identification of causal effects is that of an intervention, whereby a variable is forcefully set to a particular value independent of any prior propensities. We represent the effect of such an intervention as an endofunctor which performs `string diagram surgery’ within the syntactic category of string diagrams. This diagram surgery in turn yields a new, interventional distribution via the interpretation functor. While in general there is no way to compute interventional distributions purely from observed data, we show that this is possible in certain special cases using a calculational tool called comb disintegration. We demonstrate the use of this technique on a well-known toy example, where we predict the causal effect of smoking on cancer in the presence of a confounding common cause. After developing this specific example, we show this technique provides simple sufficient conditions for computing interventions which apply to a wide variety of situations considered in the causal inference literature.
+}}
+
