@@ -3,6 +3,7 @@
 \meta{institution}{University of Strathclyde}
 \meta{position}{PhD Student}
 \meta{external}{https://erischel.com}
+\import{macros}
 \subtree{
   \title{Problems, Interests, Projects}
   \subtree{
@@ -27,7 +28,7 @@
         \li{For any machine #{m}, #{m \in V(K(m))}}
       }
     }
-    \p{See eg [wikipedia: Krohn-Rhodes Theory](https://en.wikipedia.org/wiki/Krohn%E2%80%93Rhodes_theory), or \ref{esik-proof-kr-2000} for a proof.}
+    \p{See eg [wikipedia: Krohn-Rhodes Theory](https://en.wikipedia.org/wiki/Krohn\%E2\%80\%93Rhodes_theory), or \ref{esik-proof-kr-2000} for a proof.}
     \p{
       This is a sort of algebraic classification theory (or decomposition theory) for automata, objects of great interest in categorical cybernetics. It would be very interesting to try and develop versions of this theorem suitable for other monoidal categories.
     }
@@ -52,7 +53,7 @@
   \subtree{
     \title{Atlas of mathematical structures}
     \p{
-      It should be possible to build a system which, given a formal definition (say in Lean) of a class of algebraic structure (like groups, rings, [loops](https://ncatlab.org/nlab/show/loop+%28algebra%29), etc), searches through a standard library of such structures from the literature and finds the name and existing work on your structure (combined with a simplified syntax for giving such definitions, maybe). Compare the [Online Encyclopedia of Integer Sequences](https://oeis.org/), and the recent collaborative project to classify those algebraic theories axiomatizable by one binary operation and one equation with at most four occurences of the operation ([here](https://terrytao.wordpress.com/2024/10/12/the-equational-theories-project-a-brief-tour/), note that they aim to describe the poset of such structures under implication, not merely the set of equivalence classes).
+      It should be possible to build a system which, given a formal definition (say in Lean) of a class of algebraic structure (like groups, rings, [loops](https://ncatlab.org/nlab/show/loop+\%28algebra\%29), etc), searches through a standard library of such structures from the literature and finds the name and existing work on your structure (combined with a simplified syntax for giving such definitions, maybe). Compare the [Online Encyclopedia of Integer Sequences](https://oeis.org/), and the recent collaborative project to classify those algebraic theories axiomatizable by one binary operation and one equation with at most four occurences of the operation ([here](https://terrytao.wordpress.com/2024/10/12/the-equational-theories-project-a-brief-tour/), note that they aim to describe the poset of such structures under implication, not merely the set of equivalence classes).
     }
   }
 }
